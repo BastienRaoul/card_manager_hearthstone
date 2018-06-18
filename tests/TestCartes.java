@@ -12,12 +12,28 @@ import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.HashSet;
+
 public class TestCartes {
 
     @Test
     public void testCartes1() throws Exception {
         Cartes tasDeCarte = new Cartes();
         assertEquals("Test constructeur 1", 0, tasDeCarte.collection().size());
+    }
+
+    @Test
+    public void testCartes101() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte arme2 = new Arme("Marteau Thor2", 11, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        tasDeCarte.ajouter(arme);
+        tasDeCarte.ajouter(arme2);
+
+        HashSet<Carte> dummy = new HashSet<>();
+        dummy.add(arme);
+        dummy.add(arme2);
+        assertEquals("Test constructeur 1", dummy, tasDeCarte.collection());
     }
 
     @Test
