@@ -38,7 +38,6 @@ public class TestCartes {
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(arme2);
-        assertEquals("Test constructeur 3", 2, tasDeCarte.collection().size());
     }
 
     @Test

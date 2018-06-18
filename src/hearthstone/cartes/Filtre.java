@@ -167,7 +167,6 @@ public class Filtre {
    */
   public static int gainDesenchantementTotal(Collection<? extends Carte> desCartes) {
     int resultatGain = 0;
-
     for (Carte resultat : desCartes) {
       try {
         resultatGain += resultat.gainDesenchantement();

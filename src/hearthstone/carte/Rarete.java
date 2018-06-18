@@ -26,11 +26,10 @@ public enum Rarete {
 
     Rarete(Color couleur, int vd, int vc, int vdd, int vcd) {
         gemme = couleur;
-        valeurCreation = vc;
         valeurDesenchantement = vd;
-        valeurCreationDoree = vcd;
+        valeurCreation = vc;
         valeurDesenchantementDoree = vdd;
-
+        valeurCreationDoree = vcd;
     }
 
     Rarete() {
