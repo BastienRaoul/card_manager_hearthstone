@@ -197,7 +197,6 @@ public class Filtre {
       }
     }
     return true;
-
   }
 
   /**
@@ -209,8 +208,24 @@ public class Filtre {
    * @return la collection de cartes dénombrées
    */
   public static Collection<Denombrement> cartesDenombrees(Collection<? extends Carte> desCartes) {
-    // TODO
-    return null;
+    ArrayList<Denombrement> denombrees = new ArrayList<Denombrement>(); 
+      for(Carte resultat : desCartes)
+      {
+        boolean existe = false;
+        for(Denombrement verificationDoublons : denombrees)
+        {
+          if(verificationDoublons.carte().equals(resultat))
+          {
+            existe = true;
+            verificationDoublons.incremente();
+          }
+        }
+        if(!existe)
+        {
+          denombrees.add(new Denombrement(resultat));
+        }
+      }
+      return denombrees;
   }
 
 }
