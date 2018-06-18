@@ -174,5 +174,4 @@ public class Cartes implements ManipulationCartes {
     public Collection<Deck> collectionDeDeck() {
         return maListeDeDeck;
     }
-
 }
