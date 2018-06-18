@@ -12,8 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+
+import static org.junit.Assert.*;
 
 import java.util.*;
 
@@ -35,7 +35,6 @@ public class TestFiltre {
     @Test
     public void testFiltre2() throws Exception {
         Cartes tasDeCarte = new Cartes();
-        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         Carte serviteur = new Serviteur("smop", 2, "qd", Rarete.BASIQUE, Classe.CHASSEUR, 2, 4, Race.DEMON);
         tasDeCarte.ajouter(serviteur);
 
@@ -60,7 +59,6 @@ public class TestFiltre {
     public void testFiltre4() throws Exception {
         Cartes tasDeCarte = new Cartes();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
-        Carte serviteur = new Serviteur("smop", 2, "qd", Rarete.BASIQUE, Classe.CHASSEUR, 2, 4, Race.DEMON);
         tasDeCarte.ajouter(arme);
 
         HashSet<Carte> dummy = new HashSet<>();
@@ -84,7 +82,6 @@ public class TestFiltre {
     public void testFiltre6() throws Exception {
         Cartes tasDeCarte = new Cartes();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
-        Carte sort = new Sort("monsort", 5, "descri", Rarete.BASIQUE, Classe.CHAMAN);
         tasDeCarte.ajouter(arme);
 
         HashSet<Carte> dummy = new HashSet<>();
@@ -193,7 +190,6 @@ public class TestFiltre {
         ArrayList<Carte> tasDeCartes = new ArrayList<Carte>();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         Carte sort = new Sort("monsort", 5, "descri", Rarete.COMMUNE, Classe.NEUTRE);
-        Carte arme2 = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
 
         tasDeCartes.add(arme);
         tasDeCartes.add(arme);
