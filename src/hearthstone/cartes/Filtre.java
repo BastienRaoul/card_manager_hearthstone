@@ -132,8 +132,22 @@ public class Filtre {
      * @throws ClasseNeutreException si jamais il est demandé de filtrer avec la classe NEUTRE
      */
     public static Collection<Carte> cartesParClasse(Collection<? extends Carte> desCartes, Classe classe) throws ClasseNeutreException {
-      // TODO
-      return null;
+      HashSet<> filtreClasse = new HashSet()<>;
+      for(Carte resultat :desCartes)
+      {
+        if(classe == NEUTRE)
+        {
+          throw new ClasseNeutreException("You can't choose neutral class.");
+        }
+        else
+        {
+          if(resultat.classe() == classe)
+          {
+            filtreClasse.add(resultat)
+          }
+        }
+      }
+      return filtreClasse;
     }
 
     /**
@@ -142,7 +156,7 @@ public class Filtre {
      * @return la valeur de mana necessaire
      */
     public static int manaMinimalNecessaire(Collection<? extends Carte> desCartes) {
-      // TODO
+      //TODO
       return 0;
     }
 
@@ -153,8 +167,12 @@ public class Filtre {
      * @return la valeur totale de desenchantement
      */
     public static int gainDesenchantementTotal(Collection<? extends Carte> desCartes) {
-      // TODO
-      return 0;
+      int resultatGain = 0;
+      for(Carte resultat :desCartes)
+      {
+        resultatGain += resultat.gainDesenchantement();
+      }
+      return resultatGain;
     }
 
 
