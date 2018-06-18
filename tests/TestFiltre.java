@@ -196,13 +196,13 @@ public class TestFiltre {
         Carte arme2 = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
 
         tasDeCartes.add(arme);
+        tasDeCartes.add(arme);
         tasDeCartes.add(sort);
-        tasDeCartes.add(arme2);
 
         ArrayList<Denombrement> resultat = new ArrayList<Denombrement>();
         resultat.add(new Denombrement(arme, 2));
         resultat.add(new Denombrement(sort));
 
-        assertEquals("Test cartes denombrees", resultat, tasDeCartes);
+        assertEquals("Test cartes denombrees", resultat, Filtre.cartesDenombrees(tasDeCartes));
     }
 }

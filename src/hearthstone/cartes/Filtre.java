@@ -221,6 +221,7 @@ public class Filtre {
         denombrees.add(new Denombrement(resultat));
       }
     }
+    
     return denombrees;
   }
 }
