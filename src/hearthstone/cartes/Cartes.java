@@ -35,16 +35,21 @@ public class Cartes implements ManipulationCartes {
      */
     public Cartes(Collection<Carte> cartesInitiales) throws CarteDejaPresenteException {
         this();
-
-        int throwException = 0;
-
+        /*
+         * int throwException = 0;
+         * 
+         * for (Carte c : cartesInitiales) { if (throwException > 0 || estPresente(c))
+         * ++throwException; ajouter(c); }
+         * 
+         * if (throwException > 0) throw new CarteDejaPresenteException(throwException +
+         * " cards could not be added because of duplicates !");
+         */
         for (Carte c : cartesInitiales) {
             if (estPresente(c))
-                ++throwException;
+                throw new CarteDejaPresenteException("Cards could not be added because of duplicates !");
             ajouter(c);
         }
-        if (throwException > 0)
-            throw new CarteDejaPresenteException(throwException + " cards could not be added because of duplicates !");
+
     }
 
     /**
