@@ -20,26 +20,16 @@ public class Serviteur extends CarteD {
 	/**
 	 * Construit une carte Serviteur
 	 * 
-	 * @param nom
-	 *            nom de la carte
-	 * @param mana
-	 *            valeur manna de la carte
-	 * @param desc
-	 *            description de la carte
-	 * @param rarete
-	 *            rareté de la carte
-	 * @param classe
-	 *            classe de la carte
-	 * @param urlImage
-	 *            url vers une image de la carte
-	 * @param urlImageDoree
-	 *            url vers une version doree de l'image de la carte
-	 * @param degats
-	 *            valeur de degats de la carte
-	 * @param pointsDeVie
-	 *            valeur de points de vie de la carte
-	 * @param race
-	 *            race de la carte
+	 * @param nom           nom de la carte
+	 * @param mana          valeur manna de la carte
+	 * @param desc          description de la carte
+	 * @param rarete        rareté de la carte
+	 * @param classe        classe de la carte
+	 * @param urlImage      url vers une image de la carte
+	 * @param urlImageDoree url vers une version doree de l'image de la carte
+	 * @param degats        valeur de degats de la carte
+	 * @param pointsDeVie   valeur de points de vie de la carte
+	 * @param race          race de la carte
 	 *
 	 */
 	public Serviteur(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage,
@@ -52,22 +42,14 @@ public class Serviteur extends CarteD {
 	/**
 	 * Construit une carte Serviteur sans URL d'images
 	 * 
-	 * @param nom
-	 *            nom de la carte
-	 * @param mana
-	 *            valeur manna de la carte
-	 * @param desc
-	 *            description de la carte
-	 * @param rarete
-	 *            rareté de la carte
-	 * @param classe
-	 *            classe de la carte
-	 * @param degats
-	 *            valeur de degats de la carte
-	 * @param pointsDeVie
-	 *            valeur de points de vie de la carte
-	 * @param race
-	 *            race de la carte
+	 * @param nom         nom de la carte
+	 * @param mana        valeur manna de la carte
+	 * @param desc        description de la carte
+	 * @param rarete      rareté de la carte
+	 * @param classe      classe de la carte
+	 * @param degats      valeur de degats de la carte
+	 * @param pointsDeVie valeur de points de vie de la carte
+	 * @param race        race de la carte
 	 *
 	 */
 	public Serviteur(String nom, int mana, String desc, Rarete rarete, Classe classe, int degats, int pointsDeVie,

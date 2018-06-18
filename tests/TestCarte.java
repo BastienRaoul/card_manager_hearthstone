@@ -11,11 +11,11 @@ import static org.junit.Assert.assertTrue;
 
 public class TestCarte {
 
-
     @Test
     public void test() throws Exception {
-        Carte arme = new Arme("Marteau de Thor",10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
-        assertEquals("manna different",10, arme.mana());
+        Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
+                100);
+        assertEquals("manna different", 10, arme.mana());
     }
 
     @Test

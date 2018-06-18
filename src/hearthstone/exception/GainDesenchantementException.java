@@ -2,6 +2,7 @@ package hearthstone.exception;
 
 /**
  * Exception levée quand le gain de desenchantement est mauvais
+ * 
  * @author lanoix-a remm-jf
  * @version 1.0
  */

@@ -53,20 +53,13 @@ public abstract class Carte {
 	/**
 	 * Construit une carte abstraite
 	 *
-	 * @param nom
-	 *            nom de la carte
-	 * @param mana
-	 *            valeur manna de la carte
-	 * @param desc
-	 *            description de la carte
-	 * @param rarete
-	 *            rareté de la carte
-	 * @param classe
-	 *            classe de la carte
-	 * @param urlImage
-	 *            url vers une image de la carte
-	 * @param urlImageDoree
-	 *            url vers une version doree de l'image de la carte
+	 * @param nom           nom de la carte
+	 * @param mana          valeur manna de la carte
+	 * @param desc          description de la carte
+	 * @param rarete        rareté de la carte
+	 * @param classe        classe de la carte
+	 * @param urlImage      url vers une image de la carte
+	 * @param urlImageDoree url vers une version doree de l'image de la carte
 	 */
 	Carte(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree) {
 		this.nom = nom;
@@ -157,11 +150,10 @@ public abstract class Carte {
 	}
 
 	/**
-	 * indique si la carte est jouable, cad que la reserve de Mana est
-	 * suffisante pour jouer la carte
+	 * indique si la carte est jouable, cad que la reserve de Mana est suffisante
+	 * pour jouer la carte
 	 *
-	 * @param reserveMana
-	 *            une valeur de reserve de mana
+	 * @param reserveMana une valeur de reserve de mana
 	 * @return true si la carte est jouable
 	 */
 	public boolean estJouable(int reserveMana) {
@@ -169,11 +161,10 @@ public abstract class Carte {
 	}
 
 	/**
-	 * indique si deux cartes sont égales, indépendemment du fait qu'elles
-	 * soient dorées ou non
+	 * indique si deux cartes sont égales, indépendemment du fait qu'elles soient
+	 * dorées ou non
 	 *
-	 * @param carte
-	 *            la carte a comparer
+	 * @param carte la carte a comparer
 	 * @return true si la carte courante est égale à la carte sans considere
 	 *         qu'elles soient dorées ou non
 	 */
@@ -182,12 +173,11 @@ public abstract class Carte {
 	}
 
 	/**
-	 * donne le cout de creation d'une carte, si possible, i.e. si la carte
-	 * n'est pas BASIQUE
+	 * donne le cout de creation d'une carte, si possible, i.e. si la carte n'est
+	 * pas BASIQUE
 	 *
 	 * @return le cout de creation de la carte
-	 * @throws CoutCreationException
-	 *             si la carte est BASIQUE
+	 * @throws CoutCreationException si la carte est BASIQUE
 	 */
 	public int coutCreation() throws CoutCreationException {
 		if (rarete == Rarete.BASIQUE)
@@ -198,12 +188,11 @@ public abstract class Carte {
 	}
 
 	/**
-	 * donne le gain a detruire la carte, si c'est possible, i.e. si la carte
-	 * n'est pas BASIQUE
+	 * donne le gain a detruire la carte, si c'est possible, i.e. si la carte n'est
+	 * pas BASIQUE
 	 *
 	 * @return le gain de desenchantement de la carte
-	 * @throws GainDesenchantementException
-	 *             si la carte est BASIQUE
+	 * @throws GainDesenchantementException si la carte est BASIQUE
 	 */
 	public int gainDesenchantement() throws GainDesenchantementException {
 		if (rarete == Rarete.BASIQUE)
@@ -216,15 +205,11 @@ public abstract class Carte {
 	/**
 	 * Fabrique une carte dorée à partir d'une carte simple, si c'est possible
 	 *
-	 * @param c
-	 *            la carte d'origine servant à la fabrication
+	 * @param c la carte d'origine servant à la fabrication
 	 * @return la nouvelle carte dorée
-	 * @throws CarteDoreeException
-	 *             la carte d'origine est déja une carte doree
-	 * @throws CarteBasiqueException
-	 *             la carte d'origine est une carte BASIQUE
-	 * @throws Exception
-	 *             autres cas empechant la fabrication de la carte
+	 * @throws CarteDoreeException   la carte d'origine est déja une carte doree
+	 * @throws CarteBasiqueException la carte d'origine est une carte BASIQUE
+	 * @throws Exception             autres cas empechant la fabrication de la carte
 	 */
 	public static Carte fabriquerCarteDoree(Carte c) throws Exception {
 		if (c.estDoree())

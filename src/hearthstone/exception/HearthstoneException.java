@@ -3,6 +3,7 @@ package hearthstone.exception;
 /**
  *
  * Exception levée dans le cadre du projet
+ * 
  * @author lanoix-a remm-jf
  * @version 1.0
  */

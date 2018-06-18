@@ -4,9 +4,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 
-@Suite.SuiteClasses({
-        TestCarte.class
-})
+@Suite.SuiteClasses({ TestCarte.class })
 
 public class HearthstoneTestSuite {
 }
