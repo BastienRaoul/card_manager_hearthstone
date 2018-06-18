@@ -24,6 +24,7 @@ public class Cartes implements ManipulationCartes {
      */
     public Cartes() {
         collectionDeCarte = new HashSet<>();
+        maListeDeDeck = new ArrayList<>();
     }
 
     /**
@@ -126,8 +127,11 @@ public class Cartes implements ManipulationCartes {
         } catch (Exception e) {
             throw new DeckCreationException(e.getMessage());
         } finally {
-            if (estPresentDeck(nouveauDeck))
-                throw new DeckCreationException("This deck is already in the decklist !");
+            // not usable cuz of the nature of newly created decks (all the same except for
+            // the class)
+            // if (estPresentDeck(nouveauDeck))
+            // throw new DeckCreationException("This deck is already in the decklist !");
+
             /*
              * for (Carte carte : nouveauDeck.collection()) if (!estPresente(carte)) throw
              * new
@@ -171,7 +175,7 @@ public class Cartes implements ManipulationCartes {
      * @return les deck sous la forme d'une collection de deck au sens Collection de
      *         Deck
      */
-    public Collection<Deck> collectionDeDeck() {
+    public List<Deck> collectionDeDeck() {
         return maListeDeDeck;
     }
 }
