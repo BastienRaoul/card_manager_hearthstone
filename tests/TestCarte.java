@@ -23,5 +23,4 @@ public class TestCarte {
         Cartes cartes = new Cartes(FabriqueJson.lireCartesDepuisFichier("json/initial.json"));
         assertEquals(3, cartes.collection().size());
     }
-
 }
