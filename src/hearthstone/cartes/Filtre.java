@@ -22,8 +22,15 @@ public class Filtre {
      * @return la collection des carte "Serviteur" contenues dans la collection de cartes
      */
     public static Collection<Arme> cartesArme(Collection<? extends Carte> desCartes) {
-      // TODO
-      return null;
+      HashSet<Arme> filtreArmes = new HashSet()<Arme>;
+      for(Carte resultat :desCartes)
+      {
+        if(resultat instanceOf Arme)
+        {
+          filtreArmes.add(resultat);
+        }
+      }
+      return filtreArmes;
     }
 
     /**
@@ -32,8 +39,15 @@ public class Filtre {
      * @return la collection des cartes "Serviteur" contenues dans la collection de cartes
      */
     public static Collection<Serviteur> cartesServiteur(Collection<? extends Carte> desCartes) {
-      // TODO
-      return null;
+      HashSet<Serviteur> filtreServiteurs = new HashSet()<Serviteur>;
+      for(Carte resultat :desCartes)
+      {
+        if(resultat instanceOf Serviteur)
+        {
+          filtreServiteurs.add(resultat);
+        }
+      }
+      return filtreServiteurs;
     }
 
     /**
@@ -42,8 +56,15 @@ public class Filtre {
      * @return la collection des cartes "Sort" contenues dans la collection de cartes
      */
     public static Collection<Sort> cartesSort(Collection<? extends Carte> desCartes) {
-      // TODO
-      return null;
+      HashSet<Sort> filtreSorts = new HashSet()<Sort>;
+      for(Carte resultat :desCartes)
+      {
+        if(resultat instanceOf Sort)
+        {
+          filtreSorts.add(resultat);
+        }
+      }
+      return filtreSorts;
     }
 
     /**
@@ -53,8 +74,15 @@ public class Filtre {
      * @return la collection des cartes qui ont comme raretés rarete
      */
     public static Collection<Carte> cartesParRarete(Collection<? extends Carte> desCartes, Rarete rarete) {
-      // TODO
-      return null;
+      HashSet<> filtreRarete = new HashSet()<>;
+      for(Carte resultat :desCartes)
+      {
+        if(resultat.rarete() == rarete)
+        {
+          filtreRarete.add(resultat);
+        }
+      }
+      return filtreRarete;
     }
 
     /**
@@ -64,9 +92,18 @@ public class Filtre {
      * @return la collection de cartes qui ont comme races race
      */
     public static Collection<Serviteur> cartesParRace(Collection<Serviteur> desCartes, Race race) {
-      // TODO
-      return null;
-
+      HashSet<> filtreRace = new HashSet()<>;
+      for(Carte resultat :desCartes)
+      {
+        if(resultat instanceOf Serviteur)
+        {
+          if(resultat.race() == race)
+          {
+            filtreRace.add(resultat);
+          }
+        }
+      }
+      return filtreRace;
     }
 
     /**
@@ -75,9 +112,15 @@ public class Filtre {
      * @return la colelction de cartes dorées
      */
     public static Collection<Carte> cartesDorees(Collection<? extends Carte> desCartes) {
-      // TODO
-      return null;
-
+      HashSet<> filtreDore = new HashSet()<>;
+      for(Carte resultat :desCartes)
+      {
+        if(resultat.estDoree())
+        {
+          filtreDore.add(resultat);
+        }
+      }
+      return filtreDore;
     }
 
     /**
