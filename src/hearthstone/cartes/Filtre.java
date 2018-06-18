@@ -156,8 +156,12 @@ public class Filtre {
      * @return la valeur de mana necessaire
      */
     public static int manaMinimalNecessaire(Collection<? extends Carte> desCartes) {
-      //TODO
-      return 0;
+      int resultatMana = 0;
+      for(Carte resultat :desCartes)
+      {
+        resultatMana += resultat.mana();
+      }
+      return resultatMana;
     }
 
 
@@ -183,8 +187,16 @@ public class Filtre {
      * @return true si la création est possible
      */
     public static boolean possibleDeCreer(Collection<? extends Carte> desCartes, int valeurCreationDisponible) {
-      // TODO
-      return false;
+      int cout = 0;
+      for(Carte resultat :desCartes)
+      {
+        cout += resultat.CoutCreation();
+        if(cout > valeurCreationDisponible)
+        {
+          return false;
+        }
+      }
+      return true;
     }
 
 
