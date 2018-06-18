@@ -2,21 +2,26 @@ package hearthstone.cartes;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.typeadapters.RuntimeTypeAdapterFactory;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import hearthstone.carte.Arme;
-import hearthstone.carte.Carte;
-import hearthstone.carte.Serviteur;
-import hearthstone.carte.Sort;
+import hearthstone.carte.*;
+import jdk.nashorn.internal.ir.ReturnNode;
+
+import static org.junit.Assume.assumeNoException;
 
 import java.io.*;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+
+import javax.naming.InitialContext;
+
+import org.json.*;
 
 /**
  * Classe statique permettant de manipuler une représentation au format JSON
@@ -37,7 +42,51 @@ public class FabriqueJson {
 		Collection<Carte> cartes = donneGson().fromJson(jsonString, new TypeToken<List<Carte>>() {
 		}.getType());
 		// TODO : [AL] il n'y a pas d'appel au constructeur de carte, c'est
-		// étrange quand même
+		// étrange quand même		
+		try {
+			JSONObject jsonObject = new JSONObject(jsonString);	
+
+			//String 
+			String nom = jsonObject.getString("name");	
+			String desc = jsonObject.getString("text");	
+			String urlImage = jsonObject.getString("img");
+			String urlImageDoree = jsonObject.getString("imgGold");	
+
+			//int
+			int mana = jsonObject.getInt("cost");	
+			int degats = jsonObject.getInt("cost");
+			int pointsDeVie = jsonObject.getInt("cost");
+			int durabilite = jsonObject.getInt("durability");
+
+			//Rarete		
+			Rarete rarete = typeRarete(jsonString);
+
+			//Classe
+			Classe classe = typeClasse(jsonString);
+
+			//Race		
+			Race race = typeRace(jsonString);
+			
+			switch(jsonObject.getString("type"))
+			{
+				case "Minion":
+					Serviteur serviteur = new Serviteur(nom, mana, desc, rarete, classe, urlImage, urlImageDoree, degats, pointsDeVie, race);
+					cartes.add(serviteur);
+					break;
+				case "Spell":
+					Sort sort = new Sort(nom, mana, desc, rarete, classe, urlImage, urlImageDoree);	
+					cartes.add(sort);	
+					break;
+				case "Weapon":
+					Arme arme = new Arme(nom, mana, desc, rarete, classe, urlImage, urlImageDoree, degats, durabilite);
+					cartes.add(arme);
+					break;
+				default:
+					System.out.println("");
+			}
+		} catch (Exception e) {
+			System.out.print("");
+		}	
 
 		// élimination des cartes à coup sûr avec une image non existante
 		for (Iterator<Carte> ic = cartes.iterator(); ic.hasNext();) {
@@ -47,6 +96,110 @@ public class FabriqueJson {
 				ic.remove();
 		}
 		return cartes;
+	}
+
+	/** 
+	 * @param jsonString la chaine de caractères
+	 * @return la race du serviteur
+	 */
+	public static Race typeRace(String jsonString) {
+
+		try{
+			JSONObject jsonObject = new JSONObject(jsonString);	
+		
+			switch(jsonObject.getString("race")) {
+
+				case "Beast":
+					return Race.BETE;
+				case "Demon":
+					return Race.DEMON;				
+				case "Dragon":
+					return Race.DRAGON;
+				case "Elemental":
+					return Race.ELEMENTAIRE;
+				case "Mech":
+					return Race.MECA;		
+				case "Murloc":
+					return Race.MURLOC;
+				case "Pirate":
+					return Race.PIRATE;
+				case "Totem":
+					return Race.TOTEM;
+				default:
+					System.out.println("");					
+			}
+		}catch(Exception e) {
+			System.out.print("");
+		}
+		return null;
+	}
+
+	/** 
+	 * @param jsonString la chaine de caractères
+	 * @return le classe de la carte
+	 */
+	public static Classe typeClasse(String jsonString) {
+
+		try{
+			JSONObject jsonObject = new JSONObject(jsonString);	
+		
+			switch(jsonObject.getString("faction")) {
+				case "Neutral":
+					return Classe.NEUTRE;
+				case "Druid":
+					return Classe.DRUIDE;				
+				case "Hunter":
+					return Classe.CHASSEUR;
+				case "Mage":
+					return Classe.MAGE;
+				case "Paladin":
+					return Classe.PALADIN;		
+				case "Priest":
+					return Classe.PRETRE;
+				case "Shaman":
+					return Classe.CHAMAN;
+				case "Warlock":
+					return Classe.DEMONISTE;
+				case "Rogue":
+					return Classe.VOLEUR;
+				case "Warrior":
+					return Classe.GUERRIER;
+				default:
+					System.out.println("");					
+			}
+		}catch(Exception e) {
+			System.out.print("");
+		}
+		return null;
+	}
+
+	/** 
+	 * @param jsonString la chaine de caractères
+	 * @return la rarete de la carte
+	 */
+	public static Rarete typeRarete(String jsonString) {
+
+		try{
+			JSONObject jsonObject = new JSONObject(jsonString);	
+		
+			switch(jsonObject.getString("faction")) {
+				case "Free":
+					return Rarete.BASIQUE;
+				case "Common":
+					return Rarete.COMMUNE;
+				case "Rare":
+					return Rarete.RARE;				
+				case "Epic":
+					return Rarete.EPIQUE;
+				case "Legendary":
+					return Rarete.LEGENDAIRE;				
+				default:
+					System.out.println("");					
+			}
+		}catch(Exception e) {
+			System.out.print("");
+		}
+		return null;
 	}
 
 	/**
@@ -67,6 +220,7 @@ public class FabriqueJson {
 			return deserialiseJson(reponseHttp.getBody());
 		} else {
 			// TODO : lever une exception
+			//throw new UnirestException();
 		}
 		return null;
 	}
