@@ -108,32 +108,31 @@ public class Deck implements ManipulationCartes {
   @Override
   public void ajouter(Carte carte) throws DeckPleinException, CarteNonDisponibleException, CarteMauvaiseClasseException,
       LimiteNombreDeCartesException {
-    if (tailleMax == 30) {
+    if (this.list.size() >= this.tailleMax) {
       throw new DeckPleinException("le deck est plein");
     }
-    if (estPresente(carte) == false) {
+    if (!(this.mesCartes.estPresente(carte))) {
       throw new CarteNonDisponibleException("la carte n'est pas présente dans le paquet de carte");
     }
     if (!(carte.classe() == this.maClasse || carte.classe() == Classe.NEUTRE)) {
       throw new CarteMauvaiseClasseException("la carte ne fait pas partie de la bonne classe");
     }
-    if (carte.rarete() == Rarete.LEGENDAIRE && estPresente(carte)) {
-      throw new LimiteNombreDeCartesException("Une carte légendaire ne peut être rajouté qu'une fois");
-    }
 
+    int count = 0;
     for (Iterator<Carte> i = list.iterator(); i.hasNext();) {
-      int counter = 0;
-      if (i.equals(carte)) {
-        counter++;
-        if (carte.rarete() == Rarete.LEGENDAIRE && estPresente(carte)) {
+
+      Carte tmp = i.next();
+      if (tmp.equals(carte)) {
+        count++;
+        if (carte.rarete() == Rarete.LEGENDAIRE) {
           throw new LimiteNombreDeCartesException("Une carte légendaire ne peut être ajouté qu'une fois");
         }
-        if (counter == 2) {
+        if (count == 2) {
           throw new LimiteNombreDeCartesException("On ne peut pas ajouter une carte plus de deux fois");
         }
       }
     }
-    list.add(carte);
+    this.list.add(carte);
   }
 
   /**
