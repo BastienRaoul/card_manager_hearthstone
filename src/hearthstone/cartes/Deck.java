@@ -24,6 +24,10 @@ import java.util.*;
  */
 
 public class Deck implements ManipulationCartes {
+  private ArrayList<Carte> list;
+  private Cartes mesCartes;
+  private Classe maClasse;
+  private int tailleMax;
 
   /**
    * créer un deck
@@ -36,7 +40,16 @@ public class Deck implements ManipulationCartes {
    */
   public Deck(Cartes mesCartes, Classe maClasse, int tailleMax)
       throws ClasseNeutreException, LimiteNombreDeCartesException {
-    // TODO
+    if (tailleMax > 30) {
+      throw new LimiteNombreDeCartesException("taille trop grande");
+    }
+    if (maClasse == Classe.NEUTRE) {
+      throw new ClasseNeutreException("un deck ne peut pas être NEUTRE");
+    }
+    this.mesCartes = mesCartes;
+    this.maClasse = maClasse;
+    this.tailleMax = tailleMax;
+    this.list = new ArrayList(tailleMax);
   }
 
   /**
@@ -48,7 +61,7 @@ public class Deck implements ManipulationCartes {
    * @throws LimiteNombreDeCartesException si la taille max dépasse 30
    */
   public Deck(Cartes mesCartes, Classe maClasse) throws ClasseNeutreException, LimiteNombreDeCartesException {
-    // TODO
+    this(mesCartes,maClasse,30);
   }
 
   /**
@@ -58,8 +71,7 @@ public class Deck implements ManipulationCartes {
    */
   @Override
   public Collection<Carte> collection() {
-    // TODO
-    return null;
+    return this.list;
   }
 
   /**
@@ -70,8 +82,7 @@ public class Deck implements ManipulationCartes {
    */
   @Override
   public boolean estPresente(Carte carte) {
-    // TODO
-    return false;
+    return this.list.contains(carte);
   }
 
   /**
@@ -91,7 +102,31 @@ public class Deck implements ManipulationCartes {
   @Override
   public void ajouter(Carte carte) throws DeckPleinException, CarteNonDisponibleException, CarteMauvaiseClasseException,
       LimiteNombreDeCartesException {
-    // TODO
+    if (this.list.size() >= this.tailleMax) {
+      throw new DeckPleinException("le deck est plein");
+    }
+    if (!(this.mesCartes.estPresente(carte))) {
+      throw new CarteNonDisponibleException("la carte n'est pas présente dans le paquet de carte");
+    }
+    if (!(carte.classe() == this.maClasse || carte.classe() == Classe.NEUTRE)) {
+      throw new CarteMauvaiseClasseException("la carte ne fait pas partie de la bonne classe");
+    }
+
+    int count = 0;
+    for (Iterator<Carte> i = list.iterator(); i.hasNext();) {
+
+      Carte tmp = i.next();
+      if (tmp.equals(carte)) {
+        count++;
+        if (carte.rarete() == Rarete.LEGENDAIRE) {
+          throw new LimiteNombreDeCartesException("Une carte légendaire ne peut être ajouté qu'une fois");
+        }
+        if (count == 2) {
+          throw new LimiteNombreDeCartesException("On ne peut pas ajouter une carte plus de deux fois");
+        }
+      }
+    }
+    this.list.add(carte);
   }
 
   /**
@@ -102,7 +137,25 @@ public class Deck implements ManipulationCartes {
    */
   @Override
   public void effacer(Carte carte) throws CarteAbsenteException {
-    // TODO
+    if (!estPresente(carte)) {
+      throw new CarteAbsenteException("cette carte n'est pas présente dans le Deck");
+    }
+
+    list.remove(carte);
+  }
+
+  /**
+   * supprime les cartes du deck
+   * 
+   * @param carte la carte à supprimer
+   * @throws CarteAbsenteException si la carte n'est pas dans le deck
+   */
+  public void effacerToutesCartes(Carte carte) throws CarteAbsenteException {
+    if (!estPresente(carte)) {
+      throw new CarteAbsenteException("cette carte n'est pas présente dans le Deck");
+    }
+    while (estPresente(carte))
+      list.remove(carte);
   }
 
   /**
@@ -110,8 +163,7 @@ public class Deck implements ManipulationCartes {
    * @return la taille maximum déterminée pour le deck
    */
   public int tailleMax() {
-    // TODO
-    return 0;
+    return this.tailleMax;
   }
 
   /**
@@ -119,8 +171,7 @@ public class Deck implements ManipulationCartes {
    * @return la taille actuelle du deck
    */
   public int tailleActuelle() {
-    // TODO
-    return 0;
+    return list.size();
   }
 
   /**
@@ -128,15 +179,14 @@ public class Deck implements ManipulationCartes {
    * @return la classe du deck
    */
   public Classe classe() {
-    // TODO
-    return null;
+    return this.maClasse;
   }
 
   /**
    * melange le deck ; l'ordre des cartes dans le deck doit être modifié
    */
   public void melanger() {
-    // TODO
+    Collections.shuffle(list);
   }
 
 }

@@ -1,0 +1,28 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "projetS2-2018-groupeG",
+                "projectName": "projetS2-2018-groupeG",
+                "workingDirectory": "/hometu/etudiants/r/o/E175139T/cours/Project/projetS2-2018-groupeG",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "projetS2-2018-groupeG",
+                "projectName": "projetS2-2018-groupeG",
+                "workingDirectory": "/hometu/etudiants/r/o/E175139T/cours/Project/projetS2-2018-groupeG",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
