@@ -30,6 +30,7 @@ public class Deck implements ManipulationCartes {
   private Cartes mesCartes;
   private Classe maClasse;
   private int tailleMax;
+
   /**
    * créer un deck
    * 
@@ -41,17 +42,17 @@ public class Deck implements ManipulationCartes {
    */
   public Deck(Cartes mesCartes, Classe maClasse, int tailleMax)
       throws ClasseNeutreException, LimiteNombreDeCartesException {
-        if(tailleMax>30){
-          throw new LimiteNombreDeCartesException("taille trop grande");
-        }
-        if(maClasse==Classe.NEUTRE){
-          throw new ClasseNeutreException("un deck ne peut pas être NEUTRE");
-        }
-    this.mesCartes=mesCartes;
-    this.maClasse=maClasse;
-    this.tailleMax=tailleMax;
-    this.list=new ArrayList(tailleMax);
+    if (tailleMax > 30) {
+      throw new LimiteNombreDeCartesException("taille trop grande");
     }
+    if (maClasse == Classe.NEUTRE) {
+      throw new ClasseNeutreException("un deck ne peut pas être NEUTRE");
+    }
+    this.mesCartes = mesCartes;
+    this.maClasse = maClasse;
+    this.tailleMax = tailleMax;
+    this.list = new ArrayList(tailleMax);
+  }
 
   /**
    * créer un deck
@@ -62,13 +63,13 @@ public class Deck implements ManipulationCartes {
    * @throws LimiteNombreDeCartesException si la taille max dépasse 30
    */
   public Deck(Cartes mesCartes, Classe maClasse) throws ClasseNeutreException, LimiteNombreDeCartesException {
-    if(maClasse==Classe.NEUTRE){
+    if (maClasse == Classe.NEUTRE) {
       throw new ClasseNeutreException("un deck ne peut pas être NEUTRE");
     }
-      this.mesCartes=mesCartes;
-      this.maClasse=maClasse;
-      this.tailleMax=30;
-      this.list=new ArrayList(tailleMax);
+    this.mesCartes = mesCartes;
+    this.maClasse = maClasse;
+    this.tailleMax = 30;
+    this.list = new ArrayList(tailleMax);
   }
 
   /**
@@ -109,32 +110,32 @@ public class Deck implements ManipulationCartes {
   @Override
   public void ajouter(Carte carte) throws DeckPleinException, CarteNonDisponibleException, CarteMauvaiseClasseException,
       LimiteNombreDeCartesException {
-        if(tailleMax==30){
-          throw new DeckPleinException("le deck est plein");
-        }
-        if(estPresente(carte)==false){
-          throw new CarteNonDisponibleException("la carte n'est pas présente dans le paquet de carte");
-        }
-        if(!(carte.classe()==this.maClasse || carte.classe()==Classe.NEUTRE)){
-          throw new CarteMauvaiseClasseException("la carte ne fait pas partie de la bonne classe");
-        }
-        if(carte.rarete()==Rarete.LEGENDAIRE && estPresente(carte)){
-          throw new LimiteNombreDeCartesException("Une carte légendaire ne peut être rajouté qu'une fois");
-        }
+    if (tailleMax == 30) {
+      throw new DeckPleinException("le deck est plein");
+    }
+    if (estPresente(carte) == false) {
+      throw new CarteNonDisponibleException("la carte n'est pas présente dans le paquet de carte");
+    }
+    if (!(carte.classe() == this.maClasse || carte.classe() == Classe.NEUTRE)) {
+      throw new CarteMauvaiseClasseException("la carte ne fait pas partie de la bonne classe");
+    }
+    if (carte.rarete() == Rarete.LEGENDAIRE && estPresente(carte)) {
+      throw new LimiteNombreDeCartesException("Une carte légendaire ne peut être rajouté qu'une fois");
+    }
 
-        for(Iterator<Carte> i= list.iterator();i.hasNext();){
-          int counter=0;
-          if(i.equals(carte)){
-            counter++;
-            if(carte.rarete()==Rarete.LEGENDAIRE && estPresente(carte)){
-              throw new LimiteNombreDeCartesException("Une carte légendaire ne peut être ajouté qu'une fois");
-            }
-            if(counter==2){
-              throw new LimiteNombreDeCartesException("On ne peut pas ajouter une carte plus de deux fois");
-            }
-          }
+    for (Iterator<Carte> i = list.iterator(); i.hasNext();) {
+      int counter = 0;
+      if (i.equals(carte)) {
+        counter++;
+        if (carte.rarete() == Rarete.LEGENDAIRE && estPresente(carte)) {
+          throw new LimiteNombreDeCartesException("Une carte légendaire ne peut être ajouté qu'une fois");
         }
-        list.add(carte);
+        if (counter == 2) {
+          throw new LimiteNombreDeCartesException("On ne peut pas ajouter une carte plus de deux fois");
+        }
+      }
+    }
+    list.add(carte);
   }
 
   /**
@@ -145,9 +146,10 @@ public class Deck implements ManipulationCartes {
    */
   @Override
   public void effacer(Carte carte) throws CarteAbsenteException {
-    if(!estPresente(carte)){
+    if (!estPresente(carte)) {
       throw new CarteAbsenteException("cette carte n'est pas présente dans le Deck");
     }
+
     list.remove(carte);
   }
 
