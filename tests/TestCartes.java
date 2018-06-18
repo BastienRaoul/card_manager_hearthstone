@@ -1,9 +1,9 @@
 
 import hearthstone.carte.*;
-import hearthstone.cartes.Cartes;
-import hearthstone.cartes.FabriqueJson;
+import hearthstone.cartes.*;
 import hearthstone.exception.CarteAbsenteException;
 import hearthstone.exception.CarteDejaPresenteException;
+import hearthstone.exception.DeckSuppressionException;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +12,7 @@ import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.util.HashSet;
+import java.util.*;
 
 public class TestCartes {
 
@@ -33,7 +33,7 @@ public class TestCartes {
         HashSet<Carte> dummy = new HashSet<>();
         dummy.add(arme);
         dummy.add(arme2);
-        assertEquals("Test constructeur 1", dummy, tasDeCarte.collection());
+        assertEquals("Test constructeur 2", dummy, tasDeCarte.collection());
     }
 
     @Test
@@ -43,7 +43,7 @@ public class TestCartes {
         Carte arme2 = new Arme("Marteau Thor2", 11, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(arme2);
-        assertEquals("Test constructeur 2", 2, tasDeCarte.collection().size());
+        assertEquals("Test constructeur 3", 2, tasDeCarte.collection().size());
     }
 
     @Test(expected = CarteDejaPresenteException.class)
@@ -82,9 +82,9 @@ public class TestCartes {
     public void testCartes6() throws Exception {
         Cartes tasDeCarte = new Cartes();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
-        assertEquals("Test ajouter 1", false, tasDeCarte.estPresente(arme));
+        assertEquals("Test est presente 1", false, tasDeCarte.estPresente(arme));
         tasDeCarte.ajouter(arme);
-        assertEquals("Test ajouter 2", true, tasDeCarte.estPresente(arme));
+        assertEquals("Test est presente 2", true, tasDeCarte.estPresente(arme));
     }
 
     @Test(expected = CarteAbsenteException.class)
@@ -93,7 +93,71 @@ public class TestCartes {
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         tasDeCarte.ajouter(arme);
         tasDeCarte.effacer(arme);
-        assertEquals("Test ajouter 2", 0, tasDeCarte.collection().size());
+        assertEquals("Test effacer 2", 0, tasDeCarte.collection().size());
         tasDeCarte.effacer(arme);
+    }
+
+    @Test
+    public void testCartes8() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.CHASSEUR, 100, 100);
+        tasDeCarte.ajouter(arme);
+
+        tasDeCarte.ajouterDeck(Classe.CHASSEUR);
+        tasDeCarte.collectionDeDeck().get(0).ajouter(arme);
+
+        assertEquals("Test estPresentDeck 2", true, tasDeCarte.estPresentDeck(tasDeCarte.collectionDeDeck().get(0)));
+    }
+
+    @Test
+    public void testCartes9() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.CHASSEUR, 100, 100);
+        tasDeCarte.ajouter(arme);
+
+        tasDeCarte.ajouterDeck(Classe.CHASSEUR);
+        tasDeCarte.ajouterDeck(Classe.CHAMAN);
+        tasDeCarte.ajouterDeck(Classe.DEMONISTE);
+        tasDeCarte.ajouterDeck(Classe.CHASSEUR);
+
+        assertEquals("Test estPresentDeck 1", 4, tasDeCarte.collectionDeDeck().size());
+    }
+
+    @Test
+    public void testCartes10() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.CHASSEUR, 100, 100);
+        tasDeCarte.ajouter(arme);
+
+        tasDeCarte.ajouterDeck(Classe.CHASSEUR);
+        tasDeCarte.ajouterDeck(Classe.CHAMAN);
+
+        assertEquals("Test effacerDeck 1", 2, tasDeCarte.collectionDeDeck().size());
+
+        tasDeCarte.effacerDeck(tasDeCarte.collectionDeDeck().get(0));
+
+        assertEquals("Test effacerDeck 2", 1, tasDeCarte.collectionDeDeck().size());
+    }
+
+    @Test(expected = DeckSuppressionException.class)
+    public void testCartes11() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.CHASSEUR, 100, 100);
+        tasDeCarte.ajouter(arme);
+        tasDeCarte.effacerDeck(new Deck(tasDeCarte, Classe.CHASSEUR, 30));
+    }
+
+    @Test
+    public void testCartes12() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.CHASSEUR, 100, 100);
+        tasDeCarte.ajouter(arme);
+
+        tasDeCarte.ajouterDeck(Classe.CHASSEUR);
+        tasDeCarte.collectionDeDeck().get(0).ajouter(arme);
+
+        assertEquals("Test effacceCarteDesDecks 1", 1, tasDeCarte.collectionDeDeck().get(0).collection().size());
+        tasDeCarte.effacerCarteDesDecks(arme);
+        assertEquals("Test effacceCarteDesDecks 2", 0, tasDeCarte.collectionDeDeck().get(0).collection().size());
     }
 }
