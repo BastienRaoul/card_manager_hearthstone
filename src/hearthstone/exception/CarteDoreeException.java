@@ -1,7 +1,9 @@
 package hearthstone.exception;
 
 /**
- * Exception levée quand on rencontre une carte dorée mais que ce n'est pas possible
+ * Exception levée quand on rencontre une carte dorée mais que ce n'est pas
+ * possible
+ * 
  * @author lanoix-a remm-jf
  * @version 1.0
  */

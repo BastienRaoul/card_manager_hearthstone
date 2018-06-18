@@ -26,11 +26,10 @@ import java.util.List;
 public class FabriqueJson {
 
 	/**
-	 * transforme une chaine de caractères contenant du JSON en une collection
-	 * de cartes
+	 * transforme une chaine de caractères contenant du JSON en une collection de
+	 * cartes
 	 * 
-	 * @param jsonString
-	 *            la chaine de caractères
+	 * @param jsonString la chaine de caractères
 	 * @return la collection de cartes résulat
 	 */
 	public static Collection<Carte> deserialiseJson(String jsonString) {
@@ -51,14 +50,12 @@ public class FabriqueJson {
 	}
 
 	/**
-	 * execute une requete vers un webservice et récupère une collection de
-	 * cartes répondant au critère de recherche
+	 * execute une requete vers un webservice et récupère une collection de cartes
+	 * répondant au critère de recherche
 	 * 
-	 * @param recherche
-	 *            le critère de recherche
+	 * @param recherche le critère de recherche
 	 * @return la collection de cartes résulat
-	 * @throws UnirestException
-	 *             si la requete n'a pas pu s'executer correctement
+	 * @throws UnirestException si la requete n'a pas pu s'executer correctement
 	 */
 	public static Collection<Carte> donneCartesDepuisInternet(String recherche) throws UnirestException {
 		// requête synchrone pour obtenir une carte par son nom
@@ -75,14 +72,11 @@ public class FabriqueJson {
 	}
 
 	/**
-	 * lit un fichier JSON et creé une collection de cartes avec les données
-	 * lues
+	 * lit un fichier JSON et creé une collection de cartes avec les données lues
 	 * 
-	 * @param fichier
-	 *            le fichier à lire
+	 * @param fichier le fichier à lire
 	 * @return la collection de cartes résulat
-	 * @throws IOException
-	 *             en cas de problème de lecture du fichier
+	 * @throws IOException en cas de problème de lecture du fichier
 	 */
 	public static Collection<Carte> lireCartesDepuisFichier(String fichier) throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(fichier));
@@ -96,11 +90,10 @@ public class FabriqueJson {
 	}
 
 	/**
-	 * créé, à partir d'une collection de cartes, une chaine de caractère
-	 * contenant du JSON
+	 * créé, à partir d'une collection de cartes, une chaine de caractère contenant
+	 * du JSON
 	 * 
-	 * @param cartes
-	 *            la collection de cartes à sérialiser
+	 * @param cartes la collection de cartes à sérialiser
 	 * @return la chaine de caractères JSON
 	 */
 	public static String serialiseJon(Collection<Carte> cartes) {
@@ -113,12 +106,9 @@ public class FabriqueJson {
 	/**
 	 * écrit une collection de cartes dans un fichier au format JSON
 	 * 
-	 * @param cartes
-	 *            la collection de cartes à sauvegarder
-	 * @param fichier
-	 *            le fichier dans lequel effectuer la sauvegarde
-	 * @throws IOException
-	 *             en cas de problème d'écriture dans le fichier
+	 * @param cartes  la collection de cartes à sauvegarder
+	 * @param fichier le fichier dans lequel effectuer la sauvegarde
+	 * @throws IOException en cas de problème d'écriture dans le fichier
 	 */
 	public static void ecrireCartesDansFichier(Collection<Carte> cartes, String fichier) throws IOException {
 		BufferedWriter bw = new BufferedWriter(new FileWriter(fichier));

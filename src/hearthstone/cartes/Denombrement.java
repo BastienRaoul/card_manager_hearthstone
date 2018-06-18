@@ -4,6 +4,7 @@ import hearthstone.carte.Carte;
 
 /**
  * "couple" permettant d'associer à une carte son nombre d'exemplaires
+ * 
  * @author lanoix-a remm-jf
  * @version 1.0
  */
@@ -14,7 +15,8 @@ public class Denombrement {
 
     /**
      * creer un "couple" (carte,nombre)
-     * @param carte la carte à utiliser
+     * 
+     * @param carte  la carte à utiliser
      * @param nombre le nombre d'exemplaires
      */
     public Denombrement(Carte carte, int nombre) {
@@ -24,6 +26,7 @@ public class Denombrement {
 
     /**
      * creer un "couple" (carte,1)
+     * 
      * @param carte la carte à utiliser
      */
     public Denombrement(Carte carte) {
@@ -53,23 +56,22 @@ public class Denombrement {
         nombre++;
     }
 
-
     @Override
     public String toString() {
-        return "(" +
-                "carte=" + carte +
-                ", nombre=" + nombre +
-                ')';
+        return "(" + "carte=" + carte + ", nombre=" + nombre + ')';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
 
         Denombrement that = (Denombrement) o;
 
-        if (nombre != that.nombre) return false;
+        if (nombre != that.nombre)
+            return false;
         return carte.equals(that.carte);
     }
 

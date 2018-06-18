@@ -18,22 +18,14 @@ public abstract class CarteD extends Carte {
 	/**
 	 * Construit une carte abstraite
 	 * 
-	 * @param nom
-	 *            nom de la carte
-	 * @param mana
-	 *            valeur manna de la carte
-	 * @param desc
-	 *            description de la carte
-	 * @param rarete
-	 *            rareté de la carte
-	 * @param classe
-	 *            classe de la carte
-	 * @param urlImage
-	 *            url vers une image de la carte
-	 * @param urlImageDoree
-	 *            url vers une version doree de l'image de la carte
-	 * @param degats
-	 *            valeur de degats de la carte
+	 * @param nom           nom de la carte
+	 * @param mana          valeur manna de la carte
+	 * @param desc          description de la carte
+	 * @param rarete        rareté de la carte
+	 * @param classe        classe de la carte
+	 * @param urlImage      url vers une image de la carte
+	 * @param urlImageDoree url vers une version doree de l'image de la carte
+	 * @param degats        valeur de degats de la carte
 	 *
 	 */
 	CarteD(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree,
