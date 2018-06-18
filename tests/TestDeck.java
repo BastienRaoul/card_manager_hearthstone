@@ -15,22 +15,14 @@ import java.util.ArrayList;
 public class TestDeck {
 
     @Test(expected = LimiteNombreDeCartesException.class)
-<<<<<<< HEAD
-    public void testDeck1() throws Exception {
-=======
 
     public void ErrTaille() throws Exception {
->>>>>>> f583c927c630390acb37c4789af2bd1781f32ab7
         Deck d = new Deck(new Cartes(), Classe.MAGE, 31);
     }
 
     @Test(expected = ClasseNeutreException.class)
-<<<<<<< HEAD
-    public void testDeck2() throws Exception {
-=======
 
     public void ErrClasse() throws Exception {
->>>>>>> f583c927c630390acb37c4789af2bd1781f32ab7
         Deck d = new Deck(new Cartes(), Classe.NEUTRE, 30);
     }
 
@@ -173,7 +165,7 @@ public class TestDeck {
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
         t.ajouter(arme0);
         d.ajouter(arme0);
-        ArrayList ar = new ArrayList();
+        ArrayList<Carte> ar = new ArrayList<>();
         ar.add(arme0);
         assertEquals("testDeck 16 ", ar, d.collection());
     }
