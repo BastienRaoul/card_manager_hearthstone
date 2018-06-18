@@ -160,4 +160,19 @@ public class TestCartes {
         tasDeCarte.effacerCarteDesDecks(arme);
         assertEquals("Test effacceCarteDesDecks 2", 0, tasDeCarte.collectionDeDeck().get(0).collection().size());
     }
+
+    @Test
+    public void testCartes13() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.CHASSEUR, 100, 100);
+        tasDeCarte.ajouter(arme);
+
+        List<Deck> lesDecks = new ArrayList<>();
+        lesDecks.add(new Deck(tasDeCarte, Classe.CHASSEUR, 30));
+
+        tasDeCarte.ajouterDeck(Classe.CHASSEUR);
+
+        assertEquals("Test collectionDeDeck 2", lesDecks, tasDeCarte.collectionDeDeck());
+    }
+
 }
