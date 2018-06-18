@@ -40,8 +40,9 @@ public class TestDeck {
        
     @Test(expected = DeckPleinException.class)
     public void testDeck4() throws Exception {
-    Deck d = new Deck(new Cartes(),Classe.GUERRIER,4);
     Cartes t = new Cartes();
+    Deck d = new Deck(t,Classe.GUERRIER,4);
+   
     Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
     Carte arme1 = new Arme("arteau Thor", 1, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
     Carte arme2 = new Arme("Mrteau Thor", 2, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
@@ -69,10 +70,50 @@ public class TestDeck {
 
     @Test(expected = CarteMauvaiseClasseException.class)
     public void testDeck6() throws Exception {
-    Deck d = new Deck(new Cartes(),Classe.GUERRIER);
-    Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+    Cartes t = new Cartes();
+    Deck d = new Deck(t,Classe.GUERRIER);
+    Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.LEGENDAIRE, Classe.DEMONISTE, 100, 100);
+    t.ajouter(arme0);
     d.ajouter(arme0);
     }
+
+
+    @Test(expected = LimiteNombreDeCartesException.class)
+    public void testDeck7() throws Exception {
+    Cartes t = new Cartes();
+    Deck d = new Deck(t,Classe.GUERRIER);
+    Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+    t.ajouter(arme0);
+    d.ajouter(arme0);
+    d.ajouter(arme0);
+    }
+
+    @Test(expected = LimiteNombreDeCartesException.class)
+    public void testDeck8() throws Exception {
+    Cartes t = new Cartes();
+    Deck d = new Deck(t,Classe.MAGE);
+    Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
+    t.ajouter(arme0);
+    d.ajouter(arme0);
+    d.ajouter(arme0);
+    d.ajouter(arme0);
+    }
+
+
+    @Test(expected = CarteAbsenteException.class)
+    public void testDeck9() throws Exception {
+    Cartes t = new Cartes();
+    Deck d = new Deck(t,Classe.MAGE);
+    Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
+    t.ajouter(arme0);
+    d.effacer(arme0);
+
+    }
+
+
+
+
+    
 
 
 }

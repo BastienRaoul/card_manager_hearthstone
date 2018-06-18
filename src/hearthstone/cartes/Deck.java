@@ -118,10 +118,10 @@ public class Deck implements ManipulationCartes {
         if(!(carte.classe()==this.maClasse || carte.classe()==Classe.NEUTRE)){
           throw new CarteMauvaiseClasseException("la carte ne fait pas partie de la bonne classe");
         }
-
         
+        int count=0;
         for(Iterator<Carte> i= list.iterator();i.hasNext();){
-          int count=0;
+          
           Carte tmp = i.next();
           if(tmp.equals(carte)){
             count++;
