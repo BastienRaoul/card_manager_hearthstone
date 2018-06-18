@@ -1,6 +1,7 @@
 
 import hearthstone.carte.*;
 import hearthstone.cartes.Cartes;
+import hearthstone.cartes.Denombrement;
 import hearthstone.cartes.FabriqueJson;
 import hearthstone.cartes.Filtre;
 import hearthstone.exception.CarteAbsenteException;
@@ -187,15 +188,22 @@ public class TestFiltre {
         assertEquals("Test filtre possible de creer 1", true, Filtre.possibleDeCreer(tasDeCarte.collection(), 1640));
     }
 
-    @Test
-    public void testFiltre15() throws Exception {
-        Cartes tasDeCarte = new Cartes();
+    @Test 
+    public void testFiltre15() throws Exception 
+    {
+        ArrayList<Carte> tasDeCartes = new ArrayList<Carte>();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         Carte sort = new Sort("monsort", 5, "descri", Rarete.COMMUNE, Classe.NEUTRE);
+        Carte arme2 = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
 
-        tasDeCarte.ajouter(arme);
-        tasDeCarte.ajouter(sort);
+        tasDeCartes.add(arme);
+        tasDeCartes.add(sort);
+        tasDeCartes.add(arme2);
 
-        assertEquals("Test filtre possible de creer 1", true, Filtre.possibleDeCreer(tasDeCarte.collection(), 1640));
+        ArrayList<Denombrement> resultat = new ArrayList<Denombrement>();
+        resultat.add(new Denombrement(arme, 2));
+        resultat.add(new Denombrement(sort));
+
+        assertEquals("Test cartes denombrees", resultat, tasDeCartes);
     }
 }

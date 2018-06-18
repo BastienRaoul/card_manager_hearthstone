@@ -1,18 +1,9 @@
 
 import hearthstone.carte.*;
-import hearthstone.cartes.Cartes;
-import hearthstone.cartes.Deck;
-import hearthstone.cartes.FabriqueJson;
-import hearthstone.exception.CarteAbsenteException;
-import hearthstone.exception.CarteDejaPresenteException;
-import hearthstone.exception.CarteMauvaiseClasseException;
-import hearthstone.exception.CarteNonDisponibleException;
-import hearthstone.exception.ClasseNeutreException;
-import hearthstone.exception.DeckPleinException;
-import hearthstone.exception.LimiteNombreDeCartesException;
+import hearthstone.cartes.*;
+import hearthstone.exception.*;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertEquals;
@@ -24,11 +15,13 @@ import java.util.ArrayList;
 public class TestDeck {
 
     @Test(expected = LimiteNombreDeCartesException.class)
+
     public void ErrTaille() throws Exception {
         Deck d = new Deck(new Cartes(), Classe.MAGE, 31);
     }
 
     @Test(expected = ClasseNeutreException.class)
+
     public void ErrClasse() throws Exception {
         Deck d = new Deck(new Cartes(), Classe.NEUTRE, 30);
     }
@@ -172,7 +165,7 @@ public class TestDeck {
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
         t.ajouter(arme0);
         d.ajouter(arme0);
-        ArrayList ar = new ArrayList();
+        ArrayList<Carte> ar = new ArrayList<>();
         ar.add(arme0);
         assertEquals("testDeck 16 ", ar, d.collection());
     }
