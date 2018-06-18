@@ -7,8 +7,6 @@ import hearthstone.exception.*;
 
 import java.util.*;
 
-import org.w3c.dom.css.Counter;
-
 /**
  *
  * Classe représentant un deck, c'est à dire, une sélection de cartes parmi les
@@ -151,6 +149,20 @@ public class Deck implements ManipulationCartes {
     }
 
     list.remove(carte);
+  }
+
+  /**
+   * supprime les cartes du deck
+   * 
+   * @param carte la carte à supprimer
+   * @throws CarteAbsenteException si la carte n'est pas dans le deck
+   */
+  public void effacerToutesCartes(Carte carte) throws CarteAbsenteException {
+    if (!estPresente(carte)) {
+      throw new CarteAbsenteException("cette carte n'est pas présente dans le Deck");
+    }
+    while (estPresente(carte))
+      list.remove(carte);
   }
 
   /**

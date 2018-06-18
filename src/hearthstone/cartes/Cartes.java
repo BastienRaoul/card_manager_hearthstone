@@ -1,10 +1,7 @@
 package hearthstone.cartes;
 
-import hearthstone.carte.Carte;
-import hearthstone.exception.CarteAbsenteException;
-import hearthstone.exception.CarteDejaPresenteException;
-import hearthstone.exception.DeckCreationException;
-import hearthstone.exception.DeckSuppressionException;
+import hearthstone.carte.*;
+import hearthstone.exception.*;
 
 import java.util.*;
 
@@ -18,7 +15,7 @@ import java.util.*;
 
 public class Cartes implements ManipulationCartes {
 
-    private Collection<Carte> collectionDeCarte = null;
+    private HashSet<Carte> collectionDeCarte = null;
 
     private List<Deck> maListeDeDeck = null;
 
@@ -101,7 +98,7 @@ public class Cartes implements ManipulationCartes {
      */
     @Override
     public void effacer(Carte carte) throws CarteAbsenteException {
-        if (estPresente(carte))
+        if (!estPresente(carte))
             throw new CarteAbsenteException("This card does not exist in this set !");
         collectionDeCarte.remove(carte);
     }
@@ -119,28 +116,37 @@ public class Cartes implements ManipulationCartes {
     /**
      * tente d'ajouter le deck à la liste de deck
      * 
-     * @param deck le deck à ajouter
+     * @param maClasse la classe du deck à ajouter
      * @throws DeckCreationException si le deck est déjà présent
      */
-    public void ajouterDeck(Deck monNouveauDeck) throws DeckCreationException {
-        if (estPresentDeck(monNouveauDeck))
-            throw new DeckCreationException("This deck is already in the decklist !");
-
-        for (Carte carte : monNouveauDeck.collection())
-            if (!estPresente(carte))
-                throw new DeckCreationException("On of the deck's card does not exist in the current set !");
-        maListeDeDeck.add(monNouveauDeck);
+    public void ajouterDeck(Classe maClasse) throws DeckCreationException {
+        Deck nouveauDeck = null;
+        try {
+            nouveauDeck = new Deck(this, maClasse, 30);
+        } catch (Exception e) {
+            throw new DeckCreationException(e.getMessage());
+        } finally {
+            if (estPresentDeck(nouveauDeck))
+                throw new DeckCreationException("This deck is already in the decklist !");
+            /*
+             * for (Carte carte : nouveauDeck.collection()) if (!estPresente(carte)) throw
+             * new
+             * DeckCreationException("On of the deck's card does not exist in the current set !"
+             * );
+             */
+        }
+        maListeDeDeck.add(nouveauDeck);
     }
 
     /**
      * supprime le deck de la liste de deck
      * 
-     * @param carte la carte à supprimer
+     * @param deck le deck à supprimer
      * @throws DeckSuppressionException si le deck n'est pas dans la liste de deck
      */
     public void effacerDeck(Deck deck) throws DeckSuppressionException {
-        if (estPresentDeck(deck))
-            throw new DeckSuppressionException("This card does not exist in this set !");
+        if (!estPresentDeck(deck))
+            throw new DeckSuppressionException("This deck does not exist in this list !");
         maListeDeDeck.remove(deck);
     }
 
@@ -154,11 +160,19 @@ public class Cartes implements ManipulationCartes {
             // l'utilisation de estPresente est une possibilitée mais rend le code plus lent
             // !
             try {
-                while (deck.estPresente(carte))
-                    deck.effacer(carte);
+                deck.effacerToutesCartes(carte);
             } catch (CarteAbsenteException e) {
             }
         }
+    }
+
+    /**
+     *
+     * @return les deck sous la forme d'une collection de deck au sens Collection de
+     *         Deck
+     */
+    public Collection<Deck> collectionDeDeck() {
+        return maListeDeDeck;
     }
 
 }
