@@ -8,6 +8,6 @@ package hearthstone;
 public class Hearthstone {
 
     public static void main(String[] args) {
-        System.out.println("TODO4");
+        System.out.println("TODO5");
     }
 }
