@@ -1,0 +1,22 @@
+{
+    "run": [
+        {
+            "name": "projetS2-2018-groupeG",
+            "projectName": "projetS2-2018-groupeG",
+            "workingDirectory": "/hometu/etudiants/m/a/E174566W/Bureau/Projet/projetS2-2018-groupeG",
+            "args": [],
+            "vmargs": [],
+            "preLaunchTask": ""
+        }
+    ],
+    "debug": [
+        {
+            "name": "projetS2-2018-groupeG",
+            "projectName": "projetS2-2018-groupeG",
+            "workingDirectory": "/hometu/etudiants/m/a/E174566W/Bureau/Projet/projetS2-2018-groupeG",
+            "args": [],
+            "vmargs": [],
+            "preLaunchTask": ""
+        }
+    ]
+}

@@ -2,6 +2,9 @@
 import hearthstone.carte.*;
 import hearthstone.cartes.Cartes;
 import hearthstone.cartes.FabriqueJson;
+import hearthstone.exception.CarteAbsenteException;
+import hearthstone.exception.CarteDejaPresenteException;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,49 +24,61 @@ public class TestCartes {
     public void testCartes2() throws Exception {
         Cartes tasDeCarte = new Cartes();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte arme2 = new Arme("Marteau Thor2", 11, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         tasDeCarte.ajouter(arme);
-        tasDeCarte.ajouter(arme);
+        tasDeCarte.ajouter(arme2);
         assertEquals("Test constructeur 2", 2, tasDeCarte.collection().size());
     }
 
-    @Test
+    @Test(expected = CarteDejaPresenteException.class)
     public void testCartes3() throws Exception {
         Cartes tasDeCarte = new Cartes();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte arme2 = new Arme("Marteau Thor2", 11, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(arme);
-        tasDeCarte.ajouter(arme);
+        tasDeCarte.ajouter(arme2);
         assertEquals("Test constructeur 3", 2, tasDeCarte.collection().size());
-
     }
 
     @Test
     public void testCartes4() throws Exception {
-        Cartes cartes = new Cartes(FabriqueJson.lireCartesDepuisFichier("json/initial.json"));
-        assertEquals(3, cartes.collection().size());
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte arme2 = new Arme("Marteau Thor2", 11, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        try {
+            tasDeCarte.ajouter(arme2);
+            tasDeCarte.ajouter(arme);
+            tasDeCarte.ajouter(arme);
+        } catch (Exception e) {
+        }
+        assertEquals("Test constructeur 4", 2, tasDeCarte.collection().size());
     }
 
-    @Test
+    @Test(expected = CarteDejaPresenteException.class)
     public void testCartes5() throws Exception {
-        Cartes cartes = new Cartes(FabriqueJson.lireCartesDepuisFichier("json/initial.json"));
-        assertEquals(3, cartes.collection().size());
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        tasDeCarte.ajouter(arme);
+        tasDeCarte.ajouter(arme);
     }
 
     @Test
     public void testCartes6() throws Exception {
-        Cartes cartes = new Cartes(FabriqueJson.lireCartesDepuisFichier("json/initial.json"));
-        assertEquals(3, cartes.collection().size());
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        assertEquals("Test ajouter 1", false, tasDeCarte.estPresente(arme));
+        tasDeCarte.ajouter(arme);
+        assertEquals("Test ajouter 2", true, tasDeCarte.estPresente(arme));
     }
 
-    @Test
+    @Test(expected = CarteAbsenteException.class)
     public void testCartes7() throws Exception {
-        Cartes cartes = new Cartes(FabriqueJson.lireCartesDepuisFichier("json/initial.json"));
-        assertEquals(3, cartes.collection().size());
-    }
-
-    @Test
-    public void testCartes8() throws Exception {
-        Cartes cartes = new Cartes(FabriqueJson.lireCartesDepuisFichier("json/initial.json"));
-        assertEquals(3, cartes.collection().size());
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        tasDeCarte.ajouter(arme);
+        tasDeCarte.effacer(arme);
+        assertEquals("Test ajouter 2", 0, tasDeCarte.collection().size());
+        tasDeCarte.effacer(arme);
     }
 }
