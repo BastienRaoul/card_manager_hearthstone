@@ -15,32 +15,24 @@ import java.util.ArrayList;
 public class TestDeck {
 
     @Test(expected = LimiteNombreDeCartesException.class)
-<<<<<<< HEAD
-    public void testDeck1() throws Exception {
-=======
 
     public void ErrTaille() throws Exception {
->>>>>>> f583c927c630390acb37c4789af2bd1781f32ab7
         Deck d = new Deck(new Cartes(), Classe.MAGE, 31);
     }
 
     @Test(expected = ClasseNeutreException.class)
-<<<<<<< HEAD
-    public void testDeck2() throws Exception {
-=======
 
     public void ErrClasse() throws Exception {
->>>>>>> f583c927c630390acb37c4789af2bd1781f32ab7
         Deck d = new Deck(new Cartes(), Classe.NEUTRE, 30);
     }
 
     @Test(expected = ClasseNeutreException.class)
-    public void testDeck3() throws Exception {
+    public void ErrClasse2() throws Exception {
         Deck d = new Deck(new Cartes(), Classe.NEUTRE);
     }
 
     @Test(expected = DeckPleinException.class)
-    public void testDeck4() throws Exception {
+    public void ErrTailleaj() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.GUERRIER, 4);
 
@@ -63,14 +55,14 @@ public class TestDeck {
     }
 
     @Test(expected = CarteNonDisponibleException.class)
-    public void testDeck5() throws Exception {
+    public void ErrCartesaj() throws Exception {
         Deck d = new Deck(new Cartes(), Classe.GUERRIER);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         d.ajouter(arme0);
     }
 
     @Test(expected = CarteMauvaiseClasseException.class)
-    public void testDeck6() throws Exception {
+    public void ErrClasseaj() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.GUERRIER);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.LEGENDAIRE, Classe.DEMONISTE, 100, 100);
@@ -79,7 +71,7 @@ public class TestDeck {
     }
 
     @Test(expected = LimiteNombreDeCartesException.class)
-    public void testDeck7() throws Exception {
+    public void Errrareteaj() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.GUERRIER);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
@@ -89,7 +81,7 @@ public class TestDeck {
     }
 
     @Test(expected = LimiteNombreDeCartesException.class)
-    public void testDeck8() throws Exception {
+    public void Errrareteaj2() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
@@ -100,7 +92,7 @@ public class TestDeck {
     }
 
     @Test(expected = CarteAbsenteException.class)
-    public void testDeck9() throws Exception {
+    public void Erreffacer() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
@@ -110,14 +102,14 @@ public class TestDeck {
     }
 
     @Test
-    public void testDeck10() throws Exception {
+    public void EssTailleMax() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE, 30);
         assertEquals("testDeck 10 ", 30, d.tailleMax());
     }
 
     @Test
-    public void testDeck11() throws Exception {
+    public void EssTailleActuelle() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
@@ -127,7 +119,7 @@ public class TestDeck {
     }
 
     @Test
-    public void testDeck12() throws Exception {
+    public void EssClasse() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE);
         assertEquals("testDeck 12 ", Classe.MAGE, d.classe());
@@ -135,7 +127,7 @@ public class TestDeck {
     }
 
     @Test
-    public void testDeck13() throws Exception {
+    public void EssAjouter() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
@@ -145,7 +137,7 @@ public class TestDeck {
     }
 
     @Test
-    public void testDeck14() throws Exception {
+    public void EssEffacer() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
@@ -157,7 +149,7 @@ public class TestDeck {
     }
 
     @Test
-    public void testDeck15() throws Exception {
+    public void EssestPresent() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
@@ -167,13 +159,13 @@ public class TestDeck {
     }
 
     @Test
-    public void testDeck16() throws Exception {
+    public void EssCollection() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
         t.ajouter(arme0);
         d.ajouter(arme0);
-        ArrayList ar = new ArrayList();
+        ArrayList<Carte> ar = new ArrayList<>();
         ar.add(arme0);
         assertEquals("testDeck 16 ", ar, d.collection());
     }

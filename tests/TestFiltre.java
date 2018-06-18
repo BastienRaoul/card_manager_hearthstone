@@ -188,9 +188,8 @@ public class TestFiltre {
         assertEquals("Test filtre possible de creer 1", true, Filtre.possibleDeCreer(tasDeCarte.collection(), 1640));
     }
 
-    @Test 
-    public void testFiltre15() throws Exception 
-    {
+    @Test
+    public void testFiltre15() throws Exception {
         ArrayList<Carte> tasDeCartes = new ArrayList<Carte>();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         Carte sort = new Sort("monsort", 5, "descri", Rarete.COMMUNE, Classe.NEUTRE);
