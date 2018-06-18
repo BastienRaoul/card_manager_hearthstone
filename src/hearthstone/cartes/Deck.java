@@ -7,8 +7,6 @@ import hearthstone.exception.*;
 
 import java.util.*;
 
-import org.w3c.dom.css.Counter;
-
 /**
  *
  * Classe représentant un deck, c'est à dire, une sélection de cartes parmi les
@@ -30,6 +28,7 @@ public class Deck implements ManipulationCartes {
   private Cartes mesCartes;
   private Classe maClasse;
   private int tailleMax;
+
   /**
    * créer un deck
    * 
@@ -41,17 +40,17 @@ public class Deck implements ManipulationCartes {
    */
   public Deck(Cartes mesCartes, Classe maClasse, int tailleMax)
       throws ClasseNeutreException, LimiteNombreDeCartesException {
-        if(tailleMax>30){
-          throw new LimiteNombreDeCartesException("taille trop grande");
-        }
-        if(maClasse==Classe.NEUTRE){
-          throw new ClasseNeutreException("un deck ne peut pas être NEUTRE");
-        }
-    this.mesCartes=mesCartes;
-    this.maClasse=maClasse;
-    this.tailleMax=tailleMax;
-    this.list=new ArrayList(tailleMax);
+    if (tailleMax > 30) {
+      throw new LimiteNombreDeCartesException("taille trop grande");
     }
+    if (maClasse == Classe.NEUTRE) {
+      throw new ClasseNeutreException("un deck ne peut pas être NEUTRE");
+    }
+    this.mesCartes = mesCartes;
+    this.maClasse = maClasse;
+    this.tailleMax = tailleMax;
+    this.list = new ArrayList(tailleMax);
+  }
 
   /**
    * créer un deck
@@ -103,31 +102,31 @@ public class Deck implements ManipulationCartes {
   @Override
   public void ajouter(Carte carte) throws DeckPleinException, CarteNonDisponibleException, CarteMauvaiseClasseException,
       LimiteNombreDeCartesException {
-        if(this.list.size()>=this.tailleMax){
-          throw new DeckPleinException("le deck est plein");
+    if (this.list.size() >= this.tailleMax) {
+      throw new DeckPleinException("le deck est plein");
+    }
+    if (!(this.mesCartes.estPresente(carte))) {
+      throw new CarteNonDisponibleException("la carte n'est pas présente dans le paquet de carte");
+    }
+    if (!(carte.classe() == this.maClasse || carte.classe() == Classe.NEUTRE)) {
+      throw new CarteMauvaiseClasseException("la carte ne fait pas partie de la bonne classe");
+    }
+
+    int count = 0;
+    for (Iterator<Carte> i = list.iterator(); i.hasNext();) {
+
+      Carte tmp = i.next();
+      if (tmp.equals(carte)) {
+        count++;
+        if (carte.rarete() == Rarete.LEGENDAIRE) {
+          throw new LimiteNombreDeCartesException("Une carte légendaire ne peut être ajouté qu'une fois");
         }
-        if(!(this.mesCartes.estPresente(carte))){
-          throw new CarteNonDisponibleException("la carte n'est pas présente dans le paquet de carte");
+        if (count == 2) {
+          throw new LimiteNombreDeCartesException("On ne peut pas ajouter une carte plus de deux fois");
         }
-        if(!(carte.classe()==this.maClasse || carte.classe()==Classe.NEUTRE)){
-          throw new CarteMauvaiseClasseException("la carte ne fait pas partie de la bonne classe");
-        }
-        
-        int count=0;
-        for(Iterator<Carte> i= list.iterator();i.hasNext();){
-          
-          Carte tmp = i.next();
-          if(tmp.equals(carte)){
-            count++;
-            if(carte.rarete()==Rarete.LEGENDAIRE){
-              throw new LimiteNombreDeCartesException("Une carte légendaire ne peut être ajouté qu'une fois");
-            }
-            if(count==2){
-              throw new LimiteNombreDeCartesException("On ne peut pas ajouter une carte plus de deux fois");
-            }
-          }
-        }
-        this.list.add(carte);
+      }
+    }
+    this.list.add(carte);
   }
 
   /**
@@ -138,10 +137,25 @@ public class Deck implements ManipulationCartes {
    */
   @Override
   public void effacer(Carte carte) throws CarteAbsenteException {
-    if(!estPresente(carte)){
+    if (!estPresente(carte)) {
       throw new CarteAbsenteException("cette carte n'est pas présente dans le Deck");
     }
+
     list.remove(carte);
+  }
+
+  /**
+   * supprime les cartes du deck
+   * 
+   * @param carte la carte à supprimer
+   * @throws CarteAbsenteException si la carte n'est pas dans le deck
+   */
+  public void effacerToutesCartes(Carte carte) throws CarteAbsenteException {
+    if (!estPresente(carte)) {
+      throw new CarteAbsenteException("cette carte n'est pas présente dans le Deck");
+    }
+    while (estPresente(carte))
+      list.remove(carte);
   }
 
   /**
