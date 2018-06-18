@@ -10,15 +10,27 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeNoException;
 
+import java.util.ArrayList;
+
 public class TestDeck {
 
     @Test(expected = LimiteNombreDeCartesException.class)
+<<<<<<< HEAD
     public void testDeck1() throws Exception {
+=======
+
+    public void ErrTaille() throws Exception {
+>>>>>>> f583c927c630390acb37c4789af2bd1781f32ab7
         Deck d = new Deck(new Cartes(), Classe.MAGE, 31);
     }
 
     @Test(expected = ClasseNeutreException.class)
+<<<<<<< HEAD
     public void testDeck2() throws Exception {
+=======
+
+    public void ErrClasse() throws Exception {
+>>>>>>> f583c927c630390acb37c4789af2bd1781f32ab7
         Deck d = new Deck(new Cartes(), Classe.NEUTRE, 30);
     }
 
@@ -94,5 +106,75 @@ public class TestDeck {
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
         t.ajouter(arme0);
         d.effacer(arme0);
+
+    }
+
+    @Test
+    public void testDeck10() throws Exception {
+        Cartes t = new Cartes();
+        Deck d = new Deck(t, Classe.MAGE, 30);
+        assertEquals("testDeck 10 ", 30, d.tailleMax());
+    }
+
+    @Test
+    public void testDeck11() throws Exception {
+        Cartes t = new Cartes();
+        Deck d = new Deck(t, Classe.MAGE);
+        Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
+        t.ajouter(arme0);
+        d.ajouter(arme0);
+        assertEquals("testDeck 11 ", 1, d.tailleActuelle());
+    }
+
+    @Test
+    public void testDeck12() throws Exception {
+        Cartes t = new Cartes();
+        Deck d = new Deck(t, Classe.MAGE);
+        assertEquals("testDeck 12 ", Classe.MAGE, d.classe());
+
+    }
+
+    @Test
+    public void testDeck13() throws Exception {
+        Cartes t = new Cartes();
+        Deck d = new Deck(t, Classe.MAGE);
+        Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
+        t.ajouter(arme0);
+        d.ajouter(arme0);
+        assertEquals("testDeck 13 ", 1, d.tailleActuelle());
+    }
+
+    @Test
+    public void testDeck14() throws Exception {
+        Cartes t = new Cartes();
+        Deck d = new Deck(t, Classe.MAGE);
+        Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
+        t.ajouter(arme0);
+        d.ajouter(arme0);
+        d.ajouter(arme0);
+        d.effacer(arme0);
+        assertEquals("testDeck 13 ", 1, d.tailleActuelle());
+    }
+
+    @Test
+    public void testDeck15() throws Exception {
+        Cartes t = new Cartes();
+        Deck d = new Deck(t, Classe.MAGE);
+        Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
+        t.ajouter(arme0);
+        d.ajouter(arme0);
+        assertEquals("testDeck 13 ", true, d.estPresente(arme0));
+    }
+
+    @Test
+    public void testDeck16() throws Exception {
+        Cartes t = new Cartes();
+        Deck d = new Deck(t, Classe.MAGE);
+        Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
+        t.ajouter(arme0);
+        d.ajouter(arme0);
+        ArrayList ar = new ArrayList();
+        ar.add(arme0);
+        assertEquals("testDeck 16 ", ar, d.collection());
     }
 }
