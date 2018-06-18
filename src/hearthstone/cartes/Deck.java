@@ -62,13 +62,7 @@ public class Deck implements ManipulationCartes {
    * @throws LimiteNombreDeCartesException si la taille max dépasse 30
    */
   public Deck(Cartes mesCartes, Classe maClasse) throws ClasseNeutreException, LimiteNombreDeCartesException {
-    if(maClasse==Classe.NEUTRE){
-      throw new ClasseNeutreException("un deck ne peut pas être NEUTRE");
-    }
-      this.mesCartes=mesCartes;
-      this.maClasse=maClasse;
-      this.tailleMax=30;
-      this.list=new ArrayList(tailleMax);
+    this(mesCartes,maClasse,30);
   }
 
   /**
