@@ -118,27 +118,26 @@ public class Cartes implements ManipulationCartes {
      * tente d'ajouter le deck à la liste de deck
      * 
      * @param maClasse la classe du deck à ajouter
-     * @throws DeckCreationException si le deck est déjà présent
      */
-    public void ajouterDeck(Classe maClasse) throws DeckCreationException {
+    public void ajouterDeck(Classe maClasse) {
         Deck nouveauDeck = null;
         try {
             nouveauDeck = new Deck(this, maClasse, 30);
         } catch (Exception e) {
-            throw new DeckCreationException(e.getMessage());
-        } finally {
-            // not usable cuz of the nature of newly created decks (all the same except for
-            // the class)
-            // if (estPresentDeck(nouveauDeck))
-            // throw new DeckCreationException("This deck is already in the decklist !");
-
-            /*
-             * for (Carte carte : nouveauDeck.collection()) if (!estPresente(carte)) throw
-             * new
-             * DeckCreationException("On of the deck's card does not exist in the current set !"
-             * );
-             */
         }
+
+        // not usable cuz of the nature of newly created decks (all the same except for
+        // the class)
+        // if (estPresentDeck(nouveauDeck))
+        // throw new DeckCreationException("This deck is already in the decklist !");
+
+        /*
+         * for (Carte carte : nouveauDeck.collection()) if (!estPresente(carte)) throw
+         * new
+         * DeckCreationException("On of the deck's card does not exist in the current set !"
+         * );
+         */
+
         maListeDeDeck.add(nouveauDeck);
     }
 
