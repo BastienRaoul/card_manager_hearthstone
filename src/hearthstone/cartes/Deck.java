@@ -32,7 +32,7 @@ public class Deck implements ManipulationCartes {
 
   /**
    * créer un deck
-   * On creer une ArrayList qui nous permet de garder les doublons
+   * On creer une ArrayList de type Carte ce qui nous permet de garder les doublons
    * 
    * @param mesCartes le paquet de carte associé
    * @param maClasse  la classe associée
@@ -64,7 +64,7 @@ public class Deck implements ManipulationCartes {
    * @throws LimiteNombreDeCartesException si la taille max dépasse 30
    */
   public Deck(Cartes mesCartes, Classe maClasse) throws ClasseNeutreException, LimiteNombreDeCartesException {
-    //On appelle le constructeur au dessus en mettant comme valeur de base 30 pour la taille maximum
+    //On appelle le constructeur au dessus en mettant comme valeur pour la taille maximum 30 
     this(mesCartes, maClasse, 30);
   }
 
@@ -107,12 +107,15 @@ public class Deck implements ManipulationCartes {
   public void ajouter(Carte carte) throws DeckPleinException, CarteNonDisponibleException, CarteMauvaiseClasseException,
       LimiteNombreDeCartesException {
     //On exclu les Exception au cas par cas
+    //On verifie que la taille de la liste est inferieur 
     if (this.list.size() >= this.tailleMax) {
       throw new DeckPleinException("le deck est plein");
     }
+    //On verifie que la carte m'appartient
     if (!(this.mesCartes.estPresente(carte))) {
       throw new CarteNonDisponibleException("la carte n'est pas présente dans le paquet de carte");
     }
+    //on verifie si la carte n'est pas egal à la classe du Deck et à la classe neutre 
     if (!(carte.classe() == this.maClasse || carte.classe() == Classe.NEUTRE)) {
       throw new CarteMauvaiseClasseException("la carte ne fait pas partie de la bonne classe");
     }
@@ -123,7 +126,7 @@ public class Deck implements ManipulationCartes {
     for (Iterator<Carte> i = list.iterator(); i.hasNext();) {
 
       Carte tmp = i.next();
-      if (tmp.equals(carte)) {
+      if (tmp.estEgalModuloDoree(carte)) {
         count++;
         if (carte.rarete() == Rarete.LEGENDAIRE) {
           throw new LimiteNombreDeCartesException("Une carte légendaire ne peut être ajouté qu'une fois");
