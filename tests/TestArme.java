@@ -42,7 +42,7 @@ public class TestArme {
         Arme arme2 = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, "", "", 3, 3);
         assertEquals(Classe.CHAMAN, arme.classe());
         assertEquals(3, arme.durabilite());
-        assertEquals(true, arme.equals(arme2));s
+        assertEquals(true, arme.equals(arme2));
         assertEquals("Test Doree", true, arme.estEgalModuloDoree(arme2));
     }
 
