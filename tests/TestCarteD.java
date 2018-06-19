@@ -24,7 +24,9 @@ public class TestCarteD {
     public void testCarteD2() throws Exception
     {
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6, Race.BETE);
-        assertEquals(true, serviteur.equals(new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6, Race.BETE)));
+        Serviteur serviteur2 = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6, Race.BETE);
+        
+        assertEquals(true, serviteur.equals(serviteur2));
     }
 
     @Test(expected = ValeurNegativeException.class)
