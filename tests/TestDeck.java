@@ -92,9 +92,9 @@ public class TestDeck {
         d.ajouter(arme0);
     }
 
-@Test(expected = LimiteNombreDeCartesException.class)
+    @Test(expected = LimiteNombreDeCartesException.class)
 
-public void Test() throws Exception{
+    public void Test() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE);
         Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
@@ -105,8 +105,7 @@ public void Test() throws Exception{
         d.ajouter(arme0);
         d.ajouter(arme1);
 
-}
-
+    }
 
     @Test(expected = CarteAbsenteException.class)
     public void Erreffacer() throws Exception {
@@ -234,4 +233,44 @@ public void Test() throws Exception{
 
         assertEquals("Test equals ", true, d.collection().equals(d2.collection()));
     }
+
+    @Test(expected = LimiteNombreDeCartesException.class)
+    public void TestValeurnullcontructeur() throws Exception {
+        Cartes tasDeCartes = new Cartes();
+        Deck d = new Deck(tasDeCartes, Classe.GUERRIER, -1);
+    }
+
+    @Test
+    public void testDeckCorrect() throws Exception {
+        Cartes tasDeCartes = new Cartes();
+        Deck d = new Deck(tasDeCartes, Classe.GUERRIER, 30);
+    }
+
+    @Test
+    public void testeffacerToutesCartes() throws Exception {
+        Cartes tasDeCartes = new Cartes();
+        Carte arme1 = new Arme("arteau Thor", 1, "MarteauThor...", Rarete.BASIQUE, Classe.GUERRIER, 100, 100);
+        Carte arme2 = new Arme("teau Thor", 1, "MarteauThor...", Rarete.BASIQUE, Classe.GUERRIER, 100, 100);
+        Carte arme3 = new Arme("rteau Thor", 1, "MarteauThor...", Rarete.BASIQUE, Classe.GUERRIER, 100, 100);
+
+        tasDeCartes.ajouter(arme1);
+        tasDeCartes.ajouter(arme2);
+        tasDeCartes.ajouter(arme3);
+
+        Deck d = new Deck(tasDeCartes, Classe.GUERRIER, 30);
+
+        d.ajouter(arme1);
+        d.ajouter(arme1);
+        d.ajouter(arme2);
+        d.ajouter(arme2);
+        d.ajouter(arme3);
+        d.ajouter(arme3);
+
+        assertEquals(6, d.collection().size());
+
+        d.effacerToutesCartes(arme1);
+
+        assertEquals(4, d.collection().size());
+    }
+
 }

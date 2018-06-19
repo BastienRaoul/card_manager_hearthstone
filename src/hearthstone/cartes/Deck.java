@@ -31,8 +31,8 @@ public class Deck implements ManipulationCartes {
   private int tailleMax;
 
   /**
-   * créer un deck
-   * On creer une ArrayList de type Carte ce qui nous permet de garder les doublons
+   * créer un deck On creer une ArrayList de type Carte ce qui nous permet de
+   * garder les doublons
    * 
    * @param mesCartes le paquet de carte associé
    * @param maClasse  la classe associée
@@ -42,9 +42,9 @@ public class Deck implements ManipulationCartes {
    */
   public Deck(Cartes mesCartes, Classe maClasse, int tailleMax)
       throws ClasseNeutreException, LimiteNombreDeCartesException {
-        //On test chaque erreur cas par cas
-    if (tailleMax > 30) {
-      throw new LimiteNombreDeCartesException("taille trop grande");
+    // On test chaque erreur cas par cas
+    if (tailleMax > 30 || tailleMax < 0) {
+      throw new LimiteNombreDeCartesException("taille trop grande ou trop petite");
     }
     if (maClasse == Classe.NEUTRE) {
       throw new ClasseNeutreException("un deck ne peut pas être NEUTRE");
@@ -64,7 +64,8 @@ public class Deck implements ManipulationCartes {
    * @throws LimiteNombreDeCartesException si la taille max dépasse 30
    */
   public Deck(Cartes mesCartes, Classe maClasse) throws ClasseNeutreException, LimiteNombreDeCartesException {
-    //On appelle le constructeur au dessus en mettant comme valeur pour la taille maximum 30 
+    // On appelle le constructeur au dessus en mettant comme valeur pour la taille
+    // maximum 30
     this(mesCartes, maClasse, 30);
   }
 
@@ -106,22 +107,25 @@ public class Deck implements ManipulationCartes {
   @Override
   public void ajouter(Carte carte) throws DeckPleinException, CarteNonDisponibleException, CarteMauvaiseClasseException,
       LimiteNombreDeCartesException {
-    //On exclu les Exception au cas par cas
-    //On verifie que la taille de la liste est inferieur 
+    // On exclu les Exception au cas par cas
+    // On verifie que la taille de la liste est inferieur
     if (this.list.size() >= this.tailleMax) {
       throw new DeckPleinException("le deck est plein");
     }
-    //On verifie que la carte m'appartient
+    // On verifie que la carte m'appartient
     if (!(this.mesCartes.estPresente(carte))) {
       throw new CarteNonDisponibleException("la carte n'est pas présente dans le paquet de carte");
     }
-    //on verifie si la carte n'est pas egal à la classe du Deck et à la classe neutre 
-    if (!(carte.classe() == this.maClasse || carte.classe() == Classe.NEUTRE)) {
+    // on verifie si la carte n'est pas egal à la classe du Deck et à la classe
+    // neutre
+    if (carte.classe() != this.maClasse && carte.classe() != Classe.NEUTRE) {
       throw new CarteMauvaiseClasseException("la carte ne fait pas partie de la bonne classe");
     }
 
-    //Pour la dernière Exception on parcours toutes la liste grâce à un iterator pour compter le nombre de fois qu'est présente la carte
-    //Si on as déjà deux carte on directement une Exception et si on en a seulement une on verifi que ce n'est pas un carte légendaire 
+    // Pour la dernière Exception on parcours toutes la liste grâce à un iterator
+    // pour compter le nombre de fois qu'est présente la carte
+    // Si on as déjà deux carte on directement une Exception et si on en a seulement
+    // une on verifi que ce n'est pas un carte légendaire
     int count = 0;
     for (Iterator<Carte> i = list.iterator(); i.hasNext();) {
 
@@ -147,7 +151,7 @@ public class Deck implements ManipulationCartes {
    */
   @Override
   public void effacer(Carte carte) throws CarteAbsenteException {
-    //On verifie si la carte est présente dans le Deck avant de la supprimer
+    // On verifie si la carte est présente dans le Deck avant de la supprimer
     if (!estPresente(carte)) {
       throw new CarteAbsenteException("cette carte n'est pas présente dans le Deck");
     }
@@ -156,17 +160,17 @@ public class Deck implements ManipulationCartes {
   }
 
   /**
-   * supprime les cartes du deck
+   * supprime toutes les instance de la carte du deck
    * 
    * @param carte la carte à supprimer
    * @throws CarteAbsenteException si la carte n'est pas dans le deck
    */
   public void effacerToutesCartes(Carte carte) throws CarteAbsenteException {
-    //On verifie si la carte est présente dans le Deck
+    // On verifie si la carte est présente dans le Deck
     if (!estPresente(carte)) {
       throw new CarteAbsenteException("cette carte n'est pas présente dans le Deck");
     }
-    //On supprime la carte tant qu'elle est présente dans le Deck
+    // On supprime la carte tant qu'elle est présente dans le Deck
     while (estPresente(carte))
       list.remove(carte);
   }
@@ -199,7 +203,7 @@ public class Deck implements ManipulationCartes {
    * melange le deck ; l'ordre des cartes dans le deck doit être modifié
    */
   public void melanger() {
-    //On utilise un shuffle qui nous permet de melanger l'ordre de la liste
+    // On utilise un shuffle qui nous permet de melanger l'ordre de la liste
     Collections.shuffle(list);
   }
 }
