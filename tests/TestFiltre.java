@@ -61,13 +61,8 @@ public class TestFiltre {
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         tasDeCarte.ajouter(arme);
 
-<<<<<<< HEAD
-        HashSet<Carte> dummy = new HashSet<>();
-        assertEquals("Test filtre serviteur 2", dummy, Filtre.cartesServiteur(tasDeCarte.collection()));
-=======
         ArrayList<Carte> dummy = new ArrayList<>();
         assertEquals("Test filtre arme 2", dummy, Filtre.cartesServiteur(tasDeCarte.collection()));
->>>>>>> 680259fa5ee5549a93780d82a769502c62a10124
     }
 
     @Test
