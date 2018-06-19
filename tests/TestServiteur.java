@@ -44,27 +44,21 @@ public class TestServiteur {
     }
 
     @Test
-    public void testServiteurFalse() throws Exception
-    {
+    public void testServiteurFalse() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
         assertEquals("vie différente", 6, serviteur.pointSDeVie());
         assertEquals("race différente", Race.BETE, serviteur.race());
-        assertEquals(false, serviteur.equals(new Serviteur("Ranger", 5, "Strong", Rarete.EPIQUE, Classe.GUERRIER, 5, 6, Race.BETE)));
+        assertEquals(false, serviteur
+                .equals(new Serviteur("Ranger", 5, "Strong", Rarete.EPIQUE, Classe.GUERRIER, 5, 6, Race.BETE)));
     }
 
     @Test
-    public void testServiteur2False() throws Exception
-    {
-        Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6, Race.BETE);
+    public void testServiteur2False() throws Exception {
+        Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,
+                Race.BETE);
         assertEquals("vie différente", 6, serviteur.pointSDeVie());
         assertEquals("race différente", Race.BETE, serviteur.race());
-        assertEquals(false, serviteur.equals(new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.MECA)));
-    }
-   
-    @Test
-    public void testServiteur5() throws Exception {
-        Serviteur serviteur = new Serviteur(null, 1, null, null, null, 5, 6, null);
-        serviteur.verifie();
-        assertEquals(Race.ELEMENTAIRE, serviteur.race());
+        assertEquals(false,
+                serviteur.equals(new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.MECA)));
     }
 }

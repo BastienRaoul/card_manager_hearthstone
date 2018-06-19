@@ -63,8 +63,8 @@ public class TestCarte {
     @Test
     public void nDoree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
-        100);
-        assertEquals("Test Doree",false,arme.estDoree());
+                100);
+        assertEquals("Test Doree", false, arme.estDoree());
     }
 
     @Test
@@ -76,10 +76,9 @@ public class TestCarte {
 
     @Test
     public void EssnJouable() throws Exception {
-        Carte arme = new Arme("Marteau de Thor", 5, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
-        100);
+        Carte arme = new Arme("Marteau de Thor", 5, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
 
-        assertEquals("Test Doree",false,arme.estJouable(4));
+        assertEquals("Test Doree", false, arme.estJouable(4));
     }
 
     @Test
@@ -89,17 +88,17 @@ public class TestCarte {
         Carte arme2 = arme;
 
         arme2 = Carte.fabriquerCarteDoree(arme);
-        assertEquals("Test Doree",true,arme.estEgalModuloDoree(arme2));
+        assertEquals("Test Doree", true, arme.estEgalModuloDoree(arme2));
     }
 
     @Test
     public void EssnestModuloDoree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
-        100);
+                100);
         Carte arme2 = new Arme("Marteau de Thor", 5, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
-        100);
+                100);
         arme2 = arme2.fabriquerCarteDoree(arme2);
-        assertEquals("Test Doree",false,arme.estEgalModuloDoree(arme2));
+        assertEquals("Test Doree", false, arme.estEgalModuloDoree(arme2));
     }
 
     @Test(expected = CoutCreationException.class)
@@ -153,14 +152,14 @@ public class TestCarte {
     }
 
     @Test
-    public void EssnFabriquerDoree()throws Exception{
-        Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100,100);
-        Carte serviteur = new Serviteur("Ranger",4,"Strong",Rarete.RARE,Classe.DRUIDE, 5,6,Race.MECA);
-        Carte sort = new Sort("sort",6,"Feu",Rarete.RARE,Classe.GUERRIER);
+    public void EssnFabriquerDoree() throws Exception {
+        Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
+        Carte serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.RARE, Classe.DRUIDE, 5, 6, Race.MECA);
+        Carte sort = new Sort("sort", 6, "Feu", Rarete.RARE, Classe.GUERRIER);
 
-        assertEquals("Test Carte Doree arme",false,arme.estDoree());
-        assertEquals("Test Carte Doree serviteur",false,serviteur.estDoree());
-        assertEquals("Test Carte Doree sort",false,sort.estDoree());
+        assertEquals("Test Carte Doree arme", false, arme.estDoree());
+        assertEquals("Test Carte Doree serviteur", false, serviteur.estDoree());
+        assertEquals("Test Carte Doree sort", false, sort.estDoree());
     }
 
     @Test
@@ -170,25 +169,31 @@ public class TestCarte {
         assertEquals("Equals ", true, arme.equals(arme2));
     }
 
-    @Test
-    public void testVerifie() throws Exception {
-        Carte arme = new Arme(null, 1, null, null, null, 5, 6);
-        arme.verifie();
-        assertEquals(Classe.NEUTRE, arme.classe());
-        assertEquals("", arme.nom());
-        assertEquals("", arme.description());
-        assertEquals(Rarete.BASIQUE, arme.rarete());
-        assertEquals("", arme.urlImage());
+    @Test(expected = NullPointerException.class)
+    public void testNullparam() throws Exception {
+        Carte arme1 = new Arme(null, 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
     }
 
-
-    @Test
-    public void EssnEquals() throws Exception{
-        Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100,100);
-        Carte arme2 = new Arme("Marteau de Thor", 5, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100,100);
-        assertEquals("Equals ",false,arme.equals(arme2));
+    @Test(expected = NullPointerException.class)
+    public void testNullparam1() throws Exception {
+        Carte arme2 = new Arme("Marteau de Thor.", 10, null, Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
     }
 
+    @Test(expected = NullPointerException.class)
+    public void testNullparam2() throws Exception {
+        Carte arme3 = new Arme("Marteau de Thor.", 10, "Marteau de Thor...", null, Classe.GUERRIER, 100, 100);
+    }
 
+    @Test(expected = NullPointerException.class)
+    public void testNullparam3() throws Exception {
+        Carte arme4 = new Arme("Marteau de Thor.", 10, "Marteau de Thor...", Rarete.EPIQUE, null, 100, 100);
+    }
+
+    @Test
+    public void EssnEquals() throws Exception {
+        Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
+        Carte arme2 = new Arme("Marteau de Thor", 5, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
+        assertEquals("Equals ", false, arme.equals(arme2));
+    }
 
 }
