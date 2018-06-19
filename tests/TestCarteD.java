@@ -57,7 +57,6 @@ public class TestCarteD {
     @Test
     public void EssestModulo() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", 2, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
-
         assertEquals("estModulo", true, serviteur.estEgalModuloDoree(serviteur));
     }
 
@@ -67,8 +66,12 @@ public class TestCarteD {
      */
     @Test
     public void EssestModulo2() throws Exception {
-        Serviteur serviteur = new Serviteur("Ranger", 2, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
-        Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
+        Carte serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
+        serviteur = serviteur.fabriquerCarteDoree(serviteur);
+        Carte sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
         assertEquals("estModulo", false, serviteur.estEgalModuloDoree(sort));
+        sort = sort.fabriquerCarteDoree(sort);
+        assertEquals("dura ", false, serviteur.estEgalModuloDoree(sort));
     }
+
 }
