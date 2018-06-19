@@ -18,23 +18,26 @@ public class Serviteur extends CarteD {
     @SerializedName("race")
     private Race race;
 
-
     /**
      * Construit une carte Serviteur
-     * @param nom nom de la carte
-     * @param mana valeur manna de la carte
-     * @param desc description de la carte
-     * @param rarete rareté de la carte
-     * @param classe classe de la carte
-     * @param urlImage url vers une image de la carte
+     * 
+     * @param nom           nom de la carte
+     * @param mana          valeur manna de la carte
+     * @param desc          description de la carte
+     * @param rarete        rareté de la carte
+     * @param classe        classe de la carte
+     * @param urlImage      url vers une image de la carte
      * @param urlImageDoree url vers une version doree de l'image de la carte
-     * @param degats valeur de degats de la carte
-     * @param pointsDeVie valeur de points de vie de la carte
-     * @param race race de la carte
-     * @throws ValeurNegativeException si une veleur negative est utilisee pour initialiser une carte
+     * @param degats        valeur de degats de la carte
+     * @param pointsDeVie   valeur de points de vie de la carte
+     * @param race          race de la carte
+     * @throws ValeurNegativeException si une veleur negative est utilisee pour
+     *                                 initialiser une carte
      *
      */
-    public Serviteur(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree, int degats, int pointsDeVie, Race race) throws ValeurNegativeException, NullPointerException {
+    public Serviteur(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage,
+            String urlImageDoree, int degats, int pointsDeVie, Race race)
+            throws ValeurNegativeException, NullPointerException {
         super(nom, mana, desc, rarete, classe, urlImage, urlImageDoree, degats);
         if (race == null)
             throw new NullPointerException("un des paramètres = null");
@@ -46,17 +49,20 @@ public class Serviteur extends CarteD {
 
     /**
      * Construit une carte Serviteur sans URL d'images
-     * @param nom nom de la carte
-     * @param mana valeur manna de la carte
-     * @param desc description de la carte
-     * @param rarete rareté de la carte
-     * @param classe classe de la carte
-     * @param degats valeur de degats de la carte
+     * 
+     * @param nom         nom de la carte
+     * @param mana        valeur manna de la carte
+     * @param desc        description de la carte
+     * @param rarete      rareté de la carte
+     * @param classe      classe de la carte
+     * @param degats      valeur de degats de la carte
      * @param pointsDeVie valeur de points de vie de la carte
-     * @param race race de la carte
-     * @throws ValeurNegativeException si une veleur negative est utilisee pour initialiser une carte
+     * @param race        race de la carte
+     * @throws ValeurNegativeException si une veleur negative est utilisee pour
+     *                                 initialiser une carte
      */
-    public Serviteur(String nom, int mana, String desc, Rarete rarete, Classe classe, int degats, int pointsDeVie, Race race) throws ValeurNegativeException, NullPointerException {
+    public Serviteur(String nom, int mana, String desc, Rarete rarete, Classe classe, int degats, int pointsDeVie,
+            Race race) throws ValeurNegativeException, NullPointerException {
         this(nom, mana, desc, rarete, classe, "", "", degats, pointsDeVie, race);
     }
 
@@ -72,7 +78,7 @@ public class Serviteur extends CarteD {
      *
      * @return la race de la carte
      */
-    public Race race(){
+    public Race race() {
         return race;
     }
 
@@ -83,33 +89,42 @@ public class Serviteur extends CarteD {
     }
 
     /**
-     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient dorées ou non
+     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient
+     * dorées ou non
      *
      * @param carte la carte a comparer
-     * @return true si la carte courante est égale à la carte sans considere qu'elles soient dorées ou non
+     * @return true si la carte courante est égale à la carte sans considere
+     *         qu'elles soient dorées ou non
      */
     @Override
     public boolean estEgalModuloDoree(Carte carte) {
-        if (this == carte) return true;
-        if (!(carte instanceof Serviteur)) return false;
-        if (!super.estEgalModuloDoree(carte)) return false;
+        if (this == carte)
+            return true;
+        if (!(carte instanceof Serviteur))
+            return false;
+        if (!super.estEgalModuloDoree(carte))
+            return false;
 
         Serviteur serviteur = (Serviteur) carte;
 
-        if (pointsDeVie != serviteur.pointsDeVie) return false;
+        if (pointsDeVie != serviteur.pointsDeVie)
+            return false;
         return race == serviteur.race;
     }
 
-
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Serviteur)) return false;
-        if (!super.equals(o)) return false;
+        if (this == o)
+            return true;
+        if (!(o instanceof Serviteur))
+            return false;
+        if (!super.equals(o))
+            return false;
 
         Serviteur serviteur = (Serviteur) o;
 
-        if (pointsDeVie != serviteur.pointsDeVie) return false;
+        if (pointsDeVie != serviteur.pointsDeVie)
+            return false;
         return race == serviteur.race;
     }
 
@@ -123,10 +138,7 @@ public class Serviteur extends CarteD {
 
     @Override
     public String toString() {
-        return super.toString() +
-                ", pointsDeVie='" + pointsDeVie + '\''+
-                ", race='" + race + '\'' ;
+        return super.toString() + ", pointsDeVie='" + pointsDeVie + '\'' + ", race='" + race + '\'';
     }
-
 
 }
