@@ -27,6 +27,7 @@ public class TestCarte {
                 100);
         assertEquals("manna different", 10, arme.mana());
     }
+
     /**
      * Test taille d'une collection
      */
@@ -121,7 +122,7 @@ public class TestCarte {
         assertEquals("Test Doree", true, arme.estEgalModuloDoree(arme2));
     }
 
-     /**
+    /**
      * Test arme n'est pas la même qu'une autre arme (dorée / non dorée)
      */
     @Test
@@ -134,7 +135,7 @@ public class TestCarte {
         assertEquals("Test Doree", false, arme.estEgalModuloDoree(arme2));
     }
 
-     /**
+    /**
      * Test retourne le coût de création de l'arme
      */
     @Test(expected = CoutCreationException.class)
@@ -143,7 +144,7 @@ public class TestCarte {
         arme.coutCreation();
     }
 
-     /**
+    /**
      * Test le coût le création d'une arme
      */
     @Test
@@ -152,7 +153,7 @@ public class TestCarte {
         assertEquals("Test Cout Creation", 100, arme.coutCreation());
     }
 
-     /**
+    /**
      * Test le gain de désenchantement de l'arme
      */
     @Test
@@ -161,8 +162,7 @@ public class TestCarte {
         assertEquals("Test Gain Desenchantement", 100, arme.gainDesenchantement());
     }
 
-
-     /**
+    /**
      * Test retourne le gain de désenchantement de l'arme
      */
     @Test(expected = GainDesenchantementException.class)
@@ -171,9 +171,8 @@ public class TestCarte {
         arme.gainDesenchantement();
     }
 
-     /**
-     * Test exception CarteDoreeException
-     * Transforme une carte déja dorée en dorée
+    /**
+     * Test exception CarteDoreeException Transforme une carte déja dorée en dorée
      */
     @Test(expected = CarteDoreeException.class)
     public void ErrCarteDoree() throws Exception {
@@ -183,9 +182,8 @@ public class TestCarte {
     }
 
     /**
-     * Test exception CarteBasiqueException
-     * Transforme une carte en dorée
-     * On expecte une carte basique
+     * Test exception CarteBasiqueException Transforme une carte en dorée On expecte
+     * une carte basique
      */
     @Test(expected = CarteBasiqueException.class)
     public void ErrCarteBasique() throws Exception {
@@ -194,10 +192,9 @@ public class TestCarte {
     }
 
     /**
-     * Création carte arme, serviteur, sort
-     * Transformation des cartes en dorée
-     * Test carte arme, serviteur, sort est doré
-    */
+     * Création carte arme, serviteur, sort Transformation des cartes en dorée Test
+     * carte arme, serviteur, sort est doré
+     */
     @Test
     public void EssFabriquerDoree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
@@ -212,9 +209,9 @@ public class TestCarte {
     }
 
     /**
-     * Création carte arme, serviteur, sort
-     * Test carte arme, serviteur, sort n'est pas doré
-    */
+     * Création carte arme, serviteur, sort Test carte arme, serviteur, sort n'est
+     * pas doré
+     */
     @Test
     public void EssnFabriquerDoree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
@@ -226,6 +223,10 @@ public class TestCarte {
         assertEquals("Test Carte Doree sort", false, sort.estDoree());
     }
 
+    /**
+     * Test méthode equals
+     * Une arme est la même qu'une autre arme
+     */
     @Test
     public void EssEquals() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
@@ -233,26 +234,46 @@ public class TestCarte {
         assertEquals("Equals ", true, arme.equals(arme2));
     }
 
+    /**
+     * Test NullPointerException
+     * Création d'une arme avec en paramètre nom : null
+     */
     @Test(expected = NullPointerException.class)
     public void testNullparam() throws Exception {
         Carte arme1 = new Arme(null, 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
     }
 
+    /**
+     * Test NullPointerException
+     * Création d'une arme avec en paramètre desc : null
+     */
     @Test(expected = NullPointerException.class)
     public void testNullparam1() throws Exception {
         Carte arme2 = new Arme("Marteau de Thor.", 10, null, Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
     }
 
+    /**
+     * Test NullPointerException
+     * Création d'une arme avec en paramètre rarete : null
+     */
     @Test(expected = NullPointerException.class)
     public void testNullparam2() throws Exception {
         Carte arme3 = new Arme("Marteau de Thor.", 10, "Marteau de Thor...", null, Classe.GUERRIER, 100, 100);
     }
 
+    /**
+     * Test NullPointerException
+     * Création d'une arme avec en paramètre classe : null
+     */
     @Test(expected = NullPointerException.class)
     public void testNullparam3() throws Exception {
         Carte arme4 = new Arme("Marteau de Thor.", 10, "Marteau de Thor...", Rarete.EPIQUE, null, 100, 100);
     }
 
+    /**
+     * Test méthode equals
+     * Une arme n'est pas la même qu'une autre arme
+     */
     @Test
     public void EssnEquals() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
@@ -260,6 +281,9 @@ public class TestCarte {
         assertEquals("Equals ", false, arme.equals(arme2));
     }
 
+    /**
+     * Test description courte de la carte arme
+     */
     @Test
     public void estDescription() throws ValeurNegativeException {
         Carte arme2 = new Arme("Marteau de Thor", 5, "aaaaaaaaaaaaaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);

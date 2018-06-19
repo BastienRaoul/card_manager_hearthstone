@@ -16,7 +16,7 @@ public class TestServiteur {
     /**
      * Création d'un serviteur sans URL d'image Test des nombres de points de vie du
      * serviteur Test de la race du serviteur Test de la méthode equals de la classe
-     * Serviteur Test de la méthode estEgalModuloDoree de la classe Serviteur
+     * serviteur Test de la méthode estEgalModuloDoree de la classe Serviteur
      */
     @Test
     public void testServiteur() throws Exception {
@@ -31,7 +31,7 @@ public class TestServiteur {
     /**
      * Création d'un serviteur avec URL d'image Test des nombres de points de vie du
      * serviteur Test de la race du serviteur Test de la méthode equals de la classe
-     * Serviteur Test de la méthode estEgalModuloDoree de la classe Serviteur
+     * serviteur Test de la méthode estEgalModuloDoree de la classe Serviteur
      */
     @Test
     public void testServiteur2() throws Exception {

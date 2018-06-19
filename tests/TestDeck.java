@@ -217,8 +217,7 @@ public class TestDeck {
         assertEquals("testDeck 16 ", ar, d.collection());
     }
 
-
-    //la méthode collect
+    // la méthode collect
     @Test
     public void EssCollect() throws Exception {
         Cartes t = new Cartes();
@@ -249,8 +248,7 @@ public class TestDeck {
         assertNotSame("EssCollect", d.collection(), de.collection());
     }
 
-
-    //la méthode equals
+    // la méthode equals
     @Test
     public void TestEquals() throws Exception {
         Cartes tasDeCartes = new Cartes();
@@ -297,6 +295,15 @@ public class TestDeck {
         d.effacerToutesCartes(arme1);
 
         assertEquals(4, d.collection().size());
+    }
+
+    @Test(expected = CarteAbsenteException.class)
+    public void effaceTouteCartes() throws Exception {
+        Cartes tasDeCartes = new Cartes();
+        Carte arme1 = new Arme("arteau Thor", 1, "MarteauThor...", Rarete.BASIQUE, Classe.GUERRIER, 100, 100);
+        tasDeCartes.ajouterDeck(Classe.CHAMAN);
+
+        tasDeCartes.collectionDeDeck().get(0).effacerToutesCartes(arme1);
     }
 
 }
