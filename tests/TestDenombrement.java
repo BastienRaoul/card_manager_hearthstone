@@ -66,7 +66,7 @@ public class TestDenombrement {
 
     // On vérifie ici l'égalité entre le dénombrement de deux cartes correspondant à
     // des variables
-    // différentes mais étant égales
+    // différentes mais étant les mêmes
     @Test
     public void testDenombrement5() throws Exception {
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
