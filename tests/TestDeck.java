@@ -31,6 +31,9 @@ public class TestDeck {
         Deck d = new Deck(new Cartes(), Classe.NEUTRE, 30);
     }
 
+    /**
+     * Test ClasseNeutreException
+     */
     @Test(expected = ClasseNeutreException.class)
     public void ErrClasse2() throws Exception {
         Deck d = new Deck(new Cartes(), Classe.NEUTRE);
@@ -258,18 +261,29 @@ public class TestDeck {
         assertEquals("Test equals ", true, d.collection().equals(d2.collection()));
     }
 
+    /**
+     * Test LimiteNombreDeCartesException
+     */
     @Test(expected = LimiteNombreDeCartesException.class)
     public void TestValeurnullcontructeur() throws Exception {
         Cartes tasDeCartes = new Cartes();
         Deck d = new Deck(tasDeCartes, Classe.GUERRIER, -1);
     }
 
+    /**
+     * Test Deck bien créé
+     */
     @Test
     public void testDeckCorrect() throws Exception {
         Cartes tasDeCartes = new Cartes();
         Deck d = new Deck(tasDeCartes, Classe.GUERRIER, 30);
     }
 
+    /**
+     * Test méthode taille de la collection du deck d
+     * Effacer les cartes arme1
+     * Test méthode taille de la collection du deck d     
+     */
     @Test
     public void testeffacerToutesCartes() throws Exception {
         Cartes tasDeCartes = new Cartes();
@@ -297,6 +311,10 @@ public class TestDeck {
         assertEquals(4, d.collection().size());
     }
 
+    /**
+     * Test CarteAbsenteException
+     * Pas de carte de la classe Chaman dans tasDeCartes
+     */
     @Test(expected = CarteAbsenteException.class)
     public void effaceTouteCartes() throws Exception {
         Cartes tasDeCartes = new Cartes();
