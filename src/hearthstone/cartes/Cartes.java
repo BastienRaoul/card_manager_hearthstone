@@ -101,6 +101,9 @@ public class Cartes implements ManipulationCartes {
     public void effacer(Carte carte) throws CarteAbsenteException {
         if (!estPresente(carte))
             throw new CarteAbsenteException("This card does not exist in this set !");
+
+        effacerCarteDesDecks(carte);
+
         collectionDeCarte.remove(carte);
     }
 
@@ -138,6 +141,22 @@ public class Cartes implements ManipulationCartes {
          * );
          */
 
+        maListeDeDeck.add(nouveauDeck);
+    }
+
+    /**
+     * tente d'ajouter le deck à la liste de deck avec un taille spécifiée
+     * 
+     * @param maClasse  la classe du deck à ajouter
+     * @param tailleMax la classe du deck à ajouter
+     */
+    public void ajouterDeck(Classe maClasse, int tailleMax) throws DeckCreationException {
+        Deck nouveauDeck = null;
+        try {
+            nouveauDeck = new Deck(this, maClasse, tailleMax);
+        } catch (Exception e) {
+            throw new DeckCreationException(e.getMessage());
+        }
         maListeDeDeck.add(nouveauDeck);
     }
 
