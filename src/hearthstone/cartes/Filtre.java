@@ -25,7 +25,7 @@ public class Filtre {
    *         cartes
    */
   public static Collection<Arme> cartesArme(Collection<? extends Carte> desCartes) {
-    HashSet<Arme> filtreArmes = new HashSet<>();
+    ArrayList<Arme> filtreArmes = new ArrayList<>();
     for (Carte resultat : desCartes) {
       if (resultat instanceof Arme) {
         filtreArmes.add((Arme) resultat);
@@ -42,7 +42,7 @@ public class Filtre {
    *         cartes
    */
   public static Collection<Serviteur> cartesServiteur(Collection<? extends Carte> desCartes) {
-    HashSet<Serviteur> filtreServiteurs = new HashSet<>();
+    ArrayList<Serviteur> filtreServiteurs = new ArrayList<>();
     for (Carte resultat : desCartes) {
       if (resultat instanceof Serviteur) {
         filtreServiteurs.add((Serviteur) resultat);
@@ -59,7 +59,7 @@ public class Filtre {
    *         cartes
    */
   public static Collection<Sort> cartesSort(Collection<? extends Carte> desCartes) {
-    HashSet<Sort> filtreSorts = new HashSet<>();
+    ArrayList<Sort> filtreSorts = new ArrayList<>();
     for (Carte resultat : desCartes) {
       if (resultat instanceof Sort) {
         filtreSorts.add((Sort) resultat);
@@ -76,7 +76,7 @@ public class Filtre {
    * @return la collection des cartes qui ont comme raretés rarete
    */
   public static Collection<Carte> cartesParRarete(Collection<? extends Carte> desCartes, Rarete rarete) {
-    HashSet<Carte> filtreRarete = new HashSet<>();
+    ArrayList<Carte> filtreRarete = new ArrayList<>();
     for (Carte resultat : desCartes) {
       if (resultat.rarete() == rarete) {
         filtreRarete.add(resultat);
@@ -93,7 +93,7 @@ public class Filtre {
    * @return la collection de cartes qui ont comme races race
    */
   public static Collection<Serviteur> cartesParRace(Collection<Serviteur> desCartes, Race race) {
-    HashSet<Serviteur> filtreRace = new HashSet<>();
+    ArrayList<Serviteur> filtreRace = new ArrayList<>();
     for (Serviteur resultat : desCartes) {
       if (resultat.race() == race) {
         filtreRace.add(resultat);
@@ -109,7 +109,7 @@ public class Filtre {
    * @return la colelction de cartes dorées
    */
   public static Collection<Carte> cartesDorees(Collection<? extends Carte> desCartes) {
-    HashSet<Carte> filtreDore = new HashSet<>();
+    ArrayList<Carte> filtreDore = new ArrayList<>();
     for (Carte resultat : desCartes) {
       if (resultat.estDoree()) {
         filtreDore.add(resultat);
@@ -132,7 +132,7 @@ public class Filtre {
    */
   public static Collection<Carte> cartesParClasse(Collection<? extends Carte> desCartes, Classe classe)
       throws ClasseNeutreException {
-    HashSet<Carte> filtreClasse = new HashSet<>();
+        ArrayList<Carte> filtreClasse = new ArrayList<>();
 
     if (classe == Classe.NEUTRE)
       throw new ClasseNeutreException("You can't choose neutral class.");
