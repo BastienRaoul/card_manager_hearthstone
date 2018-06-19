@@ -34,7 +34,7 @@ public class TestCartes {
 
     @Test
     public void testCartes101() throws Exception {
-        Cartes tasDeCarte = new Cartes();
+        Cartes tasDeCarte = new Cartes();s
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         Carte arme2 = new Arme("Marteau Thor2", 11, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         tasDeCarte.ajouter(arme);

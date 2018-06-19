@@ -7,7 +7,9 @@ import hearthstone.exception.HearthstoneException;
 import java.util.Collection;
 
 /**
- * Interface décrivant des opérations basiques de manipulation d'un "paquet" de cartes
+ * Interface décrivant des opérations basiques de manipulation d'un "paquet" de
+ * cartes
+ * 
  * @author lanoix-a remm-jf
  * @version 1.0
  */
@@ -15,12 +17,14 @@ interface ManipulationCartes {
 
     /**
      *
-     * @return le "paquet de cartes" sous la forme d'une collection de cartes au sens Collection de Cartes
+     * @return le "paquet de cartes" sous la forme d'une collection de cartes au
+     *         sens Collection de Cartes
      */
     Collection<Carte> collection();
 
     /**
      * Ajout d'une carte au "paquet"
+     * 
      * @param carte la carte à ajouter
      * @throws HearthstoneException si l'ajout n'est pas possible
      */
@@ -28,6 +32,7 @@ interface ManipulationCartes {
 
     /**
      * test si la carte est présente dans le "paquet"
+     * 
      * @param carte la carte à rechercher
      * @return true si la carte est présente
      */
@@ -35,6 +40,7 @@ interface ManipulationCartes {
 
     /**
      * supprime la carte du "paquet"
+     * 
      * @param carte la carte à supprimer
      * @throws CarteAbsenteException si la carte n'est pas dans le "paquet"
      */

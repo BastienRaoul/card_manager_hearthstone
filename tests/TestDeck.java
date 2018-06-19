@@ -217,8 +217,7 @@ public class TestDeck {
         assertEquals("testDeck 16 ", ar, d.collection());
     }
 
-
-    //la méthode collect
+    // la méthode collect
     @Test
     public void EssCollect() throws Exception {
         Cartes t = new Cartes();
@@ -249,8 +248,7 @@ public class TestDeck {
         assertNotSame("EssCollect", d.collection(), de.collection());
     }
 
-
-    //la méthode equals
+    // la méthode equals
     @Test
     public void TestEquals() throws Exception {
         Cartes tasDeCartes = new Cartes();
