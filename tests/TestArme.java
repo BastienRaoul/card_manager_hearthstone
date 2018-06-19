@@ -78,6 +78,22 @@ public class TestArme {
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
         Arme arme = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, 3, 3);
         assertEquals("est Modulo avec !=arme", false, arme.estEgalModuloDoree(serviteur));
+    }
 
+    @Test
+    public void testequals2() throws Exception {
+        Arme arme = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, 3, 3);
+        Arme arme1 = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, 3, 2);
+
+        assertEquals("equals dura ", false, arme.equals(arme1));
+    }
+
+    @Test
+    public void testegalmodulo() throws Exception {
+        Carte arme = new Arme("az", 2, "desc", Rarete.EPIQUE, Classe.CHAMAN, 3, 3);
+        arme = Arme.fabriquerCarteDoree(arme);
+        Arme arme1 = new Arme("az", 2, "desc", Rarete.EPIQUE, Classe.CHAMAN, 3, 2);
+
+        assertEquals("equals dura ", false, arme.estEgalModuloDoree(arme1));
     }
 }

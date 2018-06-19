@@ -16,7 +16,7 @@ public class TestServiteur {
     /**
      * Création d'un serviteur sans URL d'image Test des nombres de points de vie du
      * serviteur Test de la race du serviteur Test de la méthode equals de la classe
-     * serviteur Test de la méthode estEgalModuloDoree de la classe Serviteur
+     * Serviteur Test de la méthode estEgalModuloDoree de la classe Serviteur
      */
     @Test
     public void testServiteur() throws Exception {
@@ -31,7 +31,7 @@ public class TestServiteur {
     /**
      * Création d'un serviteur avec URL d'image Test des nombres de points de vie du
      * serviteur Test de la race du serviteur Test de la méthode equals de la classe
-     * serviteur Test de la méthode estEgalModuloDoree de la classe Serviteur
+     * Serviteur Test de la méthode estEgalModuloDoree de la classe Serviteur
      */
     @Test
     public void testServiteur2() throws Exception {
@@ -87,5 +87,33 @@ public class TestServiteur {
                 Race.DEMON);
 
         assertEquals(false, serviteur.equals(serviteur2));
+    }
+
+    @Test
+    public void EssestModulo() throws Exception{
+        Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,
+        Race.BETE);
+        assertEquals("est Modulo",true,serviteur.estEgalModuloDoree(serviteur));
+    }
+
+    @Test
+    public void EssestModulo2() throws Exception{
+        Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,Race.BETE);
+        Arme arme1 = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, "", "", 3, -1);
+
+        assertEquals("est Modulo",false,serviteur.estEgalModuloDoree(arme1));
+        //TODO
+    }
+
+    @Test(expected=ValeurNegativeException.class)
+    public void EssConstr() throws Exception{
+        Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", -1, 6,Race.BETE);
+
+    }
+
+    @Test(expected=ValeurNegativeException.class)
+    public void EssConstr2() throws Exception{
+        Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, -1,Race.BETE);
+
     }
 }

@@ -1,7 +1,6 @@
 
 import hearthstone.carte.*;
 import hearthstone.cartes.*;
-import hearthstone.cartes.FabriqueJson;
 import hearthstone.exception.ValeurNegativeException;
 
 import org.junit.Before;
@@ -95,5 +94,34 @@ public class TestDenombrement {
         Denombrement den1 = new Denombrement(arme1);
 
         assertEquals(true, den1.equals(den));
+    }
+
+    @Test
+    public void testEquals1() throws Exception {
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+
+        Denombrement den = new Denombrement(arme);
+
+        Denombrement den1 = den;
+
+        assertEquals(true, den1.equals(den));
+    }
+
+    @Test
+    public void testEquals2() throws Exception {
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+
+        Denombrement den = new Denombrement(arme);
+
+        assertEquals(false, den.equals(null));
+    }
+
+    @Test
+    public void testEquals3() throws Exception {
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+
+        Denombrement den = new Denombrement(arme);
+
+        assertEquals(false, den.equals(new Denombrement(arme, 2)));
     }
 }

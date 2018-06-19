@@ -41,34 +41,34 @@ public class TestCarteD {
     }
 
     /**
-     * Test ValeurNegativeException
-     * Instance d'un serviteur avec en paramètre dégat une valeur negative
+     * Test ValeurNegativeException Instance d'un serviteur avec en paramètre dégat
+     * une valeur negative
      */
-    @Test(expected=ValeurNegativeException.class)
-    public void EssConst() throws Exception{
+    @Test(expected = ValeurNegativeException.class)
+    public void EssConst() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", 2, "Strong", Rarete.EPIQUE, Classe.NEUTRE, -1, 6, Race.BETE);
 
     }
 
     /**
-     * Test méthode estEgalModuloDoree
-     * la carte serviteur est la même que la carte serviteur (dorée / non dorée)
+     * Test méthode estEgalModuloDoree la carte serviteur est la même que la carte
+     * serviteur (dorée / non dorée)
      */
     @Test
-    public void EssestModulo() throws Exception{
+    public void EssestModulo() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", 2, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
 
-        assertEquals("estModulo",true,serviteur.estEgalModuloDoree(serviteur));
+        assertEquals("estModulo", true, serviteur.estEgalModuloDoree(serviteur));
     }
 
     /**
-     * Test méthode estEgalModuloDoree
-     * la carte serviteur n'est pas la même carte que la carte sort (dorée / non dorée)
+     * Test méthode estEgalModuloDoree la carte serviteur n'est pas la même carte
+     * que la carte sort (dorée / non dorée)
      */
     @Test
-    public void EssestModulo2() throws Exception{
+    public void EssestModulo2() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", 2, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
-        assertEquals("estModulo",false,serviteur.estEgalModuloDoree(sort));
+        assertEquals("estModulo", false, serviteur.estEgalModuloDoree(sort));
     }
 }
