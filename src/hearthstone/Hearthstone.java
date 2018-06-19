@@ -13,6 +13,7 @@ import hearthstone.cartes.*;
 public class Hearthstone {
 
     public static void main(String[] args) {
+        
         Cartes collection = new Cartes();
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
                 100);
@@ -31,7 +32,6 @@ public class Hearthstone {
             Cartes collection2 = new Cartes(col);
         } catch (Exception e) {
             System.out.println(e.getMessage());
-        }
-    }
-    
+        }           
+    }    
 }
