@@ -40,7 +40,7 @@ public class TestCartes {
 
     @Test
     public void testCartes101() throws Exception {
-        Cartes tasDeCarte = new Cartes();s
+        Cartes tasDeCarte = new Cartes();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         Carte arme2 = new Arme("Marteau Thor2", 11, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         tasDeCarte.ajouter(arme);
@@ -78,8 +78,8 @@ public class TestCartes {
     }
 
     /**
-     * Test CarteDejaPresenteException
-     * Ajout de 2 fois la même carte dans le tasDeCarte
+     * Test CarteDejaPresenteException Ajout de 2 fois la même carte dans le
+     * tasDeCarte
      */
     @Test(expected = CarteDejaPresenteException.class)
     public void testCartes3() throws Exception {
@@ -92,8 +92,8 @@ public class TestCartes {
     }
 
     /**
-     * Exception car ajout de 2 fois la même carte dans le tasDeCarte
-     * Test taille de la collection de cartes tasDeCarte
+     * Exception car ajout de 2 fois la même carte dans le tasDeCarte Test taille de
+     * la collection de cartes tasDeCarte
      */
     @Test
     public void testCartes4() throws Exception {
@@ -134,8 +134,8 @@ public class TestCartes {
     }
 
     /**
-     * Test CarteAbsenteException
-     * Méthode effacer une carte arme dans collection tasDeCarte mais déjà vide
+     * Test CarteAbsenteException Méthode effacer une carte arme dans collection
+     * tasDeCarte mais déjà vide
      */
     @Test(expected = CarteAbsenteException.class)
     public void testCartes7() throws Exception {
@@ -180,9 +180,8 @@ public class TestCartes {
     }
 
     /**
-     * Test taille collectionDeck de tasDeCarte
-     * Effacement première entrée de tasDeCarte
-     * Test taille collectionDeck de tasDeCarte 
+     * Test taille collectionDeck de tasDeCarte Effacement première entrée de
+     * tasDeCarte Test taille collectionDeck de tasDeCarte
      */
     @Test
     public void testCartes10() throws Exception {
@@ -212,9 +211,8 @@ public class TestCartes {
     }
 
     /**
-     * Test taille de la collection tasDeCarte
-     * Suppresion de la carte arme dans tasDeCarte
-     * Test taille de la collection tasDeCarte
+     * Test taille de la collection tasDeCarte Suppresion de la carte arme dans
+     * tasDeCarte Test taille de la collection tasDeCarte
      */
     @Test
     public void testCartes12() throws Exception {
@@ -231,8 +229,7 @@ public class TestCartes {
     }
 
     /**
-     * Ajout deck de la classe chasseur
-     * Test taille collectionDeDeck de tasDeCarte
+     * Ajout deck de la classe chasseur Test taille collectionDeDeck de tasDeCarte
      */
     @Test
     public void testCartes13() throws Exception {
@@ -246,8 +243,8 @@ public class TestCartes {
     }
 
     /**
-     * Test DeckSuppressionException
-     * Suppresion de 2 deck alors qu'un seul a été ajouté
+     * Test DeckSuppressionException Suppresion de 2 deck alors qu'un seul a été
+     * ajouté
      */
     @Test(expected = DeckSuppressionException.class)
     public void testCartes14() throws Exception {
@@ -265,8 +262,7 @@ public class TestCartes {
     }
 
     /**
-     * Test DeckCreationException
-     * Taille du deck trop grande par rapport à la limite
+     * Test DeckCreationException Taille du deck trop grande par rapport à la limite
      */
     @Test(expected = DeckCreationException.class)
     public void testCartes15() throws Exception {
@@ -278,8 +274,8 @@ public class TestCartes {
     }
 
     /**
-     * Ajout deck de la classe chasseur de taille 30 dans tasDeCarte
-     * Test taille collectionDeDeck tasDeCarte     * 
+     * Ajout deck de la classe chasseur de taille 30 dans tasDeCarte Test taille
+     * collectionDeDeck tasDeCarte *
      */
     @Test
     public void testCartes16() throws Exception {
@@ -293,8 +289,7 @@ public class TestCartes {
     }
 
     /**
-     * Test DeckCreationException
-     * ajout d'un deck null dans tasDeCarte
+     * Test DeckCreationException ajout d'un deck null dans tasDeCarte
      */
     @Test(expected = DeckCreationException.class)
     public void testExceptionAjoutDeck() throws Exception {

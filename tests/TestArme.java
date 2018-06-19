@@ -30,19 +30,17 @@ public class TestArme {
     }
 
     /**
-    * Création d'une arme avec URL d'image
-    * Test de la classe de l'arme
-    * Test de la durabilité de l'arme
-    * Test de la méthode equals de la classe Arme
-    * Test de la méthode estEgalModuloDoree de la classe Arme
-    */
+     * Création d'une arme avec URL d'image Test de la classe de l'arme Test de la
+     * durabilité de l'arme Test de la méthode equals de la classe Arme Test de la
+     * méthode estEgalModuloDoree de la classe Arme
+     */
     @Test
     public void testArme2() throws Exception {
         Arme arme = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, "", "", 3, 3);
         Arme arme2 = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, "", "", 3, 3);
         assertEquals(Classe.CHAMAN, arme.classe());
         assertEquals(3, arme.durabilite());
-        assertEquals(true, arme.equals(arme2));s
+        assertEquals(true, arme.equals(arme2));
         assertEquals("Test Doree", true, arme.estEgalModuloDoree(arme2));
     }
 
