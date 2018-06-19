@@ -57,6 +57,23 @@ public class Arme extends CarteD {
         return durabilite;
     }
 
+    /**
+     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient dorées ou non
+     *
+     * @param carte la carte a comparer
+     * @return true si la carte courante est égale à la carte sans considere qu'elles soient dorées ou non
+     */
+    @Override
+    public boolean estEgalModuloDoree(Carte carte) {
+        if (this == carte) return true;
+        if (!(carte instanceof Arme)) return false;
+        if (!super.estEgalModuloDoree(carte)) return false;
+
+        Arme arme = (Arme) carte;
+
+        return durabilite == arme.durabilite;
+    }
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -57,14 +57,14 @@ public abstract class Carte {
      * @param classe        classe de la carte
      * @param urlImage      url vers une image de la carte
      * @param urlImageDoree url vers une version doree de l'image de la carte
-     * @throws ValeurNegativeException si une veleur negative est utilisee pour
-     *                                 initialiser une carte
+     * @throws ValeurNegativeException si une veleur negative est utilisee pour initialiser une carte
      */
-    Carte(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree)
-            throws ValeurNegativeException {
+    Carte(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree) throws ValeurNegativeException, NullPointerException {
+        if (nom == null || desc == null || rarete == null || classe == null || urlImage == null || urlImageDoree == null)
+            throw new NullPointerException("un des paramètres = null");
         if (mana < 0)
             throw new ValeurNegativeException("valeur de mana negative");
-        if (nom == null)
+        if (nom.equals(""))
             this.nom = "";
         else
             this.nom = nom.substring(0, 1).toUpperCase() + nom.substring(1).toLowerCase();
@@ -166,15 +166,21 @@ public abstract class Carte {
     }
 
     /**
-     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient
-     * dorées ou non
+     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient dorées ou non
      *
      * @param carte la carte a comparer
-     * @return true si la carte courante est égale à la carte sans considere
-     *         qu'elles soient dorées ou non
+     * @return true si la carte courante est égale à la carte sans considere qu'elles soient dorées ou non
      */
     public boolean estEgalModuloDoree(Carte carte) {
-        return mana == carte.mana && nom.equals(carte.nom) && desc.equals(carte.desc) && rarete == carte.rarete;
+        if (this == carte) return true;
+
+        if (mana != carte.mana) return false;
+        if (!nom.equals(carte.nom)) return false;
+        if (!desc.equals(carte.desc)) return false;
+        if (rarete != carte.rarete) return false;
+        if (classe != carte.classe) return false;
+        if (!urlImage.equals(carte.urlImage)) return false;
+        return urlImageDoree.equals(carte.urlImageDoree);
     }
 
     /**
