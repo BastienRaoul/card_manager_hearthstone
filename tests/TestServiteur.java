@@ -94,15 +94,14 @@ public class TestServiteur {
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,
         Race.BETE);
         assertEquals("est Modulo",true,serviteur.estEgalModuloDoree(serviteur));
-    }
+       }
 
     @Test
     public void EssestModulo2() throws Exception{
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,Race.BETE);
-        Arme arme1 = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, "", "", 3, -1);
+        Arme arme1 = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, "", "", 3, 3);
 
         assertEquals("est Modulo",false,serviteur.estEgalModuloDoree(arme1));
-        //TODO
     }
 
     @Test(expected=ValeurNegativeException.class)
