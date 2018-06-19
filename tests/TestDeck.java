@@ -198,6 +198,15 @@ public class TestDeck {
         de.ajouter(arme3);
         de.ajouter(arme4);
         de.melanger();
-        assertNotSame("EssCollect",d.collection(),de.collection());
+        assertNotSame("EssCollect", d.collection(), de.collection());
+    }
+
+    @Test
+    public void TestEquals() throws Exception {
+        Cartes tasDeCartes = new Cartes();
+        Deck d = new Deck(tasDeCartes, Classe.GUERRIER);
+        Deck d2 = new Deck(tasDeCartes, Classe.CHASSEUR);
+
+        assertEquals("Test equals ", true, d.collection().equals(d2.collection()));
     }
 }
