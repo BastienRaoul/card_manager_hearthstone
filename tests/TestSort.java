@@ -40,4 +40,22 @@ public class TestSort {
     public void testNegativeException2() throws Exception {
         Sort sort = new Sort("Groot", -12, "Description", Rarete.COMMUNE, Classe.CHASSEUR, "", "");
     }
+
+    @Test
+    public void testSort3() throws Exception {
+        Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR, "", "");
+        assertEquals(Classe.CHASSEUR, sort.classe());
+        assertEquals(Rarete.COMMUNE, sort.rarete());
+        assertEquals(5, sort.mana());
+        assertEquals(false, sort.equals(new Sort("Groot", 6, "Description", Rarete.COMMUNE, Classe.CHASSEUR)));
+    }
+
+    @Test
+    public void testSort4() throws Exception {
+        Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
+        assertEquals(Classe.CHASSEUR, sort.classe());
+        assertEquals(Rarete.COMMUNE, sort.rarete());
+        assertEquals(5, sort.mana());
+        assertEquals(false, sort.equals(new Sort("Groot", 6, "Description", Rarete.COMMUNE, Classe.CHASSEUR,"","")));
+    }
 }
