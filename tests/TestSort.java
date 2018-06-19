@@ -14,8 +14,7 @@ import static org.junit.Assert.assertTrue;
 
 public class TestSort {
     @Test
-    public void testSort1() throws Exception
-    {
+    public void testSort1() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
         assertEquals(Classe.CHASSEUR, sort.classe());
         assertEquals(Rarete.COMMUNE, sort.rarete());
@@ -24,8 +23,7 @@ public class TestSort {
     }
 
     @Test
-    public void testSort2() throws Exception
-    {
+    public void testSort2() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR, "", "");
         assertEquals(Classe.CHASSEUR, sort.classe());
         assertEquals(Rarete.COMMUNE, sort.rarete());
@@ -34,14 +32,30 @@ public class TestSort {
     }
 
     @Test(expected = ValeurNegativeException.class)
-    public void testNegativeException() throws Exception
-    {
+    public void testNegativeException() throws Exception {
         Sort sort = new Sort("Groot", -12, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
     }
 
     @Test(expected = ValeurNegativeException.class)
-    public void testNegativeException2() throws Exception
-    {
-        Sort sort = new Sort("Groot", -12, "Description", Rarete.COMMUNE, Classe.CHASSEUR,"","");
+    public void testNegativeException2() throws Exception {
+        Sort sort = new Sort("Groot", -12, "Description", Rarete.COMMUNE, Classe.CHASSEUR, "", "");
+    }
+
+    @Test
+    public void testSort3() throws Exception {
+        Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR, "", "");
+        assertEquals(Classe.CHASSEUR, sort.classe());
+        assertEquals(Rarete.COMMUNE, sort.rarete());
+        assertEquals(5, sort.mana());
+        assertEquals(false, sort.equals(new Sort("Groot", 6, "Description", Rarete.COMMUNE, Classe.CHASSEUR)));
+    }
+
+    @Test
+    public void testSort4() throws Exception {
+        Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
+        assertEquals(Classe.CHASSEUR, sort.classe());
+        assertEquals(Rarete.COMMUNE, sort.rarete());
+        assertEquals(5, sort.mana());
+        assertEquals(false, sort.equals(new Sort("Groot", 6, "Description", Rarete.COMMUNE, Classe.CHASSEUR,"","")));
     }
 }

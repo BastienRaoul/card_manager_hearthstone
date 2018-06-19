@@ -17,7 +17,8 @@ import java.util.List;
 
 /**
  *
- * Classe représentant une Carte de manière abstraite, c'est-à-dire tous les élements partagés par les 3 sortes de cartes considérées
+ * Classe représentant une Carte de manière abstraite, c'est-à-dire tous les
+ * élements partagés par les 3 sortes de cartes considérées
  *
  * @author lanoix-a remm-jf
  * @version 1.3
@@ -56,12 +57,14 @@ public abstract class Carte {
      * @param classe        classe de la carte
      * @param urlImage      url vers une image de la carte
      * @param urlImageDoree url vers une version doree de l'image de la carte
-     * @throws ValeurNegativeException si une veleur negative est utilisee pour initialiser une carte
+     * @throws ValeurNegativeException si une veleur negative est utilisee pour
+     *                                 initialiser une carte
      */
-    Carte(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree) throws ValeurNegativeException {
+    Carte(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree)
+            throws ValeurNegativeException {
         if (mana < 0)
             throw new ValeurNegativeException("valeur de mana negative");
-        if (nom.equals(""))
+        if (nom == null)
             this.nom = "";
         else
             this.nom = nom.substring(0, 1).toUpperCase() + nom.substring(1).toLowerCase();
@@ -100,7 +103,7 @@ public abstract class Carte {
      * @return le nom de la carte, bien formaté
      */
     public String nom() {
-       return nom;
+        return nom;
     }
 
     /**
@@ -133,7 +136,6 @@ public abstract class Carte {
         return rarete;
     }
 
-
     /**
      * donne l'url correspondant à l'image : url ou url dorée en fonction
      *
@@ -153,7 +155,8 @@ public abstract class Carte {
     }
 
     /**
-     * indique si la carte est jouable, cad que la reserve de Mana est suffisante pour jouer la carte
+     * indique si la carte est jouable, cad que la reserve de Mana est suffisante
+     * pour jouer la carte
      *
      * @param reserveMana une valeur de reserve de mana
      * @return true si la carte est jouable
@@ -163,36 +166,44 @@ public abstract class Carte {
     }
 
     /**
-     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient dorées ou non
+     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient
+     * dorées ou non
      *
      * @param carte la carte a comparer
-     * @return true si la carte courante est égale à la carte sans considere qu'elles soient dorées ou non
+     * @return true si la carte courante est égale à la carte sans considere
+     *         qu'elles soient dorées ou non
      */
     public boolean estEgalModuloDoree(Carte carte) {
         return mana == carte.mana && nom.equals(carte.nom) && desc.equals(carte.desc) && rarete == carte.rarete;
     }
 
     /**
-     * donne le cout de creation d'une carte, si possible, i.e. si la carte n'est pas BASIQUE
+     * donne le cout de creation d'une carte, si possible, i.e. si la carte n'est
+     * pas BASIQUE
      *
      * @return le cout de creation de la carte
      * @throws CoutCreationException si la carte est BASIQUE
      */
     public int coutCreation() throws CoutCreationException {
-        if (rarete == Rarete.BASIQUE) throw new CoutCreationException("Une carte basique n'a pas de coût de création");
-        if (doree) return rarete.valeurCreationDoree();
+        if (rarete == Rarete.BASIQUE)
+            throw new CoutCreationException("Une carte basique n'a pas de coût de création");
+        if (doree)
+            return rarete.valeurCreationDoree();
         return rarete.valeurCreation();
     }
 
     /**
-     * donne le gain a detruire la carte, si c'est possible, i.e. si la carte n'est pas BASIQUE
+     * donne le gain a detruire la carte, si c'est possible, i.e. si la carte n'est
+     * pas BASIQUE
      *
      * @return le gain de desenchantement de la carte
      * @throws GainDesenchantementException si la carte est BASIQUE
      */
     public int gainDesenchantement() throws GainDesenchantementException {
-        if (rarete == Rarete.BASIQUE) throw new GainDesenchantementException("Une carte basique n'apporte pas de gain");
-        if (doree) return rarete.valeurDesenchantementDoree();
+        if (rarete == Rarete.BASIQUE)
+            throw new GainDesenchantementException("Une carte basique n'apporte pas de gain");
+        if (doree)
+            return rarete.valeurDesenchantementDoree();
         return rarete.valeurDesenchantement();
     }
 
@@ -213,13 +224,16 @@ public abstract class Carte {
         Carte carteDoree;
         if (c instanceof Arme) {
             Arme a = (Arme) c;
-            carteDoree = new Arme(a.nom(), a.mana(), a.description(), a.rarete(), a.classe(), c.urlImageSimple(), c.urlImageDoree(), a.degats(), a.durabilite());
+            carteDoree = new Arme(a.nom(), a.mana(), a.description(), a.rarete(), a.classe(), c.urlImageSimple(),
+                    c.urlImageDoree(), a.degats(), a.durabilite());
         } else if (c instanceof Serviteur) {
             Serviteur s = (Serviteur) c;
-            carteDoree = new Serviteur(s.nom(), s.mana(), s.description(), s.rarete(), s.classe(), c.urlImageSimple(), c.urlImageDoree(), s.degats(), s.pointSDeVie(), s.race());
+            carteDoree = new Serviteur(s.nom(), s.mana(), s.description(), s.rarete(), s.classe(), c.urlImageSimple(),
+                    c.urlImageDoree(), s.degats(), s.pointSDeVie(), s.race());
         } else if (c instanceof Sort) {
             Sort s = (Sort) c;
-            carteDoree = new Sort(s.nom(), s.mana(), s.description(), s.rarete(), s.classe(), c.urlImageSimple(), c.urlImageDoree());
+            carteDoree = new Sort(s.nom(), s.mana(), s.description(), s.rarete(), s.classe(), c.urlImageSimple(),
+                    c.urlImageDoree());
         } else
             // normalement point du programme inateignable
             throw new Exception();
@@ -232,23 +246,32 @@ public abstract class Carte {
     }
 
     private String urlImageDoree() {
-        return urlImageDoree;   
+        return urlImageDoree;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Carte)) return false;
+        if (this == o)
+            return true;
+        if (!(o instanceof Carte))
+            return false;
 
         Carte carte = (Carte) o;
 
-        if (mana != carte.mana) return false;
-        if (doree != carte.doree) return false;
-        if (!nom.equals(carte.nom)) return false;
-        if (!desc.equals(carte.desc)) return false;
-        if (rarete != carte.rarete) return false;
-        if (classe != carte.classe) return false;
-        if (!urlImage.equals(carte.urlImage)) return false;
+        if (mana != carte.mana)
+            return false;
+        if (doree != carte.doree)
+            return false;
+        if (!nom.equals(carte.nom))
+            return false;
+        if (!desc.equals(carte.desc))
+            return false;
+        if (rarete != carte.rarete)
+            return false;
+        if (classe != carte.classe)
+            return false;
+        if (!urlImage.equals(carte.urlImage))
+            return false;
         return urlImageDoree.equals(carte.urlImageDoree);
     }
 
@@ -267,13 +290,8 @@ public abstract class Carte {
 
     @Override
     public String toString() {
-        return "mana=" + mana +
-                ", nom='" + nom + '\'' +
-                ", desc='" + desc + '\'' +
-                ", dorée=" + doree +
-                ", rareté=" + rarete +
-                ", classe=" + classe +
-                ", urlImage='" + urlImage + '\'' +
-                ", urlImageDorée='" + urlImageDoree + '\'';
+        return "mana=" + mana + ", nom='" + nom + '\'' + ", desc='" + desc + '\'' + ", dorée=" + doree + ", rareté="
+                + rarete + ", classe=" + classe + ", urlImage='" + urlImage + '\'' + ", urlImageDorée='" + urlImageDoree
+                + '\'';
     }
 }
