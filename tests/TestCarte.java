@@ -43,12 +43,9 @@ public class TestCarte {
     public void nom() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
                 100);
-        assertEquals("rarete different",new String("Marteau de Thor"), arme.nom().toCharArray());
+        assertEquals("rarete different", new String("Marteau de Thor"), arme.nom().toCharArray());
         // probleme pour tout les test avec string
-        //assertNotSame(message, unexpected, actual);
+        // assertNotSame(message, unexpected, actual);
     }
-
-
-
 
 }

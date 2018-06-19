@@ -174,5 +174,4 @@ public class TestCartes {
 
         assertEquals("Test collectionDeDeck 2", lesDecks, tasDeCarte.collectionDeDeck());
     }
-
 }
