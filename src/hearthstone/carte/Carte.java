@@ -232,7 +232,7 @@ public abstract class Carte {
     }
 
     private String urlImageDoree() {
-        return urlImageDoree;
+        return urlImageDoree;   
     }
 
     @Override

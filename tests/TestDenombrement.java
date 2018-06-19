@@ -1,7 +1,6 @@
 
 import hearthstone.carte.*;
-import hearthstone.cartes.Cartes;
-import hearthstone.cartes.Denombrement;
+import hearthstone.cartes.*;
 import hearthstone.cartes.FabriqueJson;
 import hearthstone.exception.ValeurNegativeException;
 
