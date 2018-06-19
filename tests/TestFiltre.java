@@ -252,7 +252,6 @@ public class TestFiltre {
     @Test
     public void testFiltre20() throws Exception {
         Cartes tasDeCarte = new Cartes();
-
         assertEquals("Test filtre possible de creer 2", true, Filtre.possibleDeCreer(tasDeCarte.collection(), 0));
     }
 

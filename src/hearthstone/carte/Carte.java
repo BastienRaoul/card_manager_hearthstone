@@ -21,7 +21,7 @@ import java.util.List;
  * élements partagés par les 3 sortes de cartes considérées
  *
  * @author lanoix-a remm-jf
- * @version 1.3
+ * @version 1.5
  */
 public abstract class Carte {
 
@@ -59,8 +59,10 @@ public abstract class Carte {
      * @param urlImageDoree url vers une version doree de l'image de la carte
      * @throws ValeurNegativeException si une veleur negative est utilisee pour initialiser une carte
      */
-    Carte(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree) throws ValeurNegativeException, NullPointerException {
-        if (nom == null || desc == null || rarete == null || classe == null || urlImage == null || urlImageDoree == null)
+    Carte(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree)
+            throws ValeurNegativeException, NullPointerException {
+        if (nom == null || desc == null || rarete == null || classe == null || urlImage == null
+                || urlImageDoree == null)
             throw new NullPointerException("un des paramètres = null");
         if (mana < 0)
             throw new ValeurNegativeException("valeur de mana negative");
@@ -172,14 +174,21 @@ public abstract class Carte {
      * @return true si la carte courante est égale à la carte sans considere qu'elles soient dorées ou non
      */
     public boolean estEgalModuloDoree(Carte carte) {
-        if (this == carte) return true;
+        if (this == carte)
+            return true;
 
-        if (mana != carte.mana) return false;
-        if (!nom.equals(carte.nom)) return false;
-        if (!desc.equals(carte.desc)) return false;
-        if (rarete != carte.rarete) return false;
-        if (classe != carte.classe) return false;
-        if (!urlImage.equals(carte.urlImage)) return false;
+        if (mana != carte.mana)
+            return false;
+        if (!nom.equals(carte.nom))
+            return false;
+        if (!desc.equals(carte.desc))
+            return false;
+        if (rarete != carte.rarete)
+            return false;
+        if (classe != carte.classe)
+            return false;
+        if (!urlImage.equals(carte.urlImage))
+            return false;
         return urlImageDoree.equals(carte.urlImageDoree);
     }
 
