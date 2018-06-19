@@ -64,7 +64,7 @@ public class TestFiltre {
         tasDeCarte.ajouter(arme);
 
         HashSet<Carte> dummy = new HashSet<>();
-        assertEquals("Test filtre arme 2", dummy, Filtre.cartesServiteur(tasDeCarte.collection()));
+        assertEquals("Test filtre serviteur 2", dummy, Filtre.cartesServiteur(tasDeCarte.collection()));
     }
 
     @Test
@@ -205,4 +205,104 @@ public class TestFiltre {
 
         assertEquals("Test cartes denombrees", resultat, Filtre.cartesDenombrees(tasDeCartes));
     }
+
+    @Test
+    public void testFiltre16() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.BASIQUE, Classe.GUERRIER, 100, 100);
+        Carte sort = new Sort("monsort", 5, "descri", Rarete.BASIQUE, Classe.CHAMAN);
+        tasDeCarte.ajouter(arme);
+        tasDeCarte.ajouter(sort);
+
+        HashSet<Carte> dummy = new HashSet<>();
+        assertEquals("Test filtre rarete 2", dummy, Filtre.cartesParRarete(tasDeCarte.collection(), Rarete.LEGENDAIRE));
+    }
+
+    @Test
+    public void testFiltre17() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte sort = new Sort("monsort", 5, "descri", Rarete.RARE, Classe.CHAMAN);
+
+        tasDeCarte.ajouter(arme);
+        tasDeCarte.ajouter(sort);
+
+        HashSet<Carte> dummy = new HashSet<>();
+        assertEquals("Test filtre dore 2", dummy, Filtre.cartesDorees(tasDeCarte.collection()));
+    }
+
+    @Test
+    public void testFiltre18() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte sort = new Sort("monsort", 5, "descri", Rarete.RARE, Classe.GUERRIER);
+
+        tasDeCarte.ajouter(arme);
+        tasDeCarte.ajouter(sort);
+
+        HashSet<Carte> dummy = new HashSet<>();
+        assertEquals("Test filtre classe 3", dummy, Filtre.cartesParClasse(tasDeCarte.collection(), Classe.CHAMAN));
+    }
+
+    @Test
+    public void testFiltre19() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte sort = new Sort("monsort", 5, "descri", Rarete.COMMUNE, Classe.NEUTRE);
+
+        assertEquals("Test filtre gaindesenchantemet 2", 0, Filtre.gainDesenchantementTotal(tasDeCarte.collection()));
+    }
+
+    @Test
+    public void testFiltre20() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte sort = new Sort("monsort", 5, "descri", Rarete.COMMUNE, Classe.NEUTRE);
+
+        assertEquals("Test filtre possible de creer 2", true, Filtre.possibleDeCreer(tasDeCarte.collection(), 1640));
+    }
+
+    @Test
+    public void testFiltre21() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte sort = new Sort("monsort", 5, "descri", Rarete.COMMUNE, Classe.NEUTRE);
+
+        tasDeCarte.ajouter(arme);
+        tasDeCarte.ajouter(sort);
+        
+        assertEquals("Test filtre possible de creer 3", false, Filtre.possibleDeCreer(tasDeCarte.collection(), 20));
+    }
+
+    @Test
+    public void testFiltre22() throws Exception {
+        ArrayList<Carte> tasDeCartes = new ArrayList<Carte>();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte sort = new Sort("monsort", 5, "descri", Rarete.COMMUNE, Classe.NEUTRE);
+        Carte arme2 = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+
+        ArrayList<Denombrement> resultat = new ArrayList<Denombrement>();
+
+        assertEquals("Test cartes denombrees", resultat, Filtre.cartesDenombrees(tasDeCartes));
+    }
+
+
+    @Test
+    public void testFiltre23() throws Exception {
+        ArrayList<Carte> tasDeCartes = new ArrayList<Carte>();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte sort = new Sort("monsort", 5, "descri", Rarete.COMMUNE, Classe.NEUTRE);
+        Carte arme2 = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+
+        tasDeCartes.add(arme);
+        tasDeCartes.add(sort);
+        tasDeCartes.add(arme2);
+
+        ArrayList<Denombrement> resultat = new ArrayList<Denombrement>();
+        resultat.add(new Denombrement(arme, 2));
+        resultat.add(new Denombrement(sort));
+
+        assertEquals("Test cartes denombrees", resultat, Filtre.cartesDenombrees(tasDeCartes));
+    }
+
 }
