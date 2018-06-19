@@ -6,6 +6,7 @@ import hearthstone.exception.CarteBasiqueException;
 import hearthstone.exception.CarteDoreeException;
 import hearthstone.exception.CoutCreationException;
 import hearthstone.exception.GainDesenchantementException;
+import hearthstone.exception.ValeurNegativeException;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -194,6 +195,12 @@ public class TestCarte {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
         Carte arme2 = new Arme("Marteau de Thor", 5, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
         assertEquals("Equals ", false, arme.equals(arme2));
+    }
+
+    @Test
+    public void estDescription() throws ValeurNegativeException {
+        Carte arme2 = new Arme("Marteau de Thor", 5, "aaaaaaaaaaaaaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
+        assertEquals("aaaaaaaaaa", arme2.descriptionCourte());
     }
 
 }

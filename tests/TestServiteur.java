@@ -79,18 +79,9 @@ public class TestServiteur {
     public void testServiteur2False() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,
                 Race.BETE);
-        assertEquals(false,
-                serviteur.equals(new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.MECA)));
-    }
+        Serviteur serviteur2 = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,
+                Race.DEMON);
 
-    /**
-     * Création d'un serviteur avec URL d'image Test méthode verifie de la classe
-     * Serviteur
-     */
-    @Test
-    public void testServiteur5() throws Exception {
-        Serviteur serviteur = new Serviteur(null, 1, null, null, null, 5, 6, null);
-        serviteur.verifie();
-        assertEquals(Race.ELEMENTAIRE, serviteur.race());
+        assertEquals(false, serviteur.equals(serviteur2));
     }
 }
