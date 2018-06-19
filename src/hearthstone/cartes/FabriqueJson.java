@@ -42,15 +42,16 @@ public class FabriqueJson {
 		Collection<Carte> cartes = donneGson().fromJson(jsonString, new TypeToken<List<Carte>>() {
 		}.getType());
 		// TODO : [AL] il n'y a pas d'appel au constructeur de carte, c'est
-		// étrange quand même	
+		// étrange quand même
 
-		/** Explication		
-		* On créer une collection de cartes ou l'on y ajoute les différentes cartes
-		* On appelle la méthode donneGson() qui permet de récupérer le type de la carte contenu dans le fichier JSON
-		* pour appeler le constructeur de cette carte(Serviteur, Arme, Sort)
-		* La méthode fromJson converti une chaine de caractère contenant du JSON passé en paramètre en une liste de Carte
-		* TypeToken<Carte> : Représente un type generique Carte
-		*/
+		/**
+		 * La librairie utulisé est développée par google. Elle permet de convertir des
+		 * objets Java en text Json. C'est la serealisation. La représentation de
+		 * l'objet en Json peut ensuite etre utilisée, transportée sur internet, via une
+		 * API etc.. Dans notre ca le Json est directement transcrit en objet Java. La
+		 * carte est recue en Json puis via la librairie, l'objet est reconstruit.
+		 * 
+		 */
 
 		// élimination des cartes à coup sûr avec une image non existante
 		for (Iterator<Carte> ic = cartes.iterator(); ic.hasNext();) {
@@ -81,7 +82,7 @@ public class FabriqueJson {
 		} else {
 			// TODO : lever une exception
 			throw new UnirestException("Réponse non valide");
-		}		
+		}
 	}
 
 	/**
@@ -128,6 +129,13 @@ public class FabriqueJson {
 		bw.write(serialiseJon(cartes));
 		bw.close();
 	}
+
+	/**
+	 * 
+	 * Transforme le json en un format utilisable par nos classes
+	 * 
+	 * @return la chaine de json valide
+	 */
 
 	private static Gson donneGson() {
 		RuntimeTypeAdapterFactory<Carte> carteAdapterFactory = RuntimeTypeAdapterFactory.of(Carte.class, "type")

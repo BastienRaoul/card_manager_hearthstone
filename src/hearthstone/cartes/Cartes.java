@@ -101,6 +101,9 @@ public class Cartes implements ManipulationCartes {
     public void effacer(Carte carte) throws CarteAbsenteException {
         if (!estPresente(carte))
             throw new CarteAbsenteException("This card does not exist in this set !");
+
+        effacerCarteDesDecks(carte);
+
         collectionDeCarte.remove(carte);
     }
 
