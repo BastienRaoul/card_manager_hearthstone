@@ -17,12 +17,18 @@ import java.util.*;
 
 public class TestCartes {
 
+    /**
+     * Test taille du tasDeCarte
+     */
     @Test
     public void testCartes1() throws Exception {
         Cartes tasDeCarte = new Cartes();
         assertEquals("Test constructeur 1", 0, tasDeCarte.collection().size());
     }
 
+    /**
+     * Test collection du tasDeCarte avec 2 cartes
+     */
     @Test
     public void testCartes101() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -37,6 +43,9 @@ public class TestCartes {
         assertEquals("Test constructeur 2", dummy, tasDeCarte.collection());
     }
 
+    /**
+     * Test collection du tasDeCarte sans carte
+     */
     @Test
     public void testCartes102() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -46,6 +55,9 @@ public class TestCartes {
         assertEquals("Test constructeur 4", dummy, tasDeCarte.collection());
     }
 
+    /**
+     * Test taille de la collection de cartes tasDeCarte
+     */
     @Test
     public void testCartes2() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -56,6 +68,10 @@ public class TestCartes {
         assertEquals("Test constructeur 3", 2, tasDeCarte.collection().size());
     }
 
+    /**
+     * Test CarteDejaPresenteException
+     * Ajout de 2 fois la même carte dans le tasDeCarte
+     */
     @Test(expected = CarteDejaPresenteException.class)
     public void testCartes3() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -66,6 +82,10 @@ public class TestCartes {
         tasDeCarte.ajouter(arme2);
     }
 
+    /**
+     * Exception car ajout de 2 fois la même carte dans le tasDeCarte
+     * Test taille de la collection de cartes tasDeCarte
+     */
     @Test
     public void testCartes4() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -80,6 +100,9 @@ public class TestCartes {
         assertEquals("Test ajouter 1", 2, tasDeCarte.collection().size());
     }
 
+    /**
+     * Test taille collection tasDeCarte avec ajout d'une carte arme
+     */
     @Test
     public void testCartes5() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -89,6 +112,9 @@ public class TestCartes {
         assertEquals("Test ajouter 3", 1, tasDeCarte.collection().size());
     }
 
+    /**
+     * Test méthode estPresente carte arme dans tasDeCarte
+     */
     @Test
     public void testCartes6() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -98,6 +124,10 @@ public class TestCartes {
         assertEquals("Test est presente 2", true, tasDeCarte.estPresente(arme));
     }
 
+    /**
+     * Test CarteAbsenteException
+     * Méthode effacer une carte arme dans collection tasDeCarte mais déjà vide
+     */
     @Test(expected = CarteAbsenteException.class)
     public void testCartes7() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -108,6 +138,9 @@ public class TestCartes {
         tasDeCarte.effacer(arme);
     }
 
+    /**
+     * Test méthode estPresentDeck dans tasDeCarte
+     */
     @Test
     public void testCartes8() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -120,6 +153,9 @@ public class TestCartes {
         assertEquals("Test estPresentDeck 2", true, tasDeCarte.estPresentDeck(tasDeCarte.collectionDeDeck().get(0)));
     }
 
+    /**
+     * Test taille collectionDeck de tasDeCarte
+     */
     @Test
     public void testCartes9() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -134,6 +170,11 @@ public class TestCartes {
         assertEquals("Test estPresentDeck 1", 4, tasDeCarte.collectionDeDeck().size());
     }
 
+    /**
+     * Test taille collectionDeck de tasDeCarte
+     * Effacement première entrée de tasDeCarte
+     * Test taille collectionDeck de tasDeCarte 
+     */
     @Test
     public void testCartes10() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -150,6 +191,9 @@ public class TestCartes {
         assertEquals("Test effacerDeck 2", 1, tasDeCarte.collectionDeDeck().size());
     }
 
+    /**
+     * Test DeckSuppressionException
+     */
     @Test(expected = DeckSuppressionException.class)
     public void testCartes11() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -158,6 +202,11 @@ public class TestCartes {
         tasDeCarte.effacerDeck(new Deck(tasDeCarte, Classe.CHASSEUR, 30));
     }
 
+    /**
+     * Test taille de la collection tasDeCarte
+     * Suppresion de la carte arme dans tasDeCarte
+     * Test taille de la collection tasDeCarte
+     */
     @Test
     public void testCartes12() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -172,6 +221,10 @@ public class TestCartes {
         assertEquals("Test effacceCarteDesDecks 2", 0, tasDeCarte.collectionDeDeck().get(0).collection().size());
     }
 
+    /**
+     * Ajout deck de la classe chasseur
+     * Test taille collectionDeDeck de tasDeCarte
+     */
     @Test
     public void testCartes13() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -183,6 +236,10 @@ public class TestCartes {
         assertEquals("Test collectionDeDeck 2", 1, tasDeCarte.collectionDeDeck().size());
     }
 
+    /**
+     * Test DeckSuppressionException
+     * Suppresion de 2 deck alors qu'un seul a été ajouté
+     */
     @Test(expected = DeckSuppressionException.class)
     public void testCartes14() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -198,6 +255,10 @@ public class TestCartes {
         tasDeCarte.effacerDeck(deck);
     }
 
+    /**
+     * Test DeckCreationException
+     * Taille du deck trop grande par rapport à la limite
+     */
     @Test(expected = DeckCreationException.class)
     public void testCartes15() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -207,6 +268,10 @@ public class TestCartes {
         tasDeCarte.ajouterDeck(Classe.CHASSEUR, 31);
     }
 
+    /**
+     * Ajout deck de la classe chasseur de taille 30 dans tasDeCarte
+     * Test taille collectionDeDeck tasDeCarte     * 
+     */
     @Test
     public void testCartes16() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -218,6 +283,10 @@ public class TestCartes {
         assertEquals(1, tasDeCarte.collectionDeDeck().size());
     }
 
+    /**
+     * Test DeckCreationException
+     * ajout d'un deck null dans tasDeCarte
+     */
     @Test(expected = DeckCreationException.class)
     public void testExceptionAjoutDeck() throws Exception {
         Cartes tasDeCarte = new Cartes();
