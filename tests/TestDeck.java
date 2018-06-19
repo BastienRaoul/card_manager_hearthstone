@@ -92,6 +92,22 @@ public class TestDeck {
         d.ajouter(arme0);
     }
 
+@Test(expected = LimiteNombreDeCartesException.class)
+
+public void Test() throws Exception{
+        Cartes t = new Cartes();
+        Deck d = new Deck(t, Classe.MAGE);
+        Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
+        t.ajouter(arme0);
+        Carte arme1 = Carte.fabriquerCarteDoree(arme0);
+        t.ajouter(arme1);
+        d.ajouter(arme0);
+        d.ajouter(arme0);
+        d.ajouter(arme1);
+
+}
+
+
     @Test(expected = CarteAbsenteException.class)
     public void Erreffacer() throws Exception {
         Cartes t = new Cartes();
