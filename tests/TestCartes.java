@@ -23,6 +23,15 @@ public class TestCartes {
         assertEquals("Test constructeur 1", 0, tasDeCarte.collection().size());
     }
 
+    @Test(expected = CarteDejaPresenteException.class)
+    public void testConstr1() throws Exception {
+        Collection<Carte> listcatre = new ArrayList<>();
+        Arme arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        listcatre.add(arme);
+        listcatre.add(arme);
+        Cartes tasDeCarte = new Cartes(listcatre);
+    }
+
     @Test
     public void testCartes101() throws Exception {
         Cartes tasDeCarte = new Cartes();
