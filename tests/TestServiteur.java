@@ -49,7 +49,7 @@ public class TestServiteur {
 
     /**
      * Création d'un serviteur avec URL d'image
-     * Test valeur négative
+     * Test d'une valeur négative
      */
     @Test(expected = ValeurNegativeException.class)
     public void testServiteur3() throws Exception {
@@ -59,7 +59,7 @@ public class TestServiteur {
 
     /**
      * Création d'un serviteur sans URL d'image
-     * Test valeur négative
+     * Test d'une valeur négative
      */
     @Test(expected = ValeurNegativeException.class)
     public void testServiteur4() throws Exception {
