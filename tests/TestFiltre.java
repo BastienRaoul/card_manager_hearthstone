@@ -210,7 +210,7 @@ public class TestFiltre {
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(sort);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         assertEquals("Test filtre rarete 2", dummy, Filtre.cartesParRarete(tasDeCarte.collection(), Rarete.LEGENDAIRE));
     }
 
@@ -223,7 +223,7 @@ public class TestFiltre {
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(sort);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         assertEquals("Test filtre dore 2", dummy, Filtre.cartesDorees(tasDeCarte.collection()));
     }
 
@@ -236,7 +236,7 @@ public class TestFiltre {
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(sort);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         assertEquals("Test filtre classe 3", dummy, Filtre.cartesParClasse(tasDeCarte.collection(), Classe.CHAMAN));
     }
 
@@ -252,10 +252,8 @@ public class TestFiltre {
     @Test
     public void testFiltre20() throws Exception {
         Cartes tasDeCarte = new Cartes();
-        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
-        Carte sort = new Sort("monsort", 5, "descri", Rarete.COMMUNE, Classe.NEUTRE);
 
-        assertEquals("Test filtre possible de creer 2", true, Filtre.possibleDeCreer(tasDeCarte.collection(), 1640));
+        assertEquals("Test filtre possible de creer 2", true, Filtre.possibleDeCreer(tasDeCarte.collection(), 0));
     }
 
     @Test
@@ -266,7 +264,7 @@ public class TestFiltre {
 
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(sort);
-        
+
         assertEquals("Test filtre possible de creer 3", false, Filtre.possibleDeCreer(tasDeCarte.collection(), 20));
     }
 
@@ -281,7 +279,6 @@ public class TestFiltre {
 
         assertEquals("Test cartes denombrees", resultat, Filtre.cartesDenombrees(tasDeCartes));
     }
-
 
     @Test
     public void testFiltre23() throws Exception {
