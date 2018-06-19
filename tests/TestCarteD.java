@@ -40,13 +40,20 @@ public class TestCarteD {
         Serviteur serviteur = new Serviteur("Ranger", -1, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
     }
 
-
+    /**
+     * Test ValeurNegativeException
+     * Instance d'un serviteur avec en paramètre dégat une valeur negative
+     */
     @Test(expected=ValeurNegativeException.class)
     public void EssConst() throws Exception{
         Serviteur serviteur = new Serviteur("Ranger", 2, "Strong", Rarete.EPIQUE, Classe.NEUTRE, -1, 6, Race.BETE);
 
     }
 
+    /**
+     * Test méthode estEgalModuloDoree
+     * la carte serviteur est la même que la carte serviteur (dorée / non dorée)
+     */
     @Test
     public void EssestModulo() throws Exception{
         Serviteur serviteur = new Serviteur("Ranger", 2, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
@@ -54,6 +61,10 @@ public class TestCarteD {
         assertEquals("estModulo",true,serviteur.estEgalModuloDoree(serviteur));
     }
 
+    /**
+     * Test méthode estEgalModuloDoree
+     * la carte serviteur n'est pas la même carte que la carte sort (dorée / non dorée)
+     */
     @Test
     public void EssestModulo2() throws Exception{
         Serviteur serviteur = new Serviteur("Ranger", 2, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
