@@ -3,6 +3,7 @@ import hearthstone.carte.*;
 import hearthstone.cartes.*;
 import hearthstone.exception.CarteAbsenteException;
 import hearthstone.exception.CarteDejaPresenteException;
+import hearthstone.exception.DeckCreationException;
 import hearthstone.exception.DeckSuppressionException;
 
 import org.junit.Before;
@@ -195,5 +196,25 @@ public class TestCartes {
         tasDeCarte.effacerDeck(deck);
 
         tasDeCarte.effacerDeck(deck);
+    }
+
+    @Test(expected = DeckCreationException.class)
+    public void testCartes15() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.CHASSEUR, 100, 100);
+        tasDeCarte.ajouter(arme);
+
+        tasDeCarte.ajouterDeck(Classe.CHASSEUR, 31);
+    }
+
+    @Test
+    public void testCartes16() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.CHASSEUR, 100, 100);
+        tasDeCarte.ajouter(arme);
+
+        tasDeCarte.ajouterDeck(Classe.CHASSEUR, 30);
+
+        assertEquals(1, tasDeCarte.collectionDeDeck().size());
     }
 }

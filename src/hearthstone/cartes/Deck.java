@@ -49,7 +49,7 @@ public class Deck implements ManipulationCartes {
     this.mesCartes = mesCartes;
     this.maClasse = maClasse;
     this.tailleMax = tailleMax;
-    this.list = new ArrayList(tailleMax);
+    this.list = new ArrayList<>(tailleMax);
   }
 
   /**
@@ -61,7 +61,7 @@ public class Deck implements ManipulationCartes {
    * @throws LimiteNombreDeCartesException si la taille max dépasse 30
    */
   public Deck(Cartes mesCartes, Classe maClasse) throws ClasseNeutreException, LimiteNombreDeCartesException {
-    this(mesCartes,maClasse,30);
+    this(mesCartes, maClasse, 30);
   }
 
   /**
