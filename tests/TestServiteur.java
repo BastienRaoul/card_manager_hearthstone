@@ -98,7 +98,7 @@ public class TestServiteur {
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,
         Race.BETE);
         assertEquals("est Modulo",true,serviteur.estEgalModuloDoree(serviteur));
-    }
+       }
 
     /**
      * Test méthode estEgalModuloDoree
