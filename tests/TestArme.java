@@ -52,6 +52,10 @@ public class TestArme {
         Arme arme = new Arme("az", -1, "desc", Rarete.COMMUNE, Classe.CHAMAN, "", "", 3, 3);
     }
 
+    /**
+     * Test ValeurNegativeException
+     * Instance d'une carte arme avec en paramètre pour la durabilité une valeur negative
+     */
     @Test(expected = ValeurNegativeException.class)
     public void testArme5() throws Exception {
         Arme arme = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, "", "", 3, -1);
@@ -65,6 +69,10 @@ public class TestArme {
         Arme arme = new Arme("az", -1, "desc", Rarete.COMMUNE, Classe.CHAMAN, 3, 3);
     }
 
+    /**
+     * Test méthode estEgalModuloDoree
+     * la carte arme n'est pas la même que la carte serviteur (dorée / non dorée)
+     */
     @Test
     public void TestModulo() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
