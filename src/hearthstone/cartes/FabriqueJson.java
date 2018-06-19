@@ -41,16 +41,15 @@ public class FabriqueJson {
 		// DéSérialisation
 		Collection<Carte> cartes = donneGson().fromJson(jsonString, new TypeToken<List<Carte>>() {
 		}.getType());
-		// TODO : [AL] il n'y a pas d'appel au constructeur de carte, c'est
-		// étrange quand même
 
 		/**
 		 * La librairie utulisé est développée par google. Elle permet de convertir des
 		 * objets Java en text Json. C'est la serealisation. La représentation de
 		 * l'objet en Json peut ensuite etre utilisée, transportée sur internet, via une
 		 * API etc.. Dans notre ca le Json est directement transcrit en objet Java. La
-		 * carte est recue en Json puis via la librairie, l'objet est reconstruit.
-		 * 
+		 * carte est recue en Json puis via la librairie, l'objet est reconstruit. Pas
+		 * besoin de contructeur car la librairie construit l'objet artificelement, le
+		 * constructeur qui sert à initialiser la classe n'est donc pas nécéssaire.
 		 */
 
 		// élimination des cartes à coup sûr avec une image non existante
@@ -80,7 +79,6 @@ public class FabriqueJson {
 		if (reponseHttp != null && reponseHttp.getStatus() == 200) {
 			return deserialiseJson(reponseHttp.getBody());
 		} else {
-			// TODO : lever une exception
 			throw new UnirestException("Réponse non valide");
 		}
 	}
