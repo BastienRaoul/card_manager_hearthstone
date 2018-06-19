@@ -7,4 +7,5 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({ TestCarte.class })
 
 public class HearthstoneTestSuite {
+    
 }

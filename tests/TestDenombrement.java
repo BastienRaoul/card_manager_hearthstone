@@ -96,6 +96,10 @@ public class TestDenombrement {
         assertEquals(true, den1.equals(den));
     }
 
+    /**
+     * Test méthode equals
+     * denombrement est le même qu'un autre dénombrement
+     */
     @Test
     public void testEquals1() throws Exception {
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
@@ -107,6 +111,10 @@ public class TestDenombrement {
         assertEquals(true, den1.equals(den));
     }
 
+    /**
+     * Test méthode equals 
+     * denombrement n'est pas nul
+     */
     @Test
     public void testEquals2() throws Exception {
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
@@ -116,6 +124,10 @@ public class TestDenombrement {
         assertEquals(false, den.equals(null));
     }
 
+    /**
+     * Test méthode equals
+     * les denombrements ne sont pas les mêmes
+     */
     @Test
     public void testEquals3() throws Exception {
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
