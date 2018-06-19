@@ -7,7 +7,7 @@ import hearthstone.exception.ValeurNegativeException;
  * Classe représentant une carte Sort
  *
  * @author lanoix-a remm-jf
- * @version 1.1
+ * @version 1.2
  */
 
 public class Sort extends Carte {
@@ -26,7 +26,7 @@ public class Sort extends Carte {
      *                                 initialiser une carte
      */
     public Sort(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree)
-            throws ValeurNegativeException {
+            throws ValeurNegativeException, NullPointerException {
         super(nom, mana, desc, rarete, classe, urlImage, urlImageDoree);
     }
 
@@ -41,7 +41,8 @@ public class Sort extends Carte {
      * @throws ValeurNegativeException si une veleur negative est utilisee pour
      *                                 initialiser une carte
      */
-    public Sort(String nom, int mana, String desc, Rarete rarete, Classe classe) throws ValeurNegativeException {
+    public Sort(String nom, int mana, String desc, Rarete rarete, Classe classe)
+            throws ValeurNegativeException, NullPointerException {
         this(nom, mana, desc, rarete, classe, "", "");
     }
 }

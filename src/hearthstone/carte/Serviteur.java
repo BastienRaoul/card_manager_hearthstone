@@ -8,7 +8,7 @@ import hearthstone.exception.ValeurNegativeException;
  * Classe représentant une carte Serviteur
  *
  * @author lanoix-a remm-jf
- * @version 1.1
+ * @version 1.2
  */
 public class Serviteur extends CarteD {
 
@@ -36,8 +36,11 @@ public class Serviteur extends CarteD {
      *
      */
     public Serviteur(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage,
-            String urlImageDoree, int degats, int pointsDeVie, Race race) throws ValeurNegativeException {
+            String urlImageDoree, int degats, int pointsDeVie, Race race)
+            throws ValeurNegativeException, NullPointerException {
         super(nom, mana, desc, rarete, classe, urlImage, urlImageDoree, degats);
+        if (race == null)
+            throw new NullPointerException("un des paramètres = null");
         if (pointsDeVie < 0)
             throw new ValeurNegativeException("valeur de points de vie negative");
         this.pointsDeVie = pointsDeVie;
@@ -59,7 +62,7 @@ public class Serviteur extends CarteD {
      *                                 initialiser une carte
      */
     public Serviteur(String nom, int mana, String desc, Rarete rarete, Classe classe, int degats, int pointsDeVie,
-            Race race) throws ValeurNegativeException {
+            Race race) throws ValeurNegativeException, NullPointerException {
         this(nom, mana, desc, rarete, classe, "", "", degats, pointsDeVie, race);
     }
 
@@ -83,6 +86,30 @@ public class Serviteur extends CarteD {
         super.verifie();
         if (race == null)
             race = Race.ELEMENTAIRE;
+    }
+
+    /**
+     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient
+     * dorées ou non
+     *
+     * @param carte la carte a comparer
+     * @return true si la carte courante est égale à la carte sans considere
+     *         qu'elles soient dorées ou non
+     */
+    @Override
+    public boolean estEgalModuloDoree(Carte carte) {
+        if (this == carte)
+            return true;
+        if (!(carte instanceof Serviteur))
+            return false;
+        if (!super.estEgalModuloDoree(carte))
+            return false;
+
+        Serviteur serviteur = (Serviteur) carte;
+
+        if (pointsDeVie != serviteur.pointsDeVie)
+            return false;
+        return race == serviteur.race;
     }
 
     @Override

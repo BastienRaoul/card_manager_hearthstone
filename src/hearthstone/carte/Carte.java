@@ -21,7 +21,7 @@ import java.util.List;
  * élements partagés par les 3 sortes de cartes considérées
  *
  * @author lanoix-a remm-jf
- * @version 1.3
+ * @version 1.5
  */
 public abstract class Carte {
 
@@ -61,10 +61,13 @@ public abstract class Carte {
      *                                 initialiser une carte
      */
     Carte(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree)
-            throws ValeurNegativeException {
+            throws ValeurNegativeException, NullPointerException {
+        if (nom == null || desc == null || rarete == null || classe == null || urlImage == null
+                || urlImageDoree == null)
+            throw new NullPointerException("un des paramètres = null");
         if (mana < 0)
             throw new ValeurNegativeException("valeur de mana negative");
-        if (nom == null)
+        if (nom.equals(""))
             this.nom = "";
         else
             this.nom = nom.substring(0, 1).toUpperCase() + nom.substring(1).toLowerCase();
@@ -174,7 +177,22 @@ public abstract class Carte {
      *         qu'elles soient dorées ou non
      */
     public boolean estEgalModuloDoree(Carte carte) {
-        return mana == carte.mana && nom.equals(carte.nom) && desc.equals(carte.desc) && rarete == carte.rarete;
+        if (this == carte)
+            return true;
+
+        if (mana != carte.mana)
+            return false;
+        if (!nom.equals(carte.nom))
+            return false;
+        if (!desc.equals(carte.desc))
+            return false;
+        if (rarete != carte.rarete)
+            return false;
+        if (classe != carte.classe)
+            return false;
+        if (!urlImage.equals(carte.urlImage))
+            return false;
+        return urlImageDoree.equals(carte.urlImageDoree);
     }
 
     /**
