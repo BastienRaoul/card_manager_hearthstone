@@ -5,8 +5,7 @@ import hearthstone.exception.ValeurNegativeException;
 
 /**
  *
- * Classe représentant une carte de manière abstraite, permettant de partager
- * l'attribut dégat entre les cartes Arme et les cartes serviteur
+ * Classe représentant une carte de manière abstraite, permettant de partager l'attribut dégat entre les cartes Arme et les cartes serviteur
  *
  * @author lanoix-a remm-jf
  * @version 1.2
@@ -18,21 +17,18 @@ public abstract class CarteD extends Carte {
 
     /**
      * Construit une carte abstraite
-     * 
-     * @param nom           nom de la carte
-     * @param mana          valeur manna de la carte
-     * @param desc          description de la carte
-     * @param rarete        rareté de la carte
-     * @param classe        classe de la carte
-     * @param urlImage      url vers une image de la carte
+     * @param nom nom de la carte
+     * @param mana valeur manna de la carte
+     * @param desc description de la carte
+     * @param rarete rareté de la carte
+     * @param classe classe de la carte
+     * @param urlImage url vers une image de la carte
      * @param urlImageDoree url vers une version doree de l'image de la carte
-     * @param degats        valeur de degats de la carte
-     * @throws ValeurNegativeException si une veleur negative est utilisee pour
-     *                                 initialiser une carte
+     * @param degats valeur de degats de la carte
+     * @throws ValeurNegativeException si une veleur negative est utilisee pour initialiser une carte
      *
      */
-    CarteD(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree,
-            int degats) throws ValeurNegativeException, NullPointerException {
+    CarteD(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree, int degats) throws ValeurNegativeException, NullPointerException {
         super(nom, mana, desc, rarete, classe, urlImage, urlImageDoree);
         if (degats < 0)
             throw new ValeurNegativeException("valeur de degats negative");
@@ -48,21 +44,16 @@ public abstract class CarteD extends Carte {
     }
 
     /**
-     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient
-     * dorées ou non
+     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient dorées ou non
      *
      * @param carte la carte a comparer
-     * @return true si la carte courante est égale à la carte sans considere
-     *         qu'elles soient dorées ou non
+     * @return true si la carte courante est égale à la carte sans considere qu'elles soient dorées ou non
      */
     @Override
     public boolean estEgalModuloDoree(Carte carte) {
-        if (this == carte)
-            return true;
-        if (!(carte instanceof CarteD))
-            return false;
-        if (!super.estEgalModuloDoree(carte))
-            return false;
+        if (this == carte) return true;
+        if (!(carte instanceof CarteD)) return false;
+        if (!super.estEgalModuloDoree(carte)) return false;
 
         CarteD carteD = (CarteD) carte;
 
@@ -71,12 +62,9 @@ public abstract class CarteD extends Carte {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (!(o instanceof CarteD))
-            return false;
-        if (!super.equals(o))
-            return false;
+        if (this == o) return true;
+        if (!(o instanceof CarteD)) return false;
+        if (!super.equals(o)) return false;
 
         CarteD carteD = (CarteD) o;
 
@@ -92,6 +80,7 @@ public abstract class CarteD extends Carte {
 
     @Override
     public String toString() {
-        return super.toString() + ", degats='" + degats + '\'';
+        return super.toString() +
+                ", degats='" + degats + '\'' ;
     }
 }

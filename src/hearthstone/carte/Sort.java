@@ -23,8 +23,7 @@ public class Sort extends Carte {
      * @param urlImageDoree url vers une version doree de l'image de la carte
      * @throws ValeurNegativeException si une veleur negative est utilisee pour initialiser une carte
      */
-    public Sort(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree)
-            throws ValeurNegativeException, NullPointerException {
+    public Sort(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree) throws ValeurNegativeException, NullPointerException {
         super(nom, mana, desc, rarete, classe, urlImage, urlImageDoree);
     }
 
@@ -37,8 +36,7 @@ public class Sort extends Carte {
      * @param classe classe de la carte
      * @throws ValeurNegativeException si une veleur negative est utilisee pour initialiser une carte
      */
-    public Sort(String nom, int mana, String desc, Rarete rarete, Classe classe)
-            throws ValeurNegativeException, NullPointerException {
+    public Sort(String nom, int mana, String desc, Rarete rarete, Classe classe) throws ValeurNegativeException, NullPointerException {
         this(nom, mana, desc, rarete, classe, "", "");
     }
 }
