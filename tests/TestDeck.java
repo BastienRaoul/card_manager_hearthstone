@@ -160,6 +160,15 @@ public class TestDeck {
     }
 
     @Test
+    public void EssnestPresent() throws Exception {
+        Cartes t = new Cartes();
+        Deck d = new Deck(t, Classe.MAGE);
+        Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.EPIQUE, Classe.MAGE, 100, 100);
+        t.ajouter(arme0);
+        assertEquals("testDeck 13 ", false, d.estPresente(arme0));
+    }
+
+    @Test
     public void EssCollection() throws Exception {
         Cartes t = new Cartes();
         Deck d = new Deck(t, Classe.MAGE);
