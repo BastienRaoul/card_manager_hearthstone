@@ -4,6 +4,7 @@ import hearthstone.carte.*;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.exception.CoutCreationException;
 import hearthstone.exception.GainDesenchantementException;
+import hearthstone.exception.ValeurNegativeException;
 
 import java.util.*;
 
@@ -132,7 +133,7 @@ public class Filtre {
    */
   public static Collection<Carte> cartesParClasse(Collection<? extends Carte> desCartes, Classe classe)
       throws ClasseNeutreException {
-        ArrayList<Carte> filtreClasse = new ArrayList<>();
+    ArrayList<Carte> filtreClasse = new ArrayList<>();
 
     if (classe == Classe.NEUTRE)
       throw new ClasseNeutreException("You can't choose neutral class.");
@@ -218,10 +219,15 @@ public class Filtre {
         }
       }
       if (!existe) {
-        denombrees.add(new Denombrement(resultat));
+        try {
+          denombrees.add(new Denombrement(resultat));
+        } catch (ValeurNegativeException e) {
+
+        }
+
       }
     }
-    
+
     return denombrees;
   }
 }
