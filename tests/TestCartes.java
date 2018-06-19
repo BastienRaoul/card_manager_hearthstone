@@ -27,17 +27,21 @@ public class TestCartes {
     }
 
     /**
-     * Test collection du tasDeCarte avec 2 cartes
+     * Test CarteDejaPresenteException
+     * ajout d'une carte déja existante dans listcartre
      */
     @Test(expected = CarteDejaPresenteException.class)
     public void testConstr1() throws Exception {
-        Collection<Carte> listcatre = new ArrayList<>();
+        Collection<Carte> listcartre = new ArrayList<>();
         Arme arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
-        listcatre.add(arme);
-        listcatre.add(arme);
-        Cartes tasDeCarte = new Cartes(listcatre);
+        listcartre.add(arme);
+        listcartre.add(arme);
+        Cartes tasDeCarte = new Cartes(listcartre);
     }
 
+    /**
+     * Test collection du tasDeCarte avec 2 cartes
+     */
     @Test
     public void testCartes101() throws Exception {
         Cartes tasDeCarte = new Cartes();
