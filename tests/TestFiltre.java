@@ -18,6 +18,7 @@ import static org.junit.Assert.*;
 import java.util.*;
 
 public class TestFiltre {
+
     // on test le filtre des armes en donnant en paramètre une collection contenant
     // diverses cartes
     @Test
@@ -44,9 +45,9 @@ public class TestFiltre {
         ArrayList<Carte> dummy = new ArrayList<>();
         assertEquals("Test filtre arme 2", dummy, Filtre.cartesArme(tasDeCarte.collection()));
     }
+
     // on test le filtre des serviteurs en donnant en paramètre une collection
     // contenant diverses cartes
-
     @Test
     public void testFiltre3() throws Exception {
         Cartes tasDeCarte = new Cartes();
@@ -71,9 +72,9 @@ public class TestFiltre {
         ArrayList<Carte> dummy = new ArrayList<>();
         assertEquals("Test filtre arme 2", dummy, Filtre.cartesServiteur(tasDeCarte.collection()));
     }
+
     // on test le filtre des sorts en donnant en paramètre une collection contenant
     // diverses cartes
-
     @Test
     public void testFiltre5() throws Exception {
         Cartes tasDeCarte = new Cartes();

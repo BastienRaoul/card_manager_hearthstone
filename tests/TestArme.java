@@ -80,6 +80,10 @@ public class TestArme {
         assertEquals("est Modulo avec !=arme", false, arme.estEgalModuloDoree(serviteur));
     }
 
+    /**
+     * Test méthode equals
+     * la carte arme n'est pas la même que la carte arme1
+     */
     @Test
     public void testequals2() throws Exception {
         Arme arme = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, 3, 3);
@@ -88,6 +92,10 @@ public class TestArme {
         assertEquals("equals dura ", false, arme.equals(arme1));
     }
 
+    /**
+     * Test méthode estEgalModuloDoree
+     * la carte arme n'est pas la même que la carte arme1 (dorée / non dorée)
+     */
     @Test
     public void testegalmodulo() throws Exception {
         Carte arme = new Arme("az", 2, "desc", Rarete.EPIQUE, Classe.CHAMAN, 3, 3);

@@ -89,6 +89,10 @@ public class TestServiteur {
         assertEquals(false, serviteur.equals(serviteur2));
     }
 
+    /**
+     * Test méthode estEgalModuloDoree
+     * la carte serviteur est la même que carte serviteur (dorée / non dorée)
+     */
     @Test
     public void EssestModulo() throws Exception{
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,
@@ -96,20 +100,31 @@ public class TestServiteur {
         assertEquals("est Modulo",true,serviteur.estEgalModuloDoree(serviteur));
        }
 
+    /**
+     * Test méthode estEgalModuloDoree
+     * la carte serviteur n'est pas la même que la carte arme
+     */
     @Test
     public void EssestModulo2() throws Exception{
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,Race.BETE);
         Arme arme1 = new Arme("az", 2, "desc", Rarete.COMMUNE, Classe.CHAMAN, "", "", 3, 3);
-
-        assertEquals("est Modulo",false,serviteur.estEgalModuloDoree(arme1));
+        assertEquals("est Modulo",false,serviteur.estEgalModuloDoree(arme1));        
     }
 
+    /**
+     * Test ValeurNegativeException
+     * Instance d'une carte serviteur avec en paramètre pour ses points de dégats une valeur negative
+     */
     @Test(expected=ValeurNegativeException.class)
     public void EssConstr() throws Exception{
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", -1, 6,Race.BETE);
 
     }
 
+    /**
+     * Test ValeurNegativeException
+     * Instance d'une carte serviteur avec en paramètre pour ses points de vie une valeur negative
+     */
     @Test(expected=ValeurNegativeException.class)
     public void EssConstr2() throws Exception{
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, -1,Race.BETE);
