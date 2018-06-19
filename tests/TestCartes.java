@@ -217,4 +217,10 @@ public class TestCartes {
 
         assertEquals(1, tasDeCarte.collectionDeDeck().size());
     }
+
+    @Test(expected = DeckCreationException.class)
+    public void testExceptionAjoutDeck() throws Exception {
+        Cartes tasDeCarte = new Cartes();
+        tasDeCarte.ajouterDeck(null);
+    }
 }
