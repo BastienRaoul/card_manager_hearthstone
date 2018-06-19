@@ -13,6 +13,14 @@ import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
 public class TestSort {
+
+    /**
+     * Création d'une carte sort sans URL d'image 
+     * Test de la classe de la carte sort
+     * Test de la rarete de la carte sort
+     * Test du coût en mana de la carte sort
+     * Test une carte sort est la même qu'une autre carte sort
+     */
     @Test
     public void testSort1() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
@@ -22,6 +30,13 @@ public class TestSort {
         assertEquals(true, sort.equals(new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR)));
     }
 
+    /**
+     * Création d'une carte sort avec URL d'image 
+     * Test de la classe de la carte sort
+     * Test de la rarete de la carte sort
+     * Test du coût en mana de la carte sort
+     * Test une carte sort est la même qu'une autre carte sort
+     */
     @Test
     public void testSort2() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR, "", "");
@@ -31,16 +46,26 @@ public class TestSort {
         assertEquals(true, sort.equals(new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR)));
     }
 
+    /**
+     * Test valeur négative  d'une carte sort sans URL d'image
+     */
     @Test(expected = ValeurNegativeException.class)
     public void testNegativeException() throws Exception {
         Sort sort = new Sort("Groot", -12, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
     }
 
+     /**
+     * Test valeur négative  d'une carte sort avec URL d'image
+     */
     @Test(expected = ValeurNegativeException.class)
     public void testNegativeException2() throws Exception {
         Sort sort = new Sort("Groot", -12, "Description", Rarete.COMMUNE, Classe.CHASSEUR, "", "");
     }
 
+     /**
+     * Carte sort sans URL d'image
+     * Test une carte sort n'est pas la même qu'une autre carte sort
+     */
     @Test
     public void testSort3() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR, "", "");
@@ -50,6 +75,10 @@ public class TestSort {
         assertEquals(false, sort.equals(new Sort("Groot", 6, "Description", Rarete.COMMUNE, Classe.CHASSEUR)));
     }
 
+    /**
+     * Carte sort avec URL d'image
+     * Test une carte sort n'est pas la même qu'une autre carte sort (mana différent)
+     */
     @Test
     public void testSort4() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
@@ -59,6 +88,10 @@ public class TestSort {
         assertEquals("mana diff",false, sort.equals(new Sort("Groot", 6, "Description", Rarete.COMMUNE, Classe.CHASSEUR,"","")));
     }
 
+     /**
+     * Carte sort avec URL d'image
+     * Test une carte sort n'est pas la même qu'une autre carte sort (mana différent)
+     */
     @Test
     public void testSort5() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
@@ -68,6 +101,10 @@ public class TestSort {
         assertEquals("description diff",false, sort.equals(new Sort("Groot", 5,"desc", Rarete.COMMUNE, Classe.CHASSEUR,"","")));
     }
 
+     /**
+     * Carte sort avec URL d'image
+     * Test une carte sort n'est pas la même qu'une autre carte sort (Nom différent)
+     */
     @Test
     public void testSort6() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
@@ -77,6 +114,10 @@ public class TestSort {
         assertEquals("Nom différent",false, sort.equals(new Sort("NomDiff", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR,"","")));
     }
 
+     /**
+     * Carte sort avec URL d'image
+     * Test une carte sort n'est pas la même qu'une autre carte sort (Rarete différente)
+     */
     @Test
     public void testSort7() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
@@ -86,6 +127,10 @@ public class TestSort {
         assertEquals("Rarete diff", false, sort.equals(new Sort("Groot", 5, "Description", Rarete.BASIQUE, Classe.CHASSEUR,"","")));
     }
 
+     /**
+     * Carte sort avec URL d'image
+     * Test une carte sort n'est pas la même qu'une autre carte sort (classe différente)
+     */
     @Test
     public void testSort8() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
