@@ -80,6 +80,10 @@ public class TestDenombrement {
         assertEquals(den, den1);
     }
 
+    /**
+     * Test méthode equals
+     * denombrement est le même qu'un autre dénombrement
+     */
     @Test
     public void testEquals() throws Exception {
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);

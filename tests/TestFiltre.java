@@ -351,6 +351,9 @@ public class TestFiltre {
         assertEquals("Test cartes denombrees", resultat, Filtre.cartesDenombrees(tasDeCartes));
     }
 
+    /**
+     * Test taille de cartesParRace de la race démon dans tasDeCarte
+     */
     @Test
     public void testcarteparrace() throws Exception {
         ArrayList<Serviteur> tasDeCartes = new ArrayList<>();

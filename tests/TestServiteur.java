@@ -46,7 +46,8 @@ public class TestServiteur {
     }
 
     /**
-     * Création d'un serviteur avec URL d'image Test d'une valeur négative
+     * Création d'un serviteur avec URL d'image 
+     * Test d'une valeur négative
      */
     @Test(expected = ValeurNegativeException.class)
     public void testServiteur3() throws Exception {
@@ -55,7 +56,8 @@ public class TestServiteur {
     }
 
     /**
-     * Création d'un serviteur sans URL d'image Test d'une valeur négative
+     * Création d'un serviteur sans URL d'image 
+     * Test d'une valeur négative
      */
     @Test(expected = ValeurNegativeException.class)
     public void testServiteur4() throws Exception {
@@ -63,7 +65,8 @@ public class TestServiteur {
     }
 
     /**
-     * Création d'un serviteur sans URL d'image Test equals false
+     * Création d'un serviteur sans URL d'image 
+     * Test equals false
      */
     @Test
     public void testServiteurFalse() throws Exception {
@@ -73,7 +76,8 @@ public class TestServiteur {
     }
 
     /**
-     * Création d'un serviteur avec URL d'image Test equals false
+     * Création d'un serviteur avec URL d'image 
+     * Test equals false
      */
     @Test
     public void testServiteur2False() throws Exception {
