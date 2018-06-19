@@ -57,8 +57,7 @@ public abstract class Carte {
      * @param classe        classe de la carte
      * @param urlImage      url vers une image de la carte
      * @param urlImageDoree url vers une version doree de l'image de la carte
-     * @throws ValeurNegativeException si une veleur negative est utilisee pour
-     *                                 initialiser une carte
+     * @throws ValeurNegativeException si une veleur negative est utilisee pour initialiser une carte
      */
     Carte(String nom, int mana, String desc, Rarete rarete, Classe classe, String urlImage, String urlImageDoree)
             throws ValeurNegativeException, NullPointerException {
@@ -169,12 +168,10 @@ public abstract class Carte {
     }
 
     /**
-     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient
-     * dorées ou non
+     * indique si deux cartes sont égales, indépendemment du fait qu'elles soient dorées ou non
      *
      * @param carte la carte a comparer
-     * @return true si la carte courante est égale à la carte sans considere
-     *         qu'elles soient dorées ou non
+     * @return true si la carte courante est égale à la carte sans considere qu'elles soient dorées ou non
      */
     public boolean estEgalModuloDoree(Carte carte) {
         if (this == carte)

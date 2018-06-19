@@ -85,7 +85,7 @@ public class Arme extends CarteD {
 
         return durabilite == arme.durabilite;
     }
-
+    
     @Override
     public boolean equals(Object o) {
         if (this == o)

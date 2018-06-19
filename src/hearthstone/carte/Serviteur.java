@@ -44,8 +44,8 @@ public class Serviteur extends CarteD {
         if (pointsDeVie < 0)
             throw new ValeurNegativeException("valeur de points de vie negative");
         this.pointsDeVie = pointsDeVie;
-        this.race = race;
     }
+      
 
     /**
      * Construit une carte Serviteur sans URL d'images
@@ -114,17 +114,13 @@ public class Serviteur extends CarteD {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (!(o instanceof Serviteur))
-            return false;
-        if (!super.equals(o))
-            return false;
+        if (this == o) return true;
+        if (!(o instanceof Serviteur)) return false;
+        if (!super.equals(o)) return false;
 
         Serviteur serviteur = (Serviteur) o;
 
-        if (pointsDeVie != serviteur.pointsDeVie)
-            return false;
+        if (pointsDeVie != serviteur.pointsDeVie) return false;
         return race == serviteur.race;
     }
 
@@ -138,7 +134,8 @@ public class Serviteur extends CarteD {
 
     @Override
     public String toString() {
-        return super.toString() + ", pointsDeVie='" + pointsDeVie + '\'' + ", race='" + race + '\'';
+        return super.toString() +
+                ", pointsDeVie='" + pointsDeVie + '\''+
+                ", race='" + race + '\'' ;
     }
-
 }
