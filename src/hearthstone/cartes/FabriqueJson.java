@@ -44,7 +44,7 @@ public class FabriqueJson {
 		// TODO : [AL] il n'y a pas d'appel au constructeur de carte, c'est
 		// étrange quand même	
 
-		/** Explication			
+		/** Explication		
 		* On créer une collection de cartes ou l'on y ajoute les différentes cartes
 		* On appelle la méthode donneGson() qui permet de récupérer le type de la carte contenu dans le fichier JSON
 		* pour appeler le constructeur de cette carte(Serviteur, Arme, Sort)
