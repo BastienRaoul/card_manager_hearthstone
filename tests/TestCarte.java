@@ -18,19 +18,27 @@ import static org.junit.Assert.assertTrue;
 
 public class TestCarte {
 
+    /**
+     * Test récupération coût en mana d'une arme
+     */
     @Test
     public void test() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
                 100);
         assertEquals("manna different", 10, arme.mana());
     }
-
+    /**
+     * Test taille d'une collection
+     */
     @Test
     public void test2() throws Exception {
         Cartes cartes = new Cartes(FabriqueJson.lireCartesDepuisFichier("json/initial.json"));
         assertEquals(3, cartes.collection().size());
     }
 
+    /**
+     * Test récupération de la classe de l'arme
+     */
     @Test
     public void Classe() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
@@ -38,6 +46,9 @@ public class TestCarte {
         assertEquals("classe different", Classe.GUERRIER, arme.classe());
     }
 
+    /**
+     * Test récupération de la rareté d'une arme
+     */
     @Test
     public void Rarete() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
@@ -45,6 +56,9 @@ public class TestCarte {
         assertEquals("rarete different", Rarete.LEGENDAIRE, arme.rarete());
     }
 
+    /**
+     * Test récupération du nom d'une arme
+     */
     @Test
     public void nom() throws Exception {
         String nom = "marteau de Thor";
@@ -53,6 +67,9 @@ public class TestCarte {
 
     }
 
+    /**
+     * Test l'arme est dorée
+     */
     @Test
     public void Doree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
@@ -61,6 +78,9 @@ public class TestCarte {
         assertEquals("Test Doree", true, arme.estDoree());
     }
 
+    /**
+     * Test l'arme n'est pas dorée
+     */
     @Test
     public void nDoree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
@@ -68,6 +88,9 @@ public class TestCarte {
         assertEquals("Test Doree", false, arme.estDoree());
     }
 
+    /**
+     * Test mana suffisant pour jouer l'arme
+     */
     @Test
     public void EssJouable() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 5, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
@@ -75,6 +98,9 @@ public class TestCarte {
         assertEquals("Test Doree", true, arme.estJouable(6));
     }
 
+    /**
+     * Test mana insuffisant pour jouer l'arme
+     */
     @Test
     public void EssnJouable() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 5, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
@@ -82,6 +108,9 @@ public class TestCarte {
         assertEquals("Test Doree", false, arme.estJouable(4));
     }
 
+    /**
+     * Test arme est la même qu'une autre arme (dorée / non dorée)
+     */
     @Test
     public void EssestModuloDoree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
@@ -92,6 +121,9 @@ public class TestCarte {
         assertEquals("Test Doree", true, arme.estEgalModuloDoree(arme2));
     }
 
+     /**
+     * Test arme n'est pas la même qu'une autre arme (dorée / non dorée)
+     */
     @Test
     public void EssnestModuloDoree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
@@ -102,30 +134,47 @@ public class TestCarte {
         assertEquals("Test Doree", false, arme.estEgalModuloDoree(arme2));
     }
 
+     /**
+     * Test retourne le coût de création de l'arme
+     */
     @Test(expected = CoutCreationException.class)
     public void ErrCoutCreation() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.BASIQUE, Classe.GUERRIER, 100, 100);
         arme.coutCreation();
     }
 
+     /**
+     * Test le coût le création d'une arme
+     */
     @Test
     public void EssCoutCreation() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.RARE, Classe.GUERRIER, 100, 100);
         assertEquals("Test Cout Creation", 100, arme.coutCreation());
     }
 
+     /**
+     * Test le gain de désenchantement de l'arme
+     */
     @Test
     public void GainDesenchentement() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
         assertEquals("Test Gain Desenchantement", 100, arme.gainDesenchantement());
     }
 
+
+     /**
+     * Test retourne le gain de désenchantement de l'arme
+     */
     @Test(expected = GainDesenchantementException.class)
     public void ErrGainDesanchentement() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.BASIQUE, Classe.GUERRIER, 100, 100);
         arme.gainDesenchantement();
     }
 
+     /**
+     * Test exception CarteDoreeException
+     * Transforme une carte déja dorée en dorée
+     */
     @Test(expected = CarteDoreeException.class)
     public void ErrCarteDoree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
@@ -133,12 +182,22 @@ public class TestCarte {
         arme = arme.fabriquerCarteDoree(arme);
     }
 
+    /**
+     * Test exception CarteBasiqueException
+     * Transforme une carte en dorée
+     * On expecte une carte basique
+     */
     @Test(expected = CarteBasiqueException.class)
     public void ErrCarteBasique() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.BASIQUE, Classe.GUERRIER, 100, 100);
         arme = arme.fabriquerCarteDoree(arme);
     }
 
+    /**
+     * Création carte arme, serviteur, sort
+     * Transformation des cartes en dorée
+     * Test carte arme, serviteur, sort est doré
+    */
     @Test
     public void EssFabriquerDoree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
@@ -152,6 +211,10 @@ public class TestCarte {
         assertEquals("Test Carte Doree sort", true, sort.estDoree());
     }
 
+    /**
+     * Création carte arme, serviteur, sort
+     * Test carte arme, serviteur, sort n'est pas doré
+    */
     @Test
     public void EssnFabriquerDoree() throws Exception {
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
