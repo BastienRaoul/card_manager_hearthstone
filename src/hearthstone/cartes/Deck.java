@@ -32,7 +32,7 @@ public class Deck implements ManipulationCartes {
 
   /**
    * créer un deck
-   * On creer une ArrayList pour laisser des doublons
+   * On creer une ArrayList qui nous permet de garder les doublons
    * 
    * @param mesCartes le paquet de carte associé
    * @param maClasse  la classe associée
