@@ -188,5 +188,4 @@ public class Deck implements ManipulationCartes {
   public void melanger() {
     Collections.shuffle(list);
   }
-
 }

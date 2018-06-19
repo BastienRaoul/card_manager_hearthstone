@@ -43,12 +43,13 @@ public class FabriqueJson {
 		}.getType());
 		// TODO : [AL] il n'y a pas d'appel au constructeur de carte, c'est
 		// étrange quand même	
+
 		/** Explication			
 		* On créer une collection de cartes ou l'on y ajoute les différentes cartes
 		* On appelle la méthode donneGson() qui permet de récupérer le type de la carte contenu dans le fichier JSON
 		* pour appeler le constructeur de cette carte(Serviteur, Arme, Sort)
 		* La méthode fromJson converti une chaine de caractère contenant du JSON passé en paramètre en une liste de Carte
-		* TypeToken<Carte> : Represents a generic type Carte
+		* TypeToken<Carte> : Représente un type generique Carte
 		*/
 
 		// élimination des cartes à coup sûr avec une image non existante

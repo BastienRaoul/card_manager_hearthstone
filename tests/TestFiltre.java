@@ -12,8 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+
+import static org.junit.Assert.*;
 
 import java.util.*;
 
@@ -27,7 +27,7 @@ public class TestFiltre {
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(serviteur);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         dummy.add(arme);
         assertEquals("Test filtre arme 1", dummy, Filtre.cartesArme(tasDeCarte.collection()));
     }
@@ -35,11 +35,10 @@ public class TestFiltre {
     @Test
     public void testFiltre2() throws Exception {
         Cartes tasDeCarte = new Cartes();
-        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         Carte serviteur = new Serviteur("smop", 2, "qd", Rarete.BASIQUE, Classe.CHASSEUR, 2, 4, Race.DEMON);
         tasDeCarte.ajouter(serviteur);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         assertEquals("Test filtre arme 2", dummy, Filtre.cartesArme(tasDeCarte.collection()));
     }
 
@@ -51,7 +50,7 @@ public class TestFiltre {
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(serviteur);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         dummy.add(serviteur);
         assertEquals("Test filtre serviteur 1", dummy, Filtre.cartesServiteur(tasDeCarte.collection()));
     }
@@ -60,10 +59,9 @@ public class TestFiltre {
     public void testFiltre4() throws Exception {
         Cartes tasDeCarte = new Cartes();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
-        Carte serviteur = new Serviteur("smop", 2, "qd", Rarete.BASIQUE, Classe.CHASSEUR, 2, 4, Race.DEMON);
         tasDeCarte.ajouter(arme);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         assertEquals("Test filtre arme 2", dummy, Filtre.cartesServiteur(tasDeCarte.collection()));
     }
 
@@ -75,7 +73,7 @@ public class TestFiltre {
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(sort);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         dummy.add(sort);
         assertEquals("Test filtre sort 1", dummy, Filtre.cartesSort(tasDeCarte.collection()));
     }
@@ -84,10 +82,9 @@ public class TestFiltre {
     public void testFiltre6() throws Exception {
         Cartes tasDeCarte = new Cartes();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
-        Carte sort = new Sort("monsort", 5, "descri", Rarete.BASIQUE, Classe.CHAMAN);
         tasDeCarte.ajouter(arme);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         assertEquals("Test filtre sort 2", dummy, Filtre.cartesSort(tasDeCarte.collection()));
     }
 
@@ -99,7 +96,7 @@ public class TestFiltre {
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(sort);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         dummy.add(arme);
         assertEquals("Test filtre rarete 1", dummy, Filtre.cartesParRarete(tasDeCarte.collection(), Rarete.LEGENDAIRE));
     }
@@ -114,7 +111,7 @@ public class TestFiltre {
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(sort);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         dummy.add(arme);
         assertEquals("Test filtre dore 1", dummy, Filtre.cartesDorees(tasDeCarte.collection()));
     }
@@ -129,7 +126,7 @@ public class TestFiltre {
         tasDeCarte.ajouter(arme);
         tasDeCarte.ajouter(sort);
 
-        HashSet<Carte> dummy = new HashSet<>();
+        ArrayList<Carte> dummy = new ArrayList<>();
         dummy.add(sort);
         assertEquals("Test filtre classe 1", dummy, Filtre.cartesParClasse(tasDeCarte.collection(), Classe.CHAMAN));
     }
@@ -193,7 +190,6 @@ public class TestFiltre {
         ArrayList<Carte> tasDeCartes = new ArrayList<Carte>();
         Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
         Carte sort = new Sort("monsort", 5, "descri", Rarete.COMMUNE, Classe.NEUTRE);
-        Carte arme2 = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
 
         tasDeCartes.add(arme);
         tasDeCartes.add(arme);

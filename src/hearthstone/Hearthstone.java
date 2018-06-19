@@ -32,6 +32,12 @@ public class Hearthstone {
             Cartes collection2 = new Cartes(col);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+<<<<<<< HEAD
         }           
     }    
+=======
+        }
+    }
+
+>>>>>>> c9b80fb3988cf0cb302d0311ad7b7176dcc0556e
 }
