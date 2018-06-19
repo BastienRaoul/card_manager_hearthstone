@@ -131,6 +131,10 @@ public class TestCarte {
     }
 
 
-
-
+    @Test
+    public void EssEquals() throws Exception{
+        Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100,100);
+        Carte arme2 = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100,100);
+        assertEquals("Equals ",true,arme.equals(arme2));
+    }
 }
