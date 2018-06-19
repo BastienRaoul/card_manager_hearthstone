@@ -133,4 +133,15 @@ public class TestCarte {
         Carte arme2 = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
         assertEquals("Equals ", true, arme.equals(arme2));
     }
+
+    @Test
+    public void testVerifie() throws Exception {
+        Carte arme = new Arme(null, 1, null, null, null, 5, 6);
+        arme.verifie();
+        assertEquals(Classe.NEUTRE, arme.classe());
+        assertEquals("", arme.nom());
+        assertEquals("", arme.description());
+        assertEquals(Rarete.BASIQUE, arme.rarete());
+        assertEquals("", arme.urlImage());
+    }
 }

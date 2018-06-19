@@ -42,4 +42,11 @@ public class TestServiteur {
     public void testServiteur4() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", -1, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
     }
+
+    @Test
+    public void testServiteur5() throws Exception {
+        Serviteur serviteur = new Serviteur(null, 1, null, null, null, 5, 6, null);
+        serviteur.verifie();
+        assertEquals(Race.ELEMENTAIRE, serviteur.race());
+    }
 }
