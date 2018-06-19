@@ -15,8 +15,20 @@ import java.util.*;
 
 public class Cartes implements ManipulationCartes {
 
+    /**
+     * Le hashset nous permet de ne pas avoir de doublon tous en permettant le
+     * stockage des données. Il nous permet grace à sa structure interne de
+     * facilement et rapidement acceder au données.
+     */
     private HashSet<Carte> collectionDeCarte = null;
 
+    /**
+     * La structure de donnée qui contient les decks que l'on bind à la liste de
+     * carte est une ArrayList. L'arraylist permet de stocker simplement les decks
+     * sans ce soucier des doublons. En effet les doublons ne sont pas un probleme
+     * en ce qui concerne les decks car il est permis de d'avoir plusieurs decks
+     * égaux. De plus l'arraylist peux facilement est lié à une interface.
+     */
     private List<Deck> maListeDeDeck = null;
 
     /**
@@ -51,7 +63,6 @@ public class Cartes implements ManipulationCartes {
                 throw new CarteDejaPresenteException("Cards could not be added because of duplicates !");
             ajouter(c);
         }
-
     }
 
     /**
@@ -178,6 +189,8 @@ public class Cartes implements ManipulationCartes {
      * @param carte la carte à supprimer des decks
      */
     public void effacerCarteDesDecks(Carte carte) {
+        // supprime une carte de tous les decks connus. Si la carte existe en double
+        // dans un deck, la carte est supprimée 2 fois
         for (Deck deck : maListeDeDeck) {
             // l'utilisation de estPresente est une possibilitée mais rend le code plus lent
             // !
