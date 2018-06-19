@@ -65,4 +65,17 @@ public class TestDenombrement {
 
         assertEquals(den, den1);
     }
+
+    @Test
+    public void testEquals() throws Exception {
+        Carte arme = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+
+        Denombrement den = new Denombrement(arme);
+
+        Carte arme1 = new Arme("Marteau Thor", 10, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+
+        Denombrement den1 = new Denombrement(arme1);
+
+        assertEquals(true, den1.equals(den));
+    }
 }

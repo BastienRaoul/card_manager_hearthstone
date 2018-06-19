@@ -295,4 +295,13 @@ public class TestDeck {
         assertEquals(4, d.collection().size());
     }
 
+    @Test(expected = CarteAbsenteException.class)
+    public void effaceTouteCartes() throws Exception {
+        Cartes tasDeCartes = new Cartes();
+        Carte arme1 = new Arme("arteau Thor", 1, "MarteauThor...", Rarete.BASIQUE, Classe.GUERRIER, 100, 100);
+        tasDeCartes.ajouterDeck(Classe.CHAMAN);
+
+        tasDeCartes.collectionDeDeck().get(0).effacerToutesCartes(arme1);
+    }
+
 }
