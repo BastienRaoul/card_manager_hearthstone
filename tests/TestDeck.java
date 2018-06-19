@@ -7,6 +7,7 @@ import org.junit.*;
 
 import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeNoException;
 
@@ -168,5 +169,35 @@ public class TestDeck {
         ArrayList<Carte> ar = new ArrayList<>();
         ar.add(arme0);
         assertEquals("testDeck 16 ", ar, d.collection());
+    }
+
+    @Test
+    public void EssCollect() throws Exception {
+        Cartes t = new Cartes();
+        Deck d = new Deck(t, Classe.GUERRIER);
+        Carte arme0 = new Arme("Marteau Thor", 0, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte arme1 = new Arme("arteau Thor", 1, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte arme2 = new Arme("Mrteau Thor", 2, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte arme3 = new Arme("Mateau Thor", 3, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        Carte arme4 = new Arme("Mareau Thor", 4, "MarteauThor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        t.ajouter(arme0);
+        t.ajouter(arme1);
+        t.ajouter(arme2);
+        t.ajouter(arme3);
+        t.ajouter(arme4);
+
+        d.ajouter(arme0);
+        d.ajouter(arme1);
+        d.ajouter(arme2);
+        d.ajouter(arme3);
+        d.ajouter(arme4);
+        Deck de = new Deck(t, Classe.GUERRIER);
+        de.ajouter(arme0);
+        de.ajouter(arme1);
+        de.ajouter(arme2);
+        de.ajouter(arme3);
+        de.ajouter(arme4);
+        de.melanger();
+        assertNotSame("EssCollect",d.collection(),de.collection());
     }
 }
