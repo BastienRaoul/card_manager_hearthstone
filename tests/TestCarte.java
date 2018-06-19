@@ -46,10 +46,10 @@ public class TestCarte {
 
     @Test
     public void nom() throws Exception {
-        Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100,
-                100);
-        assertEquals("rarete different", new String("Marteau de Thor").toCharArray(), arme.nom().toCharArray());
-        // TODO probleme comparaison string
+        String nom = "marteau de Thor";
+        Carte arme = new Arme(nom, 10, "Marteau de Thor...", Rarete.LEGENDAIRE, Classe.GUERRIER, 100, 100);
+        assertEquals("nom", "Marteau de thor", arme.nom());
+
     }
 
     @Test
@@ -115,6 +115,19 @@ public class TestCarte {
     public void ErrCarteBasique() throws Exception{
         Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.BASIQUE, Classe.GUERRIER, 100,100);
         arme = arme.fabriquerCarteDoree(arme);
+    }
+
+    @Test
+    public void EssFabriquerDoree()throws Exception{
+        Carte arme = new Arme("Marteau de Thor", 10, "Marteau de Thor...", Rarete.EPIQUE, Classe.GUERRIER, 100,100);
+        Carte serviteur = new Serviteur("Ranger",4,"Strong",Rarete.RARE,Classe.DRUIDE, 5,6,Race.MECA);
+        Carte sort = new Sort("sort",6,"Feu",Rarete.RARE,Classe.GUERRIER);
+        arme = arme.fabriquerCarteDoree(arme);
+        serviteur = serviteur.fabriquerCarteDoree(serviteur);
+        sort = sort.fabriquerCarteDoree(sort);
+        assertEquals("Test Carte Doree arme",true,arme.estDoree());
+        assertEquals("Test Carte Doree serviteur",true,serviteur.estDoree());
+        assertEquals("Test Carte Doree sort",true,sort.estDoree());
     }
 
 
