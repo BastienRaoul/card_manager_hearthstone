@@ -12,6 +12,7 @@ import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
 public class TestCarteD {
+
     // On test ici la méthode dégats() de carteD en instanciant un serviteur
     @Test
     public void testCarteD() throws Exception {
@@ -51,8 +52,8 @@ public class TestCarteD {
     }
 
     /**
-     * Test méthode estEgalModuloDoree la carte serviteur est la même que la carte
-     * serviteur (dorée / non dorée)
+     * Test méthode estEgalModuloDoree 
+     * la carte serviteur est la même que la carte serviteur (dorée / non dorée)
      */
     @Test
     public void EssestModulo() throws Exception {
@@ -61,8 +62,8 @@ public class TestCarteD {
     }
 
     /**
-     * Test méthode estEgalModuloDoree la carte serviteur n'est pas la même carte
-     * que la carte sort (dorée / non dorée)
+     * Test méthode estEgalModuloDoree 
+     * la carte serviteur n'est pas la même carte que la carte sort (dorée / non dorée)
      */
     @Test
     public void EssestModulo2() throws Exception {
