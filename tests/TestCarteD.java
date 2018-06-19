@@ -12,14 +12,15 @@ import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
 public class TestCarteD {
-
+//On test ici la méthode dégats() de carteD en instanciant un serviteur
     @Test
     public void testCarteD() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,
                 Race.BETE);
         assertEquals("Valeur fausse", 5, serviteur.degats());
     }
-
+//On vérifie ici la méthode equals en créant deux instances du même Serviteur (héritant de CarteD)
+//Et en les comparant
     @Test
     public void testCarteD2() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", 4, "Strong", Rarete.EPIQUE, Classe.NEUTRE, "", "", 5, 6,
@@ -29,7 +30,7 @@ public class TestCarteD {
 
         assertEquals(true, serviteur.equals(serviteur2));
     }
-
+//On test ici le déclenchement de l'exception valeur négative dans le constructeur de CarteD
     @Test(expected = ValeurNegativeException.class)
     public void testServiteur4() throws Exception {
         Serviteur serviteur = new Serviteur("Ranger", -1, "Strong", Rarete.EPIQUE, Classe.NEUTRE, 5, 6, Race.BETE);
