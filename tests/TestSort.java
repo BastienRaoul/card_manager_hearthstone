@@ -13,6 +13,14 @@ import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
 public class TestSort {
+
+    /**
+     * Création d'une carte sort sans URL d'image 
+     * Test de la classe de la carte sort
+     * Test de la rarete de la carte sort
+     * Test du coût en mana de la carte sort
+     * Test une carte sort est la même qu'une autre carte sort
+     */
     @Test
     public void testSort1() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
@@ -22,6 +30,13 @@ public class TestSort {
         assertEquals(true, sort.equals(new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR)));
     }
 
+    /**
+     * Création d'une carte sort avec URL d'image 
+     * Test de la classe de la carte sort
+     * Test de la rarete de la carte sort
+     * Test du coût en mana de la carte sort
+     * Test une carte sort est la même qu'une autre carte sort
+     */
     @Test
     public void testSort2() throws Exception {
         Sort sort = new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR, "", "");
@@ -31,11 +46,17 @@ public class TestSort {
         assertEquals(true, sort.equals(new Sort("Groot", 5, "Description", Rarete.COMMUNE, Classe.CHASSEUR)));
     }
 
+    /**
+     * Test valeur négative  d'une carte sort sans URL d'image
+     */
     @Test(expected = ValeurNegativeException.class)
     public void testNegativeException() throws Exception {
         Sort sort = new Sort("Groot", -12, "Description", Rarete.COMMUNE, Classe.CHASSEUR);
     }
 
+     /**
+     * Test valeur négative  d'une carte sort avec URL d'image
+     */
     @Test(expected = ValeurNegativeException.class)
     public void testNegativeException2() throws Exception {
         Sort sort = new Sort("Groot", -12, "Description", Rarete.COMMUNE, Classe.CHASSEUR, "", "");
