@@ -1,6 +1,7 @@
 package hearthstone.cartes;
 
 import hearthstone.carte.Carte;
+import hearthstone.exception.ValeurNegativeException;
 
 /**
  * "couple" permettant d'associer à une carte son nombre d'exemplaires
@@ -19,8 +20,10 @@ public class Denombrement {
      * @param carte  la carte à utiliser
      * @param nombre le nombre d'exemplaires
      */
-    public Denombrement(Carte carte, int nombre) {
+    public Denombrement(Carte carte, int nombre) throws ValeurNegativeException {
         this.carte = carte;
+        if (nombre < 0)
+            throw new ValeurNegativeException("The card count can not be negative");
         this.nombre = nombre;
     }
 
@@ -29,7 +32,7 @@ public class Denombrement {
      * 
      * @param carte la carte à utiliser
      */
-    public Denombrement(Carte carte) {
+    public Denombrement(Carte carte) throws ValeurNegativeException {
         this(carte, 1);
     }
 
