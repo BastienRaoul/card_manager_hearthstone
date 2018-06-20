@@ -133,7 +133,7 @@ public class Cartes implements ManipulationCartes {
      * 
      * @param maClasse la classe du deck à ajouter
      */
-    public void ajouterDeck(Classe maClasse) throws DeckCreationException {
+    protected void ajouterDeck(Deck deck) throws DeckCreationException {
 
         // not usable cuz of the nature of newly created decks (all the same except for
         // the class)
@@ -146,7 +146,12 @@ public class Cartes implements ManipulationCartes {
          * DeckCreationException("On of the deck's card does not exist in the current set !"
          * );
          */
-        ajouterDeck(maClasse, 30);
+        for (Carte c : deck.collection()) {
+            if (!estPresente(c)) {
+                throw new DeckCreationException("Le deck contient des carte qui ne peuvent pas etre utilisées");
+            }
+        }
+        maListeDeDeck.add(deck);
     }
 
     /**
@@ -165,7 +170,6 @@ public class Cartes implements ManipulationCartes {
         } catch (Exception e) {
             throw new DeckCreationException(e.getMessage());
         }
-        maListeDeDeck.add(nouveauDeck);
     }
 
     /**

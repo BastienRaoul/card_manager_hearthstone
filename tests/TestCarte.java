@@ -224,8 +224,7 @@ public class TestCarte {
     }
 
     /**
-     * Test méthode equals
-     * Une arme est la même qu'une autre arme
+     * Test méthode equals Une arme est la même qu'une autre arme
      */
     @Test
     public void EssEquals() throws Exception {
@@ -235,8 +234,7 @@ public class TestCarte {
     }
 
     /**
-     * Test NullPointerException
-     * Création d'une arme avec en paramètre nom : null
+     * Test NullPointerException Création d'une arme avec en paramètre nom : null
      */
     @Test(expected = NullPointerException.class)
     public void testNullparam() throws Exception {
@@ -244,8 +242,7 @@ public class TestCarte {
     }
 
     /**
-     * Test NullPointerException
-     * Création d'une arme avec en paramètre desc : null
+     * Test NullPointerException Création d'une arme avec en paramètre desc : null
      */
     @Test(expected = NullPointerException.class)
     public void testNullparam1() throws Exception {
@@ -253,8 +250,7 @@ public class TestCarte {
     }
 
     /**
-     * Test NullPointerException
-     * Création d'une arme avec en paramètre rarete : null
+     * Test NullPointerException Création d'une arme avec en paramètre rarete : null
      */
     @Test(expected = NullPointerException.class)
     public void testNullparam2() throws Exception {
@@ -262,8 +258,7 @@ public class TestCarte {
     }
 
     /**
-     * Test NullPointerException
-     * Création d'une arme avec en paramètre classe : null
+     * Test NullPointerException Création d'une arme avec en paramètre classe : null
      */
     @Test(expected = NullPointerException.class)
     public void testNullparam3() throws Exception {
@@ -271,8 +266,7 @@ public class TestCarte {
     }
 
     /**
-     * Test méthode equals
-     * Une arme n'est pas la même qu'une autre arme
+     * Test méthode equals Une arme n'est pas la même qu'une autre arme
      */
     @Test
     public void EssnEquals() throws Exception {
@@ -285,9 +279,117 @@ public class TestCarte {
      * Test description courte de la carte arme
      */
     @Test
-    public void estDescription() throws ValeurNegativeException {
+    public void estDescription() throws Exception {
         Carte arme2 = new Arme("Marteau de Thor", 5, "aaaaaaaaaaaaaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
         assertEquals("aaaaaaaaaa", arme2.descriptionCourte());
     }
 
+    /**
+     * Test description courte de la carte arme
+     */
+    @Test
+    public void estDescription2() throws Exception {
+        Carte arme2 = new Arme("Marteau de Thor", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, 100, 100);
+        assertEquals("aaaaaaaaa", arme2.descriptionCourte());
+    }
+
+    /**
+     * Test url image
+     */
+    @Test
+    public void testurlimage() throws Exception {
+        Carte arme2 = new Arme("Marteau de Thor", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdf", "sdf", 100,
+                100);
+        arme2 = arme2.fabriquerCarteDoree(arme2);
+
+        assertEquals("sdf", arme2.urlImage());
+    }
+
+    @Test
+    public void testConstri1() throws Exception {
+        Carte arme2 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdf", "sdf", 100, 100);
+
+        assertEquals("", arme2.nom());
+    }
+
+    @Test
+    public void testegalmodulodore() throws Exception {
+        Carte arme2 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdf", "sdf", 100, 100);
+
+        assertEquals(true, arme2.estEgalModuloDoree(arme2));
+    }
+
+    // desciption
+    @Test
+    public void testegalmodulodore1() throws Exception {
+        Carte arme2 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdf", "sdf", 100, 100);
+        Carte arme1 = new Arme("", 5, "aaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdf", "sdf", 100, 100);
+
+        assertEquals(false, arme1.estEgalModuloDoree(arme2));
+    }
+
+    // rarete
+    @Test
+    public void testegalmodulodore2() throws Exception {
+        Carte arme2 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdf", "sdf", 100, 100);
+        Carte arme1 = new Arme("", 5, "aaaaaaaaa", Rarete.COMMUNE, Classe.GUERRIER, "qsdf", "sdf", 100, 100);
+
+        assertEquals(false, arme1.estEgalModuloDoree(arme2));
+    }
+
+    // rarete
+    @Test
+    public void testegalmodulodore3() throws Exception {
+        Carte arme2 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdf", "sdf", 100, 100);
+        Carte arme1 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.CHASSEUR, "qsdf", "sdf", 100, 100);
+
+        assertEquals(false, arme1.estEgalModuloDoree(arme2));
+    }
+
+    // url image
+    @Test
+    public void testegalmodulodore4() throws Exception {
+        Carte arme2 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdfs", "sdf", 100, 100);
+        Carte arme1 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.CHASSEUR, "qsdf", "sdf", 100, 100);
+
+        assertEquals(false, arme1.estEgalModuloDoree(arme2));
+    }
+
+    // cout creation
+    @Test
+    public void testcoutc() throws Exception {
+        Carte arme2 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdfs", "sdf", 100, 100);
+        arme2 = arme2.fabriquerCarteDoree(arme2);
+
+        assertEquals(1600, arme2.coutCreation());
+    }
+
+    // gain desemchantement
+    @Test
+    public void testdesem() throws Exception {
+        Carte arme2 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdfs", "sdf", 100, 100);
+        arme2 = arme2.fabriquerCarteDoree(arme2);
+
+        assertEquals(400, arme2.gainDesenchantement());
+    }
+
+    // equals doré
+    @Test
+    public void testequals2() throws Exception {
+        Carte arme2 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdfs", "sdf", 100, 100);
+        arme2 = arme2.fabriquerCarteDoree(arme2);
+
+        Carte arme1 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdfs", "sdf", 100, 100);
+
+        assertEquals(false, arme2.equals(arme1));
+    }
+
+    // equals same class
+    @Test
+    public void testequals3() throws Exception {
+        Carte arme2 = new Serviteur("", 1, "sd", Rarete.COMMUNE, Classe.CHASSEUR, 12, 1, Race.DEMON);
+        Carte arme1 = new Arme("", 5, "aaaaaaaaa", Rarete.EPIQUE, Classe.GUERRIER, "qsdfs", "sdf", 100, 100);
+
+        assertEquals(false, arme2.equals(arme1));
+    }
 }

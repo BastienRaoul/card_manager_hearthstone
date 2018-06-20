@@ -280,9 +280,8 @@ public class TestDeck {
     }
 
     /**
-     * Test méthode taille de la collection du deck d
-     * Effacer les cartes arme1
-     * Test méthode taille de la collection du deck d     
+     * Test méthode taille de la collection du deck d Effacer les cartes arme1 Test
+     * méthode taille de la collection du deck d
      */
     @Test
     public void testeffacerToutesCartes() throws Exception {
@@ -312,15 +311,13 @@ public class TestDeck {
     }
 
     /**
-     * Test CarteAbsenteException
-     * Pas de carte de la classe Chaman dans tasDeCartes
+     * Test CarteAbsenteException Pas de carte de la classe Chaman dans tasDeCartes
      */
     @Test(expected = CarteAbsenteException.class)
     public void effaceTouteCartes() throws Exception {
         Cartes tasDeCartes = new Cartes();
         Carte arme1 = new Arme("arteau Thor", 1, "MarteauThor...", Rarete.BASIQUE, Classe.GUERRIER, 100, 100);
-        tasDeCartes.ajouterDeck(Classe.CHAMAN);
-
+        Deck deck = new Deck(tasDeCartes, Classe.CHAMAN);
         tasDeCartes.collectionDeDeck().get(0).effacerToutesCartes(arme1);
     }
 
