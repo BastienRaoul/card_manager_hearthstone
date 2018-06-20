@@ -41,7 +41,7 @@ public class Deck implements ManipulationCartes {
    * @throws LimiteNombreDeCartesException si la taille max dépasse 30
    */
   public Deck(Cartes mesCartes, Classe maClasse, int tailleMax)
-      throws ClasseNeutreException, LimiteNombreDeCartesException {
+      throws ClasseNeutreException, LimiteNombreDeCartesException, DeckCreationException {
     // On test chaque erreur cas par cas
     if (tailleMax > 30 || tailleMax < 0) {
       throw new LimiteNombreDeCartesException("taille trop grande ou trop petite");
@@ -53,6 +53,7 @@ public class Deck implements ManipulationCartes {
     this.maClasse = maClasse;
     this.tailleMax = tailleMax;
     this.list = new ArrayList<>(tailleMax);
+    this.mesCartes.ajouterDeck(this);
   }
 
   /**
@@ -63,7 +64,8 @@ public class Deck implements ManipulationCartes {
    * @throws ClasseNeutreException         si la classe du deck est NEUTRE
    * @throws LimiteNombreDeCartesException si la taille max dépasse 30
    */
-  public Deck(Cartes mesCartes, Classe maClasse) throws ClasseNeutreException, LimiteNombreDeCartesException {
+  public Deck(Cartes mesCartes, Classe maClasse)
+      throws ClasseNeutreException, LimiteNombreDeCartesException, DeckCreationException {
     // On appelle le constructeur au dessus en mettant comme valeur pour la taille
     // maximum 30
     this(mesCartes, maClasse, 30);
