@@ -26,6 +26,7 @@ public class Filtre {
    *         cartes
    */
   public static Collection<Arme> cartesArme(Collection<? extends Carte> desCartes) {
+
     ArrayList<Arme> filtreArmes = new ArrayList<>();
     for (Carte resultat : desCartes) {
       if (resultat instanceof Arme) {

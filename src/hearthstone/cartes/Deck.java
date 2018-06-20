@@ -43,6 +43,8 @@ public class Deck implements ManipulationCartes {
    */
   public Deck(Cartes mesCartes, Classe maClasse, int tailleMax)
       throws ClasseNeutreException, LimiteNombreDeCartesException, DeckCreationException {
+    if (mesCartes == null || maClasse == null)
+      throw new DeckCreationException("classe ou carte null");
     // On test chaque erreur cas par cas
     if (tailleMax > 30 || tailleMax < 0) {
       throw new LimiteNombreDeCartesException("taille trop grande ou trop petite");
