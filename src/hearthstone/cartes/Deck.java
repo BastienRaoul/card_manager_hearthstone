@@ -39,6 +39,7 @@ public class Deck implements ManipulationCartes {
    * @param tailleMax la taille maximum pour ce deck
    * @throws ClasseNeutreException         si la classe du deck est NEUTRE
    * @throws LimiteNombreDeCartesException si la taille max dépasse 30
+   * @throws DeckCreationException         si le deck ne peux pas etre ajouté
    */
   public Deck(Cartes mesCartes, Classe maClasse, int tailleMax)
       throws ClasseNeutreException, LimiteNombreDeCartesException, DeckCreationException {
@@ -63,6 +64,7 @@ public class Deck implements ManipulationCartes {
    * @param maClasse  la classe associée
    * @throws ClasseNeutreException         si la classe du deck est NEUTRE
    * @throws LimiteNombreDeCartesException si la taille max dépasse 30
+   * @throws DeckCreationException         si le deck ne peux pas etre ajouté
    */
   public Deck(Cartes mesCartes, Classe maClasse)
       throws ClasseNeutreException, LimiteNombreDeCartesException, DeckCreationException {
