@@ -66,7 +66,7 @@ public class vueCreation extends vue {
 	super(collection);
 
 	////////////////////
-	subMainRight.setBorder(BorderFactory.createTitledBorder("Mes decks..."));
+	subMainRight.setBorder(BorderFactory.createTitledBorder("Manipulation de carte..."));
 
 	subMainRight.setLayout(new GridLayout(10, 0));
 

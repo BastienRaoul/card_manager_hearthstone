@@ -47,7 +47,7 @@ public class vue extends JFrame {
     public int pageNumber = 0;
 
     public static boolean isWindowOpen = false;
-    
+
     ///////////////////
     private JPanel main = new JPanel();
 
@@ -468,6 +468,8 @@ public class vue extends JFrame {
     public void drawCards(ImagePanel[] cardsHolders, Classe classe) throws ClasseNeutreException, IOException {
 	Collection<Carte> cartes = applyFilterRace();
 
+	System.out.println("Drawing for " + classe);
+
 	int counter = 0;
 	int offset = 8 * (pageNumber);
 
@@ -505,78 +507,6 @@ public class vue extends JFrame {
 	}
     }
 
-    public Classe getClasseFromTabbedPaneId() {
-	switch (classTab.getSelectedIndex()) {
-	case 0:
-	    return Classe.GUERRIER;
-
-	case 1:
-	    return Classe.DRUIDE;
-
-	case 2:
-	    return Classe.CHASSEUR;
-
-	case 3:
-	    return Classe.MAGE;
-
-	case 4:
-	    return Classe.PALADIN;
-
-	case 5:
-	    return Classe.PRETRE;
-
-	case 6:
-	    return Classe.CHAMAN;
-
-	case 7:
-	    return Classe.DEMONISTE;
-
-	case 8:
-	    return Classe.VOLEUR;
-
-	case 9:
-	    return Classe.NEUTRE;
-
-	}
-	return null;
-    }
-
-    public ImagePanel[] getImagePanelFromTabbedPaneId() {
-	switch (classTab.getSelectedIndex()) {
-	case 0:
-	    return subMainGUERRIERCards;
-
-	case 1:
-	    return subMainDRUIDECards;
-
-	case 2:
-	    return subMainCHASSEURCards;
-
-	case 3:
-	    return subMainMAGECards;
-
-	case 4:
-	    return subMainPALADINCards;
-
-	case 5:
-	    return subMainPRETRECards;
-
-	case 6:
-	    return subMainCHAMANCards;
-
-	case 7:
-	    return subMainDEMONISTECards;
-
-	case 8:
-	    return subMainVOLEURCards;
-
-	case 9:
-	    return subMainNEUTRECards;
-
-	}
-	return null;
-    }
-
     public Collection<Carte> applyFilterRace() throws ClasseNeutreException {
 	Collection<Carte> cartes = collection.collection();
 
@@ -607,38 +537,85 @@ public class vue extends JFrame {
     }
 
     public ImagePanel[] getCurrentImagePanels() {
-	switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
-	case "Guerrier":
+	try {
+	    switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
+	    case "Guerrier":
+		return subMainGUERRIERCards;
+
+	    case "Druide":
+		return subMainDRUIDECards;
+
+	    case "Chasseur":
+		return subMainCHASSEURCards;
+
+	    case "Mage":
+		return subMainMAGECards;
+
+	    case "Paladin":
+		return subMainPALADINCards;
+
+	    case "Pretre":
+		return subMainPRETRECards;
+
+	    case "Chaman":
+		return subMainCHAMANCards;
+
+	    case "Demoniste":
+		return subMainDEMONISTECards;
+
+	    case "Voleur":
+		return subMainVOLEURCards;
+
+	    case "Neutre":
+		return subMainNEUTRECards;
+	    default:
+		return subMainGUERRIERCards;
+	    }
+	} catch (Exception e) {
 	    return subMainGUERRIERCards;
-
-	case "Druide":
-	    return subMainDRUIDECards;
-
-	case "Chasseur":
-	    return subMainCHASSEURCards;
-
-	case "Mage":
-	    return subMainMAGECards;
-
-	case "Paladin":
-	    return subMainPALADINCards;
-
-	case "Pretre":
-	    return subMainPRETRECards;
-
-	case "Chaman":
-	    return subMainCHAMANCards;
-
-	case "Demoniste":
-	    return subMainDEMONISTECards;
-
-	case "Voleur":
-	    return subMainVOLEURCards;
-
-	case "Neutre":
-	    return subMainNEUTRECards;
 	}
-	return null;
+
+    }
+
+    public Classe getClasseFromTabbedPaneId() {
+	try {
+	    switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
+	    case "Guerrier":
+		return Classe.GUERRIER;
+
+	    case "Druide":
+		return Classe.DRUIDE;
+
+	    case "Chasseur":
+		return Classe.CHASSEUR;
+
+	    case "Mage":
+		return Classe.MAGE;
+
+	    case "Paladin":
+		return Classe.PALADIN;
+
+	    case "Pretre":
+		return Classe.PRETRE;
+
+	    case "Chaman":
+		return Classe.CHAMAN;
+
+	    case "Demoniste":
+		return Classe.DEMONISTE;
+
+	    case "Voleur":
+		return Classe.VOLEUR;
+
+	    case "Neutre":
+		return Classe.NEUTRE;
+	    default:
+		return Classe.GUERRIER;
+	    }
+	} catch (Exception e) {
+	    return Classe.GUERRIER;
+	}
+
     }
 
     public void resetDesciption() {

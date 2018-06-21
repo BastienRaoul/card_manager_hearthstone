@@ -70,7 +70,7 @@ public class ImagePanel extends JPanel {
     }
 
     private void loadPicFile(File file) {
-	System.out.println("loading image from " + file.toString());
+	//System.out.println("loading image from " + file.toString());
 	try {
 	    image = ImageIO.read(file);
 	} catch (IOException e) {
@@ -103,7 +103,6 @@ public class ImagePanel extends JPanel {
     }
 
     public void reset() {
-	System.out.println("Reset");
 	image = null;
 	mCarte = null;
 	this.setBackground(Color.GRAY);

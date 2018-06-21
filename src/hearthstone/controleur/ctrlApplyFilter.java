@@ -18,7 +18,7 @@ public class ctrlApplyFilter implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		try {
-			mVue.drawCards(mVue.getImagePanelFromTabbedPaneId(), mVue.getClasseFromTabbedPaneId());
+			mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneId());
 		} catch (ClasseNeutreException | IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

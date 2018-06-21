@@ -83,44 +83,4 @@ public class vueCollection extends vue {
 
 	setVisible(true);
     }
-
-    public void drawCards(ImagePanel[] cardsHolders, Classe classe) throws ClasseNeutreException, IOException {
-	Collection<Carte> cartes = applyFilterRace();
-
-	int counter = 0;
-	int offset = 8 * (pageNumber);
-
-	if (cartes.size() > offset) {
-	    Collection<Carte> offsetedCollection = new ArrayList<>();
-
-	    int count = 0;
-	    for (Carte carte : cartes) {
-		if (count < offset) {
-		    ++count;
-		    continue;
-		}
-
-		offsetedCollection.add(carte);
-
-	    }
-	    cartes = offsetedCollection;
-	}
-
-	for (Carte carte : cartes) {
-	    if (counter == 8)
-		break;
-
-	    try {
-		cardsHolders[counter].loadPic(carte);
-	    } catch (Exception e) {
-		continue;
-	    }
-
-	    ++counter;
-	}
-
-	for (int i = counter; i < 8; ++i) {
-	    cardsHolders[i].reset();
-	}
-    }
 }

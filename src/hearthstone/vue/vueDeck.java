@@ -51,10 +51,13 @@ public class vueDeck extends vue {
 
 	mDeck = currentDeck;
 
+	classTab.removeAll();
+	classeVoleur();
+	classeNeutre();
+
 	/////////////////////////////////
 	subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
 
-	// TODO carteList.setListData(collection.collectionDeDeck());
 	carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 	carteList.setLayoutOrientation(JList.HORIZONTAL_WRAP);
 	carteList.setVisibleRowCount(-1);
@@ -70,16 +73,15 @@ public class vueDeck extends vue {
 
 	////////////////////////////////
 
+	choixClasse.addItem(Classe.GUERRIER);
 	choixClasse.addItem(Classe.DRUIDE);
 	choixClasse.addItem(Classe.CHASSEUR);
 	choixClasse.addItem(Classe.MAGE);
 	choixClasse.addItem(Classe.PALADIN);
 	choixClasse.addItem(Classe.PRETRE);
-	choixClasse.addItem(Classe.VOLEUR);
 	choixClasse.addItem(Classe.CHAMAN);
 	choixClasse.addItem(Classe.DEMONISTE);
-	choixClasse.addItem(Classe.GUERRIER);
-	choixClasse.setSelectedItem("Choisir Classe");
+	choixClasse.addItem(Classe.VOLEUR);
 
 	choixClasse.setMaximumRowCount(choixClasse.getModel().getSize());
 
@@ -119,7 +121,7 @@ public class vueDeck extends vue {
 
 	/////////////////////////////////
 
-	choixClasse.addItemListener(new ctrlChangeClasse(this));
+	choixClasse.addActionListener(new ctrlChangeClasse(this));
 
 	/////////////////////////////////
 
@@ -145,263 +147,49 @@ public class vueDeck extends vue {
 
     //////////////////////////////////////////
     public void classeGuerrier() {
-	mainGUERRIER = new JPanel();
-	mainGUERRIER.setLayout(new BorderLayout());
-	//
-	subMainGUERRIERLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	subMainGUERRIERLabel.add(new Label("GUERRIER"));
-
-	mainGUERRIER.add(subMainGUERRIERLabel, BorderLayout.NORTH);
-	//
-	subMainGUERRIERCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-	for (int i = 0; i < 8; ++i) {
-	    subMainGUERRIERCards[i] = new ImagePanel();
-	    subMainGUERRIERCards[i].setBackground(Color.GRAY);
-	    subMainGUERRIERCardsDisplay.add(subMainGUERRIERCards[i]);
-	}
-
-	mainGUERRIER.add(subMainGUERRIERCardsDisplay, BorderLayout.CENTER);
-	//
 	classTab.add(mainGUERRIER, "Guerrier");
-
-	try {
-	    drawCards(subMainGUERRIERCards, Classe.GUERRIER);
-	} catch (ClasseNeutreException | IOException e1) {
-	    // TODO Auto-generated catch block
-	    e1.printStackTrace();
-	}
     }
 
     public void classeDruide() {
-	mainDRUIDE = new JPanel();
-	mainDRUIDE.setLayout(new BorderLayout());
-	//
-	subMainDRUIDELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	subMainDRUIDELabel.add(new Label("DRUIDE"));
-
-	mainDRUIDE.add(subMainDRUIDELabel, BorderLayout.NORTH);
-	//
-	subMainDRUIDECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-	for (int i = 0; i < 8; ++i) {
-	    subMainDRUIDECards[i] = new ImagePanel();
-	    subMainDRUIDECards[i].setBackground(Color.GRAY);
-	    subMainDRUIDECardsDisplay.add(subMainDRUIDECards[i]);
-	}
-
-	mainDRUIDE.add(subMainDRUIDECardsDisplay, BorderLayout.CENTER);
-	//
 	classTab.add(mainDRUIDE, "Druide");
 
-	try {
-	    drawCards(subMainDRUIDECards, Classe.DRUIDE);
-	} catch (ClasseNeutreException | IOException e1) {
-	    // TODO Auto-generated catch block
-	    e1.printStackTrace();
-	}
     }
 
     public void classeVoleur() {
-	mainVOLEUR = new JPanel();
-	mainVOLEUR.setLayout(new BorderLayout());
-	//
-	subMainVOLEURLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	subMainVOLEURLabel.add(new Label("VOLEUR"));
-
-	mainVOLEUR.add(subMainVOLEURLabel, BorderLayout.NORTH);
-	//
-	subMainVOLEURCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-	for (int i = 0; i < 8; ++i) {
-	    subMainVOLEURCards[i] = new ImagePanel();
-	    subMainVOLEURCards[i].setBackground(Color.GRAY);
-	    subMainVOLEURCardsDisplay.add(subMainVOLEURCards[i]);
-	}
-
-	mainVOLEUR.add(subMainVOLEURCardsDisplay, BorderLayout.CENTER);
-	//
 	classTab.add(mainVOLEUR, "Voleur");
 
-	try {
-	    drawCards(subMainVOLEURCards, Classe.VOLEUR);
-	} catch (ClasseNeutreException | IOException e1) {
-	    // TODO Auto-generated catch block
-	    e1.printStackTrace();
-	}
     }
 
     public void classeChasseur() {
-	mainCHASSEUR = new JPanel();
-	mainCHASSEUR.setLayout(new BorderLayout());
-	//
-	subMainCHASSEURLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	subMainCHASSEURLabel.add(new Label("CHASSEUR"));
-
-	mainCHASSEUR.add(subMainCHASSEURLabel, BorderLayout.NORTH);
-	//
-	subMainCHASSEURCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-	for (int i = 0; i < 8; ++i) {
-	    subMainCHASSEURCards[i] = new ImagePanel();
-	    subMainCHASSEURCards[i].setBackground(Color.GRAY);
-	    subMainCHASSEURCardsDisplay.add(subMainCHASSEURCards[i]);
-	}
-
-	mainCHASSEUR.add(subMainCHASSEURCardsDisplay, BorderLayout.CENTER);
-	//
 	classTab.add(mainCHASSEUR, "Chasseur");
 
-	try {
-	    drawCards(subMainCHASSEURCards, Classe.CHASSEUR);
-	} catch (ClasseNeutreException | IOException e1) {
-	    // TODO Auto-generated catch block
-	    e1.printStackTrace();
-	}
     }
 
     public void classeChaman() {
-	mainCHAMAN = new JPanel();
-	mainCHAMAN.setLayout(new BorderLayout());
-	//
-	subMainCHAMANLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	subMainCHAMANLabel.add(new Label("CHAMAN"));
-
-	mainCHAMAN.add(subMainCHAMANLabel, BorderLayout.NORTH);
-	//
-	subMainCHAMANCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-	for (int i = 0; i < 8; ++i) {
-	    subMainCHAMANCards[i] = new ImagePanel();
-	    subMainCHAMANCards[i].setBackground(Color.GRAY);
-	    subMainCHAMANCardsDisplay.add(subMainCHAMANCards[i]);
-	}
-
-	mainCHAMAN.add(subMainCHAMANCardsDisplay, BorderLayout.CENTER);
-	//
 	classTab.add(mainCHAMAN, "Chaman");
-
-	try {
-	    drawCards(subMainCHAMANCards, Classe.CHAMAN);
-	} catch (ClasseNeutreException | IOException e1) {
-	    // TODO Auto-generated catch block
-	    e1.printStackTrace();
-	}
     }
 
     public void classePaladin() {
-	mainPALADIN = new JPanel();
-	mainPALADIN.setLayout(new BorderLayout());
-	//
-	subMainPALADINLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	subMainPALADINLabel.add(new Label("PALADIN"));
-
-	mainPALADIN.add(subMainPALADINLabel, BorderLayout.NORTH);
-	//
-	subMainPALADINCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-	for (int i = 0; i < 8; ++i) {
-	    subMainPALADINCards[i] = new ImagePanel();
-	    subMainPALADINCards[i].setBackground(Color.GRAY);
-	    subMainPALADINCardsDisplay.add(subMainPALADINCards[i]);
-	}
-
-	mainPALADIN.add(subMainPALADINCardsDisplay, BorderLayout.CENTER);
-	//
 	classTab.add(mainPALADIN, "Paladin");
-
-	try {
-	    drawCards(subMainPALADINCards, Classe.PALADIN);
-	} catch (ClasseNeutreException | IOException e1) {
-	    // TODO Auto-generated catch block
-	    e1.printStackTrace();
-	}
     }
 
     public void classeMage() {
-	mainMAGE = new JPanel();
-	mainMAGE.setLayout(new BorderLayout());
-	//
-	subMainMAGELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	subMainMAGELabel.add(new Label("MAGE"));
-
-	mainMAGE.add(subMainMAGELabel, BorderLayout.NORTH);
-	//
-	subMainMAGECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-	for (int i = 0; i < 8; ++i) {
-	    subMainMAGECards[i] = new ImagePanel();
-	    subMainMAGECards[i].setBackground(Color.GRAY);
-	    subMainMAGECardsDisplay.add(subMainMAGECards[i]);
-	}
-
-	mainMAGE.add(subMainMAGECardsDisplay, BorderLayout.CENTER);
-	//
 	classTab.add(mainMAGE, "Mage");
 
-	try {
-	    drawCards(subMainMAGECards, Classe.MAGE);
-	} catch (ClasseNeutreException | IOException e1) {
-	    // TODO Auto-generated catch block
-	    e1.printStackTrace();
-	}
     }
 
     public void classePretre() {
-	mainPRETRE = new JPanel();
-	mainPRETRE.setLayout(new BorderLayout());
-	//
-	subMainPRETRELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	subMainPRETRELabel.add(new Label("PRETRE"));
-
-	mainPRETRE.add(subMainPRETRELabel, BorderLayout.NORTH);
-	//
-	subMainPRETRECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-	for (int i = 0; i < 8; ++i) {
-	    subMainPRETRECards[i] = new ImagePanel();
-	    subMainPRETRECards[i].setBackground(Color.GRAY);
-	    subMainPRETRECardsDisplay.add(subMainPRETRECards[i]);
-	}
-	mainPRETRE.add(subMainPRETRECardsDisplay, BorderLayout.CENTER);
-	//
 	classTab.add(mainPRETRE, "Pretre");
 
-	try {
-	    drawCards(subMainPRETRECards, Classe.PRETRE);
-	} catch (ClasseNeutreException | IOException e1) {
-	    // TODO Auto-generated catch block
-	    e1.printStackTrace();
-	}
     }
 
     public void classeDemoniste() {
-	mainDEMONISTE = new JPanel();
-	mainDEMONISTE.setLayout(new BorderLayout());
-	//
-	subMainDEMONISTELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	subMainDEMONISTELabel.add(new Label("DEMONISTE"));
-
-	mainDEMONISTE.add(subMainDEMONISTELabel, BorderLayout.NORTH);
-	//
-	subMainDEMONISTECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-	for (int i = 0; i < 8; ++i) {
-	    subMainDEMONISTECards[i] = new ImagePanel();
-	    subMainDEMONISTECards[i].setBackground(Color.GRAY);
-	    subMainDEMONISTECardsDisplay.add(subMainDEMONISTECards[i]);
-	}
-
-	mainDEMONISTE.add(subMainDEMONISTECardsDisplay, BorderLayout.CENTER);
-	//
 	classTab.add(mainDEMONISTE, "Demoniste");
 
-	try
-
-	{
-	    drawCards(subMainDEMONISTECards, Classe.DEMONISTE);
-	} catch (ClasseNeutreException | IOException e1) {
-	    // TODO Auto-generated catch block
-	    e1.printStackTrace();
-	}
     }
 
-    //////////////////////////////////////////////
-    public void classeSupp() {
-	if (classTab.getTabCount() > 1) {
-	    classTab.remove(1);
-	}
+    public void classeNeutre() {
+	classTab.add(mainNEUTRE, "Neutre");
     }
 
     //////////////////////////
@@ -442,5 +230,9 @@ public class vueDeck extends vue {
 	}
 
 	return Classe.NEUTRE;
+    }
+
+    public void clearTab() {
+	classTab.removeAll();
     }
 }
