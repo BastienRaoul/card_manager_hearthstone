@@ -15,6 +15,7 @@ import javax.swing.UIManager.*;
 
 import hearthstone.carte.*;
 import hearthstone.cartes.*;
+import hearthstone.controleur.*;
 import hearthstone.exception.*;
 import sun.awt.image.ToolkitImage;
 
@@ -100,6 +101,11 @@ public class vueDeck extends JFrame {
 	private JLabel coutDescription = new JLabel("Cout :");
 	private JLabel valeurDesemDescription = new JLabel("Valeur :");
 	private JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
+
+	/////controlleurs
+
+	ctrlTabbedPaneCollection changementCollection = new ctrlTabbedPaneCollection(this);
+	classTab.addChangeListener(changementCollection);
 
 	/////
 

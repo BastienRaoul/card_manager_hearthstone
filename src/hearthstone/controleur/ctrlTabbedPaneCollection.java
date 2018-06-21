@@ -7,14 +7,24 @@ import javax.swing.event.*;
 
 import hearthstone.carte.Classe;
 import hearthstone.exception.ClasseNeutreException;
-import hearthstone.vue.vueCollection;
+import hearthstone.vue.*;
 
 public class ctrlTabbedPaneCollection implements ChangeListener {
 
 	vueCollection mVue = null;
+	vueDeck mVueDeck = null;
+	vueCreation mVueCreation = null;
 
 	public ctrlTabbedPaneCollection(vueCollection vue) {
 		mVue = vue;
+	}
+
+	public ctrlTabbedPaneCollection(vueDeck vue) {
+		mVueDeck = vue;
+	}
+
+	public ctrlTabbedPaneCollection(vueCreation vue) {
+		mVueCreation = vue;
 	}
 
 	@Override
