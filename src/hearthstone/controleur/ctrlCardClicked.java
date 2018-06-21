@@ -9,19 +9,9 @@ import hearthstone.vue.vueCollection;
 
 public class ctrlCardClicked implements MouseListener {
 	vueCollection mVue = null;
-	vueDeck mVueDeck = null;
-	vueCreation mVueCreation = null;
 
 	public ctrlCardClicked(vueCollection vue) {
 		mVue = vue;
-	}
-
-	public ctrlTabbedPaneCollection(vueDeck vue) {
-		mVueDeck = vue;
-	}
-
-	public ctrlTabbedPaneCollection(vueCreation vue) {
-		mVueCreation = vue;
 	}
 
 	@Override
@@ -29,12 +19,14 @@ public class ctrlCardClicked implements MouseListener {
 
 		mVue.textAreaDescription.setText("<html>" + ((ImagePanel) e.getSource()).mCarte.description() + "</html>");
 		try {
-			mVue.coutDescription.setText("Cout : " + Integer.toString(((ImagePanel) e.getSource()).mCarte.coutCreation()));
+			mVue.coutDescription
+					.setText("Cout : " + Integer.toString(((ImagePanel) e.getSource()).mCarte.coutCreation()));
 		} catch (CoutCreationException e1) {
 			e1.printStackTrace();
 		}
 		try {
-			mVue.valeurDesemDescription.setText("Valeur : " + Integer.toString(((ImagePanel) e.getSource()).mCarte.gainDesenchantement()));
+			mVue.valeurDesemDescription
+					.setText("Valeur : " + Integer.toString(((ImagePanel) e.getSource()).mCarte.gainDesenchantement()));
 		} catch (GainDesenchantementException e1) {
 			e1.printStackTrace();
 		}

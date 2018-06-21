@@ -109,7 +109,7 @@ public class vueDeck extends JFrame {
 	///////////
 	private JList<Carte> carteList = new JList<>();
 
-	private JComboBox choixClasse = new JComboBox<>();
+	private JComboBox<Classe> choixClasse = new JComboBox<>();
 
 	private JButton creationDeck = new JButton("Terminé");
 	/////
@@ -117,10 +117,10 @@ public class vueDeck extends JFrame {
 	private JPanel subMainFilterPanel = new JPanel();
 
 	private JCheckBox filtreRaceCheck = new JCheckBox("Filtre par race :");
-	private JComboBox<Race> filtreRaceCombo = new JComboBox();
+	private JComboBox<Race> filtreRaceCombo = new JComboBox<>();
 
 	private JCheckBox filtreRareteCheck = new JCheckBox("Filtre par rarete :");
-	private JComboBox<Rarete> filtreRareteCombo = new JComboBox();
+	private JComboBox<Rarete> filtreRareteCombo = new JComboBox<>();
 
 	private ButtonGroup filtreTypeGrp = new ButtonGroup();
 	private JRadioButton filtreArme = new JRadioButton("Armes");
