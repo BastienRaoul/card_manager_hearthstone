@@ -25,12 +25,12 @@ public class Filtre {
    * @return la collection des carte "Serviteur" contenues dans la collection de
    *         cartes
    */
-  public static Collection<Arme> cartesArme(Collection<? extends Carte> desCartes) {
+  public static Collection<Carte> cartesArme(Collection<? extends Carte> desCartes) {
 
-    ArrayList<Arme> filtreArmes = new ArrayList<>();
+    ArrayList<Carte> filtreArmes = new ArrayList<>();
     for (Carte resultat : desCartes) {
       if (resultat instanceof Arme) {
-        filtreArmes.add((Arme) resultat);
+        filtreArmes.add(resultat);
       }
     }
     return filtreArmes;
@@ -43,11 +43,11 @@ public class Filtre {
    * @return la collection des cartes "Serviteur" contenues dans la collection de
    *         cartes
    */
-  public static Collection<Serviteur> cartesServiteur(Collection<? extends Carte> desCartes) {
-    ArrayList<Serviteur> filtreServiteurs = new ArrayList<>();
+  public static Collection<Carte> cartesServiteur(Collection<? extends Carte> desCartes) {
+    ArrayList<Carte> filtreServiteurs = new ArrayList<>();
     for (Carte resultat : desCartes) {
       if (resultat instanceof Serviteur) {
-        filtreServiteurs.add((Serviteur) resultat);
+        filtreServiteurs.add(resultat);
       }
     }
     return filtreServiteurs;
@@ -60,11 +60,11 @@ public class Filtre {
    * @return la collection des cartes "Sort" contenues dans la collection de
    *         cartes
    */
-  public static Collection<Sort> cartesSort(Collection<? extends Carte> desCartes) {
-    ArrayList<Sort> filtreSorts = new ArrayList<>();
+  public static Collection<Carte> cartesSort(Collection<? extends Carte> desCartes) {
+    ArrayList<Carte> filtreSorts = new ArrayList<>();
     for (Carte resultat : desCartes) {
       if (resultat instanceof Sort) {
-        filtreSorts.add((Sort) resultat);
+        filtreSorts.add(resultat);
       }
     }
     return filtreSorts;
@@ -94,10 +94,10 @@ public class Filtre {
    * @param race      la race pour filtrer
    * @return la collection de cartes qui ont comme races race
    */
-  public static Collection<Serviteur> cartesParRace(Collection<Serviteur> desCartes, Race race) {
-    ArrayList<Serviteur> filtreRace = new ArrayList<>();
-    for (Serviteur resultat : desCartes) {
-      if (resultat.race() == race) {
+  public static Collection<Carte> cartesParRace(Collection<Carte> desCartes, Race race) {
+    ArrayList<Carte> filtreRace = new ArrayList<>();
+    for (Carte resultat : desCartes) {
+      if (resultat instanceof Serviteur && ((Serviteur) resultat).race() == race) {
         filtreRace.add(resultat);
       }
     }
@@ -135,10 +135,10 @@ public class Filtre {
   public static Collection<Carte> cartesParClasse(Collection<? extends Carte> desCartes, Classe classe)
       throws ClasseNeutreException {
     ArrayList<Carte> filtreClasse = new ArrayList<>();
-
-    if (classe == Classe.NEUTRE)
-      throw new ClasseNeutreException("You can't choose neutral class.");
-
+    /*
+     * if (classe == Classe.NEUTRE) throw new
+     * ClasseNeutreException("You can't choose neutral class.");
+     */
     for (Carte resultat : desCartes) {
       if (resultat.classe() == classe || resultat.classe() == Classe.NEUTRE) {
         filtreClasse.add(resultat);
