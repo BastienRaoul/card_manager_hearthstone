@@ -22,6 +22,7 @@ import hearthstone.cartes.*;
 import hearthstone.controleur.ctrlApplyFilter;
 import hearthstone.controleur.ctrlCardClicked;
 import hearthstone.controleur.ctrlCollectionNext;
+import hearthstone.controleur.ctrlListDeck;
 import hearthstone.controleur.ctrlNewCreationDeck;
 import hearthstone.controleur.ctrlTabbedPaneCollection;
 import hearthstone.exception.*;
@@ -35,6 +36,13 @@ public class vueCollection extends JFrame {
 	private final int X = 1280;
 	private final int Y = 720;
 
+	public Cartes collection = null;
+
+	public int pageNumber = 0;
+
+	public boolean isWindowOpen = false;
+	
+	///////////////////
 	private JPanel main = new JPanel();
 
 	private JPanel subMainRight = new JPanel();
@@ -48,9 +56,9 @@ public class vueCollection extends JFrame {
 	private JPanel cartesRight = new JPanel(new BorderLayout());
 	private JButton cartesButtonNextRight = new JButton(">");
 	//
-	
+
 	private ctrlCardClicked ctrlCards = new ctrlCardClicked(this);
-	
+
 	/////
 	private JPanel mainGUERRIER = null;
 	private JPanel subMainGUERRIERLabel = new JPanel();
@@ -115,7 +123,7 @@ public class vueCollection extends JFrame {
 
 	/////
 
-	private JList<Deck> deckList = new JList<>();
+	private JList<Deck> deckList = null;
 
 	private JButton creationCarte = new JButton("Creation de carte");
 
@@ -138,14 +146,15 @@ public class vueCollection extends JFrame {
 
 	private JButton applyFilter = new JButton("Appliquer");
 	/////
-	public Cartes collection = null;
-
-	public int pageNumber = 0;
 
 	public vueCollection(Cartes collection) {
 		super("DECK manager");
 
 		this.collection = collection;
+		
+		deckList = new JList<>(new DeckHandeler(collection.collectionDeDeck()));
+		deckList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		
 		/////////////////////////////////
 		main.setLayout(new BorderLayout());
 
@@ -467,6 +476,8 @@ public class vueCollection extends JFrame {
 
 		creationDeck.addActionListener(new ctrlNewCreationDeck(this));
 		
+		deckList.addListSelectionListener(new ctrlListDeck(this));
+		
 		/////////////////////////////////
 		this.getContentPane().add(main);
 
@@ -485,7 +496,7 @@ public class vueCollection extends JFrame {
 				}
 			}
 		} catch (Exception e) {
-			// If Nimbus is not available, you can set the GUI to another look and feel.
+			System.out.println("No nimbus");
 		}
 
 		setVisible(true);
@@ -631,4 +642,5 @@ public class vueCollection extends JFrame {
 		}
 		return cartes;
 	}
+
 }

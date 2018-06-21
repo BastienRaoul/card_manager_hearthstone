@@ -150,14 +150,14 @@ public class Cartes implements ManipulationCartes {
      * @throws DeckCreationException quand le deck ne peut pas etre bind à la
      *                               collection
      */
-    public void ajouterDeck(Classe maClasse, int tailleMax) throws DeckCreationException {
+    public void ajouterDeck(Classe maClasse, int tailleMax, String nom) throws DeckCreationException {
 
         if (maClasse == null)
             throw new DeckCreationException("classe null");
 
         try {
             Deck nouveauDeck = null;
-            nouveauDeck = new Deck(this, maClasse, tailleMax);
+            nouveauDeck = new Deck(this, maClasse, tailleMax, nom);
         } catch (Exception e) {
             throw new DeckCreationException(e.getMessage());
         }
