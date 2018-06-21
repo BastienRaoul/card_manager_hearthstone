@@ -22,7 +22,11 @@ public class ctrlCollectionNext implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (position) {
 			// if left
-			tryleft();
+			try {
+				tryleft();
+			} catch (ClasseNeutreException | IOException e1) {
+				e1.printStackTrace();
+			}
 		} else {
 			// if right
 			try {
@@ -33,12 +37,16 @@ public class ctrlCollectionNext implements ActionListener {
 		}
 	}
 
-	private void tryleft() {
-
+	private void tryleft() throws ClasseNeutreException, IOException {
+		if (mVue.pageNumber > 0) {
+			--mVue.pageNumber;
+			mVue.drawCards(mVue.getImagePanelFromTabbedPaneId(), mVue.getClasseFromTabbedPaneId());
+			System.out.println("right page : " + mVue.pageNumber + " " + mVue.applyFilterRace().size());
+		}
 	}
 
 	private void tryright() throws ClasseNeutreException, IOException {
-		if (((mVue.pageNumber+1) * 8) < mVue.applyFilterRace().size()) {
+		if (((mVue.pageNumber + 1) * 8) < mVue.applyFilterRace().size()) {
 			++mVue.pageNumber;
 			mVue.drawCards(mVue.getImagePanelFromTabbedPaneId(), mVue.getClasseFromTabbedPaneId());
 			System.out.println("right page : " + mVue.pageNumber + " " + mVue.applyFilterRace().size());

@@ -1,0 +1,2511 @@
+[
+    {
+        "cardId": "HERO_08",
+        "dbfId": "637",
+        "name": "Jaina Portvaillant",
+        "cardSet": "Basic",
+        "type": "Hero",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "health": 30,
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_08.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_08_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "HERO_08b",
+        "dbfId": "39117",
+        "name": "Khadgar",
+        "cardSet": "Hero Skins",
+        "type": "Hero",
+        "rarity": "Epic",
+        "health": 30,
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_08b.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_08b_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "HERO_08a",
+        "dbfId": "2829",
+        "name": "Medivh",
+        "cardSet": "Hero Skins",
+        "type": "Hero",
+        "rarity": "Epic",
+        "health": 30,
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_08a.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_08a_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_086",
+        "dbfId": "38413",
+        "name": "Flamme interdite",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 0,
+        "text": "D\u00e9pense tous vos cristaux de mana. Inflige l\u2019\u00e9quivalent sous forme de d\u00e9g\u00e2ts \u00e0 un serviteur.",
+        "flavor": "AVERTISSEMENT\u00a0: il est interdit d\u2019utiliser cette flamme \u00e0 moins d\u2019\u00eatre un acolyte des Dieux tr\u00e8s anciens habilit\u00e9.",
+        "artist": "Hideaki Takamura",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_086.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_086_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "AffectedBySpellPower"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_104",
+        "dbfId": "43420",
+        "name": "Parchemin changeant",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 0,
+        "text": "Chaque tour o\u00f9 cette carte est dans votre main, la transforme en un sort de mage al\u00e9atoire.",
+        "flavor": "Au prochain tour, ce sort va \u00eatre HALLU-CINANT_!",
+        "artist": "Arthur Bozonnet",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_104.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_104_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_021",
+        "dbfId": "40324",
+        "name": "Potion de gel",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 0,
+        "text": "<b>G\u00e8le</b> un adversaire.",
+        "flavor": "Je me les g\u00e8le, moi, rien qu\u2019\u00e0 penser \u00e0 toute cette glace\u2026",
+        "artist": "Arthur Bozonnet",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_021.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_021_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_231",
+        "dbfId": "45590",
+        "name": "Artificier des Arcanes",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 1,
+        "attack": 1,
+        "health": 2,
+        "text": "Chaque fois que vous lancez un sort, vous gagnez un montant d\u2019armure \u00e9gal \u00e0 son co\u00fbt.",
+        "flavor": "L\u2019armure \u00e9th\u00e9rienne se dissipe au bout de 6_heures, ce qui cr\u00e9e parfois des situations g\u00eanantes pour les utilisateurs d\u00e9butants ne portant pas de sous-v\u00eatements.",
+        "artist": "Arthur Gimaldinov",
+        "collectible": true,
+        "race": "Elemental",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_231.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_231_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_004",
+        "dbfId": "2572",
+        "name": "D\u00e9flagration des Arcanes",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 1,
+        "text": "Inflige $2 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur. Le bonus aux <b>D\u00e9g\u00e2ts des sorts</b> est doubl\u00e9 pour ce sort.",
+        "flavor": "D\u00e9sormais avec 100% d\u2019explosions en plus\u00a0!",
+        "artist": "Gabor Szikszai",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_004.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_004_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "D\u00e9g\u00e2ts des sorts"
+            }
+        ]
+    },
+    {
+        "cardId": "KAR_009",
+        "dbfId": "39169",
+        "name": "Grimoire bavard",
+        "cardSet": "One Night in Karazhan",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 1,
+        "attack": 1,
+        "health": 1,
+        "text": "<b>Cri de guerre_:</b> ajoute un sort de mage al\u00e9atoire dans votre main.",
+        "flavor": "Il adore Les vertes collines de Strangleronce, et passe son temps \u00e0 le r\u00e9citer en boucle_!",
+        "artist": "A.J. Nazzaro",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "Obtenue \u00e0 l\u2019\u00e9tage de la M\u00e9nagerie dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e \u00e0 l\u2019\u00e9tage de la M\u00e9nagerie dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/KAR_009.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/KAR_009_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_027",
+        "dbfId": "1084",
+        "name": "Image miroir",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 1,
+        "text": "Invoque deux serviteurs_0/2 avec <b>Provocation</b>.",
+        "flavor": "Oh h\u00e9, c\u2019est une image miroir\u00a0!\u00a0!\u00a0riorim egami enu tse\u2019c, \u00e9h hO",
+        "artist": "Jim Nelson",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 4.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 36.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_027.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_027_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_031",
+        "dbfId": "172",
+        "name": "Javelot de glace",
+        "cardSet": "Hall of Fame",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 1,
+        "text": "<b>G\u00e8le</b> un personnage. S\u2019il est d\u00e9j\u00e0 <b>gel\u00e9</b>, inflige $4 |4(point,points) de d\u00e9g\u00e2ts \u00e0 la place.",
+        "flavor": "Le truc, c\u2019est de ne pas briser le javelot. Sinon vous obtenez des morceaux de glace. Et ce n\u2019est pas aussi efficace.",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_031.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_031_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_066",
+        "dbfId": "40299",
+        "name": "Laquais de la Kabale",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 1,
+        "attack": 2,
+        "health": 1,
+        "text": "<b>Cri de guerre_:</b> le prochain <b>Secret</b> que vous jouez pendant ce tour co\u00fbte (0)_|4(cristal,cristaux).",
+        "flavor": "C\u2019est un laquais, certes, mais comme il conna\u00eet tous les secrets de la Kabale, il ne risque pas de perdre son emploi_!",
+        "artist": "Andrew Hou",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_066.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_066_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            },
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_028",
+        "dbfId": "41168",
+        "name": "Ouverture du portail",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Legendary",
+        "cost": 1,
+        "text": "<b>Qu\u00eate_:</b> lancer 6_sorts ne venant pas directement de votre deck. <b>R\u00e9compense_:</b> Distorsion temporelle.",
+        "flavor": "Bien que puissante, l\u2019incantation est simple. C\u2019est juste un saut vers la gauche, et puis un pas sur la droite.",
+        "artist": "Rafael Zanchetin",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_028.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_028_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Qu\u00eate"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_277",
+        "dbfId": "564",
+        "name": "Projectiles des Arcanes",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 1,
+        "text": "Inflige $3 |4(point,points) de d\u00e9g\u00e2ts r\u00e9partis de fa\u00e7on al\u00e9atoire entre tous les adversaires.",
+        "flavor": "Vous devriez pouvoir contr\u00f4ler vos missiles un peu mieux que \u00e7a puisque vous \u00eates un puissant mage et tout et tout.",
+        "artist": "Warren Mahy",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 32.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_277.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_277_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "ImmuneToSpellpower"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_836",
+        "dbfId": "43502",
+        "name": "Souffle de Sindragosa",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 1,
+        "text": "Inflige $2_|4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur adverse al\u00e9atoire et_le_<b>g\u00e8le</b>.",
+        "flavor": "Que quelqu\u2019un me refoute au frigo_!",
+        "artist": "Eric Braddock",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_836.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_836_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "NEW1_012",
+        "dbfId": "405",
+        "name": "Wyrm de mana",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 1,
+        "attack": 1,
+        "health": 3,
+        "text": "Chaque fois que vous lancez un sort, gagne +1_ATQ.",
+        "flavor": "Ces wyrms se nourrissent d\u2019\u00e9nergie arcanique et bien qu\u2019ils soient consid\u00e9r\u00e9s comme une nuisance plut\u00f4t qu\u2019une vraie menace, vous ne devriez vraiment pas les laisser seuls avec un seau de mana.",
+        "artist": "Blizzard Cinematics",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/NEW1_012.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/NEW1_012_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_608",
+        "dbfId": "614",
+        "name": "Apprentie du sorcier",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 3,
+        "health": 2,
+        "text": "Vos sorts co\u00fbtent (1)_|4(cristal,cristaux) de moins.",
+        "flavor": "Les apprentis, c\u2019est utile pour les basses besognes. \u00ab\u00a0Invoque-moi des pains de manne\u00a0! Et un caf\u00e9\u00a0! Non, plut\u00f4t un caf\u00e9 de manne\u00a0!\u00a0\u00bb",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_608.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_608_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Aura"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_020",
+        "dbfId": "41153",
+        "name": "Arcanologue",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "health": 3,
+        "text": "<b>Cri de guerre_:</b> vous piochez un <b>Secret</b> de votre_deck.",
+        "flavor": "Qu\u2019est-ce que vous avez pioch\u00e9_? Chut\u2026 c\u2019est un secret_!",
+        "artist": "Eva Widermann",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_020.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_020_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            },
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_691",
+        "dbfId": "47692",
+        "name": "Archimage Arugal",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 2,
+        "attack": 2,
+        "health": 2,
+        "text": "Chaque fois que vous piochez un serviteur, en ajoute une copie dans votre main.",
+        "flavor": "Sa prog\u00e9niture worgen prononce son nom AROUH-OUH-OUH-OUH-GAL.",
+        "artist": "James Ryman",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_691.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_691_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GVG_001",
+        "dbfId": "1927",
+        "name": "Canon lance-flammes",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "Inflige $4 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur adverse al\u00e9atoire.",
+        "flavor": "Le classique de la maison, notre fid\u00e8le canon lance-flammes, mon pr\u00e9f\u00e9r\u00e9\u00a0!",
+        "artist": "Mauricio Herrera",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_001.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_001_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CS2_024",
+        "dbfId": "662",
+        "name": "\u00c9clair de givre",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 2,
+        "text": "Inflige $3_points de d\u00e9g\u00e2ts \u00e0 un personnage et le <b>g\u00e8le</b>.",
+        "flavor": "D\u2019habitude, quand on joue cette carte, on crie \u00ab\u00a0Un gros cube, un petit cube, c\u2019est l\u2019heure du frigi-cube\u00a0!\u00a0\u00bb.",
+        "artist": "Steve Ellis",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 2.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 40.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_024.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_024_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_303",
+        "dbfId": "38900",
+        "name": "Ensorceleuse du culte",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 2,
+        "attack": 3,
+        "health": 2,
+        "text": "<b>D\u00e9g\u00e2ts des sorts\u00a0: +1</b>\\nApr\u00e8s que vous avez lanc\u00e9 un sort, donne +1/+1 \u00e0 votre C\u2019Thun <i>(o\u00f9 qu\u2019il soit)</i>.",
+        "flavor": "On a beau lui dire d\u2019arr\u00eater, elle continue \u00e0 nourrir C\u2019Thun apr\u00e8s minuit.",
+        "artist": "J. Meyers & T. Washington",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_303.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_303_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "D\u00e9g\u00e2ts des sorts"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_025",
+        "dbfId": "447",
+        "name": "Explosion des Arcanes",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 2,
+        "text": "Inflige $1 |4(point,points) de d\u00e9g\u00e2ts \u00e0 tous les serviteurs adverses.",
+        "flavor": "Ce sort est bien meilleur qu\u2019Implosion des Arcanes.",
+        "artist": "Howard Lyon",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 28.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_025.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_025_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_170",
+        "dbfId": "45269",
+        "name": "Familier corbeau",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "health": 2,
+        "text": "<b>Cri de guerre_:</b> r\u00e9v\u00e8le un sort de chaque deck. Si le v\u00f4tre co\u00fbte plus, vous le piochez.",
+        "flavor": "Familier corbeau sur son arbre perch\u00e9, tenait en son bec un sort\u2026",
+        "artist": "Eva Wildermann",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_170.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_170_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_081",
+        "dbfId": "38407",
+        "name": "Fracasser",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "D\u00e9truit un serviteur <b>gel\u00e9</b>.",
+        "flavor": "Pour qui sonne la glace\u00a0?",
+        "artist": "Trent Kaniuga",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_081.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_081_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_801",
+        "dbfId": "47821",
+        "name": "Gel intense",
+        "cardSet": "The Witchwood",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "<b>G\u00e8le</b> un serviteur.\\nS\u2019il est d\u00e9j\u00e0 <b>gel\u00e9</b>,\\nle d\u00e9truit.",
+        "flavor": "D\u00e9couvrez notre nouvelle glace \u00e0 l\u2019eau et son c\u0153ur gourmand au go\u00fbt intense.",
+        "artist": "Gonzalo Ordonez",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_801.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_801_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_018",
+        "dbfId": "41151",
+        "name": "Geyser de flammes",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "Inflige $2_|4(point,points) de d\u00e9g\u00e2ts. Ajoute un \u00e9l\u00e9mentaire_1/2 dans votre main.",
+        "flavor": "Flammes en avant_!",
+        "artist": "Chris Seaman",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_018.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_018_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_941",
+        "dbfId": "41496",
+        "name": "Glyphe primordial",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 2,
+        "text": "<b>D\u00e9couvre</b> un sort. R\u00e9duit son co\u00fbt de (2)_|4(cristal,cristaux).",
+        "flavor": "C\u2019est un symbole tol\u2019vir ancien qui signifie \u00ab_Oups_!_\u00bb.",
+        "artist": "Matthew O'Connor",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_941.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_941_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Discover"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_003",
+        "dbfId": "2545",
+        "name": "H\u00e9ros d\u00e9funt",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 2,
+        "attack": 3,
+        "health": 2,
+        "text": "Votre pouvoir h\u00e9ro\u00efque inflige 1 point de d\u00e9g\u00e2ts suppl\u00e9mentaire.",
+        "flavor": "\u00ab\u00a0La mort fait partie de la vie\u2026 mais j\u2019aurais pr\u00e9f\u00e9r\u00e9 que non.\u00a0\u00bb - H\u00e9ros d\u00e9funt",
+        "artist": "Arthur Bozonnet",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_003.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_003_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_548",
+        "dbfId": "47054",
+        "name": "Livre des spectres",
+        "cardSet": "The Witchwood",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 2,
+        "text": "Vous piochez 3_cartes. Vous vous d\u00e9faussez de tout sort pioch\u00e9.",
+        "flavor": "Connu dans toute la r\u00e9gion sous le nom de spectro-nomicon.",
+        "artist": "Dave Allsop",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_548.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_548_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_068",
+        "dbfId": "42716",
+        "name": "Marche-glace",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 2,
+        "attack": 1,
+        "health": 3,
+        "text": "Votre pouvoir h\u00e9ro\u00efque <b>g\u00e8le</b> aussi la cible.",
+        "flavor": "Une glace_? \u00c7a marche_!",
+        "artist": "James Ryman",
+        "collectible": true,
+        "race": "Elemental",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_068.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_068_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_003",
+        "dbfId": "1929",
+        "name": "Portail instable",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 2,
+        "text": "Place un serviteur al\u00e9atoire dans votre main. Il co\u00fbte (3) cristaux de moins.",
+        "flavor": "Les citoyens d\u2019Azeroth ne s\u2019imaginent pas combien il est difficile et surtout co\u00fbteux de stabiliser ces portails. D\u2019ailleurs, vous auriez pas 1 PO pour nous aider\u00a0?",
+        "artist": "Sean O'Daniels",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_003.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_003_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_027",
+        "dbfId": "41162",
+        "name": "Pyros",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 2,
+        "attack": 2,
+        "health": 2,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> le renvoie dans votre main et devient une carte_6/6 qui co\u00fbte (6)_|4(cristal,cristaux) de mana.",
+        "flavor": "Si vous le terrassez, il deviendra bien plus puissant que vous ne pourriez jamais\u2026 Bon bref, il deviendra une carte_6/6, quoi.",
+        "artist": "Mike Sass",
+        "collectible": true,
+        "elite": true,
+        "race": "Elemental",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_027.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_027_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_103",
+        "dbfId": "43414",
+        "name": "Rubis de sort inf\u00e9rieur",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 2,
+        "text": "<i>(Jouez 2_\u00e9l\u00e9mentaires pour l\u2019am\u00e9liorer.)</i>",
+        "flavor": "La derni\u00e8re pierre causa la perte de son ma\u00eetre,\\nEmprisonn\u00e9 par les sorts de bien tristes \u00eatres.\\nAzari poussa un f\u00e9roce rugissement,\\n\u00c0 jamais scell\u00e9 dans le n\u00e9ant.",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_103.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_103_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GVG_002",
+        "dbfId": "1928",
+        "name": "Souffle-neige",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "health": 3,
+        "text": "<b>G\u00e8le</b> tout personnage bless\u00e9 par ce serviteur.",
+        "flavor": "Rien \u00e0 voir avec le transperce-neige.",
+        "artist": "Gabor Szikszai",
+        "collectible": true,
+        "race": "Mech",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_002.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_002_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_846",
+        "dbfId": "41927",
+        "name": "Temp\u00eate chatoyante",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "health": 1,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> ajoute un sort de mage al\u00e9atoire dans votre main.",
+        "flavor": "C\u2019est le calme avant la temp\u00eate.",
+        "artist": "Luca Zontini",
+        "collectible": true,
+        "race": "Elemental",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_846.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_846_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "KAR_092",
+        "dbfId": "39767",
+        "name": "Valet de Medivh",
+        "cardSet": "One Night in Karazhan",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "health": 3,
+        "text": "<b>Cri de guerre_:</b> si vous contr\u00f4lez un <b>Secret</b>, inflige 3_points de d\u00e9g\u00e2ts.",
+        "flavor": "\u00ab_Magus Medivh, voici les ballons enflamm\u00e9s que vous avez command\u00e9s._\u00bb",
+        "artist": "Sean McNally",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "Obtenue \u00e0 l\u2019\u00e9tage de la Fl\u00e8che dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e \u00e0 l\u2019\u00e9tage de la Fl\u00e8che dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/KAR_092.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/KAR_092_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            },
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_252",
+        "dbfId": "42836",
+        "name": "\u00c2mefroide",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 3,
+        "health": 4,
+        "text": "<b>Cri de guerre_:</b> vous piochez une carte si un adversaire est <b>gel\u00e9</b>.",
+        "flavor": "Il se g\u00e8le les os ici_!",
+        "artist": "Andrew Hou",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_252.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_252_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_083",
+        "dbfId": "42756",
+        "name": "Apprentie damn\u00e9e",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 3,
+        "health": 2,
+        "text": "Les sorts de votre adversaire co\u00fbtent (1)_|4(cristal,cristaux) de plus.",
+        "flavor": "Jaina n\u2019a jamais su comment prendre soin de ses apprentis.",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_083.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_083_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Aura"
+            }
+        ]
+    },
+    {
+        "cardId": "BRM_002",
+        "dbfId": "2275",
+        "name": "Attise-flammes",
+        "cardSet": "Blackrock Mountain",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 2,
+        "health": 4,
+        "text": "Apr\u00e8s que vous avez lanc\u00e9 un sort, inflige 2 points de d\u00e9g\u00e2ts r\u00e9partis de fa\u00e7on al\u00e9atoire entre tous les adversaires.",
+        "flavor": "\u2026 Et dans les flammes, j\u2019ai entendu une voix qui disait \u00ab\u00a0Zuul\u00a0\u00bb.",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "Obtenue dans l\u2019aile repaire de l\u2019Aile noire de l\u2019aventure Mont Rochenoire.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir \u00e9t\u00e9 d\u00e9bloqu\u00e9e dans l\u2019aile repaire de l\u2019Aile noire de l\u2019aventure Mont Rochenoire.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/BRM_002.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/BRM_002_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_289",
+        "dbfId": "621",
+        "name": "Barri\u00e8re de glace",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "<b>Secret_:</b> quand votre h\u00e9ros est attaqu\u00e9, il gagne 8_points d\u2019armure.",
+        "flavor": "D\u2019accord, vous \u00eates bien prot\u00e9g\u00e9... mais vous \u00eates gel\u00e9. Et impossible de faire un feu en plein combat\u00a0!",
+        "artist": "Alex Garner",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_289.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_289_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_295",
+        "dbfId": "192",
+        "name": "Bloc de glace",
+        "cardSet": "Hall of Fame",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "cost": 3,
+        "text": "<b>Secret\u00a0:</b> prot\u00e8ge votre h\u00e9ros des d\u00e9g\u00e2ts mortels, et le rend <b>Insensible</b> pendant ce tour.",
+        "flavor": "La glace c\u2019est classe et \u00e7a carapace\u00a0!",
+        "artist": "Carl Frank",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_295.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_295_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_838",
+        "dbfId": "48445",
+        "name": "Chat noir",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>D\u00e9g\u00e2ts des sorts_:_+1</b>\\n<b>Cri de guerre_:</b> si votre deck ne contient que des cartes de co\u00fbt impair,_vous_piochez_une_carte.",
+        "flavor": "Si vous le croisez un jour impair, mettez-vous \u00e0 couvert_!",
+        "artist": "Jakub Kasber",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_838.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_838_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "D\u00e9g\u00e2ts des sorts"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_082",
+        "dbfId": "42754",
+        "name": "Clone de glace",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "<b>Secret_:</b> une fois que votre adversaire a jou\u00e9 un serviteur, en ajoute deux copies dans votre main.",
+        "flavor": "J\u2019ai une impression de d\u00e9j\u00e0-vu\u2026",
+        "artist": "Mike Sass",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_082.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_082_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_287",
+        "dbfId": "113",
+        "name": "Contresort",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "<b>Secret\u00a0:</b> quand votre adversaire lance un sort, le <b>contre</b>.",
+        "flavor": "Quelle est la diff\u00e9rence entre un mage jouant avec Contresort et un autre\u00a0? Le second se prend une explosion pyrotechnique dans la figure\u00a0!",
+        "artist": "Jason Chan",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_287.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_287_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "tt_010",
+        "dbfId": "366",
+        "name": "Courbe-sort",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "cost": 3,
+        "text": "<b>Secret_:</b> quand votre adversaire lance un sort sur un serviteur, invoque un_1/3 qui devient la nouvelle cible.",
+        "flavor": "M\u00eame si c\u2019est sympa d\u2019intercepter les \u00e9clairs adverses, le courbe-sort pr\u00e9f\u00e8re intercepter les Marques du fauve. Parce que c\u2019est plus m\u00e9chant. Et les elfes de sang... eh bien, ils sont un peu m\u00e9chants.",
+        "artist": "Gonzalo Ordonez",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/tt_010.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/tt_010_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_123",
+        "dbfId": "2249",
+        "name": "Cracheur de suie",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>D\u00e9g\u00e2ts des sorts\u00a0: +1</b>",
+        "flavor": "Cette manie que tu as de cracher partout comme un lama\u00a0!",
+        "artist": "Phil Saunders",
+        "collectible": true,
+        "race": "Mech",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_123.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_123_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "D\u00e9g\u00e2ts des sorts"
+            }
+        ]
+    },
+    {
+        "cardId": "FP1_018",
+        "dbfId": "1801",
+        "name": "Dupliquer",
+        "cardSet": "Naxxramas",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "<b>Secret\u00a0:</b> quand un serviteur alli\u00e9 meurt, en place 2 copies dans votre main.",
+        "flavor": "C\u2019est bien la seule fois o\u00f9 vous pourrez copier des cartes sans vous faire bannir votre compte\u00a0!",
+        "artist": "Alex Garner",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "Obtenue dans l\u2019aile quartier de la Peste de l\u2019aventure La mal\u00e9diction de Naxxramas.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir \u00e9t\u00e9 d\u00e9bloqu\u00e9e dans l\u2019aile quartier de la Peste de l\u2019aventure La mal\u00e9diction de Naxxramas.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/FP1_018.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/FP1_018_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_002",
+        "dbfId": "2541",
+        "name": "Effigie",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "<b>Secret\u00a0:</b> quand un serviteur alli\u00e9 meurt, invoque un serviteur al\u00e9atoire de m\u00eame co\u00fbt.",
+        "flavor": "Un homme, une flamme... Un homme et une flamme\u00a0!",
+        "artist": "Tooth",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_002.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_002_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_294",
+        "dbfId": "195",
+        "name": "Entit\u00e9 miroir",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "<b>Secret\u00a0:</b> une fois que votre adversaire a jou\u00e9 un serviteur, en invoque une copie.",
+        "flavor": "\u00ab\u00a0Vas-y d\u2019abord.\u00a0\u00bb - Krush\u2019gor, le B\u00e9h\u00e9moth, \u00e0 son sanglier.",
+        "artist": "Raven Mimura",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_294.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_294_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_660",
+        "dbfId": "40935",
+        "name": "Incante-\u00e2me d\u00e9mente",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 3,
+        "attack": 3,
+        "health": 4,
+        "text": "<b>Cri de guerre_:</b> choisit un serviteur alli\u00e9 et en place une copie dans votre deck.",
+        "flavor": "Fuyez, pauvres fous_! Ah ah ah ah ah_!",
+        "artist": "J. Ejsing & E. Amundsen",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_660.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_660_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_023",
+        "dbfId": "555",
+        "name": "Intelligence des Arcanes",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 3,
+        "text": "Vous piochez 2 cartes.",
+        "flavor": "Jouer cette carte vous rend plus INTELLIGENT. Et soyons honn\u00eates, \u00e7a ne fait de mal \u00e0 personne.",
+        "artist": "Dave Berggren",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 15.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_023.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_023_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_007",
+        "dbfId": "2571",
+        "name": "Jette-sorts",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 3,
+        "health": 4,
+        "text": "<b>Cri de guerre\u00a0:</b> ajoute un sort al\u00e9atoire dans la main de chaque joueur.",
+        "flavor": "Il lance, balance, des sorts et des charmes \u00e0 gogo\u2026",
+        "artist": "Andrew Hou",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_007.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_007_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_024",
+        "dbfId": "41158",
+        "name": "Liens de mana",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "<b>Secret_:</b> quand votre adversaire lance un sort, en ajoute une copie dans votre main qui co\u00fbte (0)_|4(cristal,cristaux).",
+        "flavor": "Joli sort. BAM, quoi_!",
+        "artist": "Izzy Hoover",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_024.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_024_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_612",
+        "dbfId": "748",
+        "name": "Mage du Kirin Tor",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 4,
+        "health": 3,
+        "text": "<b>Cri de guerre_:</b> le prochain <b>Secret</b> que vous jouez pendant ce tour co\u00fbte (0)_|4(cristal,cristaux).",
+        "flavor": "Les mages du Kirin Tor r\u00e9sident dans la cit\u00e9 flottante de Dalaran. Une ville qui flotte\u00a0? Et pourquoi pas des chevaux ail\u00e9s\u00a0!!!",
+        "artist": "Popo Wei",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_612.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_612_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            },
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_083",
+        "dbfId": "38409",
+        "name": "Mande-flamme du Cr\u00e9puscule",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 2,
+        "health": 2,
+        "text": "<b>Cri de guerre\u00a0:</b> inflige 1 point de d\u00e9g\u00e2ts \u00e0 tous les serviteurs adverses.",
+        "flavor": "Je suis tr\u00e8s loin d\u2019en avoir fini avec toi, je vais te la jouer \u00e0 la flamme bien moyen\u00e2geuse.",
+        "artist": "Anton Zemskov",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_083.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_083_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_005",
+        "dbfId": "2542",
+        "name": "M\u00e9tamorphose\u00a0: sanglier",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "Transforme un serviteur en sanglier 4/2 avec <b>Charge</b>.",
+        "flavor": "On tombe toujours sur Souffleur.",
+        "artist": "Mike Sass",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_005.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_005_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Charge"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_026",
+        "dbfId": "587",
+        "name": "Nova de givre",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 3,
+        "text": "<b>G\u00e8le</b> tous les serviteurs adverses.",
+        "flavor": "\u00c7a a jet\u00e9 un froid. M\u00e9taphoriquement et litt\u00e9ralement.",
+        "artist": "Josh Tallman",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 6.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 6.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_026.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_026_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_620",
+        "dbfId": "40409",
+        "name": "Potion de m\u00e9tamorphose",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "<b>Secret_:</b> une fois que votre adversaire a jou\u00e9 un serviteur, le transforme en mouton_1/1.",
+        "flavor": "Elle a un go\u00fbt de b\u00e9\u00e9\u00e9-tteraves_!",
+        "artist": "Arthur Bozonnet",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_620.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_620_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_065",
+        "dbfId": "40297",
+        "name": "Potion volcanique",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "Inflige $2_|4(point,points) de d\u00e9g\u00e2ts \u00e0 tous les serviteurs.",
+        "flavor": "C\u2019est l\u2019ingr\u00e9dient secret de la recette de chili de Kazakus, mais chut, je ne vous ai rien dit_!",
+        "artist": "Konstantin Turovec",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_065.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_065_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_101",
+        "dbfId": "43407",
+        "name": "Runes explosives",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "<b>Secret_:</b> une fois que votre adversaire a jou\u00e9 un serviteur, lui inflige $6_|4(point,points) de d\u00e9g\u00e2ts et tout surplus \u00e0 son_h\u00e9ros.",
+        "flavor": "Si vous lisez ceci, alors cet avertissement est pour vous. NE LISEZ PAS CET AVERTISSEMENT_!",
+        "artist": "Matt Dixon",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_101.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_101_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            },
+            {
+                "name": "ImmuneToSpellpower"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_823",
+        "dbfId": "43193",
+        "name": "Simulacre",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 3,
+        "text": "Copie le serviteur au co\u00fbt le plus bas dans votre main.",
+        "flavor": "J\u2019ai une impression de d\u00e9j\u00e0-vu\u2026",
+        "artist": "Raymond Swanland",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_823.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_823_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_147",
+        "dbfId": "46715",
+        "name": "Temp\u00eate de cendres",
+        "cardSet": "The Witchwood",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "Inflige $5_|4(point,points) de d\u00e9g\u00e2ts r\u00e9partis de fa\u00e7on al\u00e9atoire entre tous les adversaires.",
+        "flavor": "Pr\u00e9visions du jour_: \u00ab_Nuageux avec risque de temp\u00eate de boules de feu._\u00bb",
+        "artist": "Anton Zemskov",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_147.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_147_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "ImmuneToSpellpower"
+            }
+        ]
+    },
+    {
+        "cardId": "LOE_002",
+        "dbfId": "2874",
+        "name": "Torche oubli\u00e9e",
+        "cardSet": "The League of Explorers",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "Inflige $3 |4(point,points) de d\u00e9g\u00e2ts. Place une carte Torche enflamm\u00e9e dans votre deck qui inflige 6 points de d\u00e9g\u00e2ts.",
+        "flavor": "Comment une torche oubli\u00e9e peut-elle donner une torche enflamm\u00e9e\u00a0? C\u2019est un des grands myst\u00e8res de l\u2019univers\u00a0!",
+        "artist": "Richard Wright",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "Obtenue avec l\u2019aventure la Ligue des explorateurs.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir commenc\u00e9 l\u2019aventure la Ligue des explorateurs.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOE_002.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOE_002_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_594",
+        "dbfId": "286",
+        "name": "Vaporisation",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "<b>Secret\u00a0:</b> quand un serviteur attaque votre h\u00e9ros, le d\u00e9truit.",
+        "flavor": "Il para\u00eet qu\u2019Aile de mort aurait perdu une partie en jouant cette carte, ce qui aurait provoqu\u00e9 un cataclysme... Mais toutes les preuves sont parties en fum\u00e9e.",
+        "artist": "Raymond Swanland",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_594.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_594_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_069",
+        "dbfId": "42718",
+        "name": "Adjuratrice spectrale",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 2,
+        "health": 6,
+        "text": "<b>Cri de guerre_:</b> ajoute un sort Image miroir dans votre main.",
+        "flavor": "\u00ab_Ma ch\u00e9rie, du violet sur oune fant\u00f4me_? Mais tou es compl\u00e8tement \u00e0 c\u00f4t\u00e9 de ta pompe_!_\u00bb",
+        "artist": "Paul Mafayon",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_069.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_069_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_274",
+        "dbfId": "1737",
+        "name": "Arcaniste \u00e9th\u00e9rien",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 3,
+        "health": 3,
+        "text": "Si vous contr\u00f4lez un <b>Secret</b> \u00e0 la fin de votre tour, gagne_+2/+2.",
+        "flavor": "Les \u00e9th\u00e9riens s\u2019enroulent dans des \u00e9toffes pour donner forme \u00e0 leur silhouette. Mais aussi parce que c\u2019est doux et seyant.",
+        "artist": "Michael Komarck",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_274.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_274_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "LOE_119",
+        "dbfId": "36111",
+        "name": "Armure anim\u00e9e",
+        "cardSet": "The League of Explorers",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 4,
+        "health": 4,
+        "text": "Votre h\u00e9ros ne peut pas subir plus de 1 point de d\u00e9g\u00e2ts \u00e0 la fois.",
+        "flavor": "Essayez de l\u2019enfiler. Une minute, je prends ma cam\u00e9ra\u00a0!",
+        "artist": "Mike Sass",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "Obtenue dans l\u2019aile Hall des Explorateurs de l\u2019aventure la Ligue des explorateurs.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e dans l\u2019aile Hall des Explorateurs de l\u2019aventure la Ligue des explorateurs.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOE_119.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOE_119_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_006",
+        "dbfId": "2549",
+        "name": "Aspirant de Dalaran",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 4,
+        "attack": 3,
+        "health": 5,
+        "text": "<b>Exaltation\u00a0:</b> vous gagnez <b>+1 aux d\u00e9g\u00e2ts des sorts</b>.",
+        "flavor": "Aspirez, inspirez. Aspirez, insp... Euh, non c\u2019est pas \u00e7a.",
+        "artist": "Dan Scott",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_006.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_006_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Exaltation"
+            },
+            {
+                "name": "D\u00e9g\u00e2ts des sorts"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_029",
+        "dbfId": "315",
+        "name": "Boule de feu",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 4,
+        "text": "Inflige $6 |4(point,points) de d\u00e9g\u00e2ts.",
+        "flavor": "Ce sort est utile pour faire br\u00fbler des choses. Si vous cherchez un sort pour griller ou juste r\u00e9chauffer, vous n\u2019\u00eates pas au bon endroit.",
+        "artist": "Ralph Horsley",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 44.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_029.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_029_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_275",
+        "dbfId": "430",
+        "name": "C\u00f4ne de froid",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 4,
+        "text": "<b>G\u00e8le</b> et inflige $1 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur et ceux \u00e0 c\u00f4t\u00e9 de lui.",
+        "flavor": "Les magi du Kirin Tor ont longtemps lanc\u00e9 des cubes de froid avant que les c\u00f4nes ne deviennent \u00e0 la mode il y a environ 90 ans.",
+        "artist": "Leo Che",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_275.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_275_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_664",
+        "dbfId": "47554",
+        "name": "Corbeau aga\u00e7ant",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 4,
+        "attack": 3,
+        "health": 3,
+        "text": "Chaque fois que vous lancez un sort, invoque un serviteur al\u00e9atoire co\u00fbtant 2_cristaux.",
+        "flavor": "Son troisi\u00e8me \u0153il n\u2019augure jamais rien de bon.",
+        "artist": "A.J. Nazzaro",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_664.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_664_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GVG_005",
+        "dbfId": "1941",
+        "name": "\u00c9cho de Medivh",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 4,
+        "text": "Place une copie de chaque serviteur alli\u00e9 dans votre main.",
+        "flavor": "Tout est une copie d\u2019une copie d\u2019une copie...",
+        "artist": "Alex Garner",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_005.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_005_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CS2_033",
+        "dbfId": "395",
+        "name": "\u00c9l\u00e9mentaire d\u2019eau",
+        "cardSet": "Basic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 4,
+        "attack": 3,
+        "health": 6,
+        "text": "<b>G\u00e8le</b> tout personnage bless\u00e9 par ce serviteur.",
+        "flavor": "Avec l\u2019\u00e9l\u00e9mentaire d\u2019eau, tout baigne\u00a0!",
+        "artist": "John Avon",
+        "collectible": true,
+        "race": "Elemental",
+        "playerClass": "Mage",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 8.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 49.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_033.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_033_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_004",
+        "dbfId": "1934",
+        "name": "Explomage gobelin",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 5,
+        "health": 4,
+        "text": "<b>Cri de guerre\u00a0:</b> si vous poss\u00e9dez un M\u00e9ca, inflige 4 points de d\u00e9g\u00e2ts r\u00e9partis de fa\u00e7on al\u00e9atoire entre tous les adversaires.",
+        "flavor": "Je t\u2019exploserai moi-m\u00eame la cervelle\u2026 personnellement\u00a0!",
+        "artist": "Glenn Rane",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_004.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_004_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_116",
+        "dbfId": "46654",
+        "name": "Forge-cl\u00e9 arcanique",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 4,
+        "attack": 2,
+        "health": 2,
+        "text": "<b> Cri de guerre_:</b> <b>d\u00e9couvre</b> un <b>Secret</b>. Le place sur le champ de bataille.",
+        "flavor": "Notre forge-cl\u00e9 exp\u00e9riment\u00e9e est \u00e0 votre service pour tous vos travaux de serrurerie, d\u00e9pannages et autres urgences.",
+        "artist": "Matt Dixon",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_116.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_116_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Discover"
+            },
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_085",
+        "dbfId": "38412",
+        "name": "Mande-givre d\u00e9ment",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 2,
+        "health": 4,
+        "text": "Apr\u00e8s que vous avez lanc\u00e9 un sort, <b>g\u00e8le</b> un adversaire al\u00e9atoire.",
+        "flavor": "Celui-l\u00e0 je l\u2019ai refroidi.",
+        "artist": "Arthur Gimaldinov",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_085.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_085_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_537",
+        "dbfId": "46541",
+        "name": "Manipulateur tellurique",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 4,
+        "health": 5,
+        "text": "<b>Cri de guerre_:</b> r\u00e9duit de (2)_cristaux le co\u00fbt des cartes dans votre main ne venant pas directement de votre deck.",
+        "flavor": "La plus courte distance entre deux points est une ligne tellurique.",
+        "artist": "Arthur Bozonnet",
+        "collectible": true,
+        "race": "Elemental",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_537.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_537_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_022",
+        "dbfId": "77",
+        "name": "M\u00e9tamorphose",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 4,
+        "text": "Transforme un serviteur en mouton_1/1.",
+        "flavor": "J\u2019allais faire une blague m\u00ea\u00ea\u00ea\u00ea elle est tomb\u00e9e \u00e0 l\u2019eau.",
+        "artist": "Vance Kovacs",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 47.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_022.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_022_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GVG_122",
+        "dbfId": "2234",
+        "name": "Mini stoppe-sort",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 4,
+        "attack": 2,
+        "health": 5,
+        "text": "Les serviteurs adjacents ne peuvent pas \u00eatre la cible de sorts ou de pouvoirs h\u00e9ro\u00efques.",
+        "flavor": "La plaie des lanceurs de sorts.",
+        "artist": "Jonboy Meyers",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_122.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_122_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Aura"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_948",
+        "dbfId": "41690",
+        "name": "Reflet de magma",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 4,
+        "text": "Choisit un serviteur alli\u00e9 et en invoque une_copie.",
+        "flavor": "Chuis beau, j\u2019y crois pas comment je suis beau_!",
+        "artist": "L. Lullabi & K. Turovec",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_948.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_948_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_021",
+        "dbfId": "41154",
+        "name": "Surgisseur de vapeur",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 5,
+        "health": 4,
+        "text": "<b>Cri de guerre_:</b> si vous avez jou\u00e9 un \u00e9l\u00e9mentaire au tour pr\u00e9c\u00e9dent, ajoute un Geyser de flammes dans votre main.",
+        "flavor": "Crache ta vapeur, sale pourriture_!",
+        "artist": "Jakub Kasber",
+        "collectible": true,
+        "race": "Elemental",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_021.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_021_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "LOE_003",
+        "dbfId": "2875",
+        "name": "Adjurateur \u00e9th\u00e9rien",
+        "cardSet": "The League of Explorers",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 5,
+        "attack": 6,
+        "health": 3,
+        "text": "<b>Cri de guerre\u00a0: d\u00e9couvre</b>\\nun sort.",
+        "flavor": "M\u00eame si on voit \u00e0 travers, c\u2019est une carte solide.",
+        "artist": "Benjamin Zhang",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "Obtenue dans l\u2019aile Uldaman de l\u2019aventure la Ligue des explorateurs.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e dans l\u2019aile Uldaman de l\u2019aventure la Ligue des explorateurs.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOE_003.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOE_003_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Discover"
+            },
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_640",
+        "dbfId": "47429",
+        "name": "Amateur de curiosit\u00e9s",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 5,
+        "attack": 4,
+        "health": 4,
+        "text": "Chaque fois que vous piochez une carte, gagne_+1/+1.",
+        "flavor": "La curiosit\u00e9 est un vilain d\u00e9faut, c\u2019est pour \u00e7a qu\u2019il en fait son cr\u00e9do_!",
+        "artist": "Alex Konstad",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_640.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_640_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_671",
+        "dbfId": "40988",
+        "name": "Cryomancienne",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 5,
+        "attack": 5,
+        "health": 5,
+        "text": "<b>Cri de guerre_:</b> gagne_+2/+2 si un adversaire est <b>gel\u00e9</b>.",
+        "flavor": "Elle se prend pour qui, celle-l\u00e0, la reine des glaces_?",
+        "artist": "Tyler West Studios",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_671.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_671_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            },
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_106",
+        "dbfId": "43424",
+        "name": "Deck miraculeux",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 5,
+        "text": "Place 5_parchemins dans votre deck. Quand vous en piochez un, lance un sort al\u00e9atoire.",
+        "flavor": "\u00ab_Choisissez une carte, n\u2019importe laquelle. Une minute_! Non_! Pas celle-l\u00e0_!_\u00bb",
+        "artist": "Efrem Palacios",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_106.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_106_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_645",
+        "dbfId": "47438",
+        "name": "\u00c9l\u00e9mentaire incandescent",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 5,
+        "attack": 5,
+        "health": 5,
+        "text": "<b>Cri de guerre_:</b> vous piochez une carte si vous avez jou\u00e9 un \u00e9l\u00e9mentaire au tour pr\u00e9c\u00e9dent.",
+        "flavor": "Prochaine \u00e9tape_: des \u00e9l\u00e9mentaires en guimauve.",
+        "artist": "Konstantin Turovec",
+        "collectible": true,
+        "race": "Elemental",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_645.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_645_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_172",
+        "dbfId": "45271",
+        "name": "Fureur du dragon",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "cost": 5,
+        "text": "R\u00e9v\u00e8le un sort de votre deck. Inflige des d\u00e9g\u00e2ts d\u2019un montant \u00e9gal \u00e0 son co\u00fbt \u00e0 tous les serviteurs.",
+        "flavor": "Le petit dragon approche sa proie. Et avec un sort, il frappe_!",
+        "artist": "Andrew Hou",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_172.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_172_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "AffectedBySpellPower"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_090",
+        "dbfId": "38418",
+        "name": "Grimoire de cabaliste",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 5,
+        "text": "Place 3 sorts de mage al\u00e9atoires dans votre main.",
+        "flavor": "Quelle merveilleuse id\u00e9e de nous faire acheter des livres qui essaient de nous d\u00e9vorer\u00a0!",
+        "artist": "Milivoj Ceran",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_090.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_090_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_001",
+        "dbfId": "2539",
+        "name": "Lance de flammes",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 5,
+        "text": "Inflige $8 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur.",
+        "flavor": "Elle est sur le r\u00e2telier pr\u00e8s de la lance de glace, la lance d\u2019acide et la lance \u00e0 incendie.",
+        "artist": "Nutthapon Petchthai",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_001.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_001_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_087",
+        "dbfId": "38414",
+        "name": "Serviteur de Yogg-Saron",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 5,
+        "attack": 5,
+        "health": 4,
+        "text": "<b>Cri de guerre\u00a0:</b> lance un sort al\u00e9atoire co\u00fbtant au maximum\\n(5) cristaux de mana <i>(cibles choisies au hasard).</i>",
+        "flavor": "Yogg-Saron se plaint toujours qu\u2019il a trop de serviteurs et trop de bouches \u00e0 nourrir.",
+        "artist": "Slawomir Maniak",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_087.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_087_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "BRM_003",
+        "dbfId": "2284",
+        "name": "Souffle du dragon",
+        "cardSet": "Blackrock Mountain",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 5,
+        "text": "Inflige $4 points de d\u00e9g\u00e2ts. Co\u00fbte (1) |4(cristal,cristaux) de mana de moins pour chaque serviteur mort pendant ce tour.",
+        "flavor": "\u00ab\u00a0Qui s\u00e8me des boules de feu r\u00e9colte le dragon.\u00a0\u00bb \u2013 Proverbe mage",
+        "artist": "Mauricio Herrera",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "Obtenue dans l\u2019aile profondeurs de Rochenoire de l\u2019aventure Mont Rochenoire.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir \u00e9t\u00e9 d\u00e9bloqu\u00e9e dans l\u2019aile profondeurs de Rochenoire de l\u2019aventure Mont Rochenoire.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/BRM_003.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/BRM_003_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_108",
+        "dbfId": "43426",
+        "name": "Aluneth",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Weapon",
+        "rarity": "Legendary",
+        "cost": 6,
+        "attack": 0,
+        "durability": 3,
+        "text": "\u00c0 la fin de votre tour, vous piochez 3_cartes.",
+        "flavor": "UN POUVOIR ARCANIQUE PH\u00c9NOM\u00c9NAL\u2026 dans un vrai mouchoir de poche.",
+        "artist": "Izzy Hoover",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_108.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_108_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "InvisibleDeathrattle"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_028",
+        "dbfId": "457",
+        "name": "Blizzard",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 6,
+        "text": "Inflige $2_|4(point,points) de d\u00e9g\u00e2ts \u00e0 tous les serviteurs adverses et_les_<b>g\u00e8le</b>.",
+        "flavor": "Ce sort a vraiment un nom g\u00e9nial\u00a0!",
+        "artist": "Chris Seaman",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_028.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_028_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Gel"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_008",
+        "dbfId": "2544",
+        "name": "Drake de Frimarra",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 6,
+        "attack": 6,
+        "health": 6,
+        "text": "Vous pouvez utiliser votre pouvoir h\u00e9ro\u00efque autant de fois que vous voulez.",
+        "flavor": "Le Grand Tournoi a adopt\u00e9 la r\u00e8gle du \u00ab\u00a0dragons non admis\u00a0\u00bb mais elle est rarement appliqu\u00e9e.",
+        "artist": "Christopher Moeller",
+        "collectible": true,
+        "race": "Dragon",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_008.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_008_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_207",
+        "dbfId": "38725",
+        "name": "Invocateur sans-visage",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 6,
+        "attack": 5,
+        "health": 5,
+        "text": "<b>Cri de guerre\u00a0:</b> invoque un serviteur al\u00e9atoire co\u00fbtant 3 cristaux.",
+        "flavor": "Il n\u2019est jamais reconnu \u00e0 sa juste valeur. En fait, il n\u2019est jamais reconnu tout court.",
+        "artist": "Mark Abadier",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_207.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_207_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_760",
+        "dbfId": "40583",
+        "name": "Livre-cristaux de la Kabale",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 6,
+        "attack": 5,
+        "health": 5,
+        "text": "Co\u00fbte_(2)_|4(cristal,cristaux) de moins pour chaque <b>Secret</b> que vous avez jou\u00e9 pendant cette partie.",
+        "flavor": "\u00c9coutez, je peux vous avoir du mana de super qualit\u00e9, mais que \u00e7a reste entre nous.",
+        "artist": "L. Lullabi & K. Turovec",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_760.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_760_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_955",
+        "dbfId": "41878",
+        "name": "M\u00e9t\u00e9ore",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 6,
+        "text": "Inflige $15_|4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur et $3_|4(point,points) de d\u00e9g\u00e2ts aux serviteurs adjacents.",
+        "flavor": "Quand vous voulez absolument faire dispara\u00eetre tous les dinosaures.",
+        "artist": "Matt Gaser",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_955.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_955_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_549",
+        "dbfId": "47055",
+        "name": "Toki, la Trafique-Temps",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 6,
+        "attack": 5,
+        "health": 5,
+        "text": "<b>Cri de guerre_:</b> ajoute un serviteur <b>l\u00e9gendaire</b> al\u00e9atoire du pass\u00e9 dans votre main.",
+        "flavor": "Un tout petit tour vers la gauche, puis un quart de tour vers la droite et\u2026 Oups_! On n\u2019avait pas besoin de cette ligne temporelle, de toute fa\u00e7on.",
+        "artist": "Adam Byrne",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_549.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_549_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_559",
+        "dbfId": "1080",
+        "name": "Archimage Antonidas",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Legendary",
+        "cost": 7,
+        "attack": 5,
+        "health": 7,
+        "text": "Chaque fois que vous lancez un sort, ajoute un sort \u00ab_boule de feu_\u00bb dans votre main.",
+        "flavor": "Antonidas \u00e9tait le grand magus du Kirin Tor et le mentor de Jaina. C\u2019\u00e9tait une sacr\u00e9e ascension sociale par rapport \u00e0 l\u2019\u00e9poque o\u00f9 les gens l\u2019appelaient le faux mage blanc.",
+        "artist": "Wayne Reynolds",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_559.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_559_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CS2_032",
+        "dbfId": "1004",
+        "name": "Choc de flammes",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 7,
+        "text": "Inflige $4 |4(point,points) de d\u00e9g\u00e2ts \u00e0 tous les serviteurs adverses.",
+        "flavor": "Il suffira d\u2019une \u00e9tincelle, d\u2019un rien, d\u2019un geste pour... allumer le feu\u00a0!",
+        "artist": "Romain De Santi",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 10.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 51.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_032.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_032_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GVG_007",
+        "dbfId": "1939",
+        "name": "L\u00e9viathan des flammes",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 7,
+        "attack": 7,
+        "health": 7,
+        "text": "Quand vous piochez cette carte, inflige 2 points de d\u00e9g\u00e2ts \u00e0 tous les personnages.",
+        "flavor": "Mimiron et sa monture\u00a0! Un h\u00e9ros des temps modernes, dernier recours des innocents, des sans-espoir, victimes d\u2019un monde cruel et impitoyable\u00a0!",
+        "artist": "Aleksi Briclot",
+        "collectible": true,
+        "elite": true,
+        "race": "Mech",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_007.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_007_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_687",
+        "dbfId": "40701",
+        "name": "Ma\u00eetre des encres Solia",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 7,
+        "attack": 5,
+        "health": 5,
+        "text": "<b>Cri de guerre_:</b> si votre deck ne contient pas de cartes en double, votre prochain sort lanc\u00e9 pendant ce tour co\u00fbte (0)_|4(cristal,cristaux).",
+        "flavor": "Solia dessine des tatouages qui conf\u00e8rent d\u2019immenses pouvoirs aux membres de la Kabale. C\u2019est aussi une bonne m\u00e9thode pour dire \u00e0 ses adversaires_: pas touche \u00e0 mon pote_!",
+        "artist": "J. Ejsing & E. Amundsen",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_687.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_687_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "KAR_076",
+        "dbfId": "39715",
+        "name": "Portail des terres de Feu",
+        "cardSet": "One Night in Karazhan",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 7,
+        "text": "Inflige $5 |4(point,points) de d\u00e9g\u00e2ts. Invoque un serviteur al\u00e9atoire co\u00fbtant 5_cristaux.",
+        "flavor": "Venez visiter les terres de Feu_! O\u00f9 tout est <i>\u00ab_Beaucoup plus beau que la gueule des Abysses_!_\u00bb</i>",
+        "artist": "Gustav Schmidt",
+        "collectible": true,
+        "playerClass": "Mage",
+        "howToGet": "Obtenue \u00e0 l\u2019\u00e9tage du prologue dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e \u00e0 l\u2019\u00e9tage du prologue dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/KAR_076.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/KAR_076_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_623",
+        "dbfId": "40411",
+        "name": "Projectiles des Arcanes majeurs",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 7,
+        "text": "Lance trois missiles infligeant chacun $3_|4(point,points) de d\u00e9g\u00e2ts \u00e0 des adversaires al\u00e9atoires.",
+        "flavor": "Dire que je trouvais que les projectiles des Arcanes \u00e9taient d\u00e9j\u00e0 une avanc\u00e9e majeure_!",
+        "artist": "Evgeniy Zaqumyenny",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_623.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_623_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_120",
+        "dbfId": "38463",
+        "name": "Anomalus",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 8,
+        "attack": 8,
+        "health": 6,
+        "text": "<b>R\u00e2le d\u2019agonie\u00a0:</b> inflige\\n8 points de d\u00e9g\u00e2ts \u00e0 tous les serviteurs.",
+        "flavor": "Normalement, son nom c\u2019est \u00ab\u00a0Anomalus Filius Nexus\u00a0\u00bb mais il pr\u00e9f\u00e8re qu\u2019on l\u2019appelle Anomalus\u2026 ou m\u00eame Nono.",
+        "artist": "Kan Liu",
+        "collectible": true,
+        "elite": true,
+        "race": "Elemental",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_120.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_120_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_086",
+        "dbfId": "42760",
+        "name": "Myst\u00e8res glac\u00e9s",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 8,
+        "text": "Place un <b>Secret</b> de chaque type de votre deck sur le champ de bataille.",
+        "flavor": "Tout le secret est dans le gla\u00e7age.",
+        "artist": "Evgeniy Dlinnov",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_086.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_086_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_009",
+        "dbfId": "2546",
+        "name": "Rhonin",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 8,
+        "attack": 7,
+        "health": 7,
+        "text": "<b>R\u00e2le d\u2019agonie\u00a0:</b> ajoute\\n3 copies de Projectiles des Arcanes dans votre main.",
+        "flavor": "Un shamura\u00ef shans ma\u00eetre.",
+        "artist": "Zoltan & Gabor",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_009.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_009_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_838",
+        "dbfId": "43506",
+        "name": "Sindragosa",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 8,
+        "attack": 8,
+        "health": 8,
+        "text": "<b>Cri de guerre_:</b> invoque deux champions gel\u00e9s_0/1.",
+        "flavor": "\u00ab_Fait des efforts, mais a encore du chemin \u00e0 parcourir en mati\u00e8re de magie._\u00bb - Commentaire de Sindragosa, apr\u00e8s sa formation sur les critiques constructives.",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "elite": true,
+        "race": "Dragon",
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_838.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_838_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_833",
+        "dbfId": "43419",
+        "name": "Jaina liche de givre",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Hero",
+        "rarity": "Legendary",
+        "cost": 9,
+        "health": 30,
+        "armor": "5",
+        "text": "<b>Cri de guerre_:</b> invoque un \u00e9l\u00e9mentaire_d\u2019eau_3/6. Vos_\u00e9l\u00e9mentaires ont <b>Vol_de_vie</b> pendant cette partie.",
+        "flavor": "\u00ab_Arthas \u00e9tait un enfant g\u00e2t\u00e9, avec des jouets qu\u2019il ne parvenait pas \u00e0 contr\u00f4ler ou m\u00eame comprendre. Laissez le froid vous envahir. Et je vous montrerai le v\u00e9ritable pouvoir du Tr\u00f4ne de glace._\u00bb",
+        "artist": "Glenn Rane",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_833.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_833_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Lifesteal"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_535",
+        "dbfId": "46499",
+        "name": "Mande-dragon Alanna",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 9,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>Cri de guerre_:</b> invoque un Dragon_5/5 pour chaque sort co\u00fbtant (5)_cristaux ou plus que vous avez lanc\u00e9 pendant la partie.",
+        "flavor": "Son secret_? Elle leur parle d\u2019une voix douce et elle a toujours des saucisses dans ses poches.",
+        "artist": "James Ryman",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_535.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_535_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_279",
+        "dbfId": "1087",
+        "name": "Explosion pyrotechnique",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "cost": 10,
+        "text": "Inflige $10 |4(point,points) de d\u00e9g\u00e2ts.",
+        "flavor": "Prenez le temps d\u2019\u00e9clater d\u2019un rire d\u00e9moniaque apr\u00e8s avoir pioch\u00e9 cette carte.",
+        "artist": "Luca Zontini",
+        "collectible": true,
+        "playerClass": "Mage",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_279.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_279_premium.gif",
+        "locale": "frFR"
+    }
+]
