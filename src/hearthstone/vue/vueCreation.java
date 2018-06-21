@@ -134,8 +134,21 @@ public class vueCreation extends JFrame{
     private JPanel subMainRightButton = new JPanel();
     private JPanel subMainRightAjout = new JPanel();
     private JTextArea Explication = new JTextArea("Explication");
-    private JLabel Description = new JLabel("description de la carte :");
+	private JLabel Description = new JLabel("description de la carte :");
+	private JTextArea Nomcarte = new JTextArea();
+	private JComboBox nbMana = new JComboBox();
+	private JTextArea Nom = new JTextArea("Nom :");
+	private JTextArea Mana = new JTextArea("Mana :");
+	private JTextArea degat = new JTextArea("Degat");
+	private JComboBox deg = new JComboBox();
 
+	private JTextArea PointDeVie = new JTextArea("Point de Vie :");
+	private JComboBox PointVie = new JComboBox();
+
+	private JComboBox Class = new JComboBox();
+
+	private JTextField pouset = new JTextField("Poussière d'étoiles :");
+	private JTextField nbpous = new JTextField("2000");
 
 	public vueCreation() {
 super("DECK manager");
@@ -371,7 +384,7 @@ perksDescription.add(nbExemplairesDescription);
 description.add(perksDescription, BorderLayout.EAST);
 
 /////////////////////////////////
-subMainRight.setBorder(BorderFactory.createTitledBorder("Mes decks..."));
+subMainRight.setBorder(BorderFactory.createTitledBorder("Creer Cartes"));
 
 // TODO deckList.setListData(collection.collectionDeDeck());
 
@@ -407,6 +420,10 @@ filtreRareteCombo.addItem(Rarete.EPIQUE);
 filtreRareteCombo.addItem(Rarete.LEGENDAIRE);
 subMainFilterPanel.add(filtreRareteCombo);
 subMainFilterPanel.add(new JButton("Done"));
+pouset.setEditable(false);
+subMainFilterPanel.add(pouset);
+nbpous.setEditable(false);
+subMainFilterPanel.add(nbpous);
 /////////////////////////////////
 subMainRightAjout.setLayout(new BoxLayout(subMainRightAjout,BoxLayout.Y_AXIS));
 
@@ -418,6 +435,33 @@ RightTypeGrp.add(RightServiteur);
 subMainRightAjout.add(RightArme);
 subMainRightAjout.add(RightSort);
 subMainRightAjout.add(RightServiteur);
+
+Nom.setSize(new Dimension(5,5));
+Nom.setEditable(false);
+subMainRightAjout.add(Nom);
+subMainRightAjout.add(Nomcarte);
+Mana.setEditable(false);
+subMainRightAjout.add(Mana);
+Object[] element = new Object[]{"0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
+nbMana = new JComboBox(element);
+subMainRightAjout.add(nbMana);
+
+degat.setEditable(false);
+subMainRightAjout.add(degat);
+Object[] degats = new Object[]{"0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"};
+deg = new JComboBox(degats);
+subMainRightAjout.add(deg);
+
+PointDeVie.setEditable(false);
+subMainRightAjout.add(PointDeVie);
+Object[] PV = new Object[]{"0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"};
+PointVie = new JComboBox(PV);
+subMainRightAjout.add(PointVie);
+
+Object[] classe = new Object[]{"NEUTRE","DRUIDE","CHASSEUR","MAGE","PALADIN","PRETRE","CHAMAN","DEMONISTE","VOLEUR","GUERRIER"};
+Class = new JComboBox(classe);
+subMainRightAjout.add(Class);
+
 
 
 RightRaceCombo.addItem(Race.BETE);
