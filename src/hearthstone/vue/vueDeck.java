@@ -104,8 +104,8 @@ public class vueDeck extends JFrame {
 	private JLabel valeurDesemDescription = new JLabel("Valeur :");
 	private JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
 
-	/////controlleurs
-	
+	///// controlleurs
+
 	///////////
 	private JList<Carte> carteList = new JList<>();
 
@@ -130,13 +130,16 @@ public class vueDeck extends JFrame {
 	/////
 	private Cartes collection = null;
 
+	private Deck mDeck = null;
+	
 	private JButton applyFilter = new JButton("Appliquer");
 
-
-	public vueDeck(Cartes collection) {
+	public vueDeck(Cartes collection, Deck currentDeck) {
 		super("DECK manager");
 
 		this.collection = collection;
+		mDeck = currentDeck;
+		
 		/////////////////////////////////
 		main.setLayout(new BorderLayout());
 
@@ -146,7 +149,7 @@ public class vueDeck extends JFrame {
 		cartesLeft.add(cartesButtonNextLeft, BorderLayout.CENTER);
 		cartesRight.add(cartesButtonNextRight, BorderLayout.CENTER);
 
-		{			
+		{
 			////// Neutral
 			mainNEUTRE = new JPanel();
 			mainNEUTRE.setLayout(new BorderLayout());
@@ -229,31 +232,30 @@ public class vueDeck extends JFrame {
 
 		subMainFilterPanel.add(filtreRareteCombo);
 
-		////////////////////////////////		
+		////////////////////////////////
 		try {
 			drawCards(subMainNEUTRECards, Classe.DRUIDE);
 		} catch (ClasseNeutreException | IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-        
-        /////////////////////////////////
-        choixClasse.addItem("Choisir Classe");
-        choixClasse.addItem(Classe.DRUIDE);
-        choixClasse.addItem(Classe.CHASSEUR);
-        choixClasse.addItem(Classe.MAGE);
-        choixClasse.addItem(Classe.PALADIN);
-        choixClasse.addItem(Classe.PRETRE);
-        choixClasse.addItem(Classe.VOLEUR);
-        choixClasse.addItem(Classe.CHAMAN);
-        choixClasse.addItem(Classe.DEMONISTE);
+
+		/////////////////////////////////
+		choixClasse.addItem("Choisir Classe");
+		choixClasse.addItem(Classe.DRUIDE);
+		choixClasse.addItem(Classe.CHASSEUR);
+		choixClasse.addItem(Classe.MAGE);
+		choixClasse.addItem(Classe.PALADIN);
+		choixClasse.addItem(Classe.PRETRE);
+		choixClasse.addItem(Classe.VOLEUR);
+		choixClasse.addItem(Classe.CHAMAN);
+		choixClasse.addItem(Classe.DEMONISTE);
 		choixClasse.addItem(Classe.GUERRIER);
 		choixClasse.setSelectedItem("Choisir Classe");
 
+		choixClasse.setMaximumRowCount(choixClasse.getModel().getSize());
 
-        choixClasse.setMaximumRowCount(choixClasse.getModel().getSize());
-
-        /////////////////////////////////
+		/////////////////////////////////
 		subMainCenter.setLayout(new BorderLayout());
 		subMainCenter.add(classTab, BorderLayout.CENTER);
 		subMainCenter.add(description, BorderLayout.SOUTH);
@@ -265,41 +267,40 @@ public class vueDeck extends JFrame {
 		subMainRight.add(listeDesDeck, BorderLayout.CENTER);
 		subMainRight.add(choixClasse, BorderLayout.NORTH);
 		subMainFilterPanel.add(applyFilter);
-	   	
-        ////////////////////////////////////
-        JPanel test = new JPanel();
-        test.setLayout(new BoxLayout(test, BoxLayout.X_AXIS));
 
-        JLabel nbCarteDansDeck = new JLabel("15");
-        JLabel sur30 = new JLabel("/30 ");
-        JLabel cartes = new JLabel("cartes");
-        Font font = new Font("Helvetica", Font.BOLD, 18);
-        nbCarteDansDeck.setFont(font);
-        sur30.setFont(font);
-        
-        test.add(nbCarteDansDeck);
-        test.add(sur30);
-        test.add(cartes);
-        test.add(Box.createHorizontalStrut(48));
-        test.add(creationDeck);
+		////////////////////////////////////
+		JPanel test = new JPanel();
+		test.setLayout(new BoxLayout(test, BoxLayout.X_AXIS));
 
-        subMainRight.add(test, BorderLayout.SOUTH);      
+		JLabel nbCarteDansDeck = new JLabel("15");
+		JLabel sur30 = new JLabel("/30 ");
+		JLabel cartes = new JLabel("cartes");
+		Font font = new Font("Helvetica", Font.BOLD, 18);
+		nbCarteDansDeck.setFont(font);
+		sur30.setFont(font);
+
+		test.add(nbCarteDansDeck);
+		test.add(sur30);
+		test.add(cartes);
+		test.add(Box.createHorizontalStrut(48));
+		test.add(creationDeck);
+
+		subMainRight.add(test, BorderLayout.SOUTH);
 
 		main.add(subMainCenter, BorderLayout.CENTER);
 		main.add(subMainRight, BorderLayout.EAST);
 		main.add(subMainFilterPanel, BorderLayout.SOUTH);
-		
+
 		classTab.addChangeListener(new ctrlTabbedPaneCollection(this));
 
 		cartesButtonNextRight.addActionListener(new ctrlCollectionNext(this, false));
 		cartesButtonNextLeft.addActionListener(new ctrlCollectionNext(this, true));
 		applyFilter.addActionListener(new ctrlApplyFilter(this));
 
-        
 		/////////////////////////////////
 		this.getContentPane().add(main);
 
-		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
 		this.setPreferredSize(new Dimension(X, Y));
@@ -314,39 +315,36 @@ public class vueDeck extends JFrame {
 				}
 			}
 		} catch (Exception e) {
-			// If Nimbus is not available, you can set the GUI to another look and feel.
+			System.out.println("No nimbus");
 		}
 
 		setVisible(true);
 
-		
 	}
 
 	//////////////////////////////////////////
-	public void classeGuerrier()
-	{		
-			mainGUERRIER = new JPanel();
-			mainGUERRIER.setLayout(new BorderLayout());
-			//
-			subMainGUERRIERLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-			subMainGUERRIERLabel.add(new Label("GUERRIER"));
+	public void classeGuerrier() {
+		mainGUERRIER = new JPanel();
+		mainGUERRIER.setLayout(new BorderLayout());
+		//
+		subMainGUERRIERLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		subMainGUERRIERLabel.add(new Label("GUERRIER"));
 
-			mainGUERRIER.add(subMainGUERRIERLabel, BorderLayout.NORTH);
-			//
-			subMainGUERRIERCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-			for (int i = 0; i < 8; ++i) {
-				subMainGUERRIERCards[i] = new ImagePanel();
-				subMainGUERRIERCards[i].setBackground(Color.GRAY);
-				subMainGUERRIERCardsDisplay.add(subMainGUERRIERCards[i]);
-			}
+		mainGUERRIER.add(subMainGUERRIERLabel, BorderLayout.NORTH);
+		//
+		subMainGUERRIERCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+		for (int i = 0; i < 8; ++i) {
+			subMainGUERRIERCards[i] = new ImagePanel();
+			subMainGUERRIERCards[i].setBackground(Color.GRAY);
+			subMainGUERRIERCardsDisplay.add(subMainGUERRIERCards[i]);
+		}
 
-			mainGUERRIER.add(subMainGUERRIERCardsDisplay, BorderLayout.CENTER);
-			//
-			classTab.add(mainGUERRIER, "Guerrier");
+		mainGUERRIER.add(subMainGUERRIERCardsDisplay, BorderLayout.CENTER);
+		//
+		classTab.add(mainGUERRIER, "Guerrier");
 	}
 
-	public void classeDruide()
-	{
+	public void classeDruide() {
 		mainDRUIDE = new JPanel();
 		mainDRUIDE.setLayout(new BorderLayout());
 		//
@@ -367,8 +365,7 @@ public class vueDeck extends JFrame {
 		classTab.add(mainDRUIDE, "Druide");
 	}
 
-	public void classeVoleur()
-	{
+	public void classeVoleur() {
 		mainVOLEUR = new JPanel();
 		mainVOLEUR.setLayout(new BorderLayout());
 		//
@@ -389,8 +386,7 @@ public class vueDeck extends JFrame {
 		classTab.add(mainVOLEUR, "Voleur");
 	}
 
-	public void classeChasseur()
-	{
+	public void classeChasseur() {
 		mainCHASSEUR = new JPanel();
 		mainCHASSEUR.setLayout(new BorderLayout());
 		//
@@ -411,8 +407,7 @@ public class vueDeck extends JFrame {
 		classTab.add(mainCHASSEUR, "Chasseur");
 	}
 
-	public void classeChaman()
-	{
+	public void classeChaman() {
 		mainCHAMAN = new JPanel();
 		mainCHAMAN.setLayout(new BorderLayout());
 		//
@@ -433,8 +428,7 @@ public class vueDeck extends JFrame {
 		classTab.add(mainCHAMAN, "Chaman");
 	}
 
-	public void classePaladin()
-	{
+	public void classePaladin() {
 		mainPALADIN = new JPanel();
 		mainPALADIN.setLayout(new BorderLayout());
 		//
@@ -455,8 +449,7 @@ public class vueDeck extends JFrame {
 		classTab.add(mainPALADIN, "Paladin");
 	}
 
-	public void classeMage()
-	{
+	public void classeMage() {
 		mainMAGE = new JPanel();
 		mainMAGE.setLayout(new BorderLayout());
 		//
@@ -477,8 +470,7 @@ public class vueDeck extends JFrame {
 		classTab.add(mainMAGE, "Mage");
 	}
 
-	public void classePretre()
-	{
+	public void classePretre() {
 		mainPRETRE = new JPanel();
 		mainPRETRE.setLayout(new BorderLayout());
 		//
@@ -498,8 +490,7 @@ public class vueDeck extends JFrame {
 		classTab.add(mainPRETRE, "Pretre");
 	}
 
-	public void classeDemoniste() 
-	{
+	public void classeDemoniste() {
 		mainDEMONISTE = new JPanel();
 		mainDEMONISTE.setLayout(new BorderLayout());
 		//
@@ -518,14 +509,13 @@ public class vueDeck extends JFrame {
 		mainDEMONISTE.add(subMainDEMONISTECardsDisplay, BorderLayout.CENTER);
 		//
 		classTab.add(mainDEMONISTE, "Demoniste");
-	}	
+	}
 
 	//////////////////////////////////////////////
-	public void classeSupp()
-	{
-		if(classTab.getTabCount() > 1){
+	public void classeSupp() {
+		if (classTab.getTabCount() > 1) {
 			classTab.remove(1);
-		}		
+		}
 	}
 
 	//////////////////////////
