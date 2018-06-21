@@ -22,6 +22,7 @@ import hearthstone.cartes.*;
 import hearthstone.controleur.ctrlApplyFilter;
 import hearthstone.controleur.ctrlCardClicked;
 import hearthstone.controleur.ctrlCollectionNext;
+import hearthstone.controleur.ctrlNewCreationDeck;
 import hearthstone.controleur.ctrlTabbedPaneCollection;
 import hearthstone.exception.*;
 import sun.awt.image.ToolkitImage;
@@ -464,6 +465,8 @@ public class vueCollection extends JFrame {
 
 		applyFilter.addActionListener(new ctrlApplyFilter(this));
 
+		creationDeck.addActionListener(new ctrlNewCreationDeck(this));
+		
 		/////////////////////////////////
 		this.getContentPane().add(main);
 
