@@ -356,7 +356,6 @@ public class vueDeck extends JFrame {
 			subMainGUERRIERCardsDisplay.add(subMainGUERRIERCards[i]);
 		}
 
-<<<<<<< HEAD
 			mainGUERRIER.add(subMainGUERRIERCardsDisplay, BorderLayout.CENTER);
 			//
 			classTab.add(mainGUERRIER, "Guerrier");
@@ -367,11 +366,6 @@ public class vueDeck extends JFrame {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-=======
-		mainGUERRIER.add(subMainGUERRIERCardsDisplay, BorderLayout.CENTER);
-		//
-		classTab.add(mainGUERRIER, "Guerrier");
->>>>>>> c14022398bfa8cd90f7f07da5f990f40ac5126e2
 	}
 
 	public void classeDruide() {
