@@ -1,16 +1,27 @@
 package hearthstone.vue;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.net.*;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
+import java.nio.file.*;
+import java.util.*;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.UIManager.*;
 
 import hearthstone.carte.*;
 import hearthstone.cartes.*;
+import hearthstone.exception.*;
+import sun.awt.image.ToolkitImage;
 
 public class vueCollection extends JFrame {
 
-	private final int XSPACINGCARDS = 80;
-	private final int YSPACINGCARDS = (int)(XSPACINGCARDS / (1.421800948));
+	private final int YSPACINGCARDS = 10;
+	private final int XSPACINGCARDS = 80;// (int) (YSPACINGCARDS /2 );
 
 	private final int X = 1280;
 	private final int Y = 720;
@@ -32,52 +43,52 @@ public class vueCollection extends JFrame {
 	private JPanel mainGUERRIER = null;
 	private JPanel subMainGUERRIERLabel = new JPanel();
 	private JPanel subMainGUERRIERCardsDisplay = new JPanel();
-	private JPanel[] subMainGUERRIERCards = new JPanel[8];
+	private ImagePanel[] subMainGUERRIERCards = new ImagePanel[8];
 	/////
 	private JPanel mainDRUIDE = null;;
 	private JPanel subMainDRUIDELabel = new JPanel();
 	private JPanel subMainDRUIDECardsDisplay = new JPanel();
-	private JPanel[] subMainDRUIDECards = new JPanel[8];
+	private ImagePanel[] subMainDRUIDECards = new ImagePanel[8];
 	/////
 	private JPanel mainCHASSEUR = null;
 	private JPanel subMainCHASSEURLabel = new JPanel();
 	private JPanel subMainCHASSEURCardsDisplay = new JPanel();
-	private JPanel[] subMainCHASSEURCards = new JPanel[8];
+	private ImagePanel[] subMainCHASSEURCards = new ImagePanel[8];
 	/////
 	private JPanel mainMAGE = null;
 	private JPanel subMainMAGELabel = new JPanel();
 	private JPanel subMainMAGECardsDisplay = new JPanel();
-	private JPanel[] subMainMAGECards = new JPanel[8];
+	private ImagePanel[] subMainMAGECards = new ImagePanel[8];
 	/////
 	private JPanel mainPALADIN = null;
 	private JPanel subMainPALADINLabel = new JPanel();
 	private JPanel subMainPALADINCardsDisplay = new JPanel();
-	private JPanel[] subMainPALADINCards = new JPanel[8];
+	private ImagePanel[] subMainPALADINCards = new ImagePanel[8];
 	/////
 	private JPanel mainPRETRE = null;
 	private JPanel subMainPRETRELabel = new JPanel();
 	private JPanel subMainPRETRECardsDisplay = new JPanel();
-	private JPanel[] subMainPRETRECards = new JPanel[8];
+	private ImagePanel[] subMainPRETRECards = new ImagePanel[8];
 	/////
 	private JPanel mainCHAMAN = null;
 	private JPanel subMainCHAMANLabel = new JPanel();
 	private JPanel subMainCHAMANCardsDisplay = new JPanel();
-	private JPanel[] subMainCHAMANCards = new JPanel[8];
+	private ImagePanel[] subMainCHAMANCards = new ImagePanel[8];
 	/////
 	private JPanel mainDEMONISTE = null;
 	private JPanel subMainDEMONISTELabel = new JPanel();
 	private JPanel subMainDEMONISTECardsDisplay = new JPanel();
-	private JPanel[] subMainDEMONISTECards = new JPanel[8];
+	private ImagePanel[] subMainDEMONISTECards = new ImagePanel[8];
 	/////
 	private JPanel mainVOLEUR = null;
 	private JPanel subMainVOLEURLabel = new JPanel();
 	private JPanel subMainVOLEURCardsDisplay = new JPanel();
-	private JPanel[] subMainVOLEURCards = new JPanel[8];
+	private ImagePanel[] subMainVOLEURCards = new ImagePanel[8];
 	/////
 	private JPanel mainNEUTRE = null;
 	private JPanel subMainNEUTRELabel = new JPanel();
 	private JPanel subMainNEUTRECardsDisplay = new JPanel();
-	private JPanel[] subMainNEUTRECards = new JPanel[8];
+	private ImagePanel[] subMainNEUTRECards = new ImagePanel[8];
 	/////
 
 	private JPanel description = new JPanel();
@@ -115,6 +126,8 @@ public class vueCollection extends JFrame {
 	/////
 	private Cartes collection = null;
 
+	private int pageNumber = 0;
+
 	public vueCollection(Cartes collection) {
 		super("DECK manager");
 
@@ -140,7 +153,7 @@ public class vueCollection extends JFrame {
 			//
 			subMainGUERRIERCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainGUERRIERCards[i] = new JPanel();
+				subMainGUERRIERCards[i] = new ImagePanel();
 				subMainGUERRIERCards[i].setBackground(Color.GRAY);
 				subMainGUERRIERCardsDisplay.add(subMainGUERRIERCards[i]);
 			}
@@ -160,7 +173,7 @@ public class vueCollection extends JFrame {
 			//
 			subMainDRUIDECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainDRUIDECards[i] = new JPanel();
+				subMainDRUIDECards[i] = new ImagePanel();
 				subMainDRUIDECards[i].setBackground(Color.GRAY);
 				subMainDRUIDECardsDisplay.add(subMainDRUIDECards[i]);
 			}
@@ -180,7 +193,7 @@ public class vueCollection extends JFrame {
 			//
 			subMainCHASSEURCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainCHASSEURCards[i] = new JPanel();
+				subMainCHASSEURCards[i] = new ImagePanel();
 				subMainCHASSEURCards[i].setBackground(Color.GRAY);
 				subMainCHASSEURCardsDisplay.add(subMainCHASSEURCards[i]);
 			}
@@ -200,7 +213,7 @@ public class vueCollection extends JFrame {
 			//
 			subMainMAGECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainMAGECards[i] = new JPanel();
+				subMainMAGECards[i] = new ImagePanel();
 				subMainMAGECards[i].setBackground(Color.GRAY);
 				subMainMAGECardsDisplay.add(subMainMAGECards[i]);
 			}
@@ -220,7 +233,7 @@ public class vueCollection extends JFrame {
 			//
 			subMainPALADINCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainPALADINCards[i] = new JPanel();
+				subMainPALADINCards[i] = new ImagePanel();
 				subMainPALADINCards[i].setBackground(Color.GRAY);
 				subMainPALADINCardsDisplay.add(subMainPALADINCards[i]);
 			}
@@ -240,7 +253,7 @@ public class vueCollection extends JFrame {
 			//
 			subMainPRETRECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainPRETRECards[i] = new JPanel();
+				subMainPRETRECards[i] = new ImagePanel();
 				subMainPRETRECards[i].setBackground(Color.GRAY);
 				subMainPRETRECardsDisplay.add(subMainPRETRECards[i]);
 			}
@@ -260,7 +273,7 @@ public class vueCollection extends JFrame {
 			//
 			subMainCHAMANCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainCHAMANCards[i] = new JPanel();
+				subMainCHAMANCards[i] = new ImagePanel();
 				subMainCHAMANCards[i].setBackground(Color.GRAY);
 				subMainCHAMANCardsDisplay.add(subMainCHAMANCards[i]);
 			}
@@ -280,7 +293,7 @@ public class vueCollection extends JFrame {
 			//
 			subMainDEMONISTECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainDEMONISTECards[i] = new JPanel();
+				subMainDEMONISTECards[i] = new ImagePanel();
 				subMainDEMONISTECards[i].setBackground(Color.GRAY);
 				subMainDEMONISTECardsDisplay.add(subMainDEMONISTECards[i]);
 			}
@@ -300,7 +313,7 @@ public class vueCollection extends JFrame {
 			//
 			subMainVOLEURCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainVOLEURCards[i] = new JPanel();
+				subMainVOLEURCards[i] = new ImagePanel();
 				subMainVOLEURCards[i].setBackground(Color.GRAY);
 				subMainVOLEURCardsDisplay.add(subMainVOLEURCards[i]);
 			}
@@ -320,7 +333,7 @@ public class vueCollection extends JFrame {
 			//
 			subMainNEUTRECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainNEUTRECards[i] = new JPanel();
+				subMainNEUTRECards[i] = new ImagePanel();
 				subMainNEUTRECards[i].setBackground(Color.GRAY);
 				subMainNEUTRECardsDisplay.add(subMainNEUTRECards[i]);
 			}
@@ -390,6 +403,15 @@ public class vueCollection extends JFrame {
 		filtreRareteCombo.addItem(Rarete.LEGENDAIRE);
 		subMainFilterPanel.add(filtreRareteCombo);
 		/////////////////////////////////
+
+		try {
+			drawCards(subMainGUERRIERCards, Classe.GUERRIER);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		/////////////////////////////////
 		subMainCenter.setLayout(new BorderLayout());
 		subMainCenter.add(classTab, BorderLayout.CENTER);
 		subMainCenter.add(description, BorderLayout.SOUTH);
@@ -427,5 +449,43 @@ public class vueCollection extends JFrame {
 		}
 
 		setVisible(true);
+	}
+
+	public void drawCards(ImagePanel[] cardsHolders, Classe classe) throws ClasseNeutreException, IOException {
+		Collection<Carte> cartes = Filtre.cartesParClasse(collection.collection(), classe);
+
+		int counter = 0;
+		for (Carte carte : cartes) {
+			if (counter == 8)
+				break;
+
+			URL url;
+
+			try {
+				url = new URL(carte.urlImage());
+			} catch (MalformedURLException e) {
+				cardsHolders[counter].setBackground(Color.GRAY);
+				continue;
+			}
+
+			String fileName = url.getFile().substring(url.getFile().lastIndexOf("/") + 1);
+
+			// if file is cached
+			File pic = new File("./cachedPics/" + fileName);
+			if (pic.exists() && !pic.isDirectory()) {
+				cardsHolders[counter].loadPic(pic);
+			} else {
+				System.out.println("Working Directory = " + System.getProperty("user.dir"));
+				// download and cach
+				BufferedImage image = ImageIO.read(url);
+				ImageIO.write(image, "png", pic);
+				
+				
+				cardsHolders[counter].loadPic(pic);
+			}
+
+			cardsHolders[counter].setBackground(main.getBackground());
+			++counter;
+		}
 	}
 }
