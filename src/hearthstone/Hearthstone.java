@@ -24,6 +24,5 @@ public class Hearthstone {
 
         main.pack();
         main.setVisible(true);
-
     }
 }
