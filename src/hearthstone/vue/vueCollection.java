@@ -1,21 +1,28 @@
 package hearthstone.vue;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.net.*;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
+import java.nio.file.*;
 import java.util.*;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.UIManager.*;
 
 import hearthstone.carte.*;
 import hearthstone.cartes.*;
 import hearthstone.exception.*;
+import sun.awt.image.ToolkitImage;
 
 public class vueCollection extends JFrame {
 
 	private final int YSPACINGCARDS = 10;
-	private final int XSPACINGCARDS =  80;//(int) (YSPACINGCARDS /2 );
-	
+	private final int XSPACINGCARDS = 80;// (int) (YSPACINGCARDS /2 );
+
 	private final int X = 1280;
 	private final int Y = 720;
 
@@ -399,7 +406,7 @@ public class vueCollection extends JFrame {
 
 		try {
 			drawCards(subMainGUERRIERCards, Classe.GUERRIER);
-		} catch (ClasseNeutreException | MalformedURLException e1) {
+		} catch (ClasseNeutreException | IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
@@ -444,15 +451,39 @@ public class vueCollection extends JFrame {
 		setVisible(true);
 	}
 
-	public void drawCards(ImagePanel[] cardsHolders, Classe classe)
-			throws ClasseNeutreException, MalformedURLException {
+	public void drawCards(ImagePanel[] cardsHolders, Classe classe) throws ClasseNeutreException, IOException {
 		Collection<Carte> cartes = Filtre.cartesParClasse(collection.collection(), classe);
 
 		int counter = 0;
 		for (Carte carte : cartes) {
 			if (counter == 8)
 				break;
-			cardsHolders[counter].loadPic(new URL(carte.urlImage()));
+
+			URL url;
+
+			try {
+				url = new URL(carte.urlImage());
+			} catch (MalformedURLException e) {
+				cardsHolders[counter].setBackground(Color.GRAY);
+				continue;
+			}
+
+			String fileName = url.getFile().substring(url.getFile().lastIndexOf("/") + 1);
+
+			// if file is cached
+			File pic = new File("./cachedPics/" + fileName);
+			if (pic.exists() && !pic.isDirectory()) {
+				cardsHolders[counter].loadPic(pic);
+			} else {
+				System.out.println("Working Directory = " + System.getProperty("user.dir"));
+				// download and cach
+				BufferedImage image = ImageIO.read(url);
+				ImageIO.write(image, "png", pic);
+				
+				
+				cardsHolders[counter].loadPic(pic);
+			}
+
 			cardsHolders[counter].setBackground(main.getBackground());
 			++counter;
 		}

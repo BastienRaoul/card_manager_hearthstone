@@ -32,6 +32,16 @@ public class ImagePanel extends JPanel {
 		}
 		repaint();
 	}
+	
+	public void loadPic(File file) {
+		System.out.println("loading image from " + file.toString());
+		try {
+			image = ImageIO.read(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		repaint();
+	}
 
 	@Override
 	public void paintComponent(Graphics g) {
