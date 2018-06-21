@@ -17,6 +17,7 @@ import hearthstone.carte.*;
 import hearthstone.cartes.*;
 import hearthstone.controleur.ctrlTabbedPaneCollection;
 import hearthstone.controleur.ctrlApplyFilter;
+import hearthstone.controleur.ctrlChangeClasse;
 import hearthstone.controleur.ctrlCollectionNext;
 import hearthstone.exception.*;
 import sun.awt.image.ToolkitImage;
@@ -131,7 +132,7 @@ public class vueDeck extends JFrame {
 	private Cartes collection = null;
 
 	private Deck mDeck = null;
-	
+
 	private JButton applyFilter = new JButton("Appliquer");
 
 	public vueDeck(Cartes collection, Deck currentDeck) {
@@ -139,7 +140,7 @@ public class vueDeck extends JFrame {
 
 		this.collection = collection;
 		mDeck = currentDeck;
-		
+
 		/////////////////////////////////
 		main.setLayout(new BorderLayout());
 
@@ -196,6 +197,11 @@ public class vueDeck extends JFrame {
 		carteList.setLayoutOrientation(JList.HORIZONTAL_WRAP);
 		carteList.setVisibleRowCount(-1);
 
+		// Drag & Drop Image dans List
+		carteList.setDragEnabled(true);
+		carteList.setDropMode(DropMode.INSERT);
+
+		//////////////////////////////////////////////////////
 		JScrollPane listeDesDeck = new JScrollPane(carteList);
 		listeDesDeck.setPreferredSize(new Dimension(250, 80));
 
@@ -265,8 +271,16 @@ public class vueDeck extends JFrame {
 
 		subMainRight.setLayout(new BorderLayout());
 		subMainRight.add(listeDesDeck, BorderLayout.CENTER);
-		subMainRight.add(choixClasse, BorderLayout.NORTH);
 		subMainFilterPanel.add(applyFilter);
+
+		JPanel titreDeck = new JPanel();
+		titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
+
+		JTextField nomDeck = new JTextField();
+		titreDeck.add(choixClasse);
+		titreDeck.add(nomDeck);
+
+		subMainRight.add(titreDeck, BorderLayout.NORTH);
 
 		////////////////////////////////////
 		JPanel test = new JPanel();
@@ -290,6 +304,7 @@ public class vueDeck extends JFrame {
 		main.add(subMainCenter, BorderLayout.CENTER);
 		main.add(subMainRight, BorderLayout.EAST);
 		main.add(subMainFilterPanel, BorderLayout.SOUTH);
+		//////// Controlleurs
 
 		classTab.addChangeListener(new ctrlTabbedPaneCollection(this));
 
@@ -297,6 +312,7 @@ public class vueDeck extends JFrame {
 		cartesButtonNextLeft.addActionListener(new ctrlCollectionNext(this, true));
 		applyFilter.addActionListener(new ctrlApplyFilter(this));
 
+		choixClasse.addItemListener(new ctrlChangeClasse(this));
 		/////////////////////////////////
 		this.getContentPane().add(main);
 
@@ -509,6 +525,15 @@ public class vueDeck extends JFrame {
 		mainDEMONISTE.add(subMainDEMONISTECardsDisplay, BorderLayout.CENTER);
 		//
 		classTab.add(mainDEMONISTE, "Demoniste");
+
+		try
+
+		{
+			drawCards(subMainDEMONISTECards, Classe.DEMONISTE);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
 	//////////////////////////////////////////////
