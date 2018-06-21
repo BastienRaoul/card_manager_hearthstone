@@ -201,6 +201,12 @@ public class vueDeck extends JFrame {
 		carteList.setDragEnabled(true);
 		carteList.setDropMode(DropMode.INSERT);
 
+
+		//GhostGlassPane glassPane = new GhostGlassPane();
+
+
+
+
 		//////////////////////////////////////////////////////
 		JScrollPane listeDesDeck = new JScrollPane(carteList);
 		listeDesDeck.setPreferredSize(new Dimension(250, 80));
