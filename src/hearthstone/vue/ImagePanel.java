@@ -42,6 +42,12 @@ public class ImagePanel extends JPanel {
 		}
 		repaint();
 	}
+	
+	public void reset() {
+		image = null;
+		this.setBackground(Color.GRAY);
+		repaint();
+	}
 
 	@Override
 	public void paintComponent(Graphics g) {

@@ -12,9 +12,16 @@ import java.util.*;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.UIManager.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import com.sun.net.httpserver.Filter;
 
 import hearthstone.carte.*;
 import hearthstone.cartes.*;
+import hearthstone.controleur.ctrlApplyFilter;
+import hearthstone.controleur.ctrlCollectionNext;
+import hearthstone.controleur.ctrlTabbedPaneCollection;
 import hearthstone.exception.*;
 import sun.awt.image.ToolkitImage;
 
@@ -43,52 +50,52 @@ public class vueCollection extends JFrame {
 	private JPanel mainGUERRIER = null;
 	private JPanel subMainGUERRIERLabel = new JPanel();
 	private JPanel subMainGUERRIERCardsDisplay = new JPanel();
-	private ImagePanel[] subMainGUERRIERCards = new ImagePanel[8];
+	public ImagePanel[] subMainGUERRIERCards = new ImagePanel[8];
 	/////
 	private JPanel mainDRUIDE = null;;
 	private JPanel subMainDRUIDELabel = new JPanel();
 	private JPanel subMainDRUIDECardsDisplay = new JPanel();
-	private ImagePanel[] subMainDRUIDECards = new ImagePanel[8];
+	public ImagePanel[] subMainDRUIDECards = new ImagePanel[8];
 	/////
 	private JPanel mainCHASSEUR = null;
 	private JPanel subMainCHASSEURLabel = new JPanel();
 	private JPanel subMainCHASSEURCardsDisplay = new JPanel();
-	private ImagePanel[] subMainCHASSEURCards = new ImagePanel[8];
+	public ImagePanel[] subMainCHASSEURCards = new ImagePanel[8];
 	/////
 	private JPanel mainMAGE = null;
 	private JPanel subMainMAGELabel = new JPanel();
 	private JPanel subMainMAGECardsDisplay = new JPanel();
-	private ImagePanel[] subMainMAGECards = new ImagePanel[8];
+	public ImagePanel[] subMainMAGECards = new ImagePanel[8];
 	/////
 	private JPanel mainPALADIN = null;
 	private JPanel subMainPALADINLabel = new JPanel();
 	private JPanel subMainPALADINCardsDisplay = new JPanel();
-	private ImagePanel[] subMainPALADINCards = new ImagePanel[8];
+	public ImagePanel[] subMainPALADINCards = new ImagePanel[8];
 	/////
 	private JPanel mainPRETRE = null;
 	private JPanel subMainPRETRELabel = new JPanel();
 	private JPanel subMainPRETRECardsDisplay = new JPanel();
-	private ImagePanel[] subMainPRETRECards = new ImagePanel[8];
+	public ImagePanel[] subMainPRETRECards = new ImagePanel[8];
 	/////
 	private JPanel mainCHAMAN = null;
 	private JPanel subMainCHAMANLabel = new JPanel();
 	private JPanel subMainCHAMANCardsDisplay = new JPanel();
-	private ImagePanel[] subMainCHAMANCards = new ImagePanel[8];
+	public ImagePanel[] subMainCHAMANCards = new ImagePanel[8];
 	/////
 	private JPanel mainDEMONISTE = null;
 	private JPanel subMainDEMONISTELabel = new JPanel();
 	private JPanel subMainDEMONISTECardsDisplay = new JPanel();
-	private ImagePanel[] subMainDEMONISTECards = new ImagePanel[8];
+	public ImagePanel[] subMainDEMONISTECards = new ImagePanel[8];
 	/////
 	private JPanel mainVOLEUR = null;
 	private JPanel subMainVOLEURLabel = new JPanel();
 	private JPanel subMainVOLEURCardsDisplay = new JPanel();
-	private ImagePanel[] subMainVOLEURCards = new ImagePanel[8];
+	public ImagePanel[] subMainVOLEURCards = new ImagePanel[8];
 	/////
 	private JPanel mainNEUTRE = null;
 	private JPanel subMainNEUTRELabel = new JPanel();
 	private JPanel subMainNEUTRECardsDisplay = new JPanel();
-	private ImagePanel[] subMainNEUTRECards = new ImagePanel[8];
+	public ImagePanel[] subMainNEUTRECards = new ImagePanel[8];
 	/////
 
 	private JPanel description = new JPanel();
@@ -113,20 +120,22 @@ public class vueCollection extends JFrame {
 	private JPanel subMainFilterPanel = new JPanel();
 
 	private JCheckBox filtreRaceCheck = new JCheckBox("Filtre par race :");
-	private JComboBox<Race> filtreRaceCombo = new JComboBox();
+	private JComboBox<Race> filtreRaceCombo = new JComboBox<>();
 
 	private JCheckBox filtreRareteCheck = new JCheckBox("Filtre par rarete :");
-	private JComboBox<Rarete> filtreRareteCombo = new JComboBox();
+	private JComboBox<Rarete> filtreRareteCombo = new JComboBox<>();
 
 	private ButtonGroup filtreTypeGrp = new ButtonGroup();
 	private JRadioButton filtreArme = new JRadioButton("Armes");
 	private JRadioButton filtreServiteur = new JRadioButton("Serviteurs");
 	private JRadioButton filtreSort = new JRadioButton("Sorts");
+	private JRadioButton filtreNone = new JRadioButton("None");
 
+	private JButton applyFilter = new JButton("Appliquer");
 	/////
-	private Cartes collection = null;
+	public Cartes collection = null;
 
-	private int pageNumber = 0;
+	public int pageNumber = 0;
 
 	public vueCollection(Cartes collection) {
 		super("DECK manager");
@@ -377,11 +386,13 @@ public class vueCollection extends JFrame {
 		filtreTypeGrp.add(filtreArme);
 		filtreTypeGrp.add(filtreSort);
 		filtreTypeGrp.add(filtreServiteur);
+		filtreTypeGrp.add(filtreNone);
 
 		subMainFilterPanel.add(filtreArme);
 		subMainFilterPanel.add(filtreSort);
 		subMainFilterPanel.add(filtreServiteur);
-
+		filtreNone.setSelected(true);
+		subMainFilterPanel.add(filtreNone);
 		subMainFilterPanel.add(filtreRaceCheck);
 
 		filtreRaceCombo.addItem(Race.BETE);
@@ -402,6 +413,8 @@ public class vueCollection extends JFrame {
 		filtreRareteCombo.addItem(Rarete.EPIQUE);
 		filtreRareteCombo.addItem(Rarete.LEGENDAIRE);
 		subMainFilterPanel.add(filtreRareteCombo);
+
+		subMainFilterPanel.add(applyFilter);
 		/////////////////////////////////
 
 		try {
@@ -428,6 +441,16 @@ public class vueCollection extends JFrame {
 		main.add(subMainRight, BorderLayout.EAST);
 		main.add(subMainFilterPanel, BorderLayout.SOUTH);
 		/////////////////////////////////
+
+		classTab.addChangeListener(new ctrlTabbedPaneCollection(this));
+
+		cartesButtonNextRight.addActionListener(new ctrlCollectionNext(this, false));
+
+		cartesButtonNextLeft.addActionListener(new ctrlCollectionNext(this, true));
+
+		applyFilter.addActionListener(new ctrlApplyFilter(this));
+
+		/////////////////////////////////
 		this.getContentPane().add(main);
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -452,15 +475,32 @@ public class vueCollection extends JFrame {
 	}
 
 	public void drawCards(ImagePanel[] cardsHolders, Classe classe) throws ClasseNeutreException, IOException {
-		Collection<Carte> cartes = Filtre.cartesParClasse(collection.collection(), classe);
+		Collection<Carte> cartes = applyFilterRace();
 
 		int counter = 0;
+		int offset = 8 * (pageNumber);
+
+		if (cartes.size() > offset) {
+			Collection<Carte> offsetedCollection = new ArrayList<>();
+
+			int count = 0;
+			for (Carte carte : cartes) {
+				if (count < offset) {
+					++count;
+					continue;
+				}
+
+				offsetedCollection.add(carte);
+
+			}
+			cartes = offsetedCollection;
+		}
+
 		for (Carte carte : cartes) {
 			if (counter == 8)
 				break;
 
 			URL url;
-
 			try {
 				url = new URL(carte.urlImage());
 			} catch (MalformedURLException e) {
@@ -475,17 +515,121 @@ public class vueCollection extends JFrame {
 			if (pic.exists() && !pic.isDirectory()) {
 				cardsHolders[counter].loadPic(pic);
 			} else {
-				System.out.println("Working Directory = " + System.getProperty("user.dir"));
+				// System.out.println("Working Directory = " + System.getProperty("user.dir"));
 				// download and cach
 				BufferedImage image = ImageIO.read(url);
 				ImageIO.write(image, "png", pic);
-				
-				
+
 				cardsHolders[counter].loadPic(pic);
 			}
 
 			cardsHolders[counter].setBackground(main.getBackground());
 			++counter;
 		}
+
+		for (int i = counter; i < 8; ++i) {
+			cardsHolders[i].reset();
+		}
+	}
+
+	public Classe getClasseFromTabbedPaneId() {
+		switch (classTab.getSelectedIndex()) {
+		case 0:
+			return Classe.GUERRIER;
+
+		case 1:
+			return Classe.DRUIDE;
+
+		case 2:
+			return Classe.CHASSEUR;
+
+		case 3:
+			return Classe.MAGE;
+
+		case 4:
+			return Classe.PALADIN;
+
+		case 5:
+			return Classe.PRETRE;
+
+		case 6:
+			return Classe.CHAMAN;
+
+		case 7:
+			return Classe.DEMONISTE;
+
+		case 8:
+			return Classe.VOLEUR;
+
+		case 9:
+			return Classe.NEUTRE;
+
+		}
+		return null;
+	}
+
+	public ImagePanel[] getImagePanelFromTabbedPaneId() {
+		switch (classTab.getSelectedIndex()) {
+		case 0:
+			return subMainGUERRIERCards;
+
+		case 1:
+			return subMainDRUIDECards;
+
+		case 2:
+			return subMainCHASSEURCards;
+
+		case 3:
+			return subMainMAGECards;
+
+		case 4:
+			return subMainPALADINCards;
+
+		case 5:
+			return subMainPRETRECards;
+
+		case 6:
+			return subMainCHAMANCards;
+
+		case 7:
+			return subMainDEMONISTECards;
+
+		case 8:
+			return subMainVOLEURCards;
+
+		case 9:
+			return subMainNEUTRECards;
+
+		}
+		return null;
+	}
+
+	public Collection<Carte> applyFilterRace() throws ClasseNeutreException {
+		Collection<Carte> cartes = collection.collection();
+
+		cartes = applyFilter();
+		cartes = Filtre.cartesParClasse(cartes, getClasseFromTabbedPaneId());
+		return cartes;
+	}
+
+	public Collection<Carte> applyFilter() {
+		Collection<Carte> cartes = collection.collection();
+
+		if (filtreArme.isSelected()) {
+			cartes = Filtre.cartesArme(cartes);
+		} else if (filtreServiteur.isSelected()) {
+			cartes = Filtre.cartesServiteur(cartes);
+		} else if (filtreSort.isSelected()) {
+			cartes = Filtre.cartesSort(cartes);
+		}
+
+		if (filtreRaceCheck.isSelected()) {
+			cartes = Filtre.cartesParRace(cartes, (Race) filtreRaceCombo.getSelectedItem());
+		}
+
+		if (filtreRareteCheck.isSelected()) {
+			cartes = Filtre.cartesParRarete(cartes, (Rarete) filtreRareteCombo.getSelectedItem());
+		}
+		return cartes;
 	}
 }
