@@ -62,7 +62,7 @@ public class ImagePanel extends JPanel {
 			this.loadPicFile(pic);
 		}
 
-		this.setBackground(Color.WHITE);
+		this.setBackground(Color.getColor("Panel.background"));
 
 		repaint();
 	}

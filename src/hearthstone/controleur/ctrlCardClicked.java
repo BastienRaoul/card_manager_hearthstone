@@ -2,6 +2,8 @@ package hearthstone.controleur;
 
 import java.awt.event.*;
 
+import hearthstone.exception.CoutCreationException;
+import hearthstone.exception.GainDesenchantementException;
 import hearthstone.vue.ImagePanel;
 import hearthstone.vue.*;
 
@@ -10,8 +12,8 @@ public class ctrlCardClicked implements MouseListener {
 	vueDeck mVueDeck = null;
 	vueCreation mVueCreation = null;
 
-	public ctrlCardClicked() {
-		mVue = null;
+	public ctrlCardClicked(vueCollection vue) {
+		mVue = vue;
 	}
 
 	public ctrlCardClicked(vueDeck vue) {
@@ -24,10 +26,24 @@ public class ctrlCardClicked implements MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		mVue.textAreaDescription.setText(((ImagePanel)e.getSource()).mCarte.description());
-		mVue.coutDescription.setText(Integer.toString(((ImagePanel)e.getSource()).mCarte.coutCreation())));
-		mVue.valeurDesemDescription.setText(((ImagePanel)e.getSource()).mCarte.description());	
-		mVue.nbExemplairesDescription.setText(((ImagePanel)e.getSource()).mCarte.description());
+
+		mVue.textAreaDescription.setText("<html>" + ((ImagePanel) e.getSource()).mCarte.description() + "</html>");
+		try {
+			mVue.coutDescription.setText("Cout : " + Integer.toString(((ImagePanel) e.getSource()).mCarte.coutCreation()));
+		} catch (CoutCreationException e1) {
+			e1.printStackTrace();
+		}
+		try {
+			mVue.valeurDesemDescription.setText("Valeur : " + Integer.toString(((ImagePanel) e.getSource()).mCarte.gainDesenchantement()));
+		} catch (GainDesenchantementException e1) {
+			e1.printStackTrace();
+		}
+		/*
+		 * TODO try {
+		 * mVue.nbExemplairesDescription.setText(Integer.toString(((ImagePanel) //
+		 * e.getSource()).mCarte.qsdfqsdfqsdf)); } catch (GainDesenchantementException
+		 * e1) { e1.printStackTrace(); }
+		 */
 	}
 
 	@Override

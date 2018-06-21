@@ -1,34 +1,5 @@
 [
     {
-        "cardId": "HERO_07",
-        "dbfId": "893",
-        "name": "Gul\u2019dan",
-        "cardSet": "Basic",
-        "type": "Hero",
-        "faction": "Neutral",
-        "rarity": "Free",
-        "health": 30,
-        "collectible": true,
-        "playerClass": "Warlock",
-        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_07.png",
-        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_07_premium.gif",
-        "locale": "frFR"
-    },
-    {
-        "cardId": "HERO_07a",
-        "dbfId": "47817",
-        "name": "Nemsie N\u00e9croflop",
-        "cardSet": "Hero Skins",
-        "type": "Hero",
-        "rarity": "Epic",
-        "health": 30,
-        "collectible": true,
-        "playerClass": "Warlock",
-        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_07a.png",
-        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_07a_premium.gif",
-        "locale": "frFR"
-    },
-    {
         "cardId": "NEW1_003",
         "dbfId": "163",
         "name": "Pacte sacrificiel",
