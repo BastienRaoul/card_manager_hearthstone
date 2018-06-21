@@ -24,25 +24,25 @@ public class ctrlChangeClasse implements ItemListener{
     public void itemStateChanged(ItemEvent e) 
     {
         this.mVue.classeSupp();
-        switch((Classe)e.getItem())
+        switch(e.getItem())
         {
-        case DRUIDE: this.mVue.classeDruide();
+        case Classe.DRUIDE: this.mVue.classeDruide();
             break;
-        case CHASSEUR: this.mVue.classeChasseur();
+        case Classe.CHASSEUR: this.mVue.classeChasseur();
             break;
-        case MAGE: this.mVue.classeMage();
+        case Classe.MAGE: this.mVue.classeMage();
             break;
-        case PALADIN: this.mVue.classePaladin();
+        case Classe.PALADIN: this.mVue.classePaladin();
             break;
-        case PRETRE: this.mVue.classePretre();
+        case Classe.PRETRE: this.mVue.classePretre();
             break;
-        case VOLEUR: this.mVue.classeVoleur();
+        case Classe.VOLEUR: this.mVue.classeVoleur();
             break;
-        case CHAMAN: this.mVue.classeChaman();
+        case Classe.CHAMAN: this.mVue.classeChaman();
             break;
-        case DEMONISTE: this.mVue.classeDemoniste();
+        case Classe.DEMONISTE: this.mVue.classeDemoniste();
             break;
-        case GUERRIER: this.mVue.classeGuerrier();
+        case Classe.GUERRIER: this.mVue.classeGuerrier();
             break;
         default: break;
         }
