@@ -1,16 +1,27 @@
 package hearthstone.vue;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.net.*;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
+import java.nio.file.*;
+import java.util.*;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.UIManager.*;
 
 import hearthstone.carte.*;
 import hearthstone.cartes.*;
+import hearthstone.exception.*;
+import sun.awt.image.ToolkitImage;
 
 public class vueDeck extends JFrame {
 
-	private final int XSPACINGCARDS = 80;
-	private final int YSPACINGCARDS = (int)(XSPACINGCARDS / (1.421800948));
+	private final int YSPACINGCARDS = 10;
+	private final int XSPACINGCARDS = 80;// (int) (YSPACINGCARDS /2 );
 
 	private final int X = 1280;
 	private final int Y = 720;
@@ -32,52 +43,52 @@ public class vueDeck extends JFrame {
 	private JPanel mainGUERRIER = null;
 	private JPanel subMainGUERRIERLabel = new JPanel();
 	private JPanel subMainGUERRIERCardsDisplay = new JPanel();
-	private JPanel[] subMainGUERRIERCards = new JPanel[8];
+	private ImagePanel[] subMainGUERRIERCards = new ImagePanel[8];
 	/////
 	private JPanel mainDRUIDE = null;;
 	private JPanel subMainDRUIDELabel = new JPanel();
 	private JPanel subMainDRUIDECardsDisplay = new JPanel();
-	private JPanel[] subMainDRUIDECards = new JPanel[8];
+	private ImagePanel[] subMainDRUIDECards = new ImagePanel[8];
 	/////
 	private JPanel mainCHASSEUR = null;
 	private JPanel subMainCHASSEURLabel = new JPanel();
 	private JPanel subMainCHASSEURCardsDisplay = new JPanel();
-	private JPanel[] subMainCHASSEURCards = new JPanel[8];
+	private ImagePanel[] subMainCHASSEURCards = new ImagePanel[8];
 	/////
 	private JPanel mainMAGE = null;
 	private JPanel subMainMAGELabel = new JPanel();
 	private JPanel subMainMAGECardsDisplay = new JPanel();
-	private JPanel[] subMainMAGECards = new JPanel[8];
+	private ImagePanel[] subMainMAGECards = new ImagePanel[8];
 	/////
 	private JPanel mainPALADIN = null;
 	private JPanel subMainPALADINLabel = new JPanel();
 	private JPanel subMainPALADINCardsDisplay = new JPanel();
-	private JPanel[] subMainPALADINCards = new JPanel[8];
+	private ImagePanel[] subMainPALADINCards = new ImagePanel[8];
 	/////
 	private JPanel mainPRETRE = null;
 	private JPanel subMainPRETRELabel = new JPanel();
 	private JPanel subMainPRETRECardsDisplay = new JPanel();
-	private JPanel[] subMainPRETRECards = new JPanel[8];
+	private ImagePanel[] subMainPRETRECards = new ImagePanel[8];
 	/////
 	private JPanel mainCHAMAN = null;
 	private JPanel subMainCHAMANLabel = new JPanel();
 	private JPanel subMainCHAMANCardsDisplay = new JPanel();
-	private JPanel[] subMainCHAMANCards = new JPanel[8];
+	private ImagePanel[] subMainCHAMANCards = new ImagePanel[8];
 	/////
 	private JPanel mainDEMONISTE = null;
 	private JPanel subMainDEMONISTELabel = new JPanel();
 	private JPanel subMainDEMONISTECardsDisplay = new JPanel();
-	private JPanel[] subMainDEMONISTECards = new JPanel[8];
+	private ImagePanel[] subMainDEMONISTECards = new ImagePanel[8];
 	/////
 	private JPanel mainVOLEUR = null;
 	private JPanel subMainVOLEURLabel = new JPanel();
 	private JPanel subMainVOLEURCardsDisplay = new JPanel();
-	private JPanel[] subMainVOLEURCards = new JPanel[8];
+	private ImagePanel[] subMainVOLEURCards = new ImagePanel[8];
 	/////
 	private JPanel mainNEUTRE = null;
 	private JPanel subMainNEUTRELabel = new JPanel();
 	private JPanel subMainNEUTRECardsDisplay = new JPanel();
-	private JPanel[] subMainNEUTRECards = new JPanel[8];
+	private ImagePanel[] subMainNEUTRECards = new ImagePanel[8];
 	/////
 
 	private JPanel description = new JPanel();
@@ -92,7 +103,7 @@ public class vueDeck extends JFrame {
 
 	/////
 
-	private JList<Deck> deckList = new JList<>();
+	private JList<Carte> carteList = new JList<>();
 
 	private JComboBox choixClasse = new JComboBox<>();
 
@@ -128,188 +139,7 @@ public class vueDeck extends JFrame {
 		cartesLeft.add(cartesButtonNextLeft, BorderLayout.CENTER);
 		cartesRight.add(cartesButtonNextRight, BorderLayout.CENTER);
 
-		{
-			/*			
-			////// GUERRIER
-			mainGUERRIER = new JPanel();
-			mainGUERRIER.setLayout(new BorderLayout());
-			//
-			subMainGUERRIERLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-			subMainGUERRIERLabel.add(new Label("GUERRIER"));
-
-			mainGUERRIER.add(subMainGUERRIERLabel, BorderLayout.NORTH);
-			//
-			subMainGUERRIERCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-			for (int i = 0; i < 8; ++i) {
-				subMainGUERRIERCards[i] = new JPanel();
-				subMainGUERRIERCards[i].setBackground(Color.GRAY);
-				subMainGUERRIERCardsDisplay.add(subMainGUERRIERCards[i]);
-			}
-
-			mainGUERRIER.add(subMainGUERRIERCardsDisplay, BorderLayout.CENTER);
-			//
-			classTab.add(mainGUERRIER, "Guerrier");
-            
-			////// DRUID
-			mainDRUIDE = new JPanel();
-			mainDRUIDE.setLayout(new BorderLayout());
-			//
-			subMainDRUIDELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-			subMainDRUIDELabel.add(new Label("DRUIDE"));
-
-			mainDRUIDE.add(subMainDRUIDELabel, BorderLayout.NORTH);
-			//
-			subMainDRUIDECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-			for (int i = 0; i < 8; ++i) {
-				subMainDRUIDECards[i] = new JPanel();
-				subMainDRUIDECards[i].setBackground(Color.GRAY);
-				subMainDRUIDECardsDisplay.add(subMainDRUIDECards[i]);
-			}
-
-			mainDRUIDE.add(subMainDRUIDECardsDisplay, BorderLayout.CENTER);
-			//
-			classTab.add(mainDRUIDE, "Druide");
-            
-			////// CHASSEUR
-			mainCHASSEUR = new JPanel();
-			mainCHASSEUR.setLayout(new BorderLayout());
-			//
-			subMainCHASSEURLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-			subMainCHASSEURLabel.add(new Label("CHASSEUR"));
-
-			mainCHASSEUR.add(subMainCHASSEURLabel, BorderLayout.NORTH);
-			//
-			subMainCHASSEURCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-			for (int i = 0; i < 8; ++i) {
-				subMainCHASSEURCards[i] = new JPanel();
-				subMainCHASSEURCards[i].setBackground(Color.GRAY);
-				subMainCHASSEURCardsDisplay.add(subMainCHASSEURCards[i]);
-			}
-
-			mainCHASSEUR.add(subMainCHASSEURCardsDisplay, BorderLayout.CENTER);
-			//
-			classTab.add(mainCHASSEUR, "Chasseur");
-
-			////// MAGE
-			mainMAGE = new JPanel();
-			mainMAGE.setLayout(new BorderLayout());
-			//
-			subMainMAGELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-			subMainMAGELabel.add(new Label("MAGE"));
-
-			mainMAGE.add(subMainMAGELabel, BorderLayout.NORTH);
-			//
-			subMainMAGECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-			for (int i = 0; i < 8; ++i) {
-				subMainMAGECards[i] = new JPanel();
-				subMainMAGECards[i].setBackground(Color.GRAY);
-				subMainMAGECardsDisplay.add(subMainMAGECards[i]);
-			}
-
-			mainMAGE.add(subMainMAGECardsDisplay, BorderLayout.CENTER);
-			//
-			classTab.add(mainMAGE, "Mage");
-
-			////// PAL
-			mainPALADIN = new JPanel();
-			mainPALADIN.setLayout(new BorderLayout());
-			//
-			subMainPALADINLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-			subMainPALADINLabel.add(new Label("PALADIN"));
-
-			mainPALADIN.add(subMainPALADINLabel, BorderLayout.NORTH);
-			//
-			subMainPALADINCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-			for (int i = 0; i < 8; ++i) {
-				subMainPALADINCards[i] = new JPanel();
-				subMainPALADINCards[i].setBackground(Color.GRAY);
-				subMainPALADINCardsDisplay.add(subMainPALADINCards[i]);
-			}
-
-			mainPALADIN.add(subMainPALADINCardsDisplay, BorderLayout.CENTER);
-			//
-			classTab.add(mainPALADIN, "Paladin");
-
-			////// Priest
-			mainPRETRE = new JPanel();
-			mainPRETRE.setLayout(new BorderLayout());
-			//
-			subMainPRETRELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-			subMainPRETRELabel.add(new Label("PRETRE"));
-
-			mainPRETRE.add(subMainPRETRELabel, BorderLayout.NORTH);
-			//
-			subMainPRETRECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-			for (int i = 0; i < 8; ++i) {
-				subMainPRETRECards[i] = new JPanel();
-				subMainPRETRECards[i].setBackground(Color.GRAY);
-				subMainPRETRECardsDisplay.add(subMainPRETRECards[i]);
-			}
-
-			mainPRETRE.add(subMainPRETRECardsDisplay, BorderLayout.CENTER);
-			//
-			classTab.add(mainPRETRE, "Pretre");
-
-			////// Chaman
-			mainCHAMAN = new JPanel();
-			mainCHAMAN.setLayout(new BorderLayout());
-			//
-			subMainCHAMANLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-			subMainCHAMANLabel.add(new Label("CHAMAN"));
-
-			mainCHAMAN.add(subMainCHAMANLabel, BorderLayout.NORTH);
-			//
-			subMainCHAMANCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-			for (int i = 0; i < 8; ++i) {
-				subMainCHAMANCards[i] = new JPanel();
-				subMainCHAMANCards[i].setBackground(Color.GRAY);
-				subMainCHAMANCardsDisplay.add(subMainCHAMANCards[i]);
-			}
-
-			mainCHAMAN.add(subMainCHAMANCardsDisplay, BorderLayout.CENTER);
-			//
-			classTab.add(mainCHAMAN, "Chaman");
-
-			////// Warlock
-			mainDEMONISTE = new JPanel();
-			mainDEMONISTE.setLayout(new BorderLayout());
-			//
-			subMainDEMONISTELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-			subMainDEMONISTELabel.add(new Label("DEMONISTE"));
-
-			mainDEMONISTE.add(subMainDEMONISTELabel, BorderLayout.NORTH);
-			//
-			subMainDEMONISTECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-			for (int i = 0; i < 8; ++i) {
-				subMainDEMONISTECards[i] = new JPanel();
-				subMainDEMONISTECards[i].setBackground(Color.GRAY);
-				subMainDEMONISTECardsDisplay.add(subMainDEMONISTECards[i]);
-			}
-
-			mainDEMONISTE.add(subMainDEMONISTECardsDisplay, BorderLayout.CENTER);
-			//
-			classTab.add(mainDEMONISTE, "Demoniste");
-            
-			////// Rogue
-			mainVOLEUR = new JPanel();
-			mainVOLEUR.setLayout(new BorderLayout());
-			//
-			subMainVOLEURLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-			subMainVOLEURLabel.add(new Label("VOLEUR"));
-
-			mainVOLEUR.add(subMainVOLEURLabel, BorderLayout.NORTH);
-			//
-			subMainVOLEURCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
-			for (int i = 0; i < 8; ++i) {
-				subMainVOLEURCards[i] = new JPanel();
-				subMainVOLEURCards[i].setBackground(Color.GRAY);
-				subMainVOLEURCardsDisplay.add(subMainVOLEURCards[i]);
-			}
-
-			mainVOLEUR.add(subMainVOLEURCardsDisplay, BorderLayout.CENTER);
-			//
-			classTab.add(mainVOLEUR, "Voleur");
-			*/
+		{			
 			////// Neutral
 			mainNEUTRE = new JPanel();
 			mainNEUTRE.setLayout(new BorderLayout());
@@ -321,7 +151,7 @@ public class vueDeck extends JFrame {
 			//
 			subMainNEUTRECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
 			for (int i = 0; i < 8; ++i) {
-				subMainNEUTRECards[i] = new JPanel();
+				subMainNEUTRECards[i] = new ImagePanel();
 				subMainNEUTRECards[i].setBackground(Color.GRAY);
 				subMainNEUTRECardsDisplay.add(subMainNEUTRECards[i]);
 			}
@@ -351,12 +181,12 @@ public class vueDeck extends JFrame {
 		/////////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
 
-		// TODO deckList.setListData(collection.collectionDeDeck());
-		deckList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-		deckList.setLayoutOrientation(JList.HORIZONTAL_WRAP);
-		deckList.setVisibleRowCount(-1);
+		// TODO carteList.setListData(collection.collectionDeDeck());
+		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		carteList.setLayoutOrientation(JList.HORIZONTAL_WRAP);
+		carteList.setVisibleRowCount(-1);
 
-		JScrollPane listeDesDeck = new JScrollPane(deckList);
+		JScrollPane listeDesDeck = new JScrollPane(carteList);
 		listeDesDeck.setPreferredSize(new Dimension(250, 80));
 
 		subMainFilterPanel.setBorder(BorderFactory.createTitledBorder("Filtres :"));
@@ -380,8 +210,8 @@ public class vueDeck extends JFrame {
 		filtreRaceCombo.addItem(Race.MURLOC);
 		filtreRaceCombo.addItem(Race.PIRATE);
 		filtreRaceCombo.addItem(Race.TOTEM);
-		subMainFilterPanel.add(filtreRaceCombo);
 
+		subMainFilterPanel.add(filtreRaceCombo);
 		subMainFilterPanel.add(filtreRareteCheck);
 
 		filtreRareteCombo.addItem(Rarete.BASIQUE);
@@ -389,7 +219,16 @@ public class vueDeck extends JFrame {
 		filtreRareteCombo.addItem(Rarete.RARE);
 		filtreRareteCombo.addItem(Rarete.EPIQUE);
 		filtreRareteCombo.addItem(Rarete.LEGENDAIRE);
-        subMainFilterPanel.add(filtreRareteCombo);
+		
+		subMainFilterPanel.add(filtreRareteCombo);
+
+		////////////////////////////////		
+		try {
+			drawCards(subMainNEUTRECards, Classe.DRUIDE);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
         
         /////////////////////////////////
         choixClasse.addItem("Choisir Classe");
@@ -416,12 +255,12 @@ public class vueDeck extends JFrame {
 		subMainRight.setLayout(new BorderLayout());
 		subMainRight.add(listeDesDeck, BorderLayout.CENTER);
 		subMainRight.add(choixClasse, BorderLayout.NORTH);
-       
+	   	
         ////////////////////////////////////
         JPanel test = new JPanel();
         test.setLayout(new BoxLayout(test, BoxLayout.X_AXIS));
 
-        JLabel nbCarteDansDeck = new JLabel("0");
+        JLabel nbCarteDansDeck = new JLabel("15");
         JLabel sur30 = new JLabel("/30 ");
         JLabel cartes = new JLabel("cartes");
         Font font = new Font("Helvetica", Font.BOLD, 18);
@@ -462,5 +301,250 @@ public class vueDeck extends JFrame {
 		}
 
 		setVisible(true);
+	}
+
+	//////////////////////////////////////////
+	public void classeGuerrier()
+	{		
+			mainGUERRIER = new JPanel();
+			mainGUERRIER.setLayout(new BorderLayout());
+			//
+			subMainGUERRIERLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+			subMainGUERRIERLabel.add(new Label("GUERRIER"));
+
+			mainGUERRIER.add(subMainGUERRIERLabel, BorderLayout.NORTH);
+			//
+			subMainGUERRIERCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+			for (int i = 0; i < 8; ++i) {
+				subMainGUERRIERCards[i] = new ImagePanel();
+				subMainGUERRIERCards[i].setBackground(Color.GRAY);
+				subMainGUERRIERCardsDisplay.add(subMainGUERRIERCards[i]);
+			}
+
+			mainGUERRIER.add(subMainGUERRIERCardsDisplay, BorderLayout.CENTER);
+			//
+			classTab.add(mainGUERRIER, "Guerrier");
+	}
+
+	public void classeDruide()
+	{
+		mainDRUIDE = new JPanel();
+		mainDRUIDE.setLayout(new BorderLayout());
+		//
+		subMainDRUIDELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		subMainDRUIDELabel.add(new Label("DRUIDE"));
+
+		mainDRUIDE.add(subMainDRUIDELabel, BorderLayout.NORTH);
+		//
+		subMainDRUIDECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+		for (int i = 0; i < 8; ++i) {
+			subMainDRUIDECards[i] = new ImagePanel();
+			subMainDRUIDECards[i].setBackground(Color.GRAY);
+			subMainDRUIDECardsDisplay.add(subMainDRUIDECards[i]);
+		}
+
+		mainDRUIDE.add(subMainDRUIDECardsDisplay, BorderLayout.CENTER);
+		//
+		classTab.add(mainDRUIDE, "Druide");
+	}
+
+	public void classeVoleur()
+	{
+		mainVOLEUR = new JPanel();
+		mainVOLEUR.setLayout(new BorderLayout());
+		//
+		subMainVOLEURLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		subMainVOLEURLabel.add(new Label("VOLEUR"));
+
+		mainVOLEUR.add(subMainVOLEURLabel, BorderLayout.NORTH);
+		//
+		subMainVOLEURCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+		for (int i = 0; i < 8; ++i) {
+			subMainVOLEURCards[i] = new ImagePanel();
+			subMainVOLEURCards[i].setBackground(Color.GRAY);
+			subMainVOLEURCardsDisplay.add(subMainVOLEURCards[i]);
+		}
+
+		mainVOLEUR.add(subMainVOLEURCardsDisplay, BorderLayout.CENTER);
+		//
+		classTab.add(mainVOLEUR, "Voleur");
+	}
+
+	public void classeChasseur()
+	{
+		mainCHASSEUR = new JPanel();
+		mainCHASSEUR.setLayout(new BorderLayout());
+		//
+		subMainCHASSEURLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		subMainCHASSEURLabel.add(new Label("CHASSEUR"));
+
+		mainCHASSEUR.add(subMainCHASSEURLabel, BorderLayout.NORTH);
+		//
+		subMainCHASSEURCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+		for (int i = 0; i < 8; ++i) {
+			subMainCHASSEURCards[i] = new ImagePanel();
+			subMainCHASSEURCards[i].setBackground(Color.GRAY);
+			subMainCHASSEURCardsDisplay.add(subMainCHASSEURCards[i]);
+		}
+
+		mainCHASSEUR.add(subMainCHASSEURCardsDisplay, BorderLayout.CENTER);
+		//
+		classTab.add(mainCHASSEUR, "Chasseur");
+	}
+
+	public void classeChaman()
+	{
+		mainCHAMAN = new JPanel();
+		mainCHAMAN.setLayout(new BorderLayout());
+		//
+		subMainCHAMANLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		subMainCHAMANLabel.add(new Label("CHAMAN"));
+
+		mainCHAMAN.add(subMainCHAMANLabel, BorderLayout.NORTH);
+		//
+		subMainCHAMANCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+		for (int i = 0; i < 8; ++i) {
+			subMainCHAMANCards[i] = new ImagePanel();
+			subMainCHAMANCards[i].setBackground(Color.GRAY);
+			subMainCHAMANCardsDisplay.add(subMainCHAMANCards[i]);
+		}
+
+		mainCHAMAN.add(subMainCHAMANCardsDisplay, BorderLayout.CENTER);
+		//
+		classTab.add(mainCHAMAN, "Chaman");
+	}
+
+	public void classePaladin()
+	{
+		mainPALADIN = new JPanel();
+		mainPALADIN.setLayout(new BorderLayout());
+		//
+		subMainPALADINLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		subMainPALADINLabel.add(new Label("PALADIN"));
+
+		mainPALADIN.add(subMainPALADINLabel, BorderLayout.NORTH);
+		//
+		subMainPALADINCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+		for (int i = 0; i < 8; ++i) {
+			subMainPALADINCards[i] = new ImagePanel();
+			subMainPALADINCards[i].setBackground(Color.GRAY);
+			subMainPALADINCardsDisplay.add(subMainPALADINCards[i]);
+		}
+
+		mainPALADIN.add(subMainPALADINCardsDisplay, BorderLayout.CENTER);
+		//
+		classTab.add(mainPALADIN, "Paladin");
+	}
+
+	public void classeMage()
+	{
+		mainMAGE = new JPanel();
+		mainMAGE.setLayout(new BorderLayout());
+		//
+		subMainMAGELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		subMainMAGELabel.add(new Label("MAGE"));
+
+		mainMAGE.add(subMainMAGELabel, BorderLayout.NORTH);
+		//
+		subMainMAGECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+		for (int i = 0; i < 8; ++i) {
+			subMainMAGECards[i] = new ImagePanel();
+			subMainMAGECards[i].setBackground(Color.GRAY);
+			subMainMAGECardsDisplay.add(subMainMAGECards[i]);
+		}
+
+		mainMAGE.add(subMainMAGECardsDisplay, BorderLayout.CENTER);
+		//
+		classTab.add(mainMAGE, "Mage");
+	}
+
+	public void classePretre()
+	{
+		mainPRETRE = new JPanel();
+		mainPRETRE.setLayout(new BorderLayout());
+		//
+		subMainPRETRELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		subMainPRETRELabel.add(new Label("PRETRE"));
+
+		mainPRETRE.add(subMainPRETRELabel, BorderLayout.NORTH);
+		//
+		subMainPRETRECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+		for (int i = 0; i < 8; ++i) {
+			subMainPRETRECards[i] = new ImagePanel();
+			subMainPRETRECards[i].setBackground(Color.GRAY);
+			subMainPRETRECardsDisplay.add(subMainPRETRECards[i]);
+		}
+		mainPRETRE.add(subMainPRETRECardsDisplay, BorderLayout.CENTER);
+		//
+		classTab.add(mainPRETRE, "Pretre");
+	}
+
+	public void classeDemoniste() 
+	{
+		mainDEMONISTE = new JPanel();
+		mainDEMONISTE.setLayout(new BorderLayout());
+		//
+		subMainDEMONISTELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		subMainDEMONISTELabel.add(new Label("DEMONISTE"));
+
+		mainDEMONISTE.add(subMainDEMONISTELabel, BorderLayout.NORTH);
+		//
+		subMainDEMONISTECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+		for (int i = 0; i < 8; ++i) {
+			subMainDEMONISTECards[i] = new ImagePanel();
+			subMainDEMONISTECards[i].setBackground(Color.GRAY);
+			subMainDEMONISTECardsDisplay.add(subMainDEMONISTECards[i]);
+		}
+
+		mainDEMONISTE.add(subMainDEMONISTECardsDisplay, BorderLayout.CENTER);
+		//
+		classTab.add(mainDEMONISTE, "Demoniste");
+	}	
+
+	//////////////////////////////////////////////
+	public void classeSupp()
+	{
+		if(classTab.getTabCount() > 1){
+			classTab.remove(1);
+		}		
+	}
+
+	//////////////////////////
+	public void drawCards(ImagePanel[] cardsHolders, Classe classe) throws ClasseNeutreException, IOException {
+		Collection<Carte> cartes = Filtre.cartesParClasse(collection.collection(), classe);
+
+		int counter = 0;
+		for (Carte carte : cartes) {
+			if (counter == 8)
+				break;
+
+			URL url;
+
+			try {
+				url = new URL(carte.urlImage());
+			} catch (MalformedURLException e) {
+				cardsHolders[counter].setBackground(Color.GRAY);
+				continue;
+			}
+
+			String fileName = url.getFile().substring(url.getFile().lastIndexOf("/") + 1);
+
+			// if file is cached
+			File pic = new File("./cachedPics/" + fileName);
+			if (pic.exists() && !pic.isDirectory()) {
+				cardsHolders[counter].loadPic(pic);
+			} else {
+				System.out.println("Working Directory = " + System.getProperty("user.dir"));
+				// download and cach
+				BufferedImage image = ImageIO.read(url);
+				ImageIO.write(image, "png", pic);
+				
+				
+				cardsHolders[counter].loadPic(pic);
+			}
+
+			cardsHolders[counter].setBackground(main.getBackground());
+			++counter;
+		}
 	}
 }
