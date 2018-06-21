@@ -8,9 +8,9 @@ import hearthstone.vue.*;
 
 public class ctrlApplyFilter implements ActionListener {
     
-	vueCollection mVue = null;
+	vue mVue = null;
 
-	public ctrlApplyFilter(vueCollection vue) {
+	public ctrlApplyFilter(vue vue) {
 		mVue = vue;
 	}
 

@@ -11,9 +11,9 @@ import hearthstone.vue.*;
 
 public class ctrlTabbedPaneCollection implements ChangeListener {
 
-    vueCollection mVue = null;
+    vue mVue = null;
 
-    public ctrlTabbedPaneCollection(vueCollection vue) {
+    public ctrlTabbedPaneCollection(vue vue) {
 	mVue = vue;
     }
 

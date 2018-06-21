@@ -9,9 +9,9 @@ import hearthstone.vue.*;
 
 public class ctrlCardClicked implements MouseListener {
 
-    vueCollection mVue = null;
+    vue mVue = null;
 
-    public ctrlCardClicked(vueCollection vue) {
+    public ctrlCardClicked(vue vue) {
 	mVue = vue;
     }
 
