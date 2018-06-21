@@ -4,12 +4,13 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.UIManager.*;
 
+import hearthstone.carte.*;
 import hearthstone.cartes.*;
 
 public class vueCollection extends JFrame {
 
 	private final int XSPACINGCARDS = 80;
-	private final int YSPACINGCARDS = 30;
+	private final int YSPACINGCARDS = (int)(XSPACINGCARDS / (1.421800948));
 
 	private final int X = 1280;
 	private final int Y = 720;
@@ -98,6 +99,20 @@ public class vueCollection extends JFrame {
 	private JButton creationDeck = new JButton("Nouveau deck");
 	/////
 
+	private JPanel subMainFilterPanel = new JPanel();
+
+	private JCheckBox filtreRaceCheck = new JCheckBox("Filtre par race :");
+	private JComboBox<Race> filtreRaceCombo = new JComboBox();
+
+	private JCheckBox filtreRareteCheck = new JCheckBox("Filtre par rarete :");
+	private JComboBox<Rarete> filtreRareteCombo = new JComboBox();
+
+	private ButtonGroup filtreTypeGrp = new ButtonGroup();
+	private JRadioButton filtreArme = new JRadioButton("Armes");
+	private JRadioButton filtreServiteur = new JRadioButton("Serviteurs");
+	private JRadioButton filtreSort = new JRadioButton("Sorts");
+
+	/////
 	private Cartes collection = null;
 
 	public vueCollection(Cartes collection) {
@@ -343,6 +358,37 @@ public class vueCollection extends JFrame {
 		JScrollPane listeDesDeck = new JScrollPane(deckList);
 		listeDesDeck.setPreferredSize(new Dimension(250, 80));
 
+		subMainFilterPanel.setBorder(BorderFactory.createTitledBorder("Filtres :"));
+		subMainFilterPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+
+		filtreTypeGrp.add(filtreArme);
+		filtreTypeGrp.add(filtreSort);
+		filtreTypeGrp.add(filtreServiteur);
+
+		subMainFilterPanel.add(filtreArme);
+		subMainFilterPanel.add(filtreSort);
+		subMainFilterPanel.add(filtreServiteur);
+
+		subMainFilterPanel.add(filtreRaceCheck);
+
+		filtreRaceCombo.addItem(Race.BETE);
+		filtreRaceCombo.addItem(Race.DEMON);
+		filtreRaceCombo.addItem(Race.DRAGON);
+		filtreRaceCombo.addItem(Race.ELEMENTAIRE);
+		filtreRaceCombo.addItem(Race.MECA);
+		filtreRaceCombo.addItem(Race.MURLOC);
+		filtreRaceCombo.addItem(Race.PIRATE);
+		filtreRaceCombo.addItem(Race.TOTEM);
+		subMainFilterPanel.add(filtreRaceCombo);
+
+		subMainFilterPanel.add(filtreRareteCheck);
+
+		filtreRareteCombo.addItem(Rarete.BASIQUE);
+		filtreRareteCombo.addItem(Rarete.COMMUNE);
+		filtreRareteCombo.addItem(Rarete.RARE);
+		filtreRareteCombo.addItem(Rarete.EPIQUE);
+		filtreRareteCombo.addItem(Rarete.LEGENDAIRE);
+		subMainFilterPanel.add(filtreRareteCombo);
 		/////////////////////////////////
 		subMainCenter.setLayout(new BorderLayout());
 		subMainCenter.add(classTab, BorderLayout.CENTER);
@@ -358,7 +404,7 @@ public class vueCollection extends JFrame {
 
 		main.add(subMainCenter, BorderLayout.CENTER);
 		main.add(subMainRight, BorderLayout.EAST);
-
+		main.add(subMainFilterPanel, BorderLayout.SOUTH);
 		/////////////////////////////////
 		this.getContentPane().add(main);
 
