@@ -1,0 +1,2439 @@
+[
+    {
+        "cardId": "HERO_06a",
+        "dbfId": "50484",
+        "name": "Lunara",
+        "cardSet": "Hero Skins",
+        "type": "Hero",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "health": 30,
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_06a.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_06a_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "HERO_06",
+        "dbfId": "274",
+        "name": "Malfurion Hurlorage",
+        "cardSet": "Basic",
+        "type": "Hero",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "health": 30,
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_06.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_06_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CS2_008",
+        "dbfId": "467",
+        "name": "\u00c9clat lunaire",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 0,
+        "text": "Inflige $1 |4(point,points) de d\u00e9g\u00e2ts.",
+        "flavor": "\u00ab\u00a0Lancez \u00c9clat lunaire sans discontinuer.\u00a0\u00bb - Comment devenir druide, chapitre 5, paragraphe 3",
+        "artist": "Richard Wright",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 6.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 40.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_008.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_008_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_169",
+        "dbfId": "254",
+        "name": "Innervation",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 0,
+        "text": "Vous gagnez 1_cristal de mana pour ce tour uniquement.",
+        "flavor": "Certains druides font encore des cauchemars \u00e0 propos d\u2019inconnus leur criant \u00ab\u00a0Innervation sur moi_!_\u00bb.",
+        "artist": "Doug Alexander",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 36.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_169.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_169_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_161",
+        "dbfId": "233",
+        "name": "Acclimatation",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 1,
+        "text": "D\u00e9truit un serviteur. Votre adversaire pioche 2_cartes.",
+        "flavor": "Sur le moment, \u00e7a m\u2019a sembl\u00e9 une bonne id\u00e9e...",
+        "artist": "Leo Che",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_161.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_161_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_051",
+        "dbfId": "38340",
+        "name": "Ancien frapp\u00e9 d\u2019interdit",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 1,
+        "attack": 1,
+        "health": 1,
+        "text": "<b>Cri de guerre\u00a0:</b> d\u00e9pense tous vos cristaux de mana. Gagne +1/+1 pour chaque cristal d\u00e9pens\u00e9.",
+        "flavor": "L\u2019auberge lui est interdite depuis qu\u2019on a trouv\u00e9 un Dr Boum cach\u00e9 dans ses branches.",
+        "artist": "Grace Liu",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_051.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_051_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "KAR_300",
+        "dbfId": "39350",
+        "name": "Corbeau enchant\u00e9",
+        "cardSet": "One Night in Karazhan",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 1,
+        "attack": 2,
+        "health": 2,
+        "flavor": "Il y a longtemps, les gens croyaient que quand quelqu\u2019un meurt, un corbeau emporte son \u00e2me jusqu\u2019au pays des morts.",
+        "artist": "Daria Tuzova",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "howToGet": "Obtenue \u00e0 l\u2019\u00e9tage du prologue dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e \u00e0 l\u2019\u00e9tage du prologue dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/KAR_300.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/KAR_300_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_108",
+        "dbfId": "41081",
+        "name": "\u00c9cailles terrestres",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 1,
+        "text": "Donne_+1/+1 \u00e0 un serviteur alli\u00e9, puis gagne un montant d\u2019armure \u00e9quivalent \u00e0 son ATQ.",
+        "flavor": "Faire ses propres \u00e9cailles terrestres c\u2019est facile. \u00c9tape 1_: roulez-vous dans la poussi\u00e8re. \u00c9tape 2_: ajoutez un peu de magie, secouez et c\u2019est pr\u00eat_!",
+        "artist": "Mike Azevedo",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_108.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_108_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_047",
+        "dbfId": "43282",
+        "name": "\u00c9corce",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 1,
+        "text": "Donne +3_PV \u00e0 un serviteur. Vous gagnez 3_points d\u2019armure.",
+        "flavor": "Par mon \u00e9corce, je vais vous planter_!",
+        "artist": "Lucas Graciano",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_047.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_047_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_116",
+        "dbfId": "41099",
+        "name": "G\u00e9ants de la jungle",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Legendary",
+        "cost": 1,
+        "text": "<b>Qu\u00eate_:</b> invoquer 5_serviteurs avec 5_ATQ_ou_plus.\\n<b>R\u00e9compense_:</b> Barnabus.",
+        "flavor": "\u00ab_Il me faut simplement des gens qui aiment aller dans les volcans pour se faire manger par les dieux._\u00bb",
+        "artist": "Konstantin Turovec",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_116.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_116_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Qu\u00eate"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_005",
+        "dbfId": "1050",
+        "name": "Griffe",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 1,
+        "text": "Donne +2_ATQ \u00e0 votre h\u00e9ros pendant ce tour. +2_points d\u2019armure.",
+        "flavor": "La griffe est notre ma\u00eetresse, elle choisit ceux qui s\u2019en vont et ceux qui restent.",
+        "artist": "Dany Orizio",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 32.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_005.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_005_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOE_115",
+        "dbfId": "13335",
+        "name": "Idole corbeau",
+        "cardSet": "The League of Explorers",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 1,
+        "text": "<b>Choix des armes\u00a0:</b>\\n<b>d\u00e9couvre</b> un serviteur ou un sort.",
+        "flavor": "L\u2019idole corbeau sur un socle perch\u00e9, tenait en son bec une carte\u2026",
+        "artist": "A.J. Nazzaro",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "Obtenue dans l\u2019aile Hall des Explorateurs de l\u2019aventure la Ligue des explorateurs.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e dans l\u2019aile Hall des Explorateurs de l\u2019aventure la Ligue des explorateurs.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOE_115.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOE_115_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Discover"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_602",
+        "dbfId": "40372",
+        "name": "Idole de jade",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 1,
+        "text": "<b>Choix des armes_:</b> invoque un <b>golem de jade</b> ou place 3 copies de cette carte dans votre deck.",
+        "flavor": "N\u2019essayez pas de la remplacer par un sac de sable, \u00e7a ne marche jamais.",
+        "artist": "Matthew O'Connor",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_602.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_602_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Golem de jade"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_051",
+        "dbfId": "43288",
+        "name": "Jaspe de sort inf\u00e9rieur",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 1,
+        "armor": "1",
+        "text": "<i>(Obtenez 3_points d\u2019armure pour l\u2019am\u00e9liorer.)</i>",
+        "flavor": "Dans les anciens bosquets, les elfes lutt\u00e8rent contre la mal\u00e9diction,\\nAfin de disperser l\u2019ombre du d\u00e9mon.\\nMais sa haine \u00e9tait puissante, et les \u00e2mes fragiles furent transform\u00e9es,\\nAffubl\u00e9es de sabots et de cornes, et leurs for\u00eats incendi\u00e9es.",
+        "artist": "Jim Nelson",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_051.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_051_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_614",
+        "dbfId": "40397",
+        "name": "Marque du Lotus",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 1,
+        "text": "Donne_+1/+1 \u00e0 vos serviteurs.",
+        "flavor": "La marque du Lotus est une petite fleur dessin\u00e9e au marqueur permanent sur la cheville.",
+        "artist": "Wayne Reynolds",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_614.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_614_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_037",
+        "dbfId": "2792",
+        "name": "Racines vivantes",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 1,
+        "text": "<b>Choix des armes\u00a0:</b> Inflige $2 |4(point,points) de d\u00e9g\u00e2ts ou invoque deux arbrisseaux 1/1.",
+        "flavor": "2 arbrisseaux sur 2 recommandent l\u2019utilisation d\u2019arbrisseaux.",
+        "artist": "Dan Brereton",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_037.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_037_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_578",
+        "dbfId": "481",
+        "name": "Sauvagerie",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 1,
+        "text": "Inflige des d\u00e9g\u00e2ts d\u2019un montant \u00e9quivalent \u00e0 l\u2019Attaque de votre h\u00e9ros \u00e0 un serviteur.",
+        "flavor": "M\u00eame le plus timide des druides se transforme en b\u00eate sauvage quand on lui prend son miel.",
+        "artist": "Dave Rapoza",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_578.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_578_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "AffectedBySpellPower"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_038",
+        "dbfId": "2782",
+        "name": "Aspirante de Darnassus",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 2,
+        "attack": 2,
+        "health": 3,
+        "text": "<b>Cri de guerre\u00a0:</b> gagne un cristal de mana vide.\\n<b>R\u00e2le d\u2019agonie\u00a0:</b> perd un cristal de mana.",
+        "flavor": "Un moment, elle adore les cristaux de mana, l\u2019instant d\u2019apr\u00e8s elle les d\u00e9teste. Quelle girouette\u00a0!",
+        "artist": "Laurel Austin",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_038.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_038_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_154",
+        "dbfId": "836",
+        "name": "Col\u00e8re",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "<b>Choix des armes\u00a0:</b> inflige $3 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur\u00a0; ou inflige $1 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur et vous piochez une carte.",
+        "flavor": "Les habitu\u00e9s de l\u2019auberge de Gadgetzan trouvent que cette carte devrait \u00eatre l\u00e9gendaire parce qu\u2019elle est vraiment trop g\u00e9niale.",
+        "artist": "Raymond Swanland",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_154.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_154_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CS2_013",
+        "dbfId": "1124",
+        "name": "Croissance sauvage",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 2,
+        "text": "Conf\u00e8re un cristal de mana vide.",
+        "flavor": "Faites pousser vos propres cristaux de mana avec ce set de croissance au prix d\u00e9fiant toute concurrence de 39,99 pi\u00e8ces d\u2019or\u00a0!",
+        "artist": "James Ryman",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 23.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_013.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_013_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_051",
+        "dbfId": "42651",
+        "name": "Druidesse de l\u2019essaim",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 2,
+        "attack": 1,
+        "health": 2,
+        "text": "<b>Choix des armes_:</b> se transforme en_1/2 avec <b>Toxicit\u00e9</b> ou en_1/5 avec <b>Provocation</b>.",
+        "flavor": "En se r\u00e9veillant un matin apr\u00e8s des r\u00eaves agit\u00e9s, la druidesse se retrouva m\u00e9tamorphos\u00e9e en araign\u00e9e g\u00e9ante.",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_051.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_051_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            },
+            {
+                "name": "Toxicit\u00e9"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_042",
+        "dbfId": "2783",
+        "name": "Druidesse du Sabre",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "health": 1,
+        "text": "<b>Choix des armes\u00a0:</b> se transforme en_2/1 avec <b>Charge</b> ou en_3/2 avec <b>Camouflage</b>.",
+        "flavor": "Sabre comme dans dent de sabre, pas les lames incurv\u00e9es de pirate. Ce type de druidisme serait vraiment trop... tordu.",
+        "artist": "Arthur Gimaldinov",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_042.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_042_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Charge"
+            },
+            {
+                "name": "Camouflage"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_078",
+        "dbfId": "41252",
+        "name": "Fourrageur tortollan",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "health": 2,
+        "text": "<b>Cri de guerre_:</b> ajoute un serviteur al\u00e9atoire avec 5_ATQ ou plus dans votre main.",
+        "flavor": "En tortollan, Un\u2019Goro signifie \u00ab_Le monde presque perdu_\u00bb.",
+        "artist": "Jerry Mascho",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_078.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_078_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_048",
+        "dbfId": "38337",
+        "name": "Marque d\u2019Y\u2019Shaarj",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "Donne +2/+2 \u00e0 un serviteur. Si c\u2019est une B\u00eate, vous piochez une carte.",
+        "flavor": "Y\u2019Shaarj avait trois fils_: Mark, Th\u00e9odore et Chris.",
+        "artist": "Efrem Palacios",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_048.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_048_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CS2_009",
+        "dbfId": "213",
+        "name": "Marque du fauve",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 2,
+        "text": "Conf\u00e8re <b>Provocation</b> et +2/+2_\u00e0 un serviteur.<i> (+2_ATQ/+2_PV)</i>",
+        "flavor": "\u00c0 ne pas confondre avec la marque du chauve.",
+        "artist": "Brad Vancata",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 28.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_009.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_009_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_030",
+        "dbfId": "2096",
+        "name": "Ourson robot anodis\u00e9",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "health": 2,
+        "text": "<b>Provocation</b>.\\n<b>Choix des armes\u00a0:</b>\\n+1 ATQ ou +1 PV.",
+        "flavor": "Il est adorable\u00a0! AH MAIS POURQUOI IL A \u00c9TERNU\u00c9\u00a0???",
+        "artist": "Eva Widermann",
+        "collectible": true,
+        "race": "Mech",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_030.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_030_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_663",
+        "dbfId": "47553",
+        "name": "Pomme du bois Maudit",
+        "cardSet": "The Witchwood",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "Ajoute_trois_tr\u00e9ants_2/2 dans votre main.",
+        "flavor": "La pomme ne tombe jamais loin de l\u2019arbre.",
+        "artist": "Vlad Botos",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_663.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_663_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_160",
+        "dbfId": "503",
+        "name": "Puissance du fauve",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "<b>Choix des armes_:</b>\\ndonne_+1/+1 \u00e0 vos serviteurs ou invoque une panth\u00e8re_3/2.",
+        "flavor": "Ne jamais regarder une panth\u00e8re dans les yeux. Ou toujours la regarder dans les yeux\u00a0? C\u2019est soit l\u2019un, soit l\u2019autre.",
+        "artist": "Steve Tappin",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_160.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_160_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_109",
+        "dbfId": "41086",
+        "name": "Ancien brachiosaure",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 5,
+        "health": 1,
+        "text": "<b>Cri de guerre_: Adaptation</b> si vous avez un serviteur avec 5_ATQ ou plus en main.",
+        "flavor": "\u2013_Tribord, c\u2019est droite et b\u00e2bord, c\u2019est gauche.\\n\u2013_Et brachiosaure_?\\n\u2013_Brachiosaure, c\u2019est\u2026 AHHHHHHH_!!!",
+        "artist": "Trent Kaniuga",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_109.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_109_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Adaptation"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_044",
+        "dbfId": "2793",
+        "name": "Charpie",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 3,
+        "text": "D\u00e9truit un serviteur.\\nAjoute un serviteur al\u00e9atoire dans la main de votre adversaire.",
+        "flavor": "Un de perdu, un de retrouv\u00e9.",
+        "artist": "Dan Scott",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_044.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_044_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_188",
+        "dbfId": "46859",
+        "name": "Druidesse de la Faux",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 2,
+        "health": 2,
+        "text": "<b>Choix des armes_:</b> se transforme en 4/2 avec <b>Ru\u00e9e</b> ou en 2/4 avec <b>Provocation</b>.",
+        "flavor": "Sa faux est uniquement d\u00e9corative.",
+        "artist": "Luke Mancini",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_188.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_188_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Ru\u00e9e"
+            },
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "BRM_010",
+        "dbfId": "2292",
+        "name": "Druidesse de la Flamme",
+        "cardSet": "Blackrock Mountain",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 2,
+        "health": 2,
+        "text": "<b>Choix des armes_:</b> se transforme en un serviteur_5/2 ou en un serviteur_2/5.",
+        "flavor": "Il n\u2019a fallu \u00e0 Ragnaros qu\u2019une tasse de chocolat bien chaud pour s\u00e9duire les druides en Norfendre.",
+        "artist": "Stanley Lau",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "Obtenue dans l\u2019aile c\u0153ur du Magma de l\u2019aventure Mont Rochenoire.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir \u00e9t\u00e9 d\u00e9bloqu\u00e9e dans l\u2019aile c\u0153ur du Magma de l\u2019aventure Mont Rochenoire.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/BRM_010.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/BRM_010_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_713",
+        "dbfId": "40523",
+        "name": "Floraison de jade",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "Invoque un <b>golem de jade</b>. Gagne un cristal de mana vide.",
+        "flavor": "Prenez le temps de m\u00e9diter sous ses magnifiques feuilles avant de c\u00e9l\u00e9brer le renouveau du printemps par un joyeux pique-nique.",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_713.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_713_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Golem de jade"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_313",
+        "dbfId": "38916",
+        "name": "Grizzly perturb\u00e9",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 2,
+        "health": 2,
+        "text": "Apr\u00e8s que vous avez invoqu\u00e9 un serviteur, lui donne +1/+1.",
+        "flavor": "Les druides qui passent trop de temps sous forme d\u2019ours sont plus susceptibles d\u2019entendre les murmures des Dieux tr\u00e8s anciens. L\u00e0, ils lui chantent \u00ab\u00a0Je t\u2019aime\u00a0!\u00a0\u00bb en boucle depuis des jours.",
+        "artist": "Andrew Hou",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_313.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_313_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_079",
+        "dbfId": "42748",
+        "name": "Grognement",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "Donne +3_ATQ \u00e0 votre h\u00e9ros pendant ce tour. Gagne 3_points d\u2019armure.",
+        "flavor": "\u00ab_Fais un terrible grognement sourd, flanque-moi la frousse_!_\u00bb",
+        "artist": "Phil Saunders",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_079.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_079_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_571",
+        "dbfId": "47117",
+        "name": "Heure ensorcelante",
+        "cardSet": "The Witchwood",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 0,
+        "health": 0,
+        "text": "Invoque une B\u00eate\\nalli\u00e9e al\u00e9atoire morte pendant cette partie.",
+        "flavor": "\u00c0 l\u2019heure o\u00f9 tout le monde dort,\\nUne b\u00eate emport\u00e9e par la mort,\\nDe sa s\u00e9pulture glac\u00e9e sort.",
+        "artist": "Mauricio Herrera",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_571.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_571_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_637",
+        "dbfId": "47423",
+        "name": "Hurlement f\u00e9roce",
+        "cardSet": "The Witchwood",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "Vous piochez une carte. Vous gagnez 1_point d\u2019armure pour chaque carte de votre main.",
+        "flavor": "La lune bleue est un ph\u00e9nom\u00e8ne tellement rare et spectaculaire qu\u2019on ne peut s\u2019emp\u00eacher de hurler.",
+        "artist": "Mauricio Herrera",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_637.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_637_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_351",
+        "dbfId": "45945",
+        "name": "Lutin cupide",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 3,
+        "health": 1,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> gagne un cristal de mana vide.",
+        "flavor": "\u00ab_Le ma\u00eetre a donn\u00e9 \u00e0 Dougie un cristal_! Dougie est libre_!_\u00bb",
+        "artist": "L. Lullabi & K. Turovec",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_351.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_351_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_155",
+        "dbfId": "151",
+        "name": "Marque de la nature",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "<b>Choix des armes\u00a0:</b> donne +4 ATQ \u00e0 un serviteur ou +4 PV et <b>Provocation</b>.",
+        "flavor": "Les druides appellent \u00e7a la \u00ab\u00a0Marque de la nature\u00a0\u00bb. Les autres consid\u00e8rent qu\u2019ils ont juste besoin d\u2019un bon bain...",
+        "artist": "Clint Langley",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_155.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_155_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_616",
+        "dbfId": "40401",
+        "name": "Puissance chapard\u00e9e",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 3,
+        "text": "Conf\u00e8re un cristal de mana vide pour chaque serviteur alli\u00e9.",
+        "flavor": "C\u2019est dur de gagner sa vie. Alors, de temps en temps, on est amen\u00e9 \u00e0 faire des choses contraires \u00e0 ses principes. Quand on en a, bien s\u00fbr.",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_616.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_616_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_047",
+        "dbfId": "38334",
+        "name": "Rage farouche",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "<b>Choix des armes_:</b> donne +4_ATQ \u00e0 votre h\u00e9ros pendant ce tour ou 8_points d\u2019armure.",
+        "flavor": "Soyons honn\u00eates. Une des deux options est plus farouche que l\u2019autre.",
+        "artist": "Alex Alexandrov",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_047.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_047_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOE_050",
+        "dbfId": "2922",
+        "name": "Raptor de monte",
+        "cardSet": "The League of Explorers",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 3,
+        "health": 2,
+        "text": "<b>R\u00e2le d\u2019agonie\u00a0:</b> invoque un serviteur al\u00e9atoire co\u00fbtant 1 cristal.",
+        "flavor": "Petit fut\u00e9\u00a0!",
+        "artist": "Benjamin Zhang",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "howToGet": "Obtenue dans l\u2019aile Uldaman de l\u2019aventure la Ligue des explorateurs.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e dans l\u2019aile Uldaman de l\u2019aventure la Ligue des explorateurs.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOE_050.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOE_050_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_617",
+        "dbfId": "40404",
+        "name": "R\u00eaveuse c\u00e9leste",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>Cri de guerre_:</b> gagne_+2/+2 si vous contr\u00f4lez un serviteur avec 5_ATQ ou plus.",
+        "flavor": "Quel boulot de r\u00eave_!",
+        "artist": "Alex Garner",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_617.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_617_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_011",
+        "dbfId": "742",
+        "name": "Rugissement sauvage",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 3,
+        "text": "Donne +2_ATQ \u00e0 vos personnages pendant ce tour.",
+        "flavor": "C\u2019est quoi ce rugissement\u00a0? On dirait un \u00e9l\u00e9phant en rut... Mais ce n\u2019est probablement pas \u00e7a.",
+        "artist": "Grace Liu",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 4.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 43.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_011.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_011_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_808",
+        "dbfId": "43025",
+        "name": "Seigneur des cryptes",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 1,
+        "health": 6,
+        "text": "<b>Provocation</b>\\nGagne +1_PV une fois que vous avez invoqu\u00e9 un serviteur.",
+        "flavor": "Les scarab\u00e9es bourdonnent, c\u2019est la folie dans la Couronne_!",
+        "artist": "Konstanin Turovec",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_808.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_808_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_032",
+        "dbfId": "2225",
+        "name": "Sylvenier du Bosquet",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 2,
+        "health": 4,
+        "text": "<b>Choix des armes\u00a0:</b> donne \u00e0 chaque joueur un cristal de mana ou chaque joueur pioche une carte.",
+        "flavor": "Aime\u00a0: la rando et les grands espaces. D\u00e9teste\u00a0: les d\u00e9chiqueteurs gobelins et les sandales.",
+        "artist": "Chris Rahn",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_032.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_032_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CS2_007",
+        "dbfId": "773",
+        "name": "Toucher gu\u00e9risseur",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 3,
+        "text": "Rend #8 |4(point,points) de vie.",
+        "flavor": "Exigez le meilleur\u00a0! Avec Toucher gu\u00e9risseur, r\u00e9sultats imm\u00e9diats, 8 PV garantis\u00a0!",
+        "artist": "Cyril Van Der Haegen",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 15.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_007.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_007_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_158",
+        "dbfId": "381",
+        "name": "\u00c2me de la for\u00eat",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 4,
+        "text": "Conf\u00e8re \u00e0 vos serviteurs \u00ab\u00a0<b>R\u00e2le d\u2019agonie\u00a0:</b> invoque un tr\u00e9ant 2/2.\u00a0\u00bb",
+        "flavor": "C\u2019est l\u2019arbre qui cache la for\u00eat.",
+        "artist": "Markus Erdt",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_158.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_158_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_309",
+        "dbfId": "45828",
+        "name": "Appel du ch\u00eane",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 4,
+        "text": "Vous gagnez 6_points d\u2019armure.\\n<b>Appelle</b> un serviteur co\u00fbtant (4)_cristaux ou moins.",
+        "flavor": "La guilde utilisait autrefois de la feuille de ch\u00eane pour ses portails mais apr\u00e8s plusieurs \u00ab_incidents malencontreux_\u00bb, elle est pass\u00e9e au bois de ch\u00eane, c\u2019est beaucoup plus s\u00fbr.",
+        "artist": "Konstantin Turovec",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_309.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_309_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Appeler"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_012",
+        "dbfId": "64",
+        "name": "Balayage",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 4,
+        "text": "Inflige $4 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un adversaire et $1 |4(point,points) de d\u00e9g\u00e2ts \u00e0 tous les autres adversaires.",
+        "flavor": "Quand un ours se met sur ses pattes arri\u00e8re et tend celles de devant, vous \u00eates bon pour un balayage\u00a0! ... ou un gros c\u00e2lin.",
+        "artist": "Sean O\u2019Daniels",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 8.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 47.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_012.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_012_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_553",
+        "dbfId": "47063",
+        "name": "Bois aux feux follets",
+        "cardSet": "The Witchwood",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 4,
+        "attack": 0,
+        "health": 0,
+        "text": "Invoque un feu follet_1/1 pour chaque carte de votre main.",
+        "flavor": "On aurait bien appel\u00e9 cette carte \u00ab_La worgen qui murmurait \u00e0 l\u2019oreille des feux follets_\u00bb mais on n\u2019avait pas assez de place.",
+        "artist": "Max Grecke",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_553.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_553_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_392",
+        "dbfId": "46107",
+        "name": "Brindille de l\u2019Arbre-Monde",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Weapon",
+        "rarity": "Legendary",
+        "cost": 4,
+        "attack": 1,
+        "durability": 5,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> vous gagnez 10_cristaux de_mana.",
+        "flavor": "Pour les druides les plus branch\u00e9s.",
+        "artist": "Alexey Aparin",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_392.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_392_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_101",
+        "dbfId": "40973",
+        "name": "Change-carapace",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>Choix des armes_:</b> se transforme en_5/3 avec <b>Camouflage</b> ou_en_3/5 avec <b>Provocation</b>.",
+        "flavor": "Il ma\u00eetrise les trois coquillages.",
+        "artist": "Matt Dixon",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_101.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_101_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Camouflage"
+            },
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_039",
+        "dbfId": "2780",
+        "name": "Combattant sauvage",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 5,
+        "health": 4,
+        "text": "<b>Exaltation\u00a0:</b> donne +2 ATQ\\n\u00e0 votre h\u00e9ros pendant ce tour.",
+        "flavor": "Si vous lui chantez un petit air, il se calmera s\u00fbrement. Ouais\u2026 Essayez donc \u00e7a.",
+        "artist": "Alex Pascenko",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_039.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_039_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Exaltation"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_043",
+        "dbfId": "2785",
+        "name": "Communion astrale",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 4,
+        "text": "Conf\u00e8re 10 cristaux de mana. Vous d\u00e9fausse de votre main.",
+        "flavor": "J\u2019ai demand\u00e9 \u00e0 la lune si elle avait des cristaux de mana.",
+        "artist": "Christopher Moeller",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_043.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_043_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_054",
+        "dbfId": "43294",
+        "name": "Embranchement",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 4,
+        "text": "<b>Double choix des armes_:</b> vous piochez une carte, ou donne +1_ATQ \u00e0 vos serviteurs, ou vous gagnez 6_points d\u2019armure.",
+        "flavor": "Deux routes divergeaient dans un tunnel sombre. Moi, j\u2019ai pris celle par laquelle on voyage le moins souvent, et c\u2019est l\u00e0 que j\u2019ai fini d\u00e9vor\u00e9 par un limon.",
+        "artist": "Matt Dixon",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_054.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_054_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_044",
+        "dbfId": "38318",
+        "name": "Fandral Forteramure",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 4,
+        "attack": 3,
+        "health": 5,
+        "text": "Vos cartes et pouvoirs h\u00e9ro\u00efques avec <b>Choix des armes</b> combinent les deux effets.",
+        "flavor": "Chaque fois qu\u2019il le peut, il sort\u00a0: \u00ab\u00a0Moi, quand j\u2019ai cr\u00e9\u00e9 l\u2019Arbre-Monde\u2026\u00a0\u00bb Pfff_! \u00c7a suffit, maintenant.",
+        "artist": "Anton Zemskov",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_044.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_044_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Aura"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_166",
+        "dbfId": "601",
+        "name": "Gardien du bosquet",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 2,
+        "health": 2,
+        "text": "<b>Choix des armes_:</b> inflige 2_points de d\u00e9g\u00e2ts ou r\u00e9duit au <b>Silence</b> un serviteur.",
+        "flavor": "Ce gars arrive et se met \u00e0 tailler vos buissons sans m\u00eame vous demander la permission.",
+        "artist": "Gabor Szikszai",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_166.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_166_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Silence"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_202",
+        "dbfId": "38718",
+        "name": "Gardien du bourbier",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>Choix des armes\u00a0:</b> invoque une gel\u00e9e 2/2 ou conf\u00e8re un cristal de mana vide.",
+        "flavor": "Esp\u00e8ce de sale sang de bourbe_!",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_202.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_202_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_048",
+        "dbfId": "43284",
+        "name": "Golem en bois de fer",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 4,
+        "attack": 3,
+        "health": 6,
+        "text": "<b>Provocation</b>\\nNe peut attaquer que si vous avez 3_points d\u2019armure ou plus.",
+        "flavor": "Le seul golem antirouille AU MONDE_!",
+        "artist": "L. Lullabi & K. Turovec",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_048.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_048_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "FP1_019",
+        "dbfId": "1802",
+        "name": "Graines de poison",
+        "cardSet": "Naxxramas",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 4,
+        "text": "D\u00e9truit tous les serviteurs et les remplace par des tr\u00e9ants 2/2.",
+        "flavor": "La baguette tradition aux graines de poison est le produit le moins demand\u00e9 de la boulangerie druidique de McTiggin.",
+        "artist": "Brian Despain",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "Obtenue dans l\u2019aile quartier des Arachnides de l\u2019aventure La mal\u00e9diction de Naxxramas.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir \u00e9t\u00e9 d\u00e9bloqu\u00e9e dans l\u2019aile quartier des Arachnides de l\u2019aventure La mal\u00e9diction de Naxxramas.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/FP1_019.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/FP1_019_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_833",
+        "dbfId": "48286",
+        "name": "Guide de la for\u00eat",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 1,
+        "health": 6,
+        "text": "\u00c0 la fin de votre tour,\\nles deux joueurs piochent une carte.",
+        "flavor": "\u00ab_Il ne vous reste qu\u2019\u00e0 signer cette clause de renonciation \u00e0\u2026 tout, et on pourra se mettre en route._\u00bb",
+        "artist": "Hideaki Takamura",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_833.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_833_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_040",
+        "dbfId": "2786",
+        "name": "Marcheuse sauvage",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 4,
+        "attack": 4,
+        "health": 4,
+        "text": "<b>Cri de guerre\u00a0:</b> donne\\n+3 PV \u00e0 une B\u00eate alli\u00e9e.",
+        "flavor": "Elle est certaine que son destin la m\u00e8nera loin. C\u2019est juste qu\u2019elle ne sait pas encore o\u00f9...",
+        "artist": "James Ryman",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_040.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_040_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_570",
+        "dbfId": "577",
+        "name": "Morsure",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 4,
+        "text": "Donne +4_ATQ \u00e0 votre h\u00e9ros pendant ce tour. Gagne 4_points d\u2019armure.",
+        "flavor": "J\u2019ai une faim de loup\u00a0!",
+        "artist": "Tom Baxa",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_570.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_570_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_807",
+        "dbfId": "43022",
+        "name": "Pillard dure-\u00e9caille",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 2,
+        "health": 3,
+        "text": "<b>Cri de guerre_:</b> donne +2/+2_\u00e0 vos serviteurs avec <b>Provocation</b>.",
+        "flavor": "Une vieille patte moisie et une carapace. Mais bon, comme on dit, rien ne se perd\u2026",
+        "artist": "James Ryman",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_807.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_807_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "LOE_051",
+        "dbfId": "2923",
+        "name": "S\u00e9l\u00e9nien de la jungle",
+        "cardSet": "The League of Explorers",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 4,
+        "health": 4,
+        "text": "Chaque joueur a\\n<b>+2 aux d\u00e9g\u00e2ts des sorts</b>.",
+        "flavor": "Le VRAI poulet furieux\u00a0!",
+        "artist": "Mike Sass",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "howToGet": "Obtenue dans l\u2019aile Ville en ruines de l\u2019aventure la Ligue des explorateurs.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e dans l\u2019aile Ville en ruines de l\u2019aventure la Ligue des explorateurs.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOE_051.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOE_051_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "D\u00e9g\u00e2ts des sorts"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_103",
+        "dbfId": "40991",
+        "name": "Spores \u00e9volutives",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 4,
+        "text": "<b>Adaptation</b> de vos serviteurs.",
+        "flavor": "On trouve les champignons les plus puissants dans des blocs avec un \u00ab_?_\u00bb dessin\u00e9 dessus.",
+        "artist": "Grace Liu",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_103.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_103_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Adaptation"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_056",
+        "dbfId": "43304",
+        "name": "Tigre astral",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 4,
+        "attack": 3,
+        "health": 5,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> place une copie de ce serviteur dans votre deck.",
+        "flavor": "Le tigre est le signe astral le plus enthousiaste. Optimiste, plein d\u2019\u00e9nergie, il ne se laisse pas abattre et revient toujours dans votre deck_!",
+        "artist": "Tyler West Studios",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_056.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_056_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_188",
+        "dbfId": "38621",
+        "name": "Tisse-ambre klaxxi",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 4,
+        "health": 5,
+        "text": "<b>Cri de guerre\u00a0:</b> gagne\\n+5 PV si votre C\u2019Thun a au moins 10 Attaque.",
+        "flavor": "\u00ab\u00a0Vous tissez des machins\u00a0?\\n- Oh ben non, tout de suite l\u2019autre.\\n- Vous faites quoi, alors\u00a0?\\n- J\u2019fais quoi, j\u2019suis... j\u2019suis m\u00e9chant, quoi\u00a0!\u00a0\u00bb",
+        "artist": "Cole Eastburn",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_188.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_188_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_800",
+        "dbfId": "47819",
+        "name": "Aviana Tombesoir",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 5,
+        "attack": 3,
+        "health": 7,
+        "text": "Pendant le tour de chaque joueur, la premi\u00e8re carte jou\u00e9e_co\u00fbte_(0)_|4(cristal,cristaux).",
+        "flavor": "Un jour, quelqu\u2019un l\u2019a confondue avec un oiseau et lui a dit \u00ab_Coco_!_\u00bb. On ne l\u2019a plus jamais revu.",
+        "artist": "Glenn Rane",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_800.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_800_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Aura"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_100",
+        "dbfId": "40971",
+        "name": "Brachiosaure verdoyant",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 5,
+        "attack": 5,
+        "health": 4,
+        "text": "<b>Cri de guerre_: Adaptation</b>.",
+        "flavor": "Toujours \u00e0 tendre le cou pour voir si l\u2019herbe est plus verte ailleurs.",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_100.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_100_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Adaptation"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_130",
+        "dbfId": "46680",
+        "name": "Cerf sinistre",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 5,
+        "attack": 2,
+        "health": 6,
+        "text": "<b>Provocation</b>\\n<b>Cri de guerre_:</b> si votre deck ne contient que des cartes de co\u00fbt impair, gagne_+2/+2.",
+        "flavor": "Majestueux. \u00c9th\u00e9r\u00e9. Mais d\u2019une humeur sinistre.",
+        "artist": "Jerry Mascho",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_130.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_130_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            },
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_165",
+        "dbfId": "692",
+        "name": "Druide de la Griffe",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 5,
+        "attack": 4,
+        "health": 4,
+        "text": "<b>Choix des armes_:</b> se transforme en_4/4 avec <b>Charge</b> ou en_4/6 avec <b>Provocation</b>.",
+        "flavor": "F\u00e9lin ou ours\u00a0? Ours ou f\u00e9lin\u00a0?! Je n\u2019arrive PAS \u00e0 d\u00e9cider\u00a0!",
+        "artist": "Luca Zontini",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_165.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_165_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            },
+            {
+                "name": "Charge"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_080",
+        "dbfId": "2048",
+        "name": "Druide du Croc",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 5,
+        "attack": 4,
+        "health": 4,
+        "text": "<b>Cri de guerre\u00a0:</b> si vous avez une B\u00eate, transforme ce serviteur en une carte 7/7.",
+        "flavor": "Ses crocs sont tranchants, il aime votre go\u00fbt. Mieux vaut prendre vos jambes \u00e0 votre cou.",
+        "artist": "Brandon Kitkouski",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_080.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_080_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_571",
+        "dbfId": "493",
+        "name": "Force de la nature",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "cost": 5,
+        "text": "Invoque trois tr\u00e9ants_2/2.",
+        "flavor": "\u00ab\u00a0Je crois que je vais faire un somme sous ces arbres. H\u00e9, qu\u2019est-ce que... AAAAAHHH\u00a0!\u00a0\u00bb - Folbulle, le malheureux gnome",
+        "artist": "Trevor Jacobs",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_571.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_571_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_507",
+        "dbfId": "46903",
+        "name": "Gardien ensorcel\u00e9",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 5,
+        "attack": 4,
+        "health": 1,
+        "text": "<b>Provocation</b>\\n<b>Cri de guerre_:</b> gagne +1_PV pour chaque carte de votre main.",
+        "flavor": "Elle m\u2019a ensorcel\u00e9, d\u00e8s que nos regards se sont crois\u00e9s, je me suis senti foudroy\u00e9, \u00e9lectris\u00e9_!",
+        "artist": "L. Lullabi & K. Turovec",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_507.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_507_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_111",
+        "dbfId": "41094",
+        "name": "Mana vivant",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 5,
+        "text": "Transforme vos cristaux de mana en serviteurs 2/2. Vous r\u00e9cup\u00e9rez les cristaux quand les serviteurs meurent.",
+        "flavor": "Il est vivant, VIVANT_!",
+        "artist": "Matt Gaser",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_111.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_111_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "NEW1_007",
+        "dbfId": "86",
+        "name": "M\u00e9t\u00e9ores",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 5,
+        "text": "<b>Choix des armes\u00a0:</b> inflige $5 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur\u00a0; ou $2 |4(point,points) de d\u00e9g\u00e2ts \u00e0 tous les serviteurs adverses.",
+        "flavor": "\u00ab\u00a0Un peu plus pr\u00e8s des \u00e9toiles\u00a0!\u00a0\u00bb\\n- Albatros",
+        "artist": "Richard Wright",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/NEW1_007.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/NEW1_007_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_164",
+        "dbfId": "95",
+        "name": "Nourrir",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 5,
+        "text": "<b>Choix des armes_:</b> vous gagnez 2_cristaux de mana ou vous piochez 3_cartes.",
+        "flavor": "Les druides se nourrissent de nombreuses choses\u00a0: le pouvoir de la nature, le chant d\u2019un oiseau, un g\u00e2teau au chocolat.",
+        "artist": "Terese Nielsen",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_164.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_164_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_329",
+        "dbfId": "45859",
+        "name": "Seigneur fongique Ixlid",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 5,
+        "attack": 2,
+        "health": 4,
+        "text": "Une fois que vous avez jou\u00e9 un serviteur, en invoque une copie.",
+        "flavor": "Le plus grand arbre est n\u00e9 d\u2019une petite graine.",
+        "artist": "James Ryman",
+        "collectible": true,
+        "elite": true,
+        "race": "Elemental",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_329.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_329_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_816",
+        "dbfId": "40641",
+        "name": "Sensei virmen",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 5,
+        "attack": 4,
+        "health": 5,
+        "text": "<b>Cri de guerre_:</b> donne_+2/+2 \u00e0 une B\u00eate alli\u00e9e.",
+        "flavor": "La carotte est un mensonge.",
+        "artist": "Dany Orizio",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_816.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_816_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_047",
+        "dbfId": "42615",
+        "name": "Tisse-destin",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 5,
+        "attack": 5,
+        "health": 3,
+        "text": "<b>Choix du R\u00e2le d\u2019agonie (secret)_:</b> inflige 3_points de d\u00e9g\u00e2ts \u00e0 tous les serviteurs ou leur donne_+2/+2.",
+        "flavor": "Ses tenues sont en soie sauvage, \u00e9videmment.",
+        "artist": "Dan Scott",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_047.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_047_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_050",
+        "dbfId": "42649",
+        "name": "Tisse-toile",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 5,
+        "text": "Invoque deux araign\u00e9es_1/2 avec <b>Toxicit\u00e9</b>.",
+        "flavor": "Vole, tisse, toile_!",
+        "artist": "Matt Dixon",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_050.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_050_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Toxicit\u00e9"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_811",
+        "dbfId": "40615",
+        "name": "Visions lunaires",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 5,
+        "text": "Vous piochez 2_cartes. Les serviteurs pioch\u00e9s co\u00fbtent (2)_|4(cristal,cristaux) de moins.",
+        "flavor": "Le v\u00e9ritable myst\u00e8re des visions lunaires est de savoir pourquoi il n\u2019y a rien \u00e0 voir quand il y a autant de cha\u00eenes.",
+        "artist": "Arthur Bozonnet",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_811.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_811_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_343",
+        "dbfId": "40797",
+        "name": "B\u00e9h\u00e9moth de jade",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 6,
+        "attack": 3,
+        "health": 6,
+        "text": "<b>Provocation</b>\\n<b>Cri de guerre_:</b> invoque un <b>golem de jade</b>.",
+        "flavor": "J\u2019ai cru voir un \u00e9l\u00e9phant vert\u2026",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_343.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_343_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Golem de jade"
+            },
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_173",
+        "dbfId": "823",
+        "name": "Feu stellaire",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 6,
+        "text": "Inflige $5 |4(point,points) de d\u00e9g\u00e2ts.\\nVous piochez une carte.",
+        "flavor": "L\u2019\u00e9quilibre est extr\u00eamement important pour les druides. Et cette carte est parfaitement \u00e9quilibr\u00e9e.",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 2.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 45.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_173.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_173_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "KAR_065",
+        "dbfId": "39696",
+        "name": "Gardienne de la M\u00e9nagerie",
+        "cardSet": "One Night in Karazhan",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 6,
+        "attack": 5,
+        "health": 5,
+        "text": "<b>Cri de guerre_:</b> choisit une B\u00eate alli\u00e9e et en invoque une copie.",
+        "flavor": "S\u2019il vous pla\u00eet, je peux le garder_? Allez_! Je promets de nettoyer sa cage <i>tous les jours</i>.",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "Obtenue \u00e0 l\u2019\u00e9tage de la M\u00e9nagerie dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e \u00e0 l\u2019\u00e9tage de la M\u00e9nagerie dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/KAR_065.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/KAR_065_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_034",
+        "dbfId": "2002",
+        "name": "M\u00e9ca chat-ours",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 6,
+        "attack": 7,
+        "health": 6,
+        "text": "Chaque fois que ce serviteur subit des d\u00e9g\u00e2ts, place une carte <b>Pi\u00e8ce d\u00e9tach\u00e9e</b> dans votre main.",
+        "flavor": "C\u2019est un chat\u00a0? C\u2019est un ours\u00a0? Non, c\u2019est un chat-ours\u00a0!",
+        "artist": "Trent Kaniuga",
+        "collectible": true,
+        "race": "Mech",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_034.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_034_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_054",
+        "dbfId": "42656",
+        "name": "Plaie envahissante",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 6,
+        "text": "Invoque_un_scarab\u00e9e_1/5 avec <b>Provocation</b>. Si votre adversaire a plus de serviteurs, relance ce sort.",
+        "flavor": "Les elfes, c\u2019est vraiment la onzi\u00e8me plaie d\u2019Azeroth_!",
+        "artist": "Alex Alexandrov",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_054.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_054_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "KAR_075",
+        "dbfId": "39714",
+        "name": "Portail de Reflet-de-Lune",
+        "cardSet": "One Night in Karazhan",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 6,
+        "text": "Rend #6 PV. Invoque un serviteur al\u00e9atoire co\u00fbtant 6_cristaux.",
+        "flavor": "\u00c0 Reflet-de-Lune, une f\u00eate sans ours n\u2019est pas vraiment une f\u00eate.",
+        "artist": "Evgeniy Zaqumyenny",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "Obtenue \u00e0 l\u2019\u00e9tage de la Fl\u00e8che dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e \u00e0 l\u2019\u00e9tage de la Fl\u00e8che dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/KAR_075.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/KAR_075_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GVG_031",
+        "dbfId": "1995",
+        "name": "Recyclage",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 6,
+        "text": "Place un serviteur adverse dans le deck de votre adversaire.",
+        "flavor": "Les druides ont tout compris au recyclage\u00a0: ils mettent le plastique dans le bac jaune et les serviteurs adverses dans le bac vert.",
+        "artist": "Efrem Palacios",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_031.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_031_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_293",
+        "dbfId": "38882",
+        "name": "Sombre arakkoa",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 6,
+        "attack": 5,
+        "health": 7,
+        "text": "<b>Provocation</b>\\n<b>Cri de guerre_:</b> donne_+3/+3 \u00e0 votre C\u2019Thun <i>(o\u00f9 qu\u2019il soit)</i>.",
+        "flavor": "Ara quoi ?",
+        "artist": "Nutchapol Thitinunthakorn",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_293.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_293_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_041",
+        "dbfId": "2009",
+        "name": "Sombres feux follets",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 6,
+        "text": "<b>Choix des armes\u00a0:</b> invoque 5_feux follets ou donne_+5/+5 et <b>Provocation</b> \u00e0 un serviteur.",
+        "flavor": "De toute \u00e9vidence, quelqu\u2019un a nourri les feux follets apr\u00e8s minuit\u2026",
+        "artist": "Trent Kaniuga",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_041.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_041_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_086",
+        "dbfId": "41262",
+        "name": "Anaconda g\u00e9ant",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 7,
+        "attack": 5,
+        "health": 3,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> invoque un serviteur de votre main avec 5_ATQ ou plus.",
+        "flavor": "Son r\u00e9gime alimentaire doit vraiment \u00eatre\u2026 particulier.",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_086.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_086_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_178",
+        "dbfId": "1035",
+        "name": "Ancien de la guerre",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "cost": 7,
+        "attack": 5,
+        "health": 5,
+        "text": "<b>Choix des armes\u00a0:</b> \\n+5 ATQ ou +5 PV et <b>Provocation</b>.",
+        "flavor": "Les jeunes elfes de la nuit adorent jouer \u00e0 \u00ab\u00a0Qui arrivera \u00e0 d\u00e9raciner l\u2019ancien de la guerre\u00a0?\u00a0\u00bb Le perdant est celui qui se fait \u00e9craser \u00e0 mort.",
+        "artist": "Sean O\u2019Daniels",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_178.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_178_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "NEW1_008",
+        "dbfId": "920",
+        "name": "Ancien du savoir",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 7,
+        "attack": 5,
+        "health": 5,
+        "text": "<b>Choix des armes_:</b> rend 5_PV ou vous piochez une carte.",
+        "flavor": "Allez-y, gravez vos initiales dessus, pour voir\u00a0!",
+        "artist": "Patrik Hjelm",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/NEW1_008.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/NEW1_008_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_041",
+        "dbfId": "2788",
+        "name": "Chevalier des \u00e9tendues sauvages",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 7,
+        "attack": 6,
+        "health": 6,
+        "text": "Chaque fois que vous invoquez une B\u00eate, r\u00e9duit le co\u00fbt de cette carte de (1) |4(cristal,cristaux).",
+        "flavor": "Il a une r\u00e9duction permanente sur les droits d\u2019entr\u00e9e au tournoi car il est en m\u00eame temps cheval et chevalier.",
+        "artist": "Ralph Horsley",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_041.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_041_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_195",
+        "dbfId": "38655",
+        "name": "Feux follets funestes",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 7,
+        "text": "<b>Choix des armes\u00a0:</b> invoque sept feux follets 1/1 ou donne +2/+2 \u00e0 vos serviteurs.",
+        "flavor": "Ce sont des feux follets normaux. Le \u00ab_funestes_\u00bb, c\u2019est juste pour le marketing.",
+        "artist": "Skan Srisuwan",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_195.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_195_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_832",
+        "dbfId": "43417",
+        "name": "Malfurion le Putride",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Hero",
+        "rarity": "Legendary",
+        "cost": 7,
+        "health": 30,
+        "armor": "5",
+        "text": "<b>Choix_des_armes_:</b> invoque 2_araign\u00e9es avec <b>Toxicit\u00e9</b> ou 2_scarab\u00e9es avec <b>Provocation</b>.",
+        "flavor": "\u00ab_C\u00e9narius m\u2019a enseign\u00e9 autrefois que l\u2019\u00e9quilibre entre la vie et la mort est extr\u00eamement pr\u00e9caire. Mais j\u2019ai fini par comprendre que cet \u00e9quilibre n\u2019existe PAS. La mort finit toujours par gagner._\u00bb",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_832.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_832_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Toxicit\u00e9"
+            },
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_035",
+        "dbfId": "2003",
+        "name": "Malorne",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 7,
+        "attack": 9,
+        "health": 7,
+        "text": "<b>R\u00e2le d\u2019agonie\u00a0:</b> place ce serviteur dans votre deck.",
+        "flavor": "\u00ab\u00a0Ils vont voir de quels bois je me chauffe\u00a0!\u00a0\u00bb",
+        "artist": "Oliver Chipping",
+        "collectible": true,
+        "elite": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_035.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_035_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_658",
+        "dbfId": "47520",
+        "name": "\u00c9chardeuse",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 8,
+        "attack": 8,
+        "health": 8,
+        "text": "<b>Cri de guerre_:</b> vous choisissez\\nun serviteur alli\u00e9. En ajoute une copie_10/10 dans votre main qui co\u00fbte (10)_|4(cristal,cristaux).",
+        "flavor": "Il va nous falloir un plus gros s\u00e9cateur.",
+        "artist": "Craig Elliott",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_658.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_658_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_314",
+        "dbfId": "45835",
+        "name": "Gardien griffu",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 8,
+        "attack": 3,
+        "health": 5,
+        "text": "<b>Provocation</b>\\n<b>R\u00e2le d\u2019agonie_: </b> <b>appelle</b> 2_serviteurs co\u00fbtant (4)_cristaux ou moins.",
+        "flavor": "Je suis \u00e9ventreur, arracheur, tailladeur, gougeur, je suis les crocs des t\u00e9n\u00e8bres, je suis les griffes de la nuit.",
+        "artist": "Alexey Aparin",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_314.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_314_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            },
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            },
+            {
+                "name": "Appeler"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_232",
+        "dbfId": "205",
+        "name": "Protecteur \u00c9corcefer",
+        "cardSet": "Basic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 8,
+        "attack": 8,
+        "health": 8,
+        "text": "<b>Provocation</b>",
+        "flavor": "M\u00eame pas <i>cap</i> d\u2019attaquer Darnassus\u00a0!",
+        "artist": "Dave Allsop",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 10.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 49.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_232.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_232_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_033",
+        "dbfId": "2001",
+        "name": "Arbre de vie",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 9,
+        "text": "Rend \u00e0 tous les personnages tous leurs points de vie.",
+        "flavor": "La Vie pousse sur les arbres\u00a0!?",
+        "artist": "Steve Prescott",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_033.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_033_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_045",
+        "dbfId": "2796",
+        "name": "Aviana",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 9,
+        "attack": 5,
+        "health": 5,
+        "text": "Vos serviteurs co\u00fbtent\\n(1) |4(cristal,cristaux).",
+        "flavor": "C\u2019est une femme\u00a0? C\u2019est un oiseau\u00a0? Non, c\u2019est Aviana\u00a0!",
+        "artist": "Velvet Engine",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_045.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_045_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Aura"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_573",
+        "dbfId": "36",
+        "name": "C\u00e9narius",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Legendary",
+        "cost": 9,
+        "attack": 5,
+        "health": 8,
+        "text": "<b>Choix des armes_:</b> donne_+2/+2 \u00e0 vos autres serviteurs ou invoque deux tr\u00e9ants_2/2 avec <b>Provocation</b>.",
+        "flavor": "Oui, c\u2019est un demi-dieu et non, il n\u2019a pas besoin de porter de chemise.",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_573.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_573_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_835",
+        "dbfId": "43439",
+        "name": "Hadronox",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 9,
+        "attack": 3,
+        "health": 7,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> invoque vos serviteurs avec <b>Provocation</b> morts_pendant_la_partie.",
+        "flavor": "Dans un ultime effort pour arr\u00eater le roi-liche, les vizirs d\u2019Azjol-N\u00e9rub ont lib\u00e9r\u00e9 Hadronox. Avec d\u2019extr\u00eames pr\u00e9cautions, et en le touchant uniquement avec des pincettes.",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "elite": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_835.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_835_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            },
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "BRM_009",
+        "dbfId": "2295",
+        "name": "Lourdaud volcanique",
+        "cardSet": "Blackrock Mountain",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 9,
+        "attack": 7,
+        "health": 8,
+        "text": "<b>Provocation</b>.\\n Co\u00fbte (1) |4(cristal,cristaux) de moins pour chaque serviteur mort pendant ce tour.",
+        "flavor": "Le feu, \u00e7a br\u00fble\u00a0!",
+        "artist": "Trent Kaniuga",
+        "collectible": true,
+        "playerClass": "Druid",
+        "howToGet": "Obtenue dans l\u2019aile pic Rochenoire de l\u2019aventure Mont Rochenoire.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir \u00e9t\u00e9 d\u00e9bloqu\u00e9e dans l\u2019aile pic Rochenoire de l\u2019aventure Mont Rochenoire.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/BRM_009.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/BRM_009_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_085",
+        "dbfId": "42759",
+        "name": "Fl\u00e9au ultime",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 10,
+        "text": "Inflige $5_|4(point,points) de d\u00e9g\u00e2ts. Vous piochez 5_cartes. Gagne_5_points d\u2019armure.\\nInvoque_une_goule_5/5.",
+        "flavor": "Goule cinq sur cinq bien re\u00e7ue.",
+        "artist": "Slawomir Maniak",
+        "collectible": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_085.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_085_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_308",
+        "dbfId": "40416",
+        "name": "Kun, le roi oubli\u00e9",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 10,
+        "attack": 7,
+        "health": 7,
+        "text": "<b>Choix des armes_:</b> vous donne 10_points d\u2019armure ou r\u00e9initialise vos cristaux de mana.",
+        "flavor": "Aya siphonne l\u2019\u00e2me de Kun pour animer les golems de son arm\u00e9e de jade. Ce qu\u2019il en pense_? Il est juste heureux de ne pas \u00eatre totalement oubli\u00e9_!",
+        "artist": "Jon Neimeister",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_308.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_308_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_852",
+        "dbfId": "41954",
+        "name": "Tyrantus",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 10,
+        "attack": 12,
+        "health": 12,
+        "text": "Ne peut pas \u00eatre la cible de sorts ou de pouvoirs h\u00e9ro\u00efques.",
+        "flavor": "Transform\u00e9e par des mill\u00e9naires de s\u00e9lection naturelle, cette esp\u00e8ce a donn\u00e9 naissance aux dragons f\u00e9eriques que nous connaissons de nos jours.",
+        "artist": "Chris Rahn",
+        "collectible": true,
+        "elite": true,
+        "race": "Beast",
+        "playerClass": "Druid",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_852.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_852_premium.gif",
+        "locale": "frFR"
+    }
+]

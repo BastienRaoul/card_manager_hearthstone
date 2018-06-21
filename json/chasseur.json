@@ -1,0 +1,2545 @@
+[
+    {
+        "cardId": "HERO_05a",
+        "dbfId": "2826",
+        "name": "Alleria Coursevent",
+        "cardSet": "Hero Skins",
+        "type": "Hero",
+        "rarity": "Epic",
+        "health": 30,
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_05a.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_05a_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "HERO_05",
+        "dbfId": "31",
+        "name": "Rexxar",
+        "cardSet": "Basic",
+        "type": "Hero",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "health": 30,
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_05.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_05_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_912",
+        "dbfId": "41353",
+        "name": "Ara orn\u00e9 de joyaux",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 1,
+        "attack": 1,
+        "health": 1,
+        "text": "<b>Cri de guerre_:</b> ajoute une B\u00eate al\u00e9atoire dans votre main.",
+        "flavor": "Il n\u2019est pas VRAIMENT orn\u00e9 de joyaux. Lorsqu\u2019ils s\u2019en sont rendu compte, les gobelins ont \u00e9t\u00e9 extr\u00eamement d\u00e9\u00e7us.",
+        "artist": "James Ryman",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_912.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_912_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_059",
+        "dbfId": "2642",
+        "name": "Brave arch\u00e8re",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 1,
+        "attack": 2,
+        "health": 1,
+        "text": "<b>Exaltation\u00a0:</b> inflige 2 points de d\u00e9g\u00e2ts au h\u00e9ros adverse si votre main est vide.",
+        "flavor": "Toute ressemblance avec un personnage fictif est purement fortuite, etc.",
+        "artist": "Eva Widermann",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_059.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_059_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Exaltation"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_334",
+        "dbfId": "40679",
+        "name": "Caisse de contrebandier",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 1,
+        "text": "Donne_+2/+2 \u00e0 une B\u00eate al\u00e9atoire de votre main.",
+        "flavor": "Je ne suis pas certain que faire cadeau de ces petites b\u00eates aux enfants pour leur mini-ferme soit une bonne id\u00e9e\u2026",
+        "artist": "Grace Liu",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_334.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_334_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_315",
+        "dbfId": "40426",
+        "name": "Chat de goutti\u00e8re",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 1,
+        "attack": 1,
+        "health": 1,
+        "text": "<b>Cri de guerre_:</b> invoque un chat_1/1.",
+        "flavor": "Non, je ne ronronne pas, je suis trop violent et f\u00e9roce_!",
+        "artist": "Anton Zemskov",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_315.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_315_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_179",
+        "dbfId": "38584",
+        "name": "Chauve-souris embras\u00e9e",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 1,
+        "attack": 2,
+        "health": 1,
+        "text": "<b>R\u00e2le d\u2019agonie\u00a0:</b> inflige\\n1 point de d\u00e9g\u00e2ts \u00e0 un adversaire al\u00e9atoire.",
+        "flavor": "Quand les barbus crient, les chauves sourient\u00a0!",
+        "artist": "Andrew Hou",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_179.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_179_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_222",
+        "dbfId": "45537",
+        "name": "Cire-\u00e0-l\u2019arc",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Weapon",
+        "rarity": "Common",
+        "cost": 1,
+        "attack": 1,
+        "durability": 3,
+        "text": "Votre h\u00e9ros est <b>Insensible</b> quand il attaque.",
+        "flavor": "S\u2019appelait autrefois Cahn\u2019d\u00e9labr, arc court des poils de moustache cir\u00e9s.",
+        "artist": "Anton Magdalin",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_222.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_222_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_549",
+        "dbfId": "903",
+        "name": "Courroux bestial",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "cost": 1,
+        "text": "Donne +2_ATQ et l\u2019effet <b>Insensible</b> \u00e0 une B\u00eate alli\u00e9e pendant ce tour.",
+        "flavor": "Courroux coucou, \u00e7a tache \u00e7a tache\u00a0!",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_549.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_549_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_061",
+        "dbfId": "38377",
+        "name": "En chasse",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 1,
+        "text": "Inflige $1 |4(point,points) de d\u00e9g\u00e2ts. Invoque un mastiff 1/1.",
+        "flavor": "Le mastiff ricane b\u00eatement si vous ne touchez pas votre cible.",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_061.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_061_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_052",
+        "dbfId": "42652",
+        "name": "Fais le mort",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 1,
+        "text": "D\u00e9clenche le <b>R\u00e2le_d\u2019agonie</b> d\u2019un_serviteur_alli\u00e9.",
+        "flavor": "Il prend vraiment tout \u00ab_au pied_!_\u00bb \u2026 de la lettre.",
+        "artist": "Peter Stapleton",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_052.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_052_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_914",
+        "dbfId": "41357",
+        "name": "Jeune raptor",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 1,
+        "attack": 2,
+        "health": 1,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> place un raptor_4/3 dans votre deck.",
+        "flavor": "Ce ne sont que des dents de lait, attendez de voir celles de son p\u00e8re_!",
+        "artist": "Jaemin Kim",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_914.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_914_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_920",
+        "dbfId": "41368",
+        "name": "La reine du mar\u00e9cage",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Legendary",
+        "cost": 1,
+        "text": "<b>Qu\u00eate_:</b> jouer sept serviteurs \u00e0 1_cristal.\\n<b>R\u00e9compense_:</b> Reine Carnassa.",
+        "flavor": "Question_: qu\u2019est-ce qui fait le plus peur, un dinosaure g\u00e9ant en col\u00e8re ou 15 petits dinosaures vicieux_?\\nR\u00e9ponse_: AHHHHHH, ILS M\u2019ONT TROUV\u00c9\u00c9\u00c9\u00c9_!",
+        "artist": "A.J. Nazzaro",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_920.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_920_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Qu\u00eate"
+            }
+        ]
+    },
+    {
+        "cardId": "DS1_175",
+        "dbfId": "606",
+        "name": "Loup des bois",
+        "cardSet": "Basic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 1,
+        "attack": 1,
+        "health": 1,
+        "text": "Vos autres B\u00eates ont +1_ATQ.",
+        "flavor": "Toutes les b\u00eates adorent tra\u00eener avec les loups des bois.",
+        "artist": "Malcolm Davis",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 23.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/DS1_175.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/DS1_175_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Aura"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_084",
+        "dbfId": "141",
+        "name": "Marque du chasseur",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 1,
+        "text": "Fait tomber les points de vie d\u2019un serviteur\\n\u00e0\u00a01.",
+        "flavor": "Attention, chasse gard\u00e9e\u00a0!",
+        "artist": "Jimmy Lo",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 6.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 40.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_084.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_084_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "DS1_184",
+        "dbfId": "1047",
+        "name": "Pistage",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 1,
+        "text": "Affiche les 3_cartes du dessus du deck. Vous en piochez une et vous vous d\u00e9faussez des autres.",
+        "flavor": "Id\u00e9al pour ceux qui n\u2019arrivent pas \u00e0 d\u00e9cider quelles cartes mettre dans leur deck\u00a0!",
+        "artist": "Mauro Cascioli",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 15.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/DS1_184.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/DS1_184_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_916",
+        "dbfId": "41360",
+        "name": "Ru\u00e9e",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 1,
+        "text": "Chaque fois que vous jouez une B\u00eate pendant ce tour, ajoute une B\u00eate al\u00e9atoire dans votre main.",
+        "flavor": "Accrochez-vous, \u00e7a va faire mal.",
+        "artist": "Daren Bader",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_916.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_916_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "DS1_185",
+        "dbfId": "877",
+        "name": "Tir des Arcanes",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 1,
+        "text": "Inflige $2 |4(point,points) de d\u00e9g\u00e2ts.",
+        "flavor": "Les magi conjuraient des fl\u00e8ches arcaniques qu\u2019ils vendaient aux chasseurs, jusqu\u2019\u00e0 ce que ces derniers apprennent \u00e0 le faire eux-m\u00eames. Les pertes d\u2019emploi en d\u00e9coulant ont plong\u00e9 Hurlevent dans une r\u00e9cession mineure.",
+        "artist": "Luca Zontini",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 32.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/DS1_185.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/DS1_185_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "FP1_011",
+        "dbfId": "1860",
+        "name": "Tisseuse",
+        "cardSet": "Naxxramas",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 1,
+        "attack": 1,
+        "health": 1,
+        "text": "<b>R\u00e2le d\u2019agonie\u00a0:</b> ajoute une carte B\u00eate al\u00e9atoire dans votre main.",
+        "flavor": "Les cocons d\u2019araign\u00e9e, c\u2019est comme les bo\u00eetes de chocolats\u00a0: on ne sait jamais sur quoi on va tomber\u00a0!",
+        "artist": "Dan Brereton",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "howToGet": "Obtenue dans l\u2019aile quartier de la Peste de l\u2019aventure La mal\u00e9diction de Naxxramas.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir \u00e9t\u00e9 d\u00e9bloqu\u00e9e dans l\u2019aile quartier de la Peste de l\u2019aventure La mal\u00e9diction de Naxxramas.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/FP1_011.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/FP1_011_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_017",
+        "dbfId": "2094",
+        "name": "Appel du familier",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 2,
+        "text": "Vous piochez une carte. Si c\u2019est une B\u00eate, elle co\u00fbte (4) cristaux de moins.",
+        "flavor": "Les vrais chasseurs chassent la galinette cendr\u00e9e.",
+        "artist": "E.M. Gist",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_017.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_017_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_026",
+        "dbfId": "40339",
+        "name": "Cache d\u2019armes",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 2,
+        "text": "<b>Secret_:</b> une fois que votre adversaire a jou\u00e9 un serviteur, donne_+2/+2 \u00e0 un serviteur al\u00e9atoire de votre main.",
+        "flavor": "On raconte que les limons d\u2019\u00e9gout toxiques auraient \u00e9t\u00e9 cr\u00e9\u00e9s quand une nouvelle recrue des Dessoudeurs a oubli\u00e9 une bouteille de lait ouverte dans une cache d\u2019armes.",
+        "artist": "Dan Scott",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_026.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_026_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "LOE_105",
+        "dbfId": "3001",
+        "name": "Chapeau d\u2019explorateur",
+        "cardSet": "The League of Explorers",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 2,
+        "text": "Donne \u00e0 un serviteur +1/+1 et \u00ab\u00a0<b>R\u00e2le d\u2019agonie\u00a0:</b> ajoute une carte Chapeau d\u2019explorateur dans\\nvotre main.\u00a0\u00bb",
+        "flavor": "Harrison Jones \u00e9tait d\u00e9\u00e7u de ne pas faire partie de la Ligue des explorateurs, mais au moins son chapeau a r\u00e9ussi \u00e0 y entrer.",
+        "artist": "Joe Wilson",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "Obtenue avec l\u2019aventure la Ligue des explorateurs.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir commenc\u00e9 l\u2019aventure la Ligue des explorateurs.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOE_105.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOE_105_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_533",
+        "dbfId": "1091",
+        "name": "D\u00e9tournement",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 2,
+        "text": "<b>Secret_:</b> quand un adversaire attaque votre h\u00e9ros, il attaque un autre personnage al\u00e9atoire \u00e0 la place.",
+        "flavor": "C\u2019est surprenant qu\u2019un simple \u00ab\u00a0REGARDE PAR L\u00c0-BAS\u00a0!\u00a0\u00bb fonctionne si bien.",
+        "artist": "Daren Bader",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_533.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_533_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_917",
+        "dbfId": "41363",
+        "name": "Dinomancie",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 2,
+        "text": "Votre pouvoir h\u00e9ro\u00efque devient \u00ab_Donne +2/+2 \u00e0 une B\u00eate_\u00bb.",
+        "flavor": "Vous savez comment pratiquer la dinomancie_? Vous rapprochez vos l\u00e8vres comme \u00e7a et RAAAAAAAAAARGHHH_!",
+        "artist": "Arthur Bozonnet",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_917.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_917_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_058",
+        "dbfId": "2635",
+        "name": "Elekk du roi",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 3,
+        "health": 2,
+        "text": "<b>Cri de guerre\u00a0:</b> r\u00e9v\u00e8le un serviteur de chaque deck. Si le v\u00f4tre co\u00fbte plus, vous le piochez.",
+        "flavor": "Un elekk qui joute, sa trompe \u00e9norme ment.",
+        "artist": "James Zhang",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_058.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_058_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_338",
+        "dbfId": "40684",
+        "name": "Enrage-b\u00eate trogg",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 2,
+        "attack": 3,
+        "health": 2,
+        "text": "<b>Cri de guerre_:</b> donne_+1/+1 \u00e0 une B\u00eate al\u00e9atoire de votre main.",
+        "flavor": "Il l\u2019a toujours mauvaise de ne pas avoir \u00e9t\u00e9 accept\u00e9 au Club des enrag\u00e9s.",
+        "artist": "Adam Byrne",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_338.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_338_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_026",
+        "dbfId": "1991",
+        "name": "Feindre la mort",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 2,
+        "text": "D\u00e9clenche tous les <b>R\u00e2les d\u2019agonie</b> de vos serviteurs.",
+        "flavor": "Le plus difficile, c\u2019est d\u2019apprendre \u00e0 exhaler une odeur de mort authentique, \u00e7a demande beaucoup de pratique.",
+        "artist": "Luca Zontini",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_026.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_026_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_049",
+        "dbfId": "42648",
+        "name": "Fl\u00e8che toxique",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 2,
+        "text": "Inflige $2_|4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur. Lui conf\u00e8re <b>Toxicit\u00e9</b> s\u2019il survit.",
+        "flavor": "Ce qui ne vous tue pas vous rend plus toxique.",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_049.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_049_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Toxicit\u00e9"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_544",
+        "dbfId": "896",
+        "name": "Fus\u00e9e \u00e9clairante",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 2,
+        "text": "Tous les serviteurs perdent le <b>Camouflage</b>. D\u00e9truit tous les <b>Secrets</b> adverses. Vous piochez une carte.",
+        "flavor": "Non seulement elle r\u00e9v\u00e8le les adversaires, mais en plus, elle est tr\u00e8s utile pendant les f\u00eates\u00a0!",
+        "artist": "Tyler Walpole",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_544.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_544_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Camouflage"
+            },
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "KAR_005",
+        "dbfId": "39481",
+        "name": "Gentille grand-m\u00e8re",
+        "cardSet": "One Night in Karazhan",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 1,
+        "health": 1,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> invoque un Grand M\u00e9chant Loup_3/2.",
+        "flavor": "\u00ab_Oh_! Que vous avez\u2026 une salive abondante._\u00bb",
+        "artist": "Matt Dixon",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "howToGet": "Obtenue \u00e0 l\u2019\u00e9tage de l\u2019Op\u00e9ra dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e \u00e0 l\u2019\u00e9tage de l\u2019Op\u00e9ra dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/KAR_005.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/KAR_005_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_043",
+        "dbfId": "2011",
+        "name": "Glaivezooka",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Weapon",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "durability": 2,
+        "text": "<b>Cri de guerre\u00a0:</b> donne +1 ATQ \u00e0 un serviteur alli\u00e9 al\u00e9atoire.",
+        "flavor": "Glaivezooka, qui peut te battre\u00a0?",
+        "artist": "Gino Whitehall",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_043.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_043_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_910",
+        "dbfId": "41350",
+        "name": "Grave morsure",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "Inflige $2_|4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur et $1_|4(point,points) de d\u00e9g\u00e2ts aux serviteurs adjacents.",
+        "flavor": "\u00c9loignez-vous, ou vous allez vous en mordre les doigts_!",
+        "artist": "Slawomir Maniak",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_910.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_910_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_531",
+        "dbfId": "1281",
+        "name": "Hy\u00e8ne charognarde",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "health": 2,
+        "text": "Chaque fois qu\u2019une b\u00eate alli\u00e9e meurt, gagne_+2/+1.",
+        "flavor": "Les hy\u00e8nes pr\u00e9f\u00e8rent les os de kodo ou de serpent des vents, mais elles mangent n\u2019importe quoi. M\u00eame des petits pois\u00a0!",
+        "artist": "Jim Nelson",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_531.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_531_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_607t",
+        "dbfId": "47930",
+        "name": "Mastiff de chasse",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 2,
+        "health": 1,
+        "text": "<b>\u00c9cho</b>\\n<b>Ru\u00e9e</b>",
+        "flavor": "\u00ab_Arr\u00eate_! On va tous se mettre \u00e0 hurler_!_\u00bb",
+        "artist": "Konstantin Turovec",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_607t.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_607t_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "\u00c9cho"
+            },
+            {
+                "name": "Ru\u00e9e"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_079",
+        "dbfId": "43359",
+        "name": "Monstre errant",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 2,
+        "text": "<b>Secret_:</b> quand un adversaire attaque votre h\u00e9ros, invoque un serviteur co\u00fbtant 3_cristaux qui devient la nouvelle cible.",
+        "flavor": "Note de service_: \u00e0 l\u2019avenir, \u00e9vitez de laisser vos monstres errer dans les couloirs, \u00e7a fait d\u00e9sordre. Merci.",
+        "artist": "Trent Kaniuga & James Martin",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_079.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_079_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_060",
+        "dbfId": "2641",
+        "name": "Pi\u00e8ge \u00e0 ours",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "<b>Secret\u00a0:</b> invoque un ours 3/3 avec <b>Provocation</b> une fois que votre h\u00e9ros a \u00e9t\u00e9 attaqu\u00e9.",
+        "flavor": "Vous ne devinerez jamais ce qu\u2019il y a dans cette bo\u00eete qui sent l\u2019ours et qui a la forme d\u2019un ours.",
+        "artist": "Richard Wright",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_060.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_060_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            },
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_577",
+        "dbfId": "47128",
+        "name": "Pi\u00e8ge \u00e0 rat",
+        "cardSet": "The Witchwood",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 2,
+        "text": "<b>Secret_:</b> une fois que votre adversaire a jou\u00e9 trois cartes en un tour, invoque un rat_6/6.",
+        "flavor": "PERDU_: rat g\u00e9ant. Si vous le trouvez, merci de le rapporter au roi Cire-Pilleur.",
+        "artist": "Anton Zemskov",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_577.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_577_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_554",
+        "dbfId": "455",
+        "name": "Pi\u00e8ge \u00e0 serpents",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "cost": 2,
+        "text": "<b>Secret\u00a0:</b> quand un de vos serviteurs est attaqu\u00e9, invoque trois serpents 1/1.",
+        "flavor": "Des serpents, fallait que ce soit des serpents\u00a0!",
+        "artist": "Bernie Kang",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_554.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_554_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "LOE_021",
+        "dbfId": "2893",
+        "name": "Pi\u00e8ge de fl\u00e9chettes",
+        "cardSet": "The League of Explorers",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "<b>Secret\u00a0:</b> inflige\\n$5 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un adversaire al\u00e9atoire apr\u00e8s utilisation d\u2019un pouvoir h\u00e9ro\u00efque adverse.",
+        "flavor": "Ces cinq ann\u00e9es de le\u00e7ons de claquettes vont ENFIN payer\u00a0!",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "Obtenue dans l\u2019aile Ville en ruines de l\u2019aventure la Ligue des explorateurs.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e dans l\u2019aile Ville en ruines de l\u2019aventure la Ligue des explorateurs.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOE_021.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOE_021_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_610",
+        "dbfId": "585",
+        "name": "Pi\u00e8ge explosif",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "<b>Secret\u00a0:</b> quand votre h\u00e9ros est attaqu\u00e9, inflige $2 |4(point,points) de d\u00e9g\u00e2ts \u00e0 tous les adversaires.",
+        "flavor": "Il pi\u00e8ge votre prochain repas et en plus il le r\u00f4tit\u00a0!",
+        "artist": "Brandon Kitkouski",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_610.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_610_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_200",
+        "dbfId": "42525",
+        "name": "Pi\u00e8ge frappe-venin",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 2,
+        "text": "<b>Secret_:</b> quand un de vos serviteurs est attaqu\u00e9, invoque_un_cobra_2/3 avec <b>Toxicit\u00e9</b>.",
+        "flavor": "J\u2019ai un serpent dans mon pi\u00e8ge.",
+        "artist": "Dave Allsop",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_200.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_200_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            },
+            {
+                "name": "Toxicit\u00e9"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_611",
+        "dbfId": "519",
+        "name": "Pi\u00e8ge givrant",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "<b>Secret_:</b> quand un serviteur adverse attaque, le renvoie dans la main de son propri\u00e9taire et il co\u00fbte d\u00e9sormais (2)_cristaux de plus.",
+        "flavor": "\u00ab\u00a0\u00c7a me laisse de glace.\u00a0\u00bb R\u00e9ponse appropri\u00e9e \u00e0 un Pi\u00e8ge givrant, ou \u00e0 une mauvaise blague.",
+        "artist": "Matt Gaser",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_611.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_611_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_061",
+        "dbfId": "2484",
+        "name": "Pr\u00eat \u00e0 tirer",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 2,
+        "text": "Chaque fois que vous lancez un sort pendant ce tour, ajoute une carte chasseur al\u00e9atoire dans votre main.",
+        "flavor": "Rexxar plissa les yeux, attrapa sa p\u00e9toire et dit\u00a0: \u00ab\u00a0\u00c7a va saigner. Je suis pr\u00eat \u00e0 tirer.\u00a0\u00bb\\n\\nCette carte rend hommage \u00e0 cette sc\u00e8ne mythique.",
+        "artist": "Matt Dixon",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_061.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_061_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GVG_087",
+        "dbfId": "2055",
+        "name": "Sniper de Gentepression",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 2,
+        "attack": 2,
+        "health": 3,
+        "text": "Votre pouvoir h\u00e9ro\u00efque peut viser les serviteurs.",
+        "flavor": "Peu de gobelins ont la patience n\u00e9cessaire pour \u00eatre sniper. La plupart pr\u00e9f\u00e8rent lancer des explosifs.",
+        "artist": "Jun Kang",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_087.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_087_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "KAR_004",
+        "dbfId": "39160",
+        "name": "Surprise du chef",
+        "cardSet": "One Night in Karazhan",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 2,
+        "text": "<b>Secret_:</b> apr\u00e8s que votre adversaire a lanc\u00e9 un sort, invoque une panth\u00e8re 4/2_avec <b>Camouflage</b>.",
+        "flavor": "Incroyable_! On dirait de la magie_!",
+        "artist": "Mike Sass",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "Obtenue \u00e0 l\u2019\u00e9tage de la M\u00e9nagerie dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e \u00e0 l\u2019\u00e9tage de la M\u00e9nagerie dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/KAR_004.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/KAR_004_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Camouflage"
+            },
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_609",
+        "dbfId": "814",
+        "name": "Tir de pr\u00e9cision",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "<b>Secret\u00a0:</b> une fois que votre adversaire a jou\u00e9 un serviteur, ce dernier subit $4 |4(point,points) de d\u00e9g\u00e2ts.",
+        "flavor": "Quand on tire, on ne raconte pas sa vie.",
+        "artist": "Lorenzo Minaca",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_609.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_609_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "BRM_013",
+        "dbfId": "2260",
+        "name": "Tir r\u00e9flexe",
+        "cardSet": "Blackrock Mountain",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 2,
+        "text": "Inflige $3_|4(point,points) de d\u00e9g\u00e2ts. Vous piochez une carte si votre main est vide.",
+        "flavor": "Han a tir\u00e9 le premier.",
+        "artist": "Jonboy Meyers",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "Obtenue dans l\u2019aile profondeurs de Rochenoire de l\u2019aventure Mont Rochenoire.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir \u00e9t\u00e9 d\u00e9bloqu\u00e9e dans l\u2019aile profondeurs de Rochenoire de l\u2019aventure Mont Rochenoire.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/BRM_013.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/BRM_013_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "AffectedBySpellPower"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_915",
+        "dbfId": "41358",
+        "name": "Tranchegueule cr\u00e9pitant",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 2,
+        "attack": 3,
+        "health": 2,
+        "text": "<b>Cri de guerre_: Adaptation</b> d\u2019une B\u00eate alli\u00e9e.",
+        "flavor": "Ce n\u2019\u00e9tait vraiment pas malin de GRIMPER sur la barri\u00e8re \u00e9lectrique.",
+        "artist": "L. Lullabi & K. Turovec",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_915.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_915_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Adaptation"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_536",
+        "dbfId": "1662",
+        "name": "Arc cornedaigle",
+        "cardSet": "Classic",
+        "type": "Weapon",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 3,
+        "durability": 2,
+        "text": "Chaque fois qu\u2019un <b>Secret</b> alli\u00e9 est r\u00e9v\u00e9l\u00e9, gagne +1_Durabilit\u00e9.",
+        "flavor": "Le\u00e7on n\u00b01\u00a0: toujours le pointer vers l\u2019adversaire\u00a0!",
+        "artist": "Cyril Van Der Haegen",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_536.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_536_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_048",
+        "dbfId": "2016",
+        "name": "Bondisseur dent-de-m\u00e9tal",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>Cri de guerre_:</b> donne +2_ATQ \u00e0 vos autres M\u00e9ca.",
+        "flavor": "Allez chercher le bidon d\u2019huile, il ne faut pas qu\u2019il rouille.",
+        "artist": "Hideaki Takamura",
+        "collectible": true,
+        "race": "Mech",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_048.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_048_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "KAR_006",
+        "dbfId": "39492",
+        "name": "Chasseresse capuchonn\u00e9e",
+        "cardSet": "One Night in Karazhan",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 3,
+        "health": 4,
+        "text": "Vos <b>Secrets</b> co\u00fbtent (0)_|4(cristal,cristaux).",
+        "flavor": "Elle est incapable de garder un secret pour elle_!",
+        "artist": "Arthur Bozonnet",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "Obtenue \u00e0 l\u2019\u00e9tage du salon dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e \u00e0 l\u2019\u00e9tage du salon dans l\u2019aventure Une nuit \u00e0 Karazhan.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/KAR_006.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/KAR_006_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_200",
+        "dbfId": "46596",
+        "name": "Chasseuse de Havre-du-Soir",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 2,
+        "health": 5,
+        "text": "<b>Camouflage</b>\\nTant qu\u2019il est dans votre main, ce serviteur \u00e9change son ATQ et ses PV \u00e0 chaque tour.",
+        "flavor": "Elle n\u2019a qu\u2019un seul point faible, les grattouilles sur le ventre.",
+        "artist": "Garrett Hanna",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_200.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_200_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Camouflage"
+            }
+        ]
+    },
+    {
+        "cardId": "NEW1_031",
+        "dbfId": "437",
+        "name": "Compagnon animal",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "rarity": "Free",
+        "cost": 3,
+        "text": "Invoque un compagnon animal al\u00e9atoire.",
+        "flavor": "Vous pourriez invoquer Misha, Leokk ou Souffleur\u00a0! Enfin, Souffleur n\u2019en vaut pas vraiment la peine.",
+        "artist": "Wei Wang",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 2.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 45.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/NEW1_031.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/NEW1_031_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOE_020",
+        "dbfId": "2892",
+        "name": "Dromadaire du d\u00e9sert",
+        "cardSet": "The League of Explorers",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 2,
+        "health": 4,
+        "text": "<b>Cri de guerre\u00a0:</b> place un serviteur \u00e0 1 cristal de mana de chaque deck sur le champ de bataille.",
+        "flavor": "Il a fil\u00e9 une carte \u00e0 l\u2019adversaire. Quel chameau, ce dromadaire\u00a0!",
+        "artist": "Matt Dixon",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "howToGet": "Obtenue dans l\u2019aile Hall des Explorateurs de l\u2019aventure la Ligue des explorateurs.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e dans l\u2019aile Hall des Explorateurs de l\u2019aventure la Ligue des explorateurs.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOE_020.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOE_020_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_063t",
+        "dbfId": "2634",
+        "name": "\u00c9caille-d\u2019effroi",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 3,
+        "attack": 4,
+        "health": 2,
+        "text": "Inflige 1 point de d\u00e9g\u00e2ts \u00e0 tous les autres serviteurs \u00e0 la fin de votre tour.",
+        "flavor": "Soyons clairs, c\u2019est GUEULE-D\u2019ACIDE, l\u2019acolyte.",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "elite": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_063t.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_063t_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_078",
+        "dbfId": "43358",
+        "name": "Hydre des cavernes",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 2,
+        "health": 4,
+        "text": "Inflige \u00e9galement des d\u00e9g\u00e2ts aux serviteurs adjacents \u00e0 celui qu\u2019elle attaque.",
+        "flavor": "Une hydre_? Dans des tunnels_? Pas \u00e9tonnant qu\u2019elle soit aussi \u00e9nerv\u00e9e, elle doit se cogner les t\u00eates au plafond toutes les cinq minutes.",
+        "artist": "Peter Stapleton",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_078.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_078_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_045",
+        "dbfId": "38329",
+        "name": "Infester",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "Conf\u00e8re \u00e0 vos serviteurs \u00ab\u00a0<b>R\u00e2le d\u2019agonie\u00a0:</b> ajoute une carte B\u00eate al\u00e9atoire dans votre main.\u00a0\u00bb",
+        "flavor": "Le plus dr\u00f4le, c\u2019est leur t\u00eate quand vous sortez du g\u00e2teau\u00a0! Euh\u2026 du cadavre.",
+        "artist": "Anton Zemskov",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_045.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_045_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_538",
+        "dbfId": "1243",
+        "name": "L\u00e2cher les chiens",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "Invoque un chien_1/1 avec <b>Charge</b> pour chaque serviteur adverse.",
+        "flavor": "J\u2019ai d\u00e9j\u00e0 entendu \u00e7a quelque part...",
+        "artist": "Linggar Bramanty",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_538.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_538_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Charge"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_325",
+        "dbfId": "38985",
+        "name": "Larve putride",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 2,
+        "health": 5,
+        "flavor": "Larve tu \u00e9tais, charogne tu redeviendras.",
+        "artist": "Kan Liu",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_325.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_325_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_316",
+        "dbfId": "40428",
+        "name": "Le clan des rats",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 3,
+        "attack": 2,
+        "health": 2,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> invoque un nombre de rats_1/1 \u00e9gal \u00e0 l\u2019attaque de ce serviteur.",
+        "flavor": "Ils vont tout bousculer, comme d\u2019habitude.",
+        "artist": "Ozhill Studio",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_316.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_316_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "AT_057",
+        "dbfId": "2639",
+        "name": "Ma\u00eetre des \u00e9curies",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 3,
+        "attack": 4,
+        "health": 2,
+        "text": "<b>Cri de guerre\u00a0:</b> une B\u00eate alli\u00e9e devient <b>Insensible</b> pendant ce tour.",
+        "flavor": "Prend mieux soin de ses mascottes que son fr\u00e8re, le ma\u00eetre des incuries.",
+        "artist": "Tyson Murphy",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_057.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_057_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_539",
+        "dbfId": "296",
+        "name": "Ordre de tuer",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 3,
+        "text": "Inflige $3_|4(point,points) de d\u00e9g\u00e2ts. Si vous contr\u00f4lez une B\u00eate, inflige $5_|4(point,points) de d\u00e9g\u00e2ts \u00e0 la place.",
+        "flavor": "Vous avez le permis de tuer.",
+        "artist": "Gabe from Penny Arcade",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 10.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 49.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_539.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_539_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_419",
+        "dbfId": "42711",
+        "name": "Ours-requin",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 4,
+        "health": 3,
+        "text": "Ne peut pas \u00eatre la cible de sorts ou de pouvoirs h\u00e9ro\u00efques.",
+        "flavor": "Vous auriez pr\u00e9f\u00e9r\u00e9 affronter une tornade de requins, peut-\u00eatre_?",
+        "artist": "Max Grecke",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_419.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_419_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_415",
+        "dbfId": "42707",
+        "name": "Pisteur recousu",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 2,
+        "health": 2,
+        "text": "<b>Cri de guerre_:</b> <b>d\u00e9couvre</b> une copie d\u2019un serviteur de votre deck.",
+        "flavor": "Laissez tomber les gars, tous les points de suture du monde pourront pas me recoudre\u2026",
+        "artist": "Steve Prescott",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_415.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_415_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Discover"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_336",
+        "dbfId": "40681",
+        "name": "Porte-flingue secou\u00e9",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 3,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> donne_+2/+2 \u00e0 un serviteur al\u00e9atoire de votre main.",
+        "flavor": "Les Dessoudeurs peuvent vous obtenir n\u2019importe quelle arme, mais si vous ne voulez pas qu\u2019elle explose, faudra rajouter un petit suppl\u00e9ment.",
+        "artist": "Andrew Hou",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_336.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_336_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "EX1_617",
+        "dbfId": "1093",
+        "name": "Tir meurtrier",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Common",
+        "cost": 3,
+        "text": "D\u00e9truit un serviteur adverse al\u00e9atoire.",
+        "flavor": "Les Mok\u2019Nathal manquent cruellement de subtilit\u00e9. Mais ils d\u00e9bordent de cruaut\u00e9.",
+        "artist": "Steve Prescott",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_617.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_617_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_056",
+        "dbfId": "2638",
+        "name": "Tir puissant",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 3,
+        "text": "Inflige $2 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur et aux serviteurs adjacents.",
+        "flavor": "Pif, PAF, pouf.",
+        "artist": "Jonboy Meyers",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_056.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_056_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_800",
+        "dbfId": "41304",
+        "name": "Traqueur \u00e9caille-de-terreur",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>Cri de guerre_:</b> d\u00e9clenche le <b>R\u00e2le d\u2019agonie</b> d\u2019un serviteur alli\u00e9.",
+        "flavor": "C\u2019est le grand feu d\u2019artibrousse, les terreurs sont \u00e0 vos trousses_!",
+        "artist": "Chris Seaman",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_800.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_800_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_292",
+        "dbfId": "38875",
+        "name": "Traqueur lugubre",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 3,
+        "attack": 4,
+        "health": 2,
+        "text": "<b>Cri de guerre\u00a0:</b> donne +1/+1 \u00e0 tous les serviteurs avec <b>R\u00e2le d\u2019agonie</b> dans votre main.",
+        "flavor": "Pour ce qui est de mourir, il pr\u00e9f\u00e8re vous laisser sa place, si vous n\u2019y voyez pas d\u2019inconv\u00e9nient.",
+        "artist": "Peter Stapleton",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_292.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_292_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            },
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_518",
+        "dbfId": "46940",
+        "name": "Coup d\u2019aile",
+        "cardSet": "The Witchwood",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 4,
+        "text": "Inflige $4_|4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur. Co\u00fbte (1)_|4(cristal,cristaux) si un serviteur est mort pendant ce tour.",
+        "flavor": "Emeriss utilise Coup d\u2019aile. C\u2019est super efficace_!",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_518.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_518_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_021",
+        "dbfId": "42320",
+        "name": "D\u00e9flagropt\u00e8re boursoufl\u00e9",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 2,
+        "health": 1,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> inflige 2_points de d\u00e9g\u00e2ts \u00e0 tous les_serviteurs_adverses.",
+        "flavor": "Je ne suis pas gros, je suis juste un peu boursoufl\u00e9_!",
+        "artist": "Dany Orizio",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_021.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_021_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "DS1_183",
+        "dbfId": "292",
+        "name": "Fl\u00e8ches multiples",
+        "cardSet": "Basic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 4,
+        "text": "Inflige $3 |4(point,points) de d\u00e9g\u00e2ts \u00e0 deux serviteurs adverses al\u00e9atoires.",
+        "flavor": "Suivez les fl\u00e8ches.",
+        "artist": "Benjamin Zhang",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 36.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/DS1_183.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/DS1_183_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_077",
+        "dbfId": "43357",
+        "name": "Frappe lat\u00e9rale",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 4,
+        "text": "Inflige $3_|4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur. Invoque un loup_3/3.",
+        "flavor": "\u00ab_Loup \u00e0 droite, vol\u00e9es de fl\u00e8ches \u00e0 gauche, et moi \u00eatre coinc\u00e9 au milieu_!_\u00bb",
+        "artist": "Arthur Bozonnet",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_077.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_077_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_828",
+        "dbfId": "48201",
+        "name": "Fr\u00e9n\u00e9sie f\u00e9roce",
+        "cardSet": "The Witchwood",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 4,
+        "text": "Donne_+3/+3_\u00e0_une_B\u00eate. En place 3_copies dans votre deck avec_+3/+3.",
+        "flavor": "C\u2019est toujours Souffleur. Et Souffleur. Et Souffleur. Et Souffleur.",
+        "artist": "Efrem Palacios",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_828.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_828_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "GIL_607",
+        "dbfId": "47256",
+        "name": "Intoxiqueur vil",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 4,
+        "attack": 2,
+        "health": 4,
+        "text": "Chaque fois que vous jouez un serviteur \u00e0 1_cristal, lui conf\u00e8re <b>Toxicit\u00e9</b>.",
+        "flavor": "Toutes les araign\u00e9es ne sont pas venimeuses. C\u2019est l\u00e0 qu\u2019il intervient.",
+        "artist": "Tyler West Studio",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_607.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_607_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Toxicit\u00e9"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_335",
+        "dbfId": "41126",
+        "name": "Kodo de livraison",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 2,
+        "health": 4,
+        "text": "<b>Cri de guerre_:</b> inflige des d\u00e9g\u00e2ts d\u2019un montant \u00e9gal \u00e0 l\u2019Attaque de ce serviteur.",
+        "flavor": "\u00ab_Cambriolage en cours \u00e0 la Banque Centrale de Gadgetzan. D\u2019\u00e9normes quantit\u00e9s de jade sont en train d\u2019\u00eatre vol\u00e9es par ce qui ressemble \u00e0 un gang de hozens. Kodo 77, pouvez-vous vous rendre sur place imm\u00e9diatement_?_\u00bb",
+        "artist": "Luca Zontini",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_335.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_335_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_216",
+        "dbfId": "38734",
+        "name": "Loup contamin\u00e9",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>R\u00e2le d\u2019agonie\u00a0:</b> invoque deux araign\u00e9es 1/1.",
+        "flavor": "Rien qu\u2019une bonne poudre antipuces ne puisse r\u00e9gler.",
+        "artist": "E. Guiton & A. Bozonnet",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_216.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_216_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "DS1_070",
+        "dbfId": "1003",
+        "name": "Ma\u00eetre-chien",
+        "cardSet": "Basic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 4,
+        "attack": 4,
+        "health": 3,
+        "text": "<b>Cri de guerre\u00a0:</b> donne_+2/+2 et <b>Provocation</b> \u00e0 une B\u00eate alli\u00e9e.",
+        "flavor": "Il manquerait plus qu\u2019il morde\u00a0!",
+        "artist": "Dan Brereton",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 1.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 28.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/DS1_070.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/DS1_070_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Provocation"
+            },
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_650",
+        "dbfId": "47488",
+        "name": "Ma\u00eetre-chien Shaw",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 4,
+        "attack": 3,
+        "health": 6,
+        "text": "Vos autres serviteurs ont <b>Ru\u00e9e</b>.",
+        "flavor": "Ce sont de braves b\u00eates, Tess.",
+        "artist": "Zoltan Boros",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_650.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_650_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Aura"
+            },
+            {
+                "name": "Ru\u00e9e"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_204",
+        "dbfId": "42563",
+        "name": "Professeur Putricide",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 4,
+        "attack": 5,
+        "health": 4,
+        "text": "Une fois que vous avez jou\u00e9 un <b>Secret</b>, place un <b>Secret</b> de chasseur al\u00e9atoire sur le champ de bataille.",
+        "flavor": "Voici quelques-unes des inventions sur lesquelles il travaille dans le plus grand secret_: une serpilli\u00e8re \u00e0 tentacules, un diffuseur d\u2019ambiance senteur \u00ab_usine \u00e0 gaz_\u00bb et des lunettes auto-salissantes.",
+        "artist": "Mike Sass",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_204.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_204_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Secret"
+            }
+        ]
+    },
+    {
+        "cardId": "BRM_014",
+        "dbfId": "2263",
+        "name": "Rageur du Magma",
+        "cardSet": "Blackrock Mountain",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 4,
+        "attack": 4,
+        "health": 4,
+        "text": "<b>Cri de guerre_:</b> gagne_+3/+3 si votre main est vide.",
+        "flavor": "C\u2019est de mauvais go\u00fbt d\u2019arriver les mains vides, vous l\u2019avez bien cherch\u00e9_!",
+        "artist": "Jomaro Kindred",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "howToGet": "Obtenue dans l\u2019aile pic Rochenoire de l\u2019aventure Mont Rochenoire.",
+        "howToGetGold": "Peut \u00eatre cr\u00e9\u00e9e apr\u00e8s avoir \u00e9t\u00e9 d\u00e9bloqu\u00e9e dans l\u2019aile pic Rochenoire de l\u2019aventure Mont Rochenoire.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/BRM_014.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/BRM_014_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "CS2_237",
+        "dbfId": "1241",
+        "name": "Busard affam\u00e9",
+        "cardSet": "Basic",
+        "type": "Minion",
+        "rarity": "Free",
+        "cost": 5,
+        "attack": 3,
+        "health": 2,
+        "text": "Vous piochez une carte chaque fois que vous invoquez une b\u00eate.",
+        "flavor": "Si vous le nourrissez, il perdra toute son <i>identit\u00e9</i>.",
+        "artist": "Bernie Kang",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 4.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 47.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CS2_237.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CS2_237_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_010",
+        "dbfId": "2552",
+        "name": "Dompteur de b\u00e9liers",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 5,
+        "attack": 3,
+        "health": 3,
+        "text": "<b>Cri de guerre\u00a0:</b> si vous avez une B\u00eate, invoque une B\u00eate al\u00e9atoire.",
+        "flavor": "Le tout, c\u2019est d\u2019\u00e9viter de se faire pi\u00e9tiner.",
+        "artist": "Brandon Kitkouski",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_010.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_010_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_905",
+        "dbfId": "48902",
+        "name": "Drake putride",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 5,
+        "attack": 3,
+        "health": 7,
+        "text": "<b>Cri de guerre_:</b>\\nsi un serviteur est mort\\npendant ce tour, conf\u00e8re <b>Toxicit\u00e9</b>.",
+        "flavor": "Voir ses petits camarades mourir le remplit vraiment de fiel.",
+        "artist": "Steve Prescott",
+        "collectible": true,
+        "race": "Dragon",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_905.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_905_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Toxicit\u00e9"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_080",
+        "dbfId": "43363",
+        "name": "\u00c9meraude de sort inf\u00e9rieure",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 5,
+        "text": "Invoque deux loups_3/3. <i>(S\u2019am\u00e9liore quand vous jouez un <b>Secret</b>.)</i>",
+        "flavor": "Pierre \u00e9meraude fa\u00e7onn\u00e9e pour des Taurens\\nRecherchant sa puissance pour sauver leur domaine.\\nLeurs tribus perdues, et leur rage d\u00e9cha\u00een\u00e9e,\\nqui chasser d\u00e9sormais_?\\nEt qui est la v\u00e9ritable b\u00eate_?",
+        "artist": "Joe Wilson",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_080.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_080_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "UNG_913",
+        "dbfId": "41354",
+        "name": "Gardien tol\u2019vir",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 5,
+        "attack": 3,
+        "health": 5,
+        "text": "<b>Cri de guerre_:</b> vous piochez deux serviteurs \u00e0 1_cristal dans votre deck.",
+        "flavor": "F\u00e9roce au combat\u2026 et encore plus terrifiant lors des combats de mascottes.",
+        "artist": "Mike Azevedo",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_913.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_913_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_562",
+        "dbfId": "47078",
+        "name": "Glisseuse vileponte",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Common",
+        "cost": 5,
+        "attack": 1,
+        "health": 3,
+        "text": "<b>Toxicit\u00e9</b>\\n<b>Ru\u00e9e</b>",
+        "flavor": "Attention de ne pas vous faire mordre par une araign\u00e9e radioactive_!",
+        "artist": "Tyler West Studio",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_562.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_562_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Ru\u00e9e"
+            },
+            {
+                "name": "Toxicit\u00e9"
+            }
+        ]
+    },
+    {
+        "cardId": "CFM_337",
+        "dbfId": "40683",
+        "name": "Lance-piranha",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Weapon",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "cost": 5,
+        "attack": 2,
+        "durability": 4,
+        "text": "Apr\u00e8s que votre h\u00e9ros a attaqu\u00e9, invoque un piranha_1/1.",
+        "flavor": "Bien plus puissant que le lance-guppy.",
+        "artist": "Nick Southham",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_337.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_337_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "CFM_333",
+        "dbfId": "40678",
+        "name": "Phalanges",
+        "cardSet": "Mean Streets of Gadgetzan",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 5,
+        "attack": 3,
+        "health": 7,
+        "text": "Apr\u00e8s avoir attaqu\u00e9 un serviteur, frappe aussi le h\u00e9ros adverse.",
+        "flavor": "\u00ab_Maintenant, baisse-toi, pose cette banane par terre et mets les mains sur la t\u00eate, et fais pas l\u2019idiot, Phalanges._\u00bb - Sergent Sally",
+        "artist": "Sam Nielsen",
+        "collectible": true,
+        "elite": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/CFM_333.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/CFM_333_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_309",
+        "dbfId": "38910",
+        "name": "Princesse Huhuran",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 5,
+        "attack": 6,
+        "health": 5,
+        "text": "<b>Cri de guerre_:</b> d\u00e9clenche le <b>R\u00e2le d\u2019agonie</b> d\u2019un serviteur alli\u00e9.",
+        "flavor": "Elle volette dans Ahn\u2019Qiraj en r\u00eavant qu\u2019un jour son prince viendra, qu\u2019ils vivront heureux et auront beaucoup d\u2019\u0153ufs ensemble.",
+        "artist": "Jaemin Kim",
+        "collectible": true,
+        "elite": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_309.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_309_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            },
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "DS1_178",
+        "dbfId": "699",
+        "name": "Rhino de la toundra",
+        "cardSet": "Basic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Free",
+        "cost": 5,
+        "attack": 2,
+        "health": 5,
+        "text": "Vos B\u00eates ont <b>Charge</b>.",
+        "flavor": "On confond souvent les rhinos de la toundra avec les kodos. Est-ce que je me trompe\u00a0?",
+        "artist": "Lars Grant-West",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "howToGet": "D\u00e9bloqu\u00e9e au niveau 8.",
+        "howToGetGold": "D\u00e9bloqu\u00e9e au niveau 43.",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/DS1_178.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/DS1_178_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Charge"
+            },
+            {
+                "name": "Aura"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_046",
+        "dbfId": "2014",
+        "name": "Roi des b\u00eates",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 5,
+        "attack": 2,
+        "health": 6,
+        "text": "<b>Provocation</b>. <b>Cri de guerre\u00a0:</b> gagne +1 ATQ pour chacune de vos autres B\u00eates.",
+        "flavor": "Bienvenue au sommet de la cha\u00eene alimentaire.",
+        "artist": "Seamus Gallagher",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_046.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_046_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Provocation"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_073",
+        "dbfId": "2041",
+        "name": "Tir du cobra",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Spell",
+        "rarity": "Common",
+        "cost": 5,
+        "text": "Inflige $3 |4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur et au h\u00e9ros adverse.",
+        "flavor": "Venu de nulle part, c\u2019est le tir du cobra. Plus vif que le serpent, c\u2019est le tir du cobra. Personne ne l\u2019aper\u00e7oit, c\u2019est le tir du cobra. Mais il est toujours l\u00e0, c\u2019est le tir du cobra.",
+        "artist": "Howard Lyon",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_073.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_073_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_537",
+        "dbfId": "394",
+        "name": "Tir explosif",
+        "cardSet": "Classic",
+        "type": "Spell",
+        "faction": "Neutral",
+        "rarity": "Rare",
+        "cost": 5,
+        "text": "Inflige $5_|4(point,points) de d\u00e9g\u00e2ts \u00e0 un serviteur et $2_|4(point,points) de d\u00e9g\u00e2ts aux serviteurs adjacents.",
+        "flavor": "Visez, comptez jusqu\u2019\u00e0 5 et tirez. Puis jetez-vous \u00e0 terre\u00a0!",
+        "artist": "Tom Baxa",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_537.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_537_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_243",
+        "dbfId": "42822",
+        "name": "Veuve n\u00e9crophage",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 5,
+        "attack": 4,
+        "health": 6,
+        "text": "Vos cartes avec <b>R\u00e2le d\u2019agonie</b> co\u00fbtent (2)_|4(cristal,cristaux) de moins.",
+        "flavor": "Et c\u2019est comme \u00e7a que mon douzi\u00e8me mari est mort. Eh oui, me voil\u00e0 veuve_!",
+        "artist": "Dave Allsop",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_243.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_243_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Aura"
+            },
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_217",
+        "dbfId": "45546",
+        "name": "\u00c0 mes c\u00f4t\u00e9s",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 6,
+        "text": "Invoque un compagnon animal,\\nou 2_si votre deck ne contient pas de serviteurs.",
+        "flavor": "Je chasse seul. Enfin, avec Misha. Et Souffleur. Et Leokk\u2026",
+        "artist": "Peter Stapleton",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_217.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_217_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_062",
+        "dbfId": "2483",
+        "name": "Boule d\u2019araign\u00e9es",
+        "cardSet": "The Grand Tournament",
+        "type": "Spell",
+        "rarity": "Rare",
+        "cost": 6,
+        "text": "Invoque trois\\ntisseuses 1/1.",
+        "flavor": "\u00ab\u00a0IL Y EN A PARTOUT\u00a0! FAITES-LES PARTIR\u00a0!!!\u00a0\u00bb - Tout le monde",
+        "artist": "Skan Srisuwan",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_062.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_062_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_534",
+        "dbfId": "1261",
+        "name": "Grande crini\u00e8re des savanes",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 6,
+        "attack": 6,
+        "health": 5,
+        "text": "<b>R\u00e2le d\u2019agonie\u00a0:</b> invoque deux hy\u00e8nes 2/2.",
+        "flavor": "Dans la jungle, terrible jungle, le lion est mort ce soir.",
+        "artist": "Milivoj Ceran",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_534.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_534_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "ICC_828",
+        "dbfId": "43398",
+        "name": "Rexxar le n\u00e9crotraqueur",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Hero",
+        "rarity": "Legendary",
+        "cost": 6,
+        "health": 30,
+        "armor": "5",
+        "text": "<b>Cri de guerre_:</b> inflige 2_points de d\u00e9g\u00e2ts \u00e0 tous les serviteurs adverses.",
+        "flavor": "\u00ab_Vous \u00e9tiez trop lent, mon vieil ami. La traque a commenc\u00e9 il y a bien longtemps. Et\u2026 elle ne prendra plus jamais fin._\u00bb",
+        "artist": "Jomaro Kindred",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_828.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_828_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "LOOT_520",
+        "dbfId": "46445",
+        "name": "Suinteux suintant",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Rare",
+        "cost": 6,
+        "attack": 5,
+        "health": 4,
+        "text": "<b>Cri de guerre_:</b> gagne le <b>R\u00e2le d\u2019agonie</b> d\u2019un serviteur al\u00e9atoire dans votre deck.",
+        "flavor": "Si j\u2019\u00e9tais vous, j\u2019irais consulter un m\u00e9decin.",
+        "artist": "Anton Kagoukin",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_520.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_520_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "DS1_188",
+        "dbfId": "311",
+        "name": "Arc long du gladiateur",
+        "cardSet": "Classic",
+        "type": "Weapon",
+        "faction": "Neutral",
+        "rarity": "Epic",
+        "cost": 7,
+        "attack": 5,
+        "durability": 2,
+        "text": "Votre h\u00e9ros est <b>Insensible</b> quand il attaque.",
+        "flavor": "Cet arc long permet de tirer depuis une certaine distance, ce qui est particuli\u00e8rement utile contre les cibles qui... sentent.",
+        "artist": "Peter C. Lee",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/DS1_188.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/DS1_188_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "ICC_825",
+        "dbfId": "43245",
+        "name": "Archer abominable",
+        "cardSet": "Knights of the Frozen Throne",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 7,
+        "attack": 6,
+        "health": 7,
+        "text": "<b>R\u00e2le d\u2019agonie_:</b> invoque une b\u00eate alli\u00e9e al\u00e9atoire morte pendant cette partie.",
+        "flavor": "Freddy l\u2019archer abominable\u2026 \u00e9tait une \u00e2me damn\u00e9e redoutable\u2026 avec un arc fra\u00eechement taill\u00e9 et un nez \u00e9pat\u00e9\u2026",
+        "artist": "L. Lullabi & K. Turovec",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_825.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_825_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "GVG_049",
+        "dbfId": "2017",
+        "name": "Gahz\u2019rilla",
+        "cardSet": "Goblins vs Gnomes",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 7,
+        "attack": 6,
+        "health": 9,
+        "text": "Chaque fois que ce serviteur subit des d\u00e9g\u00e2ts, double son Attaque.",
+        "flavor": "Les coups au c\u0153ur, les coups au corps, ce qui ne le tue pas le rend plus fort.",
+        "artist": "Raymond Swanland",
+        "collectible": true,
+        "elite": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GVG_049.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GVG_049_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "AT_063",
+        "dbfId": "2633",
+        "name": "Gueule-d\u2019acide",
+        "cardSet": "The Grand Tournament",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 7,
+        "attack": 4,
+        "health": 2,
+        "text": "Chaque fois qu\u2019un autre serviteur subit des d\u00e9g\u00e2ts, le d\u00e9truit.",
+        "flavor": "Avec l\u2019aide de son loyal acolyte \u00c9caille-d\u2019effroi, le jormungar g\u00e9ant Gueule-d\u2019acide est pr\u00eat \u00e0 affronter n\u2019importe quel chevalier.",
+        "artist": "Andrew Hou",
+        "collectible": true,
+        "elite": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/AT_063.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/AT_063_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_522",
+        "dbfId": "46450",
+        "name": "Murs broyeurs",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 7,
+        "text": "D\u00e9truit les serviteurs de votre adversaire les\\nplus \u00e0 gauche et \u00e0 droite\\ndu plateau.",
+        "flavor": "\u00ab_\u00c7a pourrait \u00eatre pire_!\\n-_C\u2019est pire._\u00bb",
+        "artist": "Trent Kaniuga",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_522.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_522_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_085",
+        "dbfId": "43369",
+        "name": "Rhok\u2019delar",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Weapon",
+        "rarity": "Legendary",
+        "cost": 7,
+        "attack": 4,
+        "durability": 2,
+        "text": "<b>Cri de guerre_:</b> si votre\\ndeck ne contient pas de serviteurs, remplit votre main de sorts de chasseur.",
+        "flavor": "Rhok\u2019delar et la mani\u00e8re d\u2019\u00eatre un bon chasseur.",
+        "artist": "Trent Kaniuga & James Martin",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_085.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_085_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    },
+    {
+        "cardId": "UNG_919",
+        "dbfId": "41366",
+        "name": "Roi du marais Dred",
+        "cardSet": "Journey to Un'Goro",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 7,
+        "attack": 9,
+        "health": 9,
+        "text": "Une fois que votre adversaire a jou\u00e9 un serviteur, l\u2019attaque.",
+        "flavor": "Papa est tr\u00e8s en col\u00e8re.",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "elite": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/UNG_919.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/UNG_919_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "LOOT_511",
+        "dbfId": "46390",
+        "name": "Kathrena F\u00e9tu-d\u2019Hiver",
+        "cardSet": "Kobolds & Catacombs",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 8,
+        "attack": 6,
+        "health": 6,
+        "text": "<b>Cri de guerre</b> et <b>R\u00e2le d\u2019agonie_:</b> <b>appelle</b> une B\u00eate.",
+        "flavor": "Oh, j\u2019ai cru voir une grosse b\u00e9b\u00eate_!",
+        "artist": "Garrett Hanna",
+        "collectible": true,
+        "elite": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/LOOT_511.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/LOOT_511_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            },
+            {
+                "name": "Appeler"
+            },
+            {
+                "name": "R\u00e2le d\u2019agonie"
+            }
+        ]
+    },
+    {
+        "cardId": "OG_308",
+        "dbfId": "38909",
+        "name": "Ver des sables g\u00e9ant",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Minion",
+        "rarity": "Epic",
+        "cost": 8,
+        "attack": 8,
+        "health": 8,
+        "text": "Quand ce serviteur en tue un autre, il peut attaquer de nouveau.",
+        "flavor": "Banni de tous les buffets \u00e0 volont\u00e9 d\u2019Azeroth.",
+        "artist": "Slawomir Maniak",
+        "collectible": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_308.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_308_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "OG_211",
+        "dbfId": "38727",
+        "name": "Appel de la nature",
+        "cardSet": "Whispers of the Old Gods",
+        "type": "Spell",
+        "rarity": "Epic",
+        "cost": 9,
+        "text": "Invoque les trois compagnons animaux.",
+        "flavor": "\u00ab\u00a0Bonjour. Misha, Leokk et Souffleur ne sont pas disponibles pour le moment, mais laissez-nous un message et nous vous rappellerons.\u00a0\u00bb BIIIP\u00a0!",
+        "artist": "Peter Stapleton",
+        "collectible": true,
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/OG_211.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/OG_211_premium.gif",
+        "locale": "frFR"
+    },
+    {
+        "cardId": "EX1_543",
+        "dbfId": "1144",
+        "name": "Roi Krush",
+        "cardSet": "Classic",
+        "type": "Minion",
+        "faction": "Neutral",
+        "rarity": "Legendary",
+        "cost": 9,
+        "attack": 8,
+        "health": 8,
+        "text": "<b>Charge</b>",
+        "flavor": "Le meilleur moyen de se prot\u00e9ger contre Krush, c\u2019est de se cacher derri\u00e8re quelqu\u2019un qu\u2019on n\u2019aime pas.",
+        "artist": "Alex Horley Orlandelli",
+        "collectible": true,
+        "elite": true,
+        "race": "Beast",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/EX1_543.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/EX1_543_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Charge"
+            }
+        ]
+    },
+    {
+        "cardId": "GIL_128",
+        "dbfId": "46678",
+        "name": "Emeriss",
+        "cardSet": "The Witchwood",
+        "type": "Minion",
+        "rarity": "Legendary",
+        "cost": 10,
+        "attack": 8,
+        "health": 8,
+        "text": "<b>Cri de guerre_:</b> double l\u2019ATQ et les PV de tous les serviteurs_de_votre_main.",
+        "flavor": "Laisse pas tra\u00eener Emeriss, si tu veux pas qu\u2019il glisse.",
+        "artist": "James Ryman",
+        "collectible": true,
+        "elite": true,
+        "race": "Dragon",
+        "playerClass": "Hunter",
+        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_128.png",
+        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_128_premium.gif",
+        "locale": "frFR",
+        "mechanics": [
+            {
+                "name": "Cri de guerre"
+            }
+        ]
+    }
+]
