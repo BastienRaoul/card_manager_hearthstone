@@ -10,7 +10,6 @@ import java.awt.event.ItemEvent;
 import hearthstone.carte.Classe;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.vue.vueDeck;
-import sun.security.provider.JavaKeyStore.CaseExactJKS;
 
 public class ctrlChangeClasse implements ItemListener{
     
