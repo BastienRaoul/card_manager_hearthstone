@@ -219,7 +219,7 @@ public class vueDeck extends JFrame {
 		filtreRareteCombo.addItem(Rarete.RARE);
 		filtreRareteCombo.addItem(Rarete.EPIQUE);
 		filtreRareteCombo.addItem(Rarete.LEGENDAIRE);
-		
+
 		subMainFilterPanel.add(filtreRareteCombo);
 
 		////////////////////////////////		
@@ -547,4 +547,6 @@ public class vueDeck extends JFrame {
 			++counter;
 		}
 	}
+
+	
 }
