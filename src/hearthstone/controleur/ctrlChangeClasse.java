@@ -13,9 +13,9 @@ import hearthstone.vue.vueDeck;
 
 public class ctrlChangeClasse implements ItemListener{
     
-    private VueDeck mVue = null;
+    private vueDeck mVue = null;
 
-    public ctrlChangeClasse(VueDeck vue)
+    public ctrlChangeClasse(vueDeck vue)
     {
         this.mVue = vue;
     }
