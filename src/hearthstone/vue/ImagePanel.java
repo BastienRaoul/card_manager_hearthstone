@@ -80,14 +80,17 @@ public class ImagePanel extends JPanel {
     }
 
     public void setSelected(ImagePanel[] panels) {
-	for(ImagePanel panel : panels) {
-	    if(panel.equals(this) || !panel.hasCard())
-		continue;
-	    panel.setNotSelected();
+	if (hasCard()) {
+	    for (ImagePanel panel : panels) {
+		if (panel.equals(this) || !panel.hasCard())
+		    continue;
+		panel.setNotSelected();
+	    }
+
+	    this.setBackground(Color.LIGHT_GRAY);
+	    repaint();
 	}
-	
-	this.setBackground(Color.LIGHT_GRAY);
-	repaint();
+
     }
 
     public void setNotSelected() {
@@ -96,7 +99,9 @@ public class ImagePanel extends JPanel {
     }
 
     public void reset() {
+	System.out.println("Reset");
 	image = null;
+	mCarte = null;
 	this.setBackground(Color.GRAY);
 	repaint();
     }

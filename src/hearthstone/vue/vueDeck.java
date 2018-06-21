@@ -29,9 +29,9 @@ public class vueDeck extends JFrame {
     private Cartes collection = null;
 
     public int pageNumber = 0;
-    
+
     private Deck mDeck = null;
-    
+
     //////////////////////////////
     private JPanel main = new JPanel();
 
@@ -46,6 +46,7 @@ public class vueDeck extends JFrame {
     private JPanel cartesRight = new JPanel(new BorderLayout());
     private JButton cartesButtonNextRight = new JButton(">");
     //
+
     private ctrlCardClickedDeck ctrlCards = new ctrlCardClickedDeck(this);
 
     /////
@@ -111,6 +112,15 @@ public class vueDeck extends JFrame {
     public JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
 
     /////
+
+    private JList<Carte> carteList = new JList<>();
+
+    private JComboBox<Classe> choixClasse = new JComboBox<>();
+
+    private JButton creationDeck = new JButton("Terminer");
+
+    /////
+
     private JPanel subMainFilterPanel = new JPanel();
 
     private JCheckBox filtreRaceCheck = new JCheckBox("Filtre par race :");
@@ -127,12 +137,6 @@ public class vueDeck extends JFrame {
 
     private JButton applyFilter = new JButton("Appliquer");
 
-    ///////////
-    private JList<Carte> carteList = new JList<>();
-
-    private JComboBox choixClasse = new JComboBox<>();
-
-    private JButton creationDeck = new JButton("Terminé");
     /////
 
     public vueDeck(Cartes collection, Deck currentDeck) {
@@ -151,12 +155,201 @@ public class vueDeck extends JFrame {
 	cartesRight.add(cartesButtonNextRight, BorderLayout.CENTER);
 
 	{
+	    ////// GUERRIER
+	    mainGUERRIER = new JPanel();
+	    mainGUERRIER.setLayout(new BorderLayout());
+	    //
+	    subMainGUERRIERLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+	    subMainGUERRIERLabel.add(new Label("GUERRIER"));
+
+	    mainGUERRIER.add(subMainGUERRIERLabel, BorderLayout.NORTH);
+	    //
+	    subMainGUERRIERCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+	    for (int i = 0; i < 8; ++i) {
+		subMainGUERRIERCards[i] = new ImagePanel();
+		subMainGUERRIERCards[i].setBackground(Color.GRAY);
+		subMainGUERRIERCards[i].addMouseListener(ctrlCards);
+		subMainGUERRIERCardsDisplay.add(subMainGUERRIERCards[i]);
+	    }
+
+	    mainGUERRIER.add(subMainGUERRIERCardsDisplay, BorderLayout.CENTER);
+	    //
+	    classTab.add(mainGUERRIER, "Guerrier");
+
+	    ////// DROOD
+	    mainDRUIDE = new JPanel();
+	    mainDRUIDE.setLayout(new BorderLayout());
+	    //
+	    subMainDRUIDELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+	    subMainDRUIDELabel.add(new Label("DRUIDE"));
+
+	    mainDRUIDE.add(subMainDRUIDELabel, BorderLayout.NORTH);
+	    //
+	    subMainDRUIDECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+	    for (int i = 0; i < 8; ++i) {
+		subMainDRUIDECards[i] = new ImagePanel();
+		subMainDRUIDECards[i].setBackground(Color.GRAY);
+		subMainDRUIDECards[i].addMouseListener(ctrlCards);
+		subMainDRUIDECardsDisplay.add(subMainDRUIDECards[i]);
+	    }
+
+	    mainDRUIDE.add(subMainDRUIDECardsDisplay, BorderLayout.CENTER);
+	    //
+	    classTab.add(mainDRUIDE, "Druide");
+
+	    ////// CHASSEUR
+	    mainCHASSEUR = new JPanel();
+	    mainCHASSEUR.setLayout(new BorderLayout());
+	    //
+	    subMainCHASSEURLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+	    subMainCHASSEURLabel.add(new Label("CHASSEUR"));
+
+	    mainCHASSEUR.add(subMainCHASSEURLabel, BorderLayout.NORTH);
+	    //
+	    subMainCHASSEURCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+	    for (int i = 0; i < 8; ++i) {
+		subMainCHASSEURCards[i] = new ImagePanel();
+		subMainCHASSEURCards[i].setBackground(Color.GRAY);
+		subMainCHASSEURCards[i].addMouseListener(ctrlCards);
+		subMainCHASSEURCardsDisplay.add(subMainCHASSEURCards[i]);
+	    }
+
+	    mainCHASSEUR.add(subMainCHASSEURCardsDisplay, BorderLayout.CENTER);
+	    //
+	    classTab.add(mainCHASSEUR, "Chasseur");
+
+	    ////// MAGE
+	    mainMAGE = new JPanel();
+	    mainMAGE.setLayout(new BorderLayout());
+	    //
+	    subMainMAGELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+	    subMainMAGELabel.add(new Label("MAGE"));
+
+	    mainMAGE.add(subMainMAGELabel, BorderLayout.NORTH);
+	    //
+	    subMainMAGECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+	    for (int i = 0; i < 8; ++i) {
+		subMainMAGECards[i] = new ImagePanel();
+		subMainMAGECards[i].setBackground(Color.GRAY);
+		subMainMAGECards[i].addMouseListener(ctrlCards);
+		subMainMAGECardsDisplay.add(subMainMAGECards[i]);
+	    }
+
+	    mainMAGE.add(subMainMAGECardsDisplay, BorderLayout.CENTER);
+	    //
+	    classTab.add(mainMAGE, "Mage");
+
+	    ////// PAL
+	    mainPALADIN = new JPanel();
+	    mainPALADIN.setLayout(new BorderLayout());
+	    //
+	    subMainPALADINLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+	    subMainPALADINLabel.add(new Label("PALADIN"));
+
+	    mainPALADIN.add(subMainPALADINLabel, BorderLayout.NORTH);
+	    //
+	    subMainPALADINCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+	    for (int i = 0; i < 8; ++i) {
+		subMainPALADINCards[i] = new ImagePanel();
+		subMainPALADINCards[i].setBackground(Color.GRAY);
+		subMainPALADINCards[i].addMouseListener(ctrlCards);
+		subMainPALADINCardsDisplay.add(subMainPALADINCards[i]);
+	    }
+
+	    mainPALADIN.add(subMainPALADINCardsDisplay, BorderLayout.CENTER);
+	    //
+	    classTab.add(mainPALADIN, "Paladin");
+
+	    ////// Priest
+	    mainPRETRE = new JPanel();
+	    mainPRETRE.setLayout(new BorderLayout());
+	    //
+	    subMainPRETRELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+	    subMainPRETRELabel.add(new Label("PRETRE"));
+
+	    mainPRETRE.add(subMainPRETRELabel, BorderLayout.NORTH);
+	    //
+	    subMainPRETRECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+	    for (int i = 0; i < 8; ++i) {
+		subMainPRETRECards[i] = new ImagePanel();
+		subMainPRETRECards[i].setBackground(Color.GRAY);
+		subMainPRETRECards[i].addMouseListener(ctrlCards);
+		subMainPRETRECardsDisplay.add(subMainPRETRECards[i]);
+	    }
+
+	    mainPRETRE.add(subMainPRETRECardsDisplay, BorderLayout.CENTER);
+	    //
+	    classTab.add(mainPRETRE, "Pretre");
+
+	    ////// Chaman
+	    mainCHAMAN = new JPanel();
+	    mainCHAMAN.setLayout(new BorderLayout());
+	    //
+	    subMainCHAMANLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+	    subMainCHAMANLabel.add(new Label("CHAMAN"));
+
+	    mainCHAMAN.add(subMainCHAMANLabel, BorderLayout.NORTH);
+	    //
+	    subMainCHAMANCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+	    for (int i = 0; i < 8; ++i) {
+		subMainCHAMANCards[i] = new ImagePanel();
+		subMainCHAMANCards[i].setBackground(Color.GRAY);
+		subMainCHAMANCards[i].addMouseListener(ctrlCards);
+		subMainCHAMANCardsDisplay.add(subMainCHAMANCards[i]);
+	    }
+
+	    mainCHAMAN.add(subMainCHAMANCardsDisplay, BorderLayout.CENTER);
+	    //
+	    classTab.add(mainCHAMAN, "Chaman");
+
+	    ////// Warlock
+	    mainDEMONISTE = new JPanel();
+	    mainDEMONISTE.setLayout(new BorderLayout());
+	    //
+	    subMainDEMONISTELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+	    subMainDEMONISTELabel.add(new Label("DEMONISTE"));
+
+	    mainDEMONISTE.add(subMainDEMONISTELabel, BorderLayout.NORTH);
+	    //
+	    subMainDEMONISTECardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+	    for (int i = 0; i < 8; ++i) {
+		subMainDEMONISTECards[i] = new ImagePanel();
+		subMainDEMONISTECards[i].setBackground(Color.GRAY);
+		subMainDEMONISTECards[i].addMouseListener(ctrlCards);
+		subMainDEMONISTECardsDisplay.add(subMainDEMONISTECards[i]);
+	    }
+
+	    mainDEMONISTE.add(subMainDEMONISTECardsDisplay, BorderLayout.CENTER);
+	    //
+	    classTab.add(mainDEMONISTE, "Demoniste");
+
+	    ////// Rogue
+	    mainVOLEUR = new JPanel();
+	    mainVOLEUR.setLayout(new BorderLayout());
+	    //
+	    subMainVOLEURLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
+	    subMainVOLEURLabel.add(new Label("VOLEUR"));
+
+	    mainVOLEUR.add(subMainVOLEURLabel, BorderLayout.NORTH);
+	    //
+	    subMainVOLEURCardsDisplay.setLayout(new GridLayout(2, 4, XSPACINGCARDS, YSPACINGCARDS));
+	    for (int i = 0; i < 8; ++i) {
+		subMainVOLEURCards[i] = new ImagePanel();
+		subMainVOLEURCards[i].setBackground(Color.GRAY);
+		subMainVOLEURCards[i].addMouseListener(ctrlCards);
+		subMainVOLEURCardsDisplay.add(subMainVOLEURCards[i]);
+	    }
+
+	    mainVOLEUR.add(subMainVOLEURCardsDisplay, BorderLayout.CENTER);
+	    //
+	    classTab.add(mainVOLEUR, "Voleur");
+
 	    ////// Neutral
 	    mainNEUTRE = new JPanel();
 	    mainNEUTRE.setLayout(new BorderLayout());
 	    //
 	    subMainNEUTRELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	    subMainNEUTRELabel.add(new Label("NEUTRE"));
+	    subMainNEUTRELabel.add(new Label("VOLEUR"));
 
 	    mainNEUTRE.add(subMainNEUTRELabel, BorderLayout.NORTH);
 	    //
@@ -164,6 +357,7 @@ public class vueDeck extends JFrame {
 	    for (int i = 0; i < 8; ++i) {
 		subMainNEUTRECards[i] = new ImagePanel();
 		subMainNEUTRECards[i].setBackground(Color.GRAY);
+		subMainNEUTRECards[i].addMouseListener(ctrlCards);
 		subMainNEUTRECardsDisplay.add(subMainNEUTRECards[i]);
 	    }
 
@@ -171,23 +365,8 @@ public class vueDeck extends JFrame {
 	    //
 	    classTab.add(mainNEUTRE, "Neutre");
 	}
+
 	///////////
-
-	description.setLayout(new BorderLayout());
-
-	textDescription.setLayout(new BorderLayout());
-	textDescription.setBorder(BorderFactory.createTitledBorder("Description VIDE :"));
-	textAreaDescription.setEditable(false);
-	textDescription.add(textAreaDescription, BorderLayout.CENTER);
-
-	description.add(textDescription, BorderLayout.CENTER);
-
-	perksDescription.setLayout(new BoxLayout(perksDescription, BoxLayout.Y_AXIS));
-	perksDescription.add(coutDescription);
-	perksDescription.add(valeurDesemDescription);
-	perksDescription.add(nbExemplairesDescription);
-
-	description.add(perksDescription, BorderLayout.EAST);
 
 	/////////////////////////////////
 	subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
@@ -207,39 +386,6 @@ public class vueDeck extends JFrame {
 	JScrollPane listeDesDeck = new JScrollPane(carteList);
 	listeDesDeck.setPreferredSize(new Dimension(250, 80));
 
-	subMainFilterPanel.setBorder(BorderFactory.createTitledBorder("Filtres :"));
-	subMainFilterPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-
-	filtreTypeGrp.add(filtreArme);
-	filtreTypeGrp.add(filtreSort);
-	filtreTypeGrp.add(filtreServiteur);
-
-	subMainFilterPanel.add(filtreArme);
-	subMainFilterPanel.add(filtreSort);
-	subMainFilterPanel.add(filtreServiteur);
-
-	subMainFilterPanel.add(filtreRaceCheck);
-
-	filtreRaceCombo.addItem(Race.BETE);
-	filtreRaceCombo.addItem(Race.DEMON);
-	filtreRaceCombo.addItem(Race.DRAGON);
-	filtreRaceCombo.addItem(Race.ELEMENTAIRE);
-	filtreRaceCombo.addItem(Race.MECA);
-	filtreRaceCombo.addItem(Race.MURLOC);
-	filtreRaceCombo.addItem(Race.PIRATE);
-	filtreRaceCombo.addItem(Race.TOTEM);
-
-	subMainFilterPanel.add(filtreRaceCombo);
-	subMainFilterPanel.add(filtreRareteCheck);
-
-	filtreRareteCombo.addItem(Rarete.BASIQUE);
-	filtreRareteCombo.addItem(Rarete.COMMUNE);
-	filtreRareteCombo.addItem(Rarete.RARE);
-	filtreRareteCombo.addItem(Rarete.EPIQUE);
-	filtreRareteCombo.addItem(Rarete.LEGENDAIRE);
-
-	subMainFilterPanel.add(filtreRareteCombo);
-
 	////////////////////////////////
 	try {
 	    drawCards(subMainNEUTRECards, Classe.DRUIDE);
@@ -248,8 +394,16 @@ public class vueDeck extends JFrame {
 	    e1.printStackTrace();
 	}
 
+	///////////
+	subMainCenter.setLayout(new BorderLayout());
+	subMainCenter.add(classTab, BorderLayout.CENTER);
+	subMainCenter.add(description, BorderLayout.SOUTH);
+
+	subMainCenter.add(cartesLeft, BorderLayout.WEST);
+	subMainCenter.add(cartesRight, BorderLayout.EAST);
+
 	/////////////////////////////////
-	choixClasse.addItem("Choisir Classe");
+
 	choixClasse.addItem(Classe.DRUIDE);
 	choixClasse.addItem(Classe.CHASSEUR);
 	choixClasse.addItem(Classe.MAGE);
@@ -264,12 +418,6 @@ public class vueDeck extends JFrame {
 	choixClasse.setMaximumRowCount(choixClasse.getModel().getSize());
 
 	/////////////////////////////////
-	subMainCenter.setLayout(new BorderLayout());
-	subMainCenter.add(classTab, BorderLayout.CENTER);
-	subMainCenter.add(description, BorderLayout.SOUTH);
-
-	subMainCenter.add(cartesLeft, BorderLayout.WEST);
-	subMainCenter.add(cartesRight, BorderLayout.EAST);
 
 	subMainRight.setLayout(new BorderLayout());
 	subMainRight.add(listeDesDeck, BorderLayout.CENTER);
@@ -304,28 +452,95 @@ public class vueDeck extends JFrame {
 
 	subMainRight.add(test, BorderLayout.SOUTH);
 
+	/////////////////////////////////
+
+	description.setLayout(new BorderLayout());
+
+	textDescription.setLayout(new BorderLayout());
+	textDescription.setBorder(BorderFactory.createTitledBorder("Description :"));
+	textAreaDescription.setEditable(false);
+	textDescription.add(textAreaDescription, BorderLayout.CENTER);
+
+	description.add(textDescription, BorderLayout.CENTER);
+
+	perksDescription.setLayout(new BoxLayout(perksDescription, BoxLayout.Y_AXIS));
+	perksDescription.add(coutDescription);
+	perksDescription.add(valeurDesemDescription);
+	perksDescription.add(nbExemplairesDescription);
+
+	description.add(perksDescription, BorderLayout.EAST);
+
+	/////////////////////////////////
+
+	subMainFilterPanel.setBorder(BorderFactory.createTitledBorder("Filtres :"));
+	subMainFilterPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+
+	filtreTypeGrp.add(filtreArme);
+	filtreTypeGrp.add(filtreSort);
+	filtreTypeGrp.add(filtreServiteur);
+	filtreTypeGrp.add(filtreNone);
+
+	subMainFilterPanel.add(filtreArme);
+	subMainFilterPanel.add(filtreSort);
+	subMainFilterPanel.add(filtreServiteur);
+	filtreNone.setSelected(true);
+	subMainFilterPanel.add(filtreNone);
+	subMainFilterPanel.add(filtreRaceCheck);
+
+	filtreRaceCombo.addItem(Race.BETE);
+	filtreRaceCombo.addItem(Race.DEMON);
+	filtreRaceCombo.addItem(Race.DRAGON);
+	filtreRaceCombo.addItem(Race.ELEMENTAIRE);
+	filtreRaceCombo.addItem(Race.MECA);
+	filtreRaceCombo.addItem(Race.MURLOC);
+	filtreRaceCombo.addItem(Race.PIRATE);
+	filtreRaceCombo.addItem(Race.TOTEM);
+	subMainFilterPanel.add(filtreRaceCombo);
+
+	subMainFilterPanel.add(filtreRareteCheck);
+
+	filtreRareteCombo.addItem(Rarete.BASIQUE);
+	filtreRareteCombo.addItem(Rarete.COMMUNE);
+	filtreRareteCombo.addItem(Rarete.RARE);
+	filtreRareteCombo.addItem(Rarete.EPIQUE);
+	filtreRareteCombo.addItem(Rarete.LEGENDAIRE);
+	subMainFilterPanel.add(filtreRareteCombo);
+
+	subMainFilterPanel.add(applyFilter);
+
+	/////////////////////////////////
+
+	try {
+	    drawCards(subMainGUERRIERCards, Classe.GUERRIER);
+	} catch (ClasseNeutreException | IOException e1) {
+	    // TODO Auto-generated catch block
+	    e1.printStackTrace();
+	}
+
+	/////////////////////////////////
 	main.add(subMainCenter, BorderLayout.CENTER);
 	main.add(subMainRight, BorderLayout.EAST);
 	main.add(subMainFilterPanel, BorderLayout.SOUTH);
-	//////// Controlleurs
+	/////////////////////////////////
 
 	classTab.addChangeListener(new ctrlTabbedPaneCollectionDeck(this));
 
 	cartesButtonNextRight.addActionListener(new ctrlCollectionNextDeck(this, false));
+
 	cartesButtonNextLeft.addActionListener(new ctrlCollectionNextDeck(this, true));
+
 	applyFilter.addActionListener(new ctrlApplyFilterDeck(this));
 
 	choixClasse.addItemListener(new ctrlChangeClasse(this));
 	/////////////////////////////////
 	this.getContentPane().add(main);
 
-	// this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	// this.setLocation(300, 300);
 
 	this.setPreferredSize(new Dimension(X, Y));
 	setSize(X, Y);
 
-	// TODO
 	try {
 	    for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 		if ("Nimbus".equals(info.getName())) {
@@ -338,7 +553,6 @@ public class vueDeck extends JFrame {
 	}
 
 	setVisible(true);
-
     }
 
     //////////////////////////////////////////
@@ -782,39 +996,39 @@ public class vueDeck extends JFrame {
 	}
 	return cartes;
     }
-    
+
     public ImagePanel[] getCurrentImagePanels() {
-   	switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
-   	case "Guerrier":
-   	    return subMainGUERRIERCards;
+	switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
+	case "Guerrier":
+	    return subMainGUERRIERCards;
 
-   	case "Druide":
-   	    return subMainDRUIDECards;
+	case "Druide":
+	    return subMainDRUIDECards;
 
-   	case "Chasseur":
-   	    return subMainCHASSEURCards;
+	case "Chasseur":
+	    return subMainCHASSEURCards;
 
-   	case "Mage":
-   	    return subMainMAGECards;
+	case "Mage":
+	    return subMainMAGECards;
 
-   	case "Paladin":
-   	    return subMainPALADINCards;
+	case "Paladin":
+	    return subMainPALADINCards;
 
-   	case "Pretre":
-   	    return subMainPRETRECards;
+	case "Pretre":
+	    return subMainPRETRECards;
 
-   	case "Chaman":
-   	    return subMainCHAMANCards;
+	case "Chaman":
+	    return subMainCHAMANCards;
 
-   	case "Demoniste":
-   	    return subMainDEMONISTECards;
+	case "Demoniste":
+	    return subMainDEMONISTECards;
 
-   	case "Voleur":
-   	    return subMainVOLEURCards;
+	case "Voleur":
+	    return subMainVOLEURCards;
 
-   	case "Neutral":
-   	    return subMainNEUTRECards;
-   	}
-   	return null;
-       }
+	case "Neutral":
+	    return subMainNEUTRECards;
+	}
+	return null;
+    }
 }

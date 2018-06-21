@@ -111,7 +111,6 @@ public class vueCollection extends JFrame {
     public JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
 
     /////
-
     private JList<Deck> deckList = null;
 
     private JButton creationCarte = new JButton("Creation de carte");
@@ -134,6 +133,7 @@ public class vueCollection extends JFrame {
     private JRadioButton filtreNone = new JRadioButton("None");
 
     private JButton applyFilter = new JButton("Appliquer");
+    
     /////
 
     public vueCollection(Cartes collection) {
@@ -389,6 +389,7 @@ public class vueCollection extends JFrame {
 	subMainRight.add(creationDeck, BorderLayout.SOUTH);
 
 	////////////////////////////////
+	
 	description.setLayout(new BorderLayout());
 
 	textDescription.setLayout(new BorderLayout());
@@ -442,6 +443,7 @@ public class vueCollection extends JFrame {
 	subMainFilterPanel.add(filtreRareteCombo);
 
 	subMainFilterPanel.add(applyFilter);
+	
 	/////////////////////////////////
 
 	try {
