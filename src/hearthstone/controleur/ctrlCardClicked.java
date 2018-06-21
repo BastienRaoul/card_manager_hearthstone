@@ -8,7 +8,7 @@ import hearthstone.vue.ImagePanel;
 import hearthstone.vue.*;
 
 public class ctrlCardClicked implements MouseListener {
-    
+
     vueCollection mVue = null;
 
     public ctrlCardClicked(vueCollection vue) {
@@ -17,6 +17,10 @@ public class ctrlCardClicked implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
+	if (!((ImagePanel) e.getSource()).hasCard())
+	    return;
+
+	((ImagePanel) e.getSource()).setSelected(mVue.getCurrentImagePanels());
 
 	mVue.textAreaDescription.setText("<html>" + ((ImagePanel) e.getSource()).mCarte.description() + "</html>");
 	try {

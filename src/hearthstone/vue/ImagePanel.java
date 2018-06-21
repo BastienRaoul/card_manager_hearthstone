@@ -18,76 +18,94 @@ import javax.imageio.*;
  */
 public class ImagePanel extends JPanel {
 
-	private Image image;
+    private Image image;
 
-	public Carte mCarte = null;
+    public Carte mCarte = null;
 
-	public ImagePanel() {
-		super();
-		image = null;
+    public ImagePanel() {
+	super();
+	image = null;
+    }
+
+    public void loadPic(Carte carte) throws MalformedURLException {
+	mCarte = carte;
+
+	URL url = null;
+	try {
+	    url = new URL(mCarte.urlImage());
+	} catch (MalformedURLException e) {
+	    this.setBackground(Color.GRAY);
+	    throw new MalformedURLException(e.getMessage());
 	}
 
-	public void loadPic(Carte carte) throws MalformedURLException {
-		mCarte = carte;
-				
-		
-		
-		URL url = null;
-		try {
-			url = new URL(mCarte.urlImage());
-		} catch (MalformedURLException e) {
-			this.setBackground(Color.GRAY);
-			throw new MalformedURLException(e.getMessage());
-		}
+	String fileName = url.getFile().substring(url.getFile().lastIndexOf("/") + 1);
 
-		String fileName = url.getFile().substring(url.getFile().lastIndexOf("/") + 1);
+	// if file is cached
+	File pic = new File("./cachedPics/" + fileName);
+	if (pic.exists() && !pic.isDirectory()) {
+	    this.loadPicFile(pic);
 
-		// if file is cached
-		File pic = new File("./cachedPics/" + fileName);
-		if (pic.exists() && !pic.isDirectory()) {
-			this.loadPicFile(pic);
-			
-		} else {
-			System.out.println("loading image from " + mCarte.urlImage());
-			// System.out.println("Working Directory = " + System.getProperty("user.dir"));
-			// download and cach
-			BufferedImage image;
-			try {
-				image = ImageIO.read(url);
-				ImageIO.write(image, "png", pic);
-			} catch (IOException e) {
+	} else {
+	    System.out.println("loading image from " + mCarte.urlImage());
+	    // System.out.println("Working Directory = " + System.getProperty("user.dir"));
+	    // download and cach
+	    BufferedImage image;
+	    try {
+		image = ImageIO.read(url);
+		ImageIO.write(image, "png", pic);
+	    } catch (IOException e) {
 
-				e.printStackTrace();
-			}
-			this.loadPicFile(pic);
-		}
-
-		this.setBackground(Color.getColor("Panel.background"));
-
-		repaint();
+		e.printStackTrace();
+	    }
+	    this.loadPicFile(pic);
 	}
 
-	private void loadPicFile(File file) {
-		System.out.println("loading image from " + file.toString());
-		try {
-			image = ImageIO.read(file);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		repaint();
-	}
+	this.setBackground(Color.getColor("Panel.background"));
 
-	public void reset() {
-		image = null;
-		this.setBackground(Color.GRAY);
-		repaint();
-	}
+	repaint();
+    }
 
-	@Override
-	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		if (image != null) {
-			g.drawImage(image, 0, 0, this.getSize().width, this.getSize().height, this);
-		}
+    private void loadPicFile(File file) {
+	System.out.println("loading image from " + file.toString());
+	try {
+	    image = ImageIO.read(file);
+	} catch (IOException e) {
+	    e.printStackTrace();
 	}
+	repaint();
+    }
+
+    public boolean hasCard() {
+	return mCarte != null;
+    }
+
+    public void setSelected(ImagePanel[] panels) {
+	for(ImagePanel panel : panels) {
+	    if(panel.equals(this) || !panel.hasCard())
+		continue;
+	    panel.setNotSelected();
+	}
+	
+	this.setBackground(Color.LIGHT_GRAY);
+	repaint();
+    }
+
+    public void setNotSelected() {
+	this.setBackground(Color.getColor("Panel.background"));
+	repaint();
+    }
+
+    public void reset() {
+	image = null;
+	this.setBackground(Color.GRAY);
+	repaint();
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+	super.paintComponent(g);
+	if (image != null) {
+	    g.drawImage(image, 0, 0, this.getSize().width, this.getSize().height, this);
+	}
+    }
 }

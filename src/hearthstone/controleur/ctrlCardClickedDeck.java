@@ -7,22 +7,21 @@ import hearthstone.exception.GainDesenchantementException;
 import hearthstone.vue.ImagePanel;
 import hearthstone.vue.*;
 
-public class ctrlCardClickedCreation implements MouseListener {
-    
-    vueCreation mVue = null;
+public class ctrlCardClickedDeck implements MouseListener {
 
-    public ctrlCardClickedCreation(vueCreation vue) {
+    vueDeck mVue = null;
+
+    public ctrlCardClickedDeck(vueDeck vue) {
 	mVue = vue;
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-	
 	if (!((ImagePanel) e.getSource()).hasCard())
 	    return;
 
 	((ImagePanel) e.getSource()).setSelected(mVue.getCurrentImagePanels());
-	
+
 	mVue.textAreaDescription.setText("<html>" + ((ImagePanel) e.getSource()).mCarte.description() + "</html>");
 	try {
 	    mVue.coutDescription

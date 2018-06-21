@@ -26,6 +26,13 @@ public class vueDeck extends JFrame {
     private final int X = 1280;
     private final int Y = 720;
 
+    private Cartes collection = null;
+
+    public int pageNumber = 0;
+    
+    private Deck mDeck = null;
+    
+    //////////////////////////////
     private JPanel main = new JPanel();
 
     private JPanel subMainRight = new JPanel();
@@ -39,6 +46,8 @@ public class vueDeck extends JFrame {
     private JPanel cartesRight = new JPanel(new BorderLayout());
     private JButton cartesButtonNextRight = new JButton(">");
     //
+    private ctrlCardClickedDeck ctrlCards = new ctrlCardClickedDeck(this);
+
     /////
     private JPanel mainGUERRIER = null;
     private JPanel subMainGUERRIERLabel = new JPanel();
@@ -94,14 +103,29 @@ public class vueDeck extends JFrame {
     private JPanel description = new JPanel();
 
     private JPanel textDescription = new JPanel();
-    private JTextArea textAreaDescription = new JTextArea("aaaaaaaaaaaaaaaaaaaaaaaaaaa");
+    public JTextArea textAreaDescription = new JTextArea("Description...");
 
     private JPanel perksDescription = new JPanel();
-    private JLabel coutDescription = new JLabel("Cout :");
-    private JLabel valeurDesemDescription = new JLabel("Valeur :");
-    private JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
+    public JLabel coutDescription = new JLabel("Cout :");
+    public JLabel valeurDesemDescription = new JLabel("Valeur :");
+    public JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
 
-    ///// controlleurs
+    /////
+    private JPanel subMainFilterPanel = new JPanel();
+
+    private JCheckBox filtreRaceCheck = new JCheckBox("Filtre par race :");
+    private JComboBox<Race> filtreRaceCombo = new JComboBox<>();
+
+    private JCheckBox filtreRareteCheck = new JCheckBox("Filtre par rarete :");
+    private JComboBox<Rarete> filtreRareteCombo = new JComboBox<>();
+
+    private ButtonGroup filtreTypeGrp = new ButtonGroup();
+    private JRadioButton filtreArme = new JRadioButton("Armes");
+    private JRadioButton filtreServiteur = new JRadioButton("Serviteurs");
+    private JRadioButton filtreSort = new JRadioButton("Sorts");
+    private JRadioButton filtreNone = new JRadioButton("None");
+
+    private JButton applyFilter = new JButton("Appliquer");
 
     ///////////
     private JList<Carte> carteList = new JList<>();
@@ -110,26 +134,6 @@ public class vueDeck extends JFrame {
 
     private JButton creationDeck = new JButton("Terminé");
     /////
-
-    private JPanel subMainFilterPanel = new JPanel();
-
-    private JCheckBox filtreRaceCheck = new JCheckBox("Filtre par race :");
-    private JComboBox<Race> filtreRaceCombo = new JComboBox();
-
-    private JCheckBox filtreRareteCheck = new JCheckBox("Filtre par rarete :");
-    private JComboBox<Rarete> filtreRareteCombo = new JComboBox();
-
-    private ButtonGroup filtreTypeGrp = new ButtonGroup();
-    private JRadioButton filtreArme = new JRadioButton("Armes");
-    private JRadioButton filtreServiteur = new JRadioButton("Serviteurs");
-    private JRadioButton filtreSort = new JRadioButton("Sorts");
-    public int pageNumber = 0;
-    /////
-    private Cartes collection = null;
-
-    private Deck mDeck = null;
-
-    private JButton applyFilter = new JButton("Appliquer");
 
     public vueDeck(Cartes collection, Deck currentDeck) {
 	super("DECK manager");
@@ -778,4 +782,39 @@ public class vueDeck extends JFrame {
 	}
 	return cartes;
     }
+    
+    public ImagePanel[] getCurrentImagePanels() {
+   	switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
+   	case "Guerrier":
+   	    return subMainGUERRIERCards;
+
+   	case "Druide":
+   	    return subMainDRUIDECards;
+
+   	case "Chasseur":
+   	    return subMainCHASSEURCards;
+
+   	case "Mage":
+   	    return subMainMAGECards;
+
+   	case "Paladin":
+   	    return subMainPALADINCards;
+
+   	case "Pretre":
+   	    return subMainPRETRECards;
+
+   	case "Chaman":
+   	    return subMainCHAMANCards;
+
+   	case "Demoniste":
+   	    return subMainDEMONISTECards;
+
+   	case "Voleur":
+   	    return subMainVOLEURCards;
+
+   	case "Neutral":
+   	    return subMainNEUTRECards;
+   	}
+   	return null;
+       }
 }

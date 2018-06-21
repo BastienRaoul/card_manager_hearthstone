@@ -721,4 +721,39 @@ public class vueCreation extends JFrame {
 	}
 	return cartes;
     }
+    
+    public ImagePanel[] getCurrentImagePanels() {
+   	switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
+   	case "Guerrier":
+   	    return subMainGUERRIERCards;
+
+   	case "Druide":
+   	    return subMainDRUIDECards;
+
+   	case "Chasseur":
+   	    return subMainCHASSEURCards;
+
+   	case "Mage":
+   	    return subMainMAGECards;
+
+   	case "Paladin":
+   	    return subMainPALADINCards;
+
+   	case "Pretre":
+   	    return subMainPRETRECards;
+
+   	case "Chaman":
+   	    return subMainCHAMANCards;
+
+   	case "Demoniste":
+   	    return subMainDEMONISTECards;
+
+   	case "Voleur":
+   	    return subMainVOLEURCards;
+
+   	case "Neutral":
+   	    return subMainNEUTRECards;
+   	}
+   	return null;
+       }
 }
