@@ -20,7 +20,7 @@ public class HearthstoneDeck {
 
         Cartes collection = new Cartes(FabriqueJson.lireCartesDepuisFichier("./json/cartes11.json"));
 
-        vueDeck main = new vueDeck(collection);
+        vueDeck main = new vueDeck(collection, null);
         main.pack();
         main.setVisible(true);
     }

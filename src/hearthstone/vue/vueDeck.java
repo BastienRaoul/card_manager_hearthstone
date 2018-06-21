@@ -280,7 +280,7 @@ public class vueDeck extends JFrame {
 		nomDeck.setText("*Deck*");
 		titreDeck.add(choixClasse);
 		titreDeck.add(nomDeck);
-
+	
 		subMainRight.add(titreDeck, BorderLayout.NORTH);
 
 		////////////////////////////////////
@@ -645,7 +645,7 @@ public class vueDeck extends JFrame {
 		Collection<Carte> cartes = collection.collection();
 
 		cartes = applyFilter();
-		cartes = Filtre.cartesParClasse(cartes, getClasseFromTabbedPaneId());
+		cartes = Filtre.cartesParClasse(cartes, getClasse());
 		return cartes;
 	}
 
@@ -670,75 +670,39 @@ public class vueDeck extends JFrame {
 		return cartes;
 	}
 
-	public Classe getClasseFromTabbedPaneId() {
-		switch (classTab.getSelectedIndex()) {
-		case 0:
+	public Classe getClasse() {
+		switch (choixClasse.getSelectedItem().toString()) {
+		case "GUERRIER":
 			return Classe.GUERRIER;
 
-		case 1:
+		case "DRUIDE":
 			return Classe.DRUIDE;
 
-		case 2:
+		case "CHASSEUR":
 			return Classe.CHASSEUR;
 
-		case 3:
+		case "MAGE":
 			return Classe.MAGE;
 
-		case 4:
+		case "PALADIN":
 			return Classe.PALADIN;
 
-		case 5:
+		case "PRETRE":
 			return Classe.PRETRE;
 
-		case 6:
+		case "CHAMAN":
 			return Classe.CHAMAN;
 
-		case 7:
+		case "DEMONISTE":
 			return Classe.DEMONISTE;
 
-		case 8:
+		case "VOLEUR":
 			return Classe.VOLEUR;
 
-		case 9:
+		default:
 			return Classe.NEUTRE;
 
 		}
-		return null;
 	}
 
-	public ImagePanel[] getImagePanelFromTabbedPaneId() {
-		switch (classTab.getSelectedIndex()) {
-		case 0:
-			return subMainGUERRIERCards;
-
-		case 1:
-			return subMainDRUIDECards;
-
-		case 2:
-			return subMainCHASSEURCards;
-
-		case 3:
-			return subMainMAGECards;
-
-		case 4:
-			return subMainPALADINCards;
-
-		case 5:
-			return subMainPRETRECards;
-
-		case 6:
-			return subMainCHAMANCards;
-
-		case 7:
-			return subMainDEMONISTECards;
-
-		case 8:
-			return subMainVOLEURCards;
-
-		case 9:
-			return subMainNEUTRECards;
-
-		}
-		return null;
-	}
 }
