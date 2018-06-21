@@ -1,10 +1,10 @@
 package hearthstone.controleur;
 
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.*;
-
-import hearthstone.vue.*;
+import hearthstone.vue.vueCollection;
+import hearthstone.vue.vueCreation;
 
 public class ctrlNewCreationCards implements ActionListener {
 

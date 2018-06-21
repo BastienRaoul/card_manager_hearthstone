@@ -1,13 +1,11 @@
 package hearthstone;
 
 import java.io.IOException;
-import java.util.*;
 
-import hearthstone.carte.*;
-import hearthstone.cartes.*;
+import hearthstone.cartes.Cartes;
+import hearthstone.cartes.FabriqueJson;
 import hearthstone.exception.CarteDejaPresenteException;
-import hearthstone.exception.ValeurNegativeException;
-import hearthstone.vue.*;
+import hearthstone.vue.vueDeck;
 
 /**
  * @author lanoix-a remm-jf

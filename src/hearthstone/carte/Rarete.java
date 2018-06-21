@@ -1,8 +1,8 @@
 package hearthstone.carte;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.awt.Color;
+
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Enumération définissant les niveaux de raretés possible pour des cartes

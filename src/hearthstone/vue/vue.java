@@ -1,15 +1,38 @@
 package hearthstone.vue;
 
-import java.awt.*;
-import java.io.*;
-import java.util.*;
-import javax.swing.*;
-import javax.swing.UIManager.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 
-import hearthstone.carte.*;
-import hearthstone.cartes.*;
-import hearthstone.controleur.*;
-import hearthstone.exception.*;
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextArea;
+
+import hearthstone.carte.Carte;
+import hearthstone.carte.Classe;
+import hearthstone.carte.Race;
+import hearthstone.carte.Rarete;
+import hearthstone.cartes.Cartes;
+import hearthstone.cartes.Filtre;
+import hearthstone.controleur.ctrlApplyFilter;
+import hearthstone.controleur.ctrlCardClicked;
+import hearthstone.controleur.ctrlCollectionNext;
+import hearthstone.controleur.ctrlTabbedPaneCollection;
+import hearthstone.exception.ClasseNeutreException;
 
 public class vue extends JFrame {
 

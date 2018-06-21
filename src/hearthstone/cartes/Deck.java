@@ -1,11 +1,20 @@
 package hearthstone.cartes;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+
 import hearthstone.carte.Carte;
 import hearthstone.carte.Classe;
 import hearthstone.carte.Rarete;
-import hearthstone.exception.*;
-
-import java.util.*;
+import hearthstone.exception.CarteAbsenteException;
+import hearthstone.exception.CarteMauvaiseClasseException;
+import hearthstone.exception.CarteNonDisponibleException;
+import hearthstone.exception.ClasseNeutreException;
+import hearthstone.exception.DeckCreationException;
+import hearthstone.exception.DeckPleinException;
+import hearthstone.exception.LimiteNombreDeCartesException;
 
 /**
  *

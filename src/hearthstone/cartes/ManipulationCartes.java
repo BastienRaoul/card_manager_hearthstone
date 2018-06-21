@@ -1,10 +1,10 @@
 package hearthstone.cartes;
 
+import java.util.Collection;
+
 import hearthstone.carte.Carte;
 import hearthstone.exception.CarteAbsenteException;
 import hearthstone.exception.HearthstoneException;
-
-import java.util.Collection;
 
 /**
  * Interface décrivant des opérations basiques de manipulation d'un "paquet" de

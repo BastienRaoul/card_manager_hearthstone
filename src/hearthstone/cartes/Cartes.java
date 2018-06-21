@@ -1,9 +1,17 @@
 package hearthstone.cartes;
 
-import hearthstone.carte.*;
-import hearthstone.exception.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
 
-import java.util.*;
+import hearthstone.carte.Carte;
+import hearthstone.carte.Classe;
+import hearthstone.exception.CarteAbsenteException;
+import hearthstone.exception.CarteDejaPresenteException;
+import hearthstone.exception.DeckCreationException;
+import hearthstone.exception.DeckSuppressionException;
+import hearthstone.exception.ValeurNegativeException;
 
 /**
  * Classe représentant l'ensemble des cartes disponibles par quelqu'un

@@ -1,25 +1,22 @@
 package hearthstone.vue;
 
-import java.awt.*;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.awt.Dimension;
+import java.awt.GridLayout;
 
-import javax.swing.*;
-import javax.swing.UIManager.*;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 
-import hearthstone.carte.*;
-import hearthstone.cartes.*;
-import hearthstone.controleur.ctrlApplyFilter;
-import hearthstone.controleur.ctrlApplyFilterCreation;
-import hearthstone.controleur.ctrlCardClicked;
-import hearthstone.controleur.ctrlCardClickedCreation;
-import hearthstone.controleur.ctrlCollectionNext;
-import hearthstone.controleur.ctrlCollectionNextCreation;
-import hearthstone.controleur.ctrlTabbedPaneCollection;
-import hearthstone.controleur.ctrlTabbedPaneCollectionCreation;
-import hearthstone.exception.ClasseNeutreException;
-import javafx.scene.layout.Border;
+import hearthstone.carte.Classe;
+import hearthstone.carte.Race;
+import hearthstone.carte.Rarete;
+import hearthstone.cartes.Cartes;
 
 public class vueCreation extends vue {
 

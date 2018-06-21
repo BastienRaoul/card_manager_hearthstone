@@ -2,12 +2,13 @@ package hearthstone.controleur;
 
 import java.io.IOException;
 
-import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.JTabbedPane;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import hearthstone.carte.Classe;
 import hearthstone.exception.ClasseNeutreException;
-import hearthstone.vue.*;
+import hearthstone.vue.vue;
 
 public class ctrlTabbedPaneCollection implements ChangeListener {
 

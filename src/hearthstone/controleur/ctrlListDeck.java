@@ -1,7 +1,8 @@
 package hearthstone.controleur;
 
 import javax.swing.JList;
-import javax.swing.event.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 import hearthstone.cartes.Deck;
 import hearthstone.vue.vueCollection;

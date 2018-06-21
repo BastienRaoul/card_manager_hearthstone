@@ -1,6 +1,7 @@
 package hearthstone.carte;
 
 import com.google.gson.annotations.SerializedName;
+
 import hearthstone.exception.ValeurNegativeException;
 
 /**

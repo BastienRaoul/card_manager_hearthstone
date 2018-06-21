@@ -1,12 +1,17 @@
 
 package hearthstone;
 
-import java.io.*;
+import java.io.IOException;
 
-import hearthstone.carte.*;
-import hearthstone.cartes.*;
-import hearthstone.exception.*;
-import hearthstone.vue.*;
+import hearthstone.carte.Classe;
+import hearthstone.cartes.Cartes;
+import hearthstone.cartes.Deck;
+import hearthstone.cartes.FabriqueJson;
+import hearthstone.exception.CarteDejaPresenteException;
+import hearthstone.exception.ClasseNeutreException;
+import hearthstone.exception.DeckCreationException;
+import hearthstone.exception.LimiteNombreDeCartesException;
+import hearthstone.vue.vueCollection;
 
 public class Hearthstone {
 

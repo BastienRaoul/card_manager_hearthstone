@@ -1,10 +1,11 @@
 package hearthstone.controleur;
 
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 
 import hearthstone.exception.ClasseNeutreException;
-import hearthstone.vue.*;
+import hearthstone.vue.vue;
 
 public class ctrlCollectionNext implements ActionListener {
     

@@ -1,12 +1,19 @@
 package hearthstone.cartes;
 
-import hearthstone.carte.*;
+import java.util.ArrayList;
+import java.util.Collection;
+
+import hearthstone.carte.Arme;
+import hearthstone.carte.Carte;
+import hearthstone.carte.Classe;
+import hearthstone.carte.Race;
+import hearthstone.carte.Rarete;
+import hearthstone.carte.Serviteur;
+import hearthstone.carte.Sort;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.exception.CoutCreationException;
 import hearthstone.exception.GainDesenchantementException;
 import hearthstone.exception.ValeurNegativeException;
-
-import java.util.*;
 
 /**
  * Classe statique proposant diverses méthodes de filtrage de collection de

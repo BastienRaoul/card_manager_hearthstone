@@ -1,22 +1,36 @@
 package hearthstone.vue;
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.*;
-import java.net.*;
-import java.nio.channels.Channels;
-import java.nio.channels.ReadableByteChannel;
-import java.nio.file.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.io.IOException;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import javax.swing.UIManager.*;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.DropMode;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 
-import hearthstone.carte.*;
-import hearthstone.cartes.*;
-import hearthstone.controleur.*;
-import hearthstone.exception.*;
+import hearthstone.carte.Carte;
+import hearthstone.carte.Classe;
+import hearthstone.cartes.Cartes;
+import hearthstone.cartes.Deck;
+import hearthstone.controleur.ctrlChangeClasse;
+import hearthstone.exception.ClasseNeutreException;
 
 public class vueDeck extends vue {
 

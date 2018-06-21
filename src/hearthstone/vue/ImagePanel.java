@@ -1,14 +1,18 @@
 package hearthstone.vue;
 
-import java.awt.*;
-import java.net.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
 
 import hearthstone.carte.Carte;
-
-import java.awt.image.*;
-import java.io.*;
-import javax.imageio.*;
 
 /**
  * JPanel affichant une image en background

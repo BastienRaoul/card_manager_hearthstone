@@ -1,13 +1,11 @@
 package hearthstone;
 
 import java.io.IOException;
-import java.util.*;
 
-import hearthstone.carte.*;
-import hearthstone.cartes.*;
+import hearthstone.cartes.Cartes;
+import hearthstone.cartes.FabriqueJson;
 import hearthstone.exception.CarteDejaPresenteException;
-import hearthstone.exception.ValeurNegativeException;
-import hearthstone.vue.*;
+import hearthstone.vue.vueCreation;
 
 /**
  * @author lanoix-a remm-jf
@@ -18,9 +16,9 @@ public class HearthstoneCreation {
 
     public static void main(String[] args) throws CarteDejaPresenteException, IOException {
 	Cartes collection = new Cartes(FabriqueJson.lireCartesDepuisFichier("./json/cartes11.json"));
-        vueCreation main = new vueCreation(collection);
+	vueCreation main = new vueCreation(collection);
 
-        main.pack();
-        main.setVisible(true);
+	main.pack();
+	main.setVisible(true);
     }
 }
