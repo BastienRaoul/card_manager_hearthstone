@@ -15,7 +15,9 @@ import javax.swing.UIManager.*;
 
 import hearthstone.carte.*;
 import hearthstone.cartes.*;
-import hearthstone.controleur.*;
+import hearthstone.controleur.ctrlTabbedPaneCollection;
+import hearthstone.controleur.ctrlApplyFilter;
+import hearthstone.controleur.ctrlCollectionNext;
 import hearthstone.exception.*;
 import sun.awt.image.ToolkitImage;
 
@@ -103,12 +105,8 @@ public class vueDeck extends JFrame {
 	private JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
 
 	/////controlleurs
-
-	//ctrlTabbedPaneCollection changementCollection = new ctrlTabbedPaneCollection(this);
-	//classTab.addChangeListener(changementCollection);
-
-	/////
-
+	
+	///////////
 	private JList<Carte> carteList = new JList<>();
 
 	private JComboBox choixClasse = new JComboBox<>();
@@ -128,7 +126,7 @@ public class vueDeck extends JFrame {
 	private JRadioButton filtreArme = new JRadioButton("Armes");
 	private JRadioButton filtreServiteur = new JRadioButton("Serviteurs");
 	private JRadioButton filtreSort = new JRadioButton("Sorts");
-
+	public int pageNumber = 0;
 	/////
 	private Cartes collection = null;
 
@@ -307,6 +305,8 @@ public class vueDeck extends JFrame {
 		}
 
 		setVisible(true);
+
+		
 	}
 
 	//////////////////////////////////////////
@@ -517,42 +517,143 @@ public class vueDeck extends JFrame {
 
 	//////////////////////////
 	public void drawCards(ImagePanel[] cardsHolders, Classe classe) throws ClasseNeutreException, IOException {
-		Collection<Carte> cartes = Filtre.cartesParClasse(collection.collection(), classe);
+		Collection<Carte> cartes = applyFilterRace();
 
 		int counter = 0;
+		int offset = 8 * (pageNumber);
+
+		if (cartes.size() > offset) {
+			Collection<Carte> offsetedCollection = new ArrayList<>();
+
+			int count = 0;
+			for (Carte carte : cartes) {
+				if (count < offset) {
+					++count;
+					continue;
+				}
+
+				offsetedCollection.add(carte);
+
+			}
+			cartes = offsetedCollection;
+		}
+
 		for (Carte carte : cartes) {
 			if (counter == 8)
 				break;
 
-			URL url;
-
 			try {
-				url = new URL(carte.urlImage());
-			} catch (MalformedURLException e) {
-				cardsHolders[counter].setBackground(Color.GRAY);
+				cardsHolders[counter].loadPic(carte);
+			} catch (Exception e) {
 				continue;
 			}
 
-			String fileName = url.getFile().substring(url.getFile().lastIndexOf("/") + 1);
-
-			// if file is cached
-			File pic = new File("./cachedPics/" + fileName);
-			if (pic.exists() && !pic.isDirectory()) {
-				cardsHolders[counter].loadPic(pic);
-			} else {
-				System.out.println("Working Directory = " + System.getProperty("user.dir"));
-				// download and cach
-				BufferedImage image = ImageIO.read(url);
-				ImageIO.write(image, "png", pic);
-				
-				
-				cardsHolders[counter].loadPic(pic);
-			}
-
-			cardsHolders[counter].setBackground(main.getBackground());
 			++counter;
+		}
+
+		for (int i = counter; i < 8; ++i) {
+			cardsHolders[i].reset();
 		}
 	}
 
+	public Collection<Carte> applyFilterRace() throws ClasseNeutreException {
+		Collection<Carte> cartes = collection.collection();
 
+		cartes = applyFilter();
+		cartes = Filtre.cartesParClasse(cartes, getClasseFromTabbedPaneId());
+		return cartes;
+	}
+
+	public Collection<Carte> applyFilter() {
+		Collection<Carte> cartes = collection.collection();
+
+		if (filtreArme.isSelected()) {
+			cartes = Filtre.cartesArme(cartes);
+		} else if (filtreServiteur.isSelected()) {
+			cartes = Filtre.cartesServiteur(cartes);
+		} else if (filtreSort.isSelected()) {
+			cartes = Filtre.cartesSort(cartes);
+		}
+
+		if (filtreRaceCheck.isSelected()) {
+			cartes = Filtre.cartesParRace(cartes, (Race) filtreRaceCombo.getSelectedItem());
+		}
+
+		if (filtreRareteCheck.isSelected()) {
+			cartes = Filtre.cartesParRarete(cartes, (Rarete) filtreRareteCombo.getSelectedItem());
+		}
+		return cartes;
+	}
+
+	public Classe getClasseFromTabbedPaneId() {
+		switch (classTab.getSelectedIndex()) {
+		case 0:
+			return Classe.GUERRIER;
+
+		case 1:
+			return Classe.DRUIDE;
+
+		case 2:
+			return Classe.CHASSEUR;
+
+		case 3:
+			return Classe.MAGE;
+
+		case 4:
+			return Classe.PALADIN;
+
+		case 5:
+			return Classe.PRETRE;
+
+		case 6:
+			return Classe.CHAMAN;
+
+		case 7:
+			return Classe.DEMONISTE;
+
+		case 8:
+			return Classe.VOLEUR;
+
+		case 9:
+			return Classe.NEUTRE;
+
+		}
+		return null;
+	}
+
+	public ImagePanel[] getImagePanelFromTabbedPaneId() {
+		switch (classTab.getSelectedIndex()) {
+		case 0:
+			return subMainGUERRIERCards;
+
+		case 1:
+			return subMainDRUIDECards;
+
+		case 2:
+			return subMainCHASSEURCards;
+
+		case 3:
+			return subMainMAGECards;
+
+		case 4:
+			return subMainPALADINCards;
+
+		case 5:
+			return subMainPRETRECards;
+
+		case 6:
+			return subMainCHAMANCards;
+
+		case 7:
+			return subMainDEMONISTECards;
+
+		case 8:
+			return subMainVOLEURCards;
+
+		case 9:
+			return subMainNEUTRECards;
+
+		}
+		return null;
+	}
 }
