@@ -8,6 +8,7 @@ import hearthstone.vue.ImagePanel;
 import hearthstone.vue.*;
 
 public class ctrlCardClickedCreation implements MouseListener {
+    
     vueCreation mVue = null;
 
     public ctrlCardClickedCreation(vueCreation vue) {

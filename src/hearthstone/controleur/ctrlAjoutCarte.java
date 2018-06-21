@@ -10,6 +10,7 @@ import hearthstone.exception.ClasseNeutreException;
 import hearthstone.vue.*;
 
 public class ctrlAjoutCarte implements ActionListener {
+
     vueCreation mVue = null;
 
     public ctrlAjoutCarte(vueCreation vue) {

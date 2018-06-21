@@ -7,6 +7,7 @@ import hearthstone.exception.ClasseNeutreException;
 import hearthstone.vue.*;
 
 public class ctrlApplyFilter implements ActionListener {
+    
 	vueCollection mVue = null;
 
 	public ctrlApplyFilter(vueCollection vue) {

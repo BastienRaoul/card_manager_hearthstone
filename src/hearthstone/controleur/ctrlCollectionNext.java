@@ -7,6 +7,7 @@ import hearthstone.exception.ClasseNeutreException;
 import hearthstone.vue.*;
 
 public class ctrlCollectionNext implements ActionListener {
+    
     vueCollection mVue = null;
 
     /*
