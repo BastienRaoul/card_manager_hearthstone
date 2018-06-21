@@ -19,14 +19,6 @@ public class ctrlTabbedPaneCollection implements ChangeListener {
 		mVue = vue;
 	}
 
-	public ctrlTabbedPaneCollection(vueDeck vue) {
-		mVueDeck = vue;
-	}
-
-	public ctrlTabbedPaneCollection(vueCreation vue) {
-		mVueCreation = vue;
-	}
-
 	@Override
 	public void stateChanged(ChangeEvent e) {
 		switch (((JTabbedPane) e.getSource()).getSelectedIndex()) {

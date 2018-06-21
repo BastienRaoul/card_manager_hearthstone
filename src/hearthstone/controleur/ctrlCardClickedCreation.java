@@ -7,10 +7,10 @@ import hearthstone.exception.GainDesenchantementException;
 import hearthstone.vue.ImagePanel;
 import hearthstone.vue.*;
 
-public class ctrlCardClicked implements MouseListener {
-    vueCollection mVue = null;
+public class ctrlCardClickedCreation implements MouseListener {
+    vueCreation mVue = null;
 
-    public ctrlCardClicked(vueCollection vue) {
+    public ctrlCardClickedCreation(vueCreation vue) {
 	mVue = vue;
     }
 

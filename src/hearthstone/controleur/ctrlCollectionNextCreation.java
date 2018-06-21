@@ -6,15 +6,15 @@ import java.io.IOException;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.vue.*;
 
-public class ctrlCollectionNext implements ActionListener {
-    vueCollection mVue = null;
+public class ctrlCollectionNextCreation implements ActionListener {
+    vueCreation mVue = null;
 
     /*
      * true = left false = right
      */
     boolean position = false;
 
-    public ctrlCollectionNext(vueCollection vue, boolean leftOrRight) {
+    public ctrlCollectionNextCreation(vueCreation vue, boolean leftOrRight) {
 	mVue = vue;
 	position = leftOrRight;
     }
