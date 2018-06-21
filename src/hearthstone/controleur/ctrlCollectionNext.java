@@ -8,6 +8,8 @@ import hearthstone.vue.*;
 
 public class ctrlCollectionNext implements ActionListener {
 	vueCollection mVue = null;
+	vueDeck mVueDeck = null;
+	vueCreation mVueCreation = null;
 	/*
 	 * true = left false = right
 	 */
@@ -16,6 +18,14 @@ public class ctrlCollectionNext implements ActionListener {
 	public ctrlCollectionNext(vueCollection vue, boolean leftOrRight) {
 		mVue = vue;
 		position = leftOrRight;
+	}
+
+	public ctrlTabbedPaneCollection(vueDeck vue) {
+		mVueDeck = vue;
+	}
+
+	public ctrlTabbedPaneCollection(vueCreation vue) {
+		mVueCreation = vue;
 	}
 
 	@Override

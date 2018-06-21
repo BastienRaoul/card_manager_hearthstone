@@ -130,6 +130,9 @@ public class vueDeck extends JFrame {
 	/////
 	private Cartes collection = null;
 
+	private JButton applyFilter = new JButton("Appliquer");
+
+
 	public vueDeck(Cartes collection) {
 		super("DECK manager");
 
@@ -259,6 +262,7 @@ public class vueDeck extends JFrame {
 		subMainRight.setLayout(new BorderLayout());
 		subMainRight.add(listeDesDeck, BorderLayout.CENTER);
 		subMainRight.add(choixClasse, BorderLayout.NORTH);
+		subMainFilterPanel.add(applyFilter);
 	   	
         ////////////////////////////////////
         JPanel test = new JPanel();
@@ -281,7 +285,16 @@ public class vueDeck extends JFrame {
 
 		main.add(subMainCenter, BorderLayout.CENTER);
 		main.add(subMainRight, BorderLayout.EAST);
-        main.add(subMainFilterPanel, BorderLayout.SOUTH);
+		main.add(subMainFilterPanel, BorderLayout.SOUTH);
+		
+		classTab.addChangeListener(new ctrlTabbedPaneCollection(this));
+
+		cartesButtonNextRight.addActionListener(new ctrlCollectionNext(this, false));
+
+		cartesButtonNextLeft.addActionListener(new ctrlCollectionNext(this, true));
+
+		applyFilter.addActionListener(new ctrlApplyFilter(this));
+
         
 		/////////////////////////////////
 		this.getContentPane().add(main);
