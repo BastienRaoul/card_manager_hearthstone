@@ -5,7 +5,7 @@ import java.awt.event.*;
 import hearthstone.exception.CoutCreationException;
 import hearthstone.exception.GainDesenchantementException;
 import hearthstone.vue.ImagePanel;
-import hearthstone.vue.vueCollection;
+import hearthstone.vue.*;
 
 public class ctrlCardClicked implements MouseListener {
 	vueCollection mVue = null;
