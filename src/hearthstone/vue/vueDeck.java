@@ -104,11 +104,10 @@ public class vueDeck extends JFrame {
 
 	/////controlleurs
 
-	ctrlTabbedPaneCollection changementCollection = new ctrlTabbedPaneCollection(this);
-	classTab.addChangeListener(changementCollection);
-
-	/////
-
+	classTab.addChangeListener(new ctrlTabbedPaneCollection(this));
+	
+	
+	
 	private JList<Carte> carteList = new JList<>();
 
 	private JComboBox choixClasse = new JComboBox<>();
