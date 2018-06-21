@@ -101,12 +101,12 @@ public class vueCollection extends JFrame {
 	private JPanel description = new JPanel();
 
 	private JPanel textDescription = new JPanel();
-	private JTextArea textAreaDescription = new JTextArea("aaaaaaaaaaaaaaaaaaaaaaaaaaa");
+	public JTextArea textAreaDescription = new JTextArea("aaaaaaaaaaaaaaaaaaaaaaaaaaa");
 
 	private JPanel perksDescription = new JPanel();
-	private JLabel coutDescription = new JLabel("Cout :");
-	private JLabel valeurDesemDescription = new JLabel("Valeur :");
-	private JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
+	public JLabel coutDescription = new JLabel("Cout :");
+	public JLabel valeurDesemDescription = new JLabel("Valeur :");
+	public JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
 
 	/////
 
@@ -500,30 +500,12 @@ public class vueCollection extends JFrame {
 			if (counter == 8)
 				break;
 
-			URL url;
 			try {
-				url = new URL(carte.urlImage());
-			} catch (MalformedURLException e) {
-				cardsHolders[counter].setBackground(Color.GRAY);
+				cardsHolders[counter].loadPic(carte);
+			} catch (Exception e) {
 				continue;
 			}
 
-			String fileName = url.getFile().substring(url.getFile().lastIndexOf("/") + 1);
-
-			// if file is cached
-			File pic = new File("./cachedPics/" + fileName);
-			if (pic.exists() && !pic.isDirectory()) {
-				cardsHolders[counter].loadPic(pic);
-			} else {
-				// System.out.println("Working Directory = " + System.getProperty("user.dir"));
-				// download and cach
-				BufferedImage image = ImageIO.read(url);
-				ImageIO.write(image, "png", pic);
-
-				cardsHolders[counter].loadPic(pic);
-			}
-
-			cardsHolders[counter].setBackground(main.getBackground());
 			++counter;
 		}
 
