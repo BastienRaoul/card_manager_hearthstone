@@ -361,6 +361,13 @@ public class vueDeck extends JFrame {
 			mainGUERRIER.add(subMainGUERRIERCardsDisplay, BorderLayout.CENTER);
 			//
 			classTab.add(mainGUERRIER, "Guerrier");
+
+			try {
+				drawCards(subMainGUERRIERCards, Classe.GUERRIER);
+			} catch (ClasseNeutreException | IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 	}
 
 	public void classeDruide()
@@ -383,6 +390,13 @@ public class vueDeck extends JFrame {
 		mainDRUIDE.add(subMainDRUIDECardsDisplay, BorderLayout.CENTER);
 		//
 		classTab.add(mainDRUIDE, "Druide");
+
+		try {
+			drawCards(subMainDRUIDECards, Classe.DRUIDE);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
 	public void classeVoleur()
@@ -405,6 +419,13 @@ public class vueDeck extends JFrame {
 		mainVOLEUR.add(subMainVOLEURCardsDisplay, BorderLayout.CENTER);
 		//
 		classTab.add(mainVOLEUR, "Voleur");
+
+		try {
+			drawCards(subMainVOLEURCards, Classe.VOLEUR);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
 	public void classeChasseur()
@@ -427,6 +448,13 @@ public class vueDeck extends JFrame {
 		mainCHASSEUR.add(subMainCHASSEURCardsDisplay, BorderLayout.CENTER);
 		//
 		classTab.add(mainCHASSEUR, "Chasseur");
+
+		try {
+			drawCards(subMainCHASSEURCards, Classe.CHASSEUR);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
 	public void classeChaman()
@@ -449,6 +477,13 @@ public class vueDeck extends JFrame {
 		mainCHAMAN.add(subMainCHAMANCardsDisplay, BorderLayout.CENTER);
 		//
 		classTab.add(mainCHAMAN, "Chaman");
+
+		try {
+			drawCards(subMainCHAMANCards, Classe.CHAMAN);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
 	public void classePaladin()
@@ -471,6 +506,13 @@ public class vueDeck extends JFrame {
 		mainPALADIN.add(subMainPALADINCardsDisplay, BorderLayout.CENTER);
 		//
 		classTab.add(mainPALADIN, "Paladin");
+
+		try {
+			drawCards(subMainPALADINCards, Classe.PALADIN);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
 	public void classeMage()
@@ -493,6 +535,13 @@ public class vueDeck extends JFrame {
 		mainMAGE.add(subMainMAGECardsDisplay, BorderLayout.CENTER);
 		//
 		classTab.add(mainMAGE, "Mage");
+
+		try {
+			drawCards(subMainMAGECards, Classe.MAGE);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
 	public void classePretre()
@@ -514,6 +563,13 @@ public class vueDeck extends JFrame {
 		mainPRETRE.add(subMainPRETRECardsDisplay, BorderLayout.CENTER);
 		//
 		classTab.add(mainPRETRE, "Pretre");
+
+		try {
+			drawCards(subMainPRETRECards, Classe.PRETRE);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
 	public void classeDemoniste() 
