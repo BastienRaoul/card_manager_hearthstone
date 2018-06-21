@@ -107,51 +107,51 @@ public class vueCreation extends JFrame{
 	private JPanel subMainFilterPanel = new JPanel();
 
 	private JCheckBox filtreRaceCheck = new JCheckBox("Filtre par race :");
-	private JComboBox<Race> filtreRaceCombo = new JComboBox();
+	private JComboBox<Race> filtreRaceCombo = new JComboBox<>();
 
 	private JCheckBox RightRaceCheck = new JCheckBox("Filtre par race :");
-	private JComboBox<Race> RightRaceCombo = new JComboBox();
+	public JComboBox<Race> RightRaceCombo = new JComboBox<>();
 
 	private JCheckBox filtreRareteCheck = new JCheckBox("Filtre par rarete :");
-	private JComboBox<Rarete> filtreRareteCombo = new JComboBox();
+	private JComboBox<Rarete> filtreRareteCombo = new JComboBox<>();
 
 	private JCheckBox RightRareteCheck = new JCheckBox("Filtre par rarete :");
-	private JComboBox<Rarete> RightRareteCombo = new JComboBox();
+	public JComboBox<Rarete> RightRareteCombo = new JComboBox<>();
 
 
 	private ButtonGroup filtreTypeGrp = new ButtonGroup();
-	private JRadioButton filtreArme = new JRadioButton("Armes");
-	private JRadioButton filtreServiteur = new JRadioButton("Serviteurs");
-	private JRadioButton filtreSort = new JRadioButton("Sorts");
+	public JRadioButton filtreArme = new JRadioButton("Armes");
+	public JRadioButton filtreServiteur = new JRadioButton("Serviteurs");
+	public JRadioButton filtreSort = new JRadioButton("Sorts");
     /////
     private ButtonGroup RightTypeGrp = new ButtonGroup();
-	private JRadioButton RightArme = new JRadioButton("Armes");
-	private JRadioButton RightServiteur = new JRadioButton("Serviteurs");
-	private JRadioButton RightSort = new JRadioButton("Sorts");
+	public  JRadioButton RightArme = new JRadioButton("Armes");
+	public  JRadioButton RightServiteur = new JRadioButton("Serviteurs");
+	public  JRadioButton RightSort = new JRadioButton("Sorts");
     ////
 	private Cartes collection = null;
     /////
     private JPanel subMainRightButton = new JPanel();
     private JPanel subMainRightAjout = new JPanel();
-    private JTextArea Explication = new JTextArea("Explication");
-	private JLabel Description = new JLabel("description de la carte :");
-	private JTextArea Nomcarte = new JTextArea();
-	private JComboBox nbMana = new JComboBox();
+    public JTextArea Explication = new JTextArea("Explication");
+	public  JLabel Description = new JLabel("description de la carte :");
+	public  JTextArea Nomcarte = new JTextArea();
+	public  JComboBox<Integer> nbMana = new JComboBox<>();
 	private JTextArea Nom = new JTextArea("Nom :");
 	private JTextArea Mana = new JTextArea("Mana :");
 	private JTextArea degat = new JTextArea("Degat");
-	private JComboBox deg = new JComboBox();
+	public  JComboBox<Integer> deg = new JComboBox<>();
 
 	private JTextArea PointDeVie = new JTextArea("Point de Vie :");
-	private JComboBox PointVie = new JComboBox();
+	public  JComboBox<Integer> PointVie = new JComboBox<>();
 
-	private JComboBox Class = new JComboBox();
+	public  JComboBox<Classe> Class = new JComboBox<>();
 
 	private JTextField pouset = new JTextField("Poussière d'étoiles :");
 	private JTextField nbpous = new JTextField("2000");
 
 	public vueCreation() {
-super("DECK manager");
+	super("DECK manager");
 
 		this.collection = collection;
 		/////////////////////////////////
@@ -458,8 +458,17 @@ Object[] PV = new Object[]{"0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
 PointVie = new JComboBox(PV);
 subMainRightAjout.add(PointVie);
 
-Object[] classe = new Object[]{"NEUTRE","DRUIDE","CHASSEUR","MAGE","PALADIN","PRETRE","CHAMAN","DEMONISTE","VOLEUR","GUERRIER"};
-Class = new JComboBox(classe);
+
+Class.addItem(Classe.NEUTRE);
+Class.addItem(Classe.PALADIN);
+Class.addItem(Classe.PRETRE);
+Class.addItem(Classe.VOLEUR);
+Class.addItem(Classe.CHAMAN);
+Class.addItem(Classe.CHASSEUR);
+Class.addItem(Classe.DEMONISTE);
+Class.addItem(Classe.DRUIDE);
+Class.addItem(Classe.GUERRIER);
+Class.addItem(Classe.MAGE);
 subMainRightAjout.add(Class);
 
 
