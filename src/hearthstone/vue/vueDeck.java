@@ -17,6 +17,7 @@ import hearthstone.carte.*;
 import hearthstone.cartes.*;
 import hearthstone.controleur.ctrlTabbedPaneCollection;
 import hearthstone.controleur.ctrlApplyFilter;
+import hearthstone.controleur.ctrlChangeClasse;
 import hearthstone.controleur.ctrlCollectionNext;
 import hearthstone.exception.*;
 import sun.awt.image.ToolkitImage;
@@ -304,14 +305,15 @@ public class vueDeck extends JFrame {
 		main.add(subMainCenter, BorderLayout.CENTER);
 		main.add(subMainRight, BorderLayout.EAST);
 		main.add(subMainFilterPanel, BorderLayout.SOUTH);
-		
+		////////Controlleurs
+
 		classTab.addChangeListener(new ctrlTabbedPaneCollection(this));
 
 		cartesButtonNextRight.addActionListener(new ctrlCollectionNext(this, false));
 		cartesButtonNextLeft.addActionListener(new ctrlCollectionNext(this, true));
 		applyFilter.addActionListener(new ctrlApplyFilter(this));
 
-        
+        choixClasse.addItemListener(new ctrlChangeClasse(this));
 		/////////////////////////////////
 		this.getContentPane().add(main);
 
