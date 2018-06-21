@@ -677,38 +677,42 @@ public class vueDeck extends JFrame {
 	}
 
 	public Classe getClasse() {
-		switch (choixClasse.getSelectedItem().toString()) {
-		case "GUERRIER":
-			return Classe.GUERRIER;
+		if(choixClasse.getSelectedItem()!= null)
+		{
+			switch (choixClasse.getSelectedItem().toString()) {
+			case "GUERRIER":
+				return Classe.GUERRIER;
 
-		case "DRUIDE":
-			return Classe.DRUIDE;
+			case "DRUIDE":
+				return Classe.DRUIDE;
 
-		case "CHASSEUR":
-			return Classe.CHASSEUR;
+			case "CHASSEUR":
+				return Classe.CHASSEUR;
 
-		case "MAGE":
-			return Classe.MAGE;
+			case "MAGE":
+				return Classe.MAGE;
 
-		case "PALADIN":
-			return Classe.PALADIN;
+			case "PALADIN":
+				return Classe.PALADIN;
 
-		case "PRETRE":
-			return Classe.PRETRE;
+			case "PRETRE":
+				return Classe.PRETRE;
 
-		case "CHAMAN":
-			return Classe.CHAMAN;
+			case "CHAMAN":
+				return Classe.CHAMAN;
 
-		case "DEMONISTE":
-			return Classe.DEMONISTE;
+			case "DEMONISTE":
+				return Classe.DEMONISTE;
 
-		case "VOLEUR":
-			return Classe.VOLEUR;
+			case "VOLEUR":
+				return Classe.VOLEUR;
 
-		default:
+			default:
 			return Classe.NEUTRE;
-
+			}
 		}
+	
+		return Classe.NEUTRE;
 	}
 
 }
