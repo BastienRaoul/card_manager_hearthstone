@@ -24,7 +24,7 @@ public class ctrlChangeClasse implements ItemListener{
     public void itemStateChanged(ItemEvent e) 
     {
         this.mVue.classeSupp();
-        switch((String) e.getItem())
+        switch(e.getItem().toString())
         {
         case "DRUIDE": this.mVue.classeDruide();
             break;
@@ -46,5 +46,6 @@ public class ctrlChangeClasse implements ItemListener{
             break;
         default: break;
         }
+        
 	}
 }

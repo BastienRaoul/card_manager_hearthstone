@@ -520,6 +520,13 @@ public class vueDeck extends JFrame {
 		mainDEMONISTE.add(subMainDEMONISTECardsDisplay, BorderLayout.CENTER);
 		//
 		classTab.add(mainDEMONISTE, "Demoniste");
+
+		try {
+			drawCards(subMainDEMONISTECards, Classe.DEMONISTE);
+		} catch (ClasseNeutreException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}	
 
 	//////////////////////////////////////////////
