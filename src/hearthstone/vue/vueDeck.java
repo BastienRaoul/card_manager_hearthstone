@@ -104,8 +104,8 @@ public class vueDeck extends JFrame {
 
 	/////controlleurs
 
-	ctrlTabbedPaneCollection changementCollection = new ctrlTabbedPaneCollection(this);
-	classTab.addChangeListener(changementCollection);
+	//ctrlTabbedPaneCollection changementCollection = new ctrlTabbedPaneCollection(this);
+	//classTab.addChangeListener(changementCollection);
 
 	/////
 
@@ -554,5 +554,5 @@ public class vueDeck extends JFrame {
 		}
 	}
 
-	
+
 }

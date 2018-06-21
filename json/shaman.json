@@ -1,33 +1,4 @@
-[
-    {
-        "cardId": "HERO_02a",
-        "dbfId": "40183",
-        "name": "Morgl l\u2019Oracle",
-        "cardSet": "Hero Skins",
-        "type": "Hero",
-        "rarity": "Epic",
-        "health": 30,
-        "collectible": true,
-        "playerClass": "Shaman",
-        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_02a.png",
-        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_02a_premium.gif",
-        "locale": "frFR"
-    },
-    {
-        "cardId": "HERO_02",
-        "dbfId": "1066",
-        "name": "Thrall",
-        "cardSet": "Basic",
-        "type": "Hero",
-        "faction": "Neutral",
-        "rarity": "Free",
-        "health": 30,
-        "collectible": true,
-        "playerClass": "Shaman",
-        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/HERO_02.png",
-        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/HERO_02_premium.gif",
-        "locale": "frFR"
-    },
+[   
     {
         "cardId": "CS2_041",
         "dbfId": "149",
@@ -2115,32 +2086,7 @@
                 "name": "Provocation"
             }
         ]
-    },
-    {
-        "cardId": "ICC_481",
-        "dbfId": "42987",
-        "name": "Thrall le mort-voyant",
-        "cardSet": "Knights of the Frozen Throne",
-        "type": "Hero",
-        "rarity": "Legendary",
-        "cost": 5,
-        "health": 30,
-        "armor": "5",
-        "text": "<b>Cri de guerre_:</b> transforme vos serviteurs en serviteurs al\u00e9atoires qui co\u00fbtent (2)_cristaux de plus.",
-        "flavor": "\u00ab_N\u2019ayez pas peur. Approchez. Les morts dorment\u2026 pour le moment._\u00bb",
-        "artist": "Jerry Mascho",
-        "collectible": true,
-        "elite": true,
-        "playerClass": "Shaman",
-        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/ICC_481.png",
-        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/ICC_481_premium.gif",
-        "locale": "frFR",
-        "mechanics": [
-            {
-                "name": "Cri de guerre"
-            }
-        ]
-    },
+    },    
     {
         "cardId": "AT_049",
         "dbfId": "2615",
@@ -2500,32 +2446,7 @@
                 "name": "Provocation"
             }
         ]
-    },
-    {
-        "cardId": "GIL_504",
-        "dbfId": "46887",
-        "name": "Hagatha la sorci\u00e8re",
-        "cardSet": "The Witchwood",
-        "type": "Hero",
-        "rarity": "Legendary",
-        "cost": 8,
-        "health": 30,
-        "armor": "5",
-        "text": "<b>Cri de guerre_:</b> inflige 3_|4(point,points) de d\u00e9g\u00e2ts \u00e0 tous_les_serviteurs.",
-        "flavor": "Lanceuse de mal\u00e9dictions, corruptrice d\u2019arbres, m\u00e8re de cr\u00e9atures maudites\u2026 Et joueuse de Hanzo.",
-        "artist": "Alex Horley Orlandelli",
-        "collectible": true,
-        "elite": true,
-        "playerClass": "Shaman",
-        "img": "http://wow.zamimg.com/images/hearthstone/cards/frfr/original/GIL_504.png",
-        "imgGold": "http://wow.zamimg.com/images/hearthstone/cards/frfr/animated/GIL_504_premium.gif",
-        "locale": "frFR",
-        "mechanics": [
-            {
-                "name": "Cri de guerre"
-            }
-        ]
-    },
+    },    
     {
         "cardId": "LOOT_506",
         "dbfId": "46305",
