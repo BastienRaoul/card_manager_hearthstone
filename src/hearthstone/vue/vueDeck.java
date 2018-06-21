@@ -296,7 +296,7 @@ public class vueDeck extends JFrame {
 		/////////////////////////////////
 		this.getContentPane().add(main);
 
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
 		this.setPreferredSize(new Dimension(X, Y));
