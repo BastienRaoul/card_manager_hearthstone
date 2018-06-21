@@ -278,6 +278,7 @@ public class vueDeck extends JFrame {
         titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
 
 		JTextField nomDeck = new JTextField();
+		nomDeck.setText("*Deck*");
 		titreDeck.add(choixClasse);
 		titreDeck.add(nomDeck);                      
         
