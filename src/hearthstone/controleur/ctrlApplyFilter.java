@@ -8,9 +8,19 @@ import hearthstone.vue.*;
 
 public class ctrlApplyFilter implements ActionListener {
 	vueCollection mVue = null;
+	vueDeck mVueDeck = null;
+	vueCreation mVueCreation = null;
 
 	public ctrlApplyFilter(vueCollection vue) {
 		mVue = vue;
+	}
+
+	public ctrlTabbedPaneCollection(vueDeck vue) {
+		mVueDeck = vue;
+	}
+
+	public ctrlTabbedPaneCollection(vueCreation vue) {
+		mVueCreation = vue;
 	}
 
 	@Override
