@@ -20,6 +20,7 @@ import com.sun.net.httpserver.Filter;
 import hearthstone.carte.*;
 import hearthstone.cartes.*;
 import hearthstone.controleur.ctrlApplyFilter;
+import hearthstone.controleur.ctrlCardClicked;
 import hearthstone.controleur.ctrlCollectionNext;
 import hearthstone.controleur.ctrlTabbedPaneCollection;
 import hearthstone.exception.*;
@@ -46,6 +47,9 @@ public class vueCollection extends JFrame {
 	private JPanel cartesRight = new JPanel(new BorderLayout());
 	private JButton cartesButtonNextRight = new JButton(">");
 	//
+	
+	private ctrlCardClicked ctrlCards = new ctrlCardClicked(this);
+	
 	/////
 	private JPanel mainGUERRIER = null;
 	private JPanel subMainGUERRIERLabel = new JPanel();
@@ -164,6 +168,7 @@ public class vueCollection extends JFrame {
 			for (int i = 0; i < 8; ++i) {
 				subMainGUERRIERCards[i] = new ImagePanel();
 				subMainGUERRIERCards[i].setBackground(Color.GRAY);
+				subMainGUERRIERCards[i].addMouseListener(ctrlCards);
 				subMainGUERRIERCardsDisplay.add(subMainGUERRIERCards[i]);
 			}
 
@@ -184,6 +189,7 @@ public class vueCollection extends JFrame {
 			for (int i = 0; i < 8; ++i) {
 				subMainDRUIDECards[i] = new ImagePanel();
 				subMainDRUIDECards[i].setBackground(Color.GRAY);
+				subMainDRUIDECards[i].addMouseListener(ctrlCards);
 				subMainDRUIDECardsDisplay.add(subMainDRUIDECards[i]);
 			}
 
@@ -204,6 +210,7 @@ public class vueCollection extends JFrame {
 			for (int i = 0; i < 8; ++i) {
 				subMainCHASSEURCards[i] = new ImagePanel();
 				subMainCHASSEURCards[i].setBackground(Color.GRAY);
+				subMainCHASSEURCards[i].addMouseListener(ctrlCards);
 				subMainCHASSEURCardsDisplay.add(subMainCHASSEURCards[i]);
 			}
 
@@ -224,6 +231,7 @@ public class vueCollection extends JFrame {
 			for (int i = 0; i < 8; ++i) {
 				subMainMAGECards[i] = new ImagePanel();
 				subMainMAGECards[i].setBackground(Color.GRAY);
+				subMainMAGECards[i].addMouseListener(ctrlCards);
 				subMainMAGECardsDisplay.add(subMainMAGECards[i]);
 			}
 
@@ -244,6 +252,7 @@ public class vueCollection extends JFrame {
 			for (int i = 0; i < 8; ++i) {
 				subMainPALADINCards[i] = new ImagePanel();
 				subMainPALADINCards[i].setBackground(Color.GRAY);
+				subMainPALADINCards[i].addMouseListener(ctrlCards);
 				subMainPALADINCardsDisplay.add(subMainPALADINCards[i]);
 			}
 
@@ -264,6 +273,7 @@ public class vueCollection extends JFrame {
 			for (int i = 0; i < 8; ++i) {
 				subMainPRETRECards[i] = new ImagePanel();
 				subMainPRETRECards[i].setBackground(Color.GRAY);
+				subMainPRETRECards[i].addMouseListener(ctrlCards);
 				subMainPRETRECardsDisplay.add(subMainPRETRECards[i]);
 			}
 
@@ -284,6 +294,7 @@ public class vueCollection extends JFrame {
 			for (int i = 0; i < 8; ++i) {
 				subMainCHAMANCards[i] = new ImagePanel();
 				subMainCHAMANCards[i].setBackground(Color.GRAY);
+				subMainCHAMANCards[i].addMouseListener(ctrlCards);
 				subMainCHAMANCardsDisplay.add(subMainCHAMANCards[i]);
 			}
 
@@ -304,6 +315,7 @@ public class vueCollection extends JFrame {
 			for (int i = 0; i < 8; ++i) {
 				subMainDEMONISTECards[i] = new ImagePanel();
 				subMainDEMONISTECards[i].setBackground(Color.GRAY);
+				subMainDEMONISTECards[i].addMouseListener(ctrlCards);
 				subMainDEMONISTECardsDisplay.add(subMainDEMONISTECards[i]);
 			}
 
@@ -324,6 +336,7 @@ public class vueCollection extends JFrame {
 			for (int i = 0; i < 8; ++i) {
 				subMainVOLEURCards[i] = new ImagePanel();
 				subMainVOLEURCards[i].setBackground(Color.GRAY);
+				subMainVOLEURCards[i].addMouseListener(ctrlCards);
 				subMainVOLEURCardsDisplay.add(subMainVOLEURCards[i]);
 			}
 
@@ -344,6 +357,7 @@ public class vueCollection extends JFrame {
 			for (int i = 0; i < 8; ++i) {
 				subMainNEUTRECards[i] = new ImagePanel();
 				subMainNEUTRECards[i].setBackground(Color.GRAY);
+				subMainNEUTRECards[i].addMouseListener(ctrlCards);
 				subMainNEUTRECardsDisplay.add(subMainNEUTRECards[i]);
 			}
 
