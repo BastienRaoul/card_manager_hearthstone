@@ -193,6 +193,14 @@ public class vueDeck extends JFrame {
 		carteList.setLayoutOrientation(JList.HORIZONTAL_WRAP);
 		carteList.setVisibleRowCount(-1);
 
+		// Drag & Drop Image dans List
+		carteList.setDragEnabled(true);
+		carteList.setDropMode(DropMode.INSERT);
+
+
+
+
+		//////////////////////////////////////////////////////
 		JScrollPane listeDesDeck = new JScrollPane(carteList);
 		listeDesDeck.setPreferredSize(new Dimension(250, 80));
 
@@ -262,9 +270,17 @@ public class vueDeck extends JFrame {
 		subMainCenter.add(cartesRight, BorderLayout.EAST);
 
 		subMainRight.setLayout(new BorderLayout());
-		subMainRight.add(listeDesDeck, BorderLayout.CENTER);
-		subMainRight.add(choixClasse, BorderLayout.NORTH);
+		subMainRight.add(listeDesDeck, BorderLayout.CENTER);		
 		subMainFilterPanel.add(applyFilter);
+
+		JPanel titreDeck = new JPanel();
+        titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
+
+		JTextField nomDeck = new JTextField();
+		titreDeck.add(choixClasse);
+		titreDeck.add(nomDeck);                      
+        
+        subMainRight.add(titreDeck, BorderLayout.NORTH);      
 	   	
         ////////////////////////////////////
         JPanel test = new JPanel();
