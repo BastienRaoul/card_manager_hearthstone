@@ -23,24 +23,18 @@ public class ctrlCardClicked implements MouseListener {
 	((ImagePanel) e.getSource()).setSelected(mVue.getCurrentImagePanels());
 
 	mVue.textAreaDescription.setText("<html>" + ((ImagePanel) e.getSource()).mCarte.description() + "</html>");
+
 	try {
 	    mVue.coutDescription
 		    .setText("Cout : " + Integer.toString(((ImagePanel) e.getSource()).mCarte.coutCreation()));
-	} catch (CoutCreationException e1) {
-	    e1.printStackTrace();
-	}
-	try {
 	    mVue.valeurDesemDescription
 		    .setText("Valeur : " + Integer.toString(((ImagePanel) e.getSource()).mCarte.gainDesenchantement()));
-	} catch (GainDesenchantementException e1) {
-	    e1.printStackTrace();
+	} catch (Exception err) {
+
 	}
-	/*
-	 * TODO try {
-	 * mVue.nbExemplairesDescription.setText(Integer.toString(((ImagePanel) //
-	 * e.getSource()).mCarte.qsdfqsdfqsdf)); } catch (GainDesenchantementException
-	 * e1) { e1.printStackTrace(); }
-	 */
+	mVue.nbExemplairesDescription.setText(
+		"Exemplaire : " + mVue.collection.getNbExemplaireFromDenombrement(((ImagePanel) e.getSource()).mCarte));
+
     }
 
     @Override

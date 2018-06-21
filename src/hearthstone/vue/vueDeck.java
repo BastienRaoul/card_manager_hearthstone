@@ -26,7 +26,7 @@ public class vueDeck extends JFrame {
     private final int X = 1280;
     private final int Y = 720;
 
-    private Cartes collection = null;
+    public Cartes collection = null;
 
     public int pageNumber = 0;
 
@@ -107,9 +107,9 @@ public class vueDeck extends JFrame {
     public JTextArea textAreaDescription = new JTextArea("Description...");
 
     private JPanel perksDescription = new JPanel();
-    public JLabel coutDescription = new JLabel("Cout :");
-    public JLabel valeurDesemDescription = new JLabel("Valeur :");
-    public JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
+    public JLabel coutDescription = new JLabel("Cout : 0");
+    public JLabel valeurDesemDescription = new JLabel("Valeur : 0");
+    public JLabel nbExemplairesDescription = new JLabel("Exemplaires : 0");
 
     /////
 
@@ -1030,5 +1030,15 @@ public class vueDeck extends JFrame {
 	    return subMainNEUTRECards;
 	}
 	return null;
+    }
+
+    public void resetDesciption() {
+	textAreaDescription.setText("");
+
+	coutDescription.setText("Cout : 0");
+	valeurDesemDescription.setText("Valeur : 0");
+
+	nbExemplairesDescription.setText("Exemplaire : 0");
+
     }
 }

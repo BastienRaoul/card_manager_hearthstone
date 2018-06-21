@@ -110,9 +110,9 @@ public class vueCreation extends JFrame {
     public JTextArea textAreaDescription = new JTextArea("Description...");
 
     private JPanel perksDescription = new JPanel();
-    public JLabel coutDescription = new JLabel("Cout :");
-    public JLabel valeurDesemDescription = new JLabel("Valeur :");
-    public JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
+    public JLabel coutDescription = new JLabel("Cout : 0");
+    public JLabel valeurDesemDescription = new JLabel("Valeur : 0");
+    public JLabel nbExemplairesDescription = new JLabel("Exemplaires : 0");
 
     /////
     private JPanel subMainFilterPanel = new JPanel();
@@ -556,12 +556,11 @@ public class vueCreation extends JFrame {
 
 	applyFilter.addActionListener(new ctrlApplyFilterCreation(this));
 
-	
 	/////////////////////////////////
 	this.getContentPane().add(main);
-	
-	//setUndecorated(true);
-	//this.setLocation(300, 300);
+
+	// setUndecorated(true);
+	// this.setLocation(300, 300);
 
 	this.setPreferredSize(new Dimension(X + 200, Y));
 	setSize(X, Y);
@@ -721,39 +720,49 @@ public class vueCreation extends JFrame {
 	}
 	return cartes;
     }
-    
+
     public ImagePanel[] getCurrentImagePanels() {
-   	switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
-   	case "Guerrier":
-   	    return subMainGUERRIERCards;
+	switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
+	case "Guerrier":
+	    return subMainGUERRIERCards;
 
-   	case "Druide":
-   	    return subMainDRUIDECards;
+	case "Druide":
+	    return subMainDRUIDECards;
 
-   	case "Chasseur":
-   	    return subMainCHASSEURCards;
+	case "Chasseur":
+	    return subMainCHASSEURCards;
 
-   	case "Mage":
-   	    return subMainMAGECards;
+	case "Mage":
+	    return subMainMAGECards;
 
-   	case "Paladin":
-   	    return subMainPALADINCards;
+	case "Paladin":
+	    return subMainPALADINCards;
 
-   	case "Pretre":
-   	    return subMainPRETRECards;
+	case "Pretre":
+	    return subMainPRETRECards;
 
-   	case "Chaman":
-   	    return subMainCHAMANCards;
+	case "Chaman":
+	    return subMainCHAMANCards;
 
-   	case "Demoniste":
-   	    return subMainDEMONISTECards;
+	case "Demoniste":
+	    return subMainDEMONISTECards;
 
-   	case "Voleur":
-   	    return subMainVOLEURCards;
+	case "Voleur":
+	    return subMainVOLEURCards;
 
-   	case "Neutral":
-   	    return subMainNEUTRECards;
-   	}
-   	return null;
-       }
+	case "Neutral":
+	    return subMainNEUTRECards;
+	}
+	return null;
+    }
+
+    public void resetDesciption() {
+	textAreaDescription.setText("");
+
+	coutDescription.setText("Cout : 0");
+	valeurDesemDescription.setText("Valeur : 0");
+
+	nbExemplairesDescription.setText("Exemplaire : 0");
+
+    }
 }

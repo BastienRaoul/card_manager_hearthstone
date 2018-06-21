@@ -103,7 +103,7 @@ public class ctrlTabbedPaneCollectionCreation implements ChangeListener {
 	default:
 	    break;
 	}
-
+	mVue.resetDesciption();	
 	mVue.pageNumber = 0;
     }
 }

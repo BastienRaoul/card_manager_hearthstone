@@ -106,9 +106,9 @@ public class vueCollection extends JFrame {
     public JTextArea textAreaDescription = new JTextArea("Description...");
 
     private JPanel perksDescription = new JPanel();
-    public JLabel coutDescription = new JLabel("Cout :");
-    public JLabel valeurDesemDescription = new JLabel("Valeur :");
-    public JLabel nbExemplairesDescription = new JLabel("Exemplaires :");
+    public JLabel coutDescription = new JLabel("Cout : 0");
+    public JLabel valeurDesemDescription = new JLabel("Valeur : 0");
+    public JLabel nbExemplairesDescription = new JLabel("Exemplaires : 0");
 
     /////
     private JList<Deck> deckList = null;
@@ -133,7 +133,7 @@ public class vueCollection extends JFrame {
     private JRadioButton filtreNone = new JRadioButton("None");
 
     private JButton applyFilter = new JButton("Appliquer");
-    
+
     /////
 
     public vueCollection(Cartes collection) {
@@ -389,7 +389,7 @@ public class vueCollection extends JFrame {
 	subMainRight.add(creationDeck, BorderLayout.SOUTH);
 
 	////////////////////////////////
-	
+
 	description.setLayout(new BorderLayout());
 
 	textDescription.setLayout(new BorderLayout());
@@ -443,7 +443,7 @@ public class vueCollection extends JFrame {
 	subMainFilterPanel.add(filtreRareteCombo);
 
 	subMainFilterPanel.add(applyFilter);
-	
+
 	/////////////////////////////////
 
 	try {
@@ -672,4 +672,13 @@ public class vueCollection extends JFrame {
 	return null;
     }
 
+    public void resetDesciption() {
+	textAreaDescription.setText("");
+
+	coutDescription.setText("Cout : 0");
+	valeurDesemDescription.setText("Valeur : 0");
+
+	nbExemplairesDescription.setText("Exemplaire : 0");
+
+    }
 }

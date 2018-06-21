@@ -44,6 +44,7 @@ public class ctrlCollectionNext implements ActionListener {
 	    --mVue.pageNumber;
 	    mVue.drawCards(mVue.getImagePanelFromTabbedPaneId(), mVue.getClasseFromTabbedPaneId());
 	    System.out.println("right page : " + mVue.pageNumber + " " + mVue.applyFilterRace().size());
+	    mVue.resetDesciption();	
 	}
     }
 
@@ -52,6 +53,7 @@ public class ctrlCollectionNext implements ActionListener {
 	    ++mVue.pageNumber;
 	    mVue.drawCards(mVue.getImagePanelFromTabbedPaneId(), mVue.getClasseFromTabbedPaneId());
 	    System.out.println("right page : " + mVue.pageNumber + " " + mVue.applyFilterRace().size());
+	    mVue.resetDesciption();	
 	}
     }
 }

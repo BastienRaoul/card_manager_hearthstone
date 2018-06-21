@@ -104,7 +104,7 @@ public class ctrlTabbedPaneCollectionDeck implements ChangeListener {
 	default:
 	    break;
 	}
-
+	mVue.resetDesciption();	
 	mVue.pageNumber = 0;
     }
 }
