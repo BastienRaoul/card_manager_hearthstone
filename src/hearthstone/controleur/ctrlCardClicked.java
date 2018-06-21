@@ -3,7 +3,7 @@ package hearthstone.controleur;
 import java.awt.event.*;
 
 import hearthstone.vue.ImagePanel;
-import hearthstone.vue.vueCollection;
+import hearthstone.vue.*;
 
 public class ctrlCardClicked implements MouseListener {
 	vueCollection mVue = null;
@@ -14,11 +14,11 @@ public class ctrlCardClicked implements MouseListener {
 		mVue = null;
 	}
 
-	public ctrlTabbedPaneCollection(vueDeck vue) {
+	public ctrlCardClicked(vueDeck vue) {
 		mVueDeck = vue;
 	}
 
-	public ctrlTabbedPaneCollection(vueCreation vue) {
+	public ctrlCardClicked(vueCreation vue) {
 		mVueCreation = vue;
 	}
 

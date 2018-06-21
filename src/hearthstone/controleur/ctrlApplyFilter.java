@@ -15,11 +15,11 @@ public class ctrlApplyFilter implements ActionListener {
 		mVue = vue;
 	}
 
-	public ctrlTabbedPaneCollection(vueDeck vue) {
+	public ctrlApplyFilter(vueDeck vue) {
 		mVueDeck = vue;
 	}
 
-	public ctrlTabbedPaneCollection(vueCreation vue) {
+	public ctrlApplyFilter(vueCreation vue) {
 		mVueCreation = vue;
 	}
 

@@ -20,11 +20,11 @@ public class ctrlCollectionNext implements ActionListener {
 		position = leftOrRight;
 	}
 
-	public ctrlTabbedPaneCollection(vueDeck vue) {
+	public ctrlCollectionNext(vueDeck vue, boolean leftOrRight) {
 		mVueDeck = vue;
 	}
 
-	public ctrlTabbedPaneCollection(vueCreation vue) {
+	public ctrlCollectionNext(vueCreation vue, boolean leftOrRight) {
 		mVueCreation = vue;
 	}
 
