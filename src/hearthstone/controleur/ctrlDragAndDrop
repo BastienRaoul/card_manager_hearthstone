@@ -2,6 +2,18 @@ package hearthstone.controleur;
 
 import java.awt.event.*;
 
-public class ctrlDragAndDrop implements {
+import javax.swing.*;
+
+import hearthstone.vue.*;
+
+public class ctrlDragAndDrop implements MouseListener  {
+    
+    vueDeck mVue = nul;
+
+    public ctrlDragAndDrop(vueDeck vue)
+    {
+        mVue = vue;
+    }
+
     
 }
