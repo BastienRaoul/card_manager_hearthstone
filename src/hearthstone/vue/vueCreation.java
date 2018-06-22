@@ -22,11 +22,8 @@ import hearthstone.carte.Classe;
 import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
-<<<<<<< HEAD
 import hearthstone.controleur.ctrlTerminerFenetre;
-=======
 import hearthstone.controleur.ctrlAjoutImage;
->>>>>>> da4f2bebb5519784ad9d457aa638798c7249444e
 
 //Classe vueCreation héritant de vue, affichant l'interface de création de cartes
 public class vueCreation extends vue {
@@ -78,7 +75,7 @@ public class vueCreation extends vue {
 
 	//////
 	private JLabel pousseireEtoile = new JLabel("Poussiere d'étoiles :");
-	private JLabel nbPoussiereEtoile = new JLabel("2000");
+	public JLabel nbPoussiereEtoile = new JLabel("2000");
 
 	////////
 
@@ -167,15 +164,14 @@ public class vueCreation extends vue {
 		panFile.add(file);
 		file.addActionListener(new ctrlAjoutImage(this));
 
-<<<<<<< HEAD
-=======
 		// Bouton pour ajouter une image a la carte créée
 		subMainRight.add(ajoutCarteButton);
 
->>>>>>> da4f2bebb5519784ad9d457aa638798c7249444e
 		subMainRightButton.setLayout(new GridLayout(0, 2));
 		subMainRightButton.add(creationBoutton);
 		subMainRightButton.add(destructionCarte);
+		subMainRightButton.add(pousseireEtoile);
+		subMainRightButton.add(nbPoussiereEtoile);
 		subMainRight.add(subMainRightButton);
 
 		subMainRightButton2.setLayout(new GridLayout(0, 2));
