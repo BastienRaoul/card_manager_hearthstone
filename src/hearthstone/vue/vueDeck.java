@@ -16,6 +16,12 @@ import hearthstone.exception.ClasseNeutreException;
 import hearthstone.exception.DeckCreationException;
 import hearthstone.exception.LimiteNombreDeCartesException;
 
+/**
+ * Cette vue permet d'afficher les cartes contenus dans un deck, d'ajouter des cartes dans le deck affiché ou encore de supprimer des cartes du deck.
+ * Cette vue s'ouvre après avoir cliquer sur le boutons "Nouveau deck" de la vue vueCollection ou 
+ * après avoir selectionner un deck déjà créé sur la vue vueCollection.
+ */
+
 public class vueDeck extends vue {
 
 	public Deck mDeck = null;
