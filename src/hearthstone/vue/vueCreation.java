@@ -22,13 +22,8 @@ import hearthstone.carte.Classe;
 import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
-<<<<<<< HEAD
-import hearthstone.controleur.ctrlTerminerFenetre;
-import hearthstone.controleur.ctrlAjoutImage;
-=======
 import hearthstone.controleur.ctrlAjoutImage;
 import hearthstone.controleur.ctrlTerminerFenetre;
->>>>>>> dac01460d28827505e5c9b451500d0a0a5c08a1e
 
 //Classe vueCreation héritant de vue, affichant l'interface de création de cartes
 public class vueCreation extends vue {
