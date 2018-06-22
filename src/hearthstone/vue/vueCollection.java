@@ -19,10 +19,8 @@ import hearthstone.carte.Carte;
 import hearthstone.carte.Classe;
 import hearthstone.cartes.Cartes;
 import hearthstone.cartes.Deck;
-import hearthstone.controleur.ctrlListDeck;
-import hearthstone.controleur.ctrlNewCreationCards;
-import hearthstone.controleur.ctrlNewCreationDeck;
-import hearthstone.exception.ClasseNeutreException;
+import hearthstone.controleur.*;
+
 
 public class vueCollection extends vue {
 
