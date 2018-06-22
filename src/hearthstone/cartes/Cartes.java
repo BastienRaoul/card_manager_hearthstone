@@ -42,7 +42,7 @@ public class Cartes implements ManipulationCartes {
 
     /*
      * 
-     * Implémentation du dénombrement. Permet à l'interface de mieux gérer les
+     * ImplÃ©mentation du dï¿½nombrement. Permet Ã  l'interface de mieux gï¿½rer les
      * cartes.
      * 
      */
@@ -236,7 +236,7 @@ public class Cartes implements ManipulationCartes {
 
     /**
      *
-     * @return la liste des dénombrement des cartes de la collection.
+     * @return la liste des dÃ©nombrement des cartes de la collection.
      */
     public List<Deck> decombrements() {
 	return maListeDeDeck;
@@ -263,8 +263,8 @@ public class Cartes implements ManipulationCartes {
     /**
      * 
      * @param la
-     *            carte a décombrer
-     * @return le nombre de cartes posédées
+     *            carte a dï¿½combrer
+     * @return le nombre de cartes posï¿½dï¿½es
      */
     public int getNbExemplaireFromDenombrement(Carte carte) {
 	for (Denombrement denomb : monDenombrement) {

@@ -30,6 +30,7 @@ import hearthstone.carte.Classe;
 import hearthstone.cartes.Cartes;
 import hearthstone.cartes.Deck;
 import hearthstone.controleur.ctrlChangeClasse;
+import hearthstone.controleur.ctrlCreaDeckAccueil;
 import hearthstone.exception.ClasseNeutreException;
 
 public class vueDeck extends vue {
@@ -41,7 +42,8 @@ public class vueDeck extends vue {
 
     private JComboBox<Classe> choixClasse = new JComboBox<>();
 
-    private JButton creationDeck = new JButton("Terminer");
+	private JButton creationDeck = new JButton("Terminer");
+	
     /////////////////////////
 
     /////
@@ -52,11 +54,11 @@ public class vueDeck extends vue {
 	mDeck = currentDeck;
 
 	classTab.removeAll();
-	classeVoleur();
+	classeGuerrier();
 	classeNeutre();
 
 	/////////////////////////////////
-	subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
+	subMainRight.setBorder(BorderFactory.createTitledBorder("CrÃ©ation de deck..."));
 
 	carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 	carteList.setLayoutOrientation(JList.HORIZONTAL_WRAP);
@@ -141,6 +143,8 @@ public class vueDeck extends vue {
 	} catch (Exception e) {
 	    System.out.println("No nimbus");
 	}
+
+	creationDeck.addActionListener(new ctrlCreaDeckAccueil(this));
 
 	setVisible(true);
     }

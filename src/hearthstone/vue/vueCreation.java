@@ -52,12 +52,12 @@ public class vueCreation extends vue {
     //
     private JPanel subMainRightButton = new JPanel();
 
-    private JButton creationBoutton = new JButton("Créer carte.");
-    private JButton destructionCarte = new JButton("Détruire carte.");
+    private JButton creationBoutton = new JButton("CrÃ©er carte.");
+    private JButton destructionCarte = new JButton("DÃ©truire carte.");
 
     //////
 
-    private JLabel pousseireEtoile = new JLabel("Poussiere d'étoiles :");
+    private JLabel pousseireEtoile = new JLabel("Poussiere d'Ã©toiles :");
     private JLabel nbPoussiereEtoile = new JLabel("2000");
 
     ////////
