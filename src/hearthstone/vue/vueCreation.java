@@ -1,33 +1,27 @@
 package hearthstone.vue;
 
-import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
-import javax.swing.filechooser.FileNameExtensionFilter;
 
 import hearthstone.carte.Classe;
 import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
-
 import hearthstone.controleur.ctrlAjoutCarte;
-
-import hearthstone.controleur.ctrlTerminerFenetreDeck;
-import hearthstone.controleur.ctrlTerminerFenetreCreation;
 import hearthstone.controleur.ctrlAjoutImageCreation;
+import hearthstone.controleur.ctrlCreerCarteCreation;
+import hearthstone.controleur.ctrlTerminerFenetreCreation;
 
 //Classe vueCreation héritant de vue, affichant l'interface de création de cartes
 public class vueCreation extends vue {
@@ -78,7 +72,7 @@ public class vueCreation extends vue {
 
 	//////
 	private JLabel pousseireEtoile = new JLabel("Poussiere d'étoiles :");
-	public JLabel nbPoussiereEtoile = new JLabel("2000");
+	public JLabel nbPoussiereEtoile = new JLabel();
 
 	////////
 
@@ -148,13 +142,19 @@ public class vueCreation extends vue {
 		creationRace.addItem(Race.PIRATE);
 		creationRace.addItem(Race.TOTEM);
 
+
+		subMainRight.add(labelRace);
+		subMainRight.add(creationRace);
+
 		/**
-		 * 
+		 * Ajout de toutes les valeur de Mana à une ComboBox qui permet de donner le
+		 * nombre de Mana que coute la carte 
 		 */
 		for(int i=0; i<11; i++) {
 			creationNbMana.addItem(i);
 		}
 		
+<<<<<<< HEAD
 		/**
 		 * 
 		 */
@@ -171,14 +171,52 @@ public class vueCreation extends vue {
 
 		subMainRight.add(labelRace);
 		subMainRight.add(creationRace);
+=======
+>>>>>>> 99ce629242c8f7459c12ffeea1d626b803ad62af
 
 		subMainRight.add(labelMana);
+		creationNbMana.setMaximumRowCount(creationNbMana.getModel().getSize());
 		subMainRight.add(creationNbMana);
 
+
+				/**
+		 * Ajout de toutes les valeur de degats possible à une ComboBox qui permet de donner le
+		 * nombre de degats à la carte 
+		 */
+		creationDegats.addItem(0);
+		creationDegats.addItem(1);
+		creationDegats.addItem(2);
+		creationDegats.addItem(3);
+		creationDegats.addItem(4);
+		creationDegats.addItem(5);
+		creationDegats.addItem(6);
+		creationDegats.addItem(7);
+		creationDegats.addItem(8);
+		creationDegats.addItem(9);
+		creationDegats.addItem(10);
+
 		subMainRight.add(labelDegats);
+		creationDegats.setMaximumRowCount(creationDegats.getModel().getSize());
 		subMainRight.add(creationDegats);
 
+		/**
+		 * Ajout de toutes les valeur de Point de Vie Possible à une ComboBox qui permet de donner le
+		 * nombre de Point de Vie pour la carte 
+		 */
+		creationPointVie.addItem(0);
+		creationPointVie.addItem(1);
+		creationPointVie.addItem(2);
+		creationPointVie.addItem(3);
+		creationPointVie.addItem(4);
+		creationPointVie.addItem(5);
+		creationPointVie.addItem(6);
+		creationPointVie.addItem(7);
+		creationPointVie.addItem(8);
+		creationPointVie.addItem(9);
+		creationPointVie.addItem(10);
+
 		subMainRight.add(labelPointDeVie);
+		creationPointVie.setMaximumRowCount(creationPointVie.getModel().getSize());
 		subMainRight.add(creationPointVie);
 
 		subMainRight.add(labelDescription);
@@ -197,6 +235,7 @@ public class vueCreation extends vue {
 		subMainRightButton.add(creationBoutton);
 		subMainRightButton.add(destructionCarte);
 		subMainRightButton.add(pousseireEtoile);
+		nbPoussiereEtoile.setText(Integer.toString(collection.getNbPoussiere()));
 		subMainRightButton.add(nbPoussiereEtoile);
 		subMainRight.add(subMainRightButton);
 
@@ -208,12 +247,13 @@ public class vueCreation extends vue {
 
 		/////////////////////////////////
 		terminer.addActionListener(new ctrlTerminerFenetreCreation(this));
+
+		creationBoutton.addActionListener(new ctrlCreerCarteCreation(this));
 		/////////////////////////////////
 
 		this.setPreferredSize(new Dimension(X + 200, Y));
 		setSize(X, Y);
 
-		// TODO
 		try {
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {

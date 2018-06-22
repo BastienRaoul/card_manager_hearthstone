@@ -23,6 +23,8 @@ import hearthstone.exception.ValeurNegativeException;
 
 public class Cartes implements ManipulationCartes {
 
+	private int nbPoussiere = 0;
+
 	/**
 	 * Le hashset nous permet de ne pas avoir de doublon tous en permettant le
 	 * stockage des données. Il nous permet grace à sa structure interne de
@@ -272,5 +274,13 @@ public class Cartes implements ManipulationCartes {
 			}
 		}
 		return 0;
+	}
+
+	public int getNbPoussiere() {
+		return nbPoussiere;
+	}
+
+	public void setNbPoussiere(int nbPoussiere) {
+		this.nbPoussiere = nbPoussiere;
 	}
 }

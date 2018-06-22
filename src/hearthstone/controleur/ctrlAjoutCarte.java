@@ -10,6 +10,7 @@ import hearthstone.cartes.*;
 import hearthstone.controleur.ctrlAjoutImageCreation;
 import hearthstone.exception.ClasseNeutreException;
 
+//Controlleur permettant de créer une carte selon les volontées de l'utilisateur
 public class ctrlAjoutCarte implements ActionListener {
 
     vueCreation mVue = null;

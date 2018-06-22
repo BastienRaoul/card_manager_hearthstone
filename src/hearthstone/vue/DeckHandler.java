@@ -6,6 +6,7 @@ import javax.swing.AbstractListModel;
 
 import hearthstone.cartes.Deck;
 
+//Classe servant de liste contenant tous les decks du joueur 
 public class DeckHandler extends AbstractListModel<Deck> {
 
 	List<Deck> listeDeck = null;

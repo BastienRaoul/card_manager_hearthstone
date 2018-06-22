@@ -87,8 +87,8 @@ public class vueDeck extends vue {
 			}
 
 		cardshandler = new CardsHandler(mDeck.collection());
-		/////////////////////////////////
-
+	
+		//////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
 		subMainRight.setLayout(new BorderLayout());
 
@@ -121,33 +121,7 @@ public class vueDeck extends vue {
 		System.out.println(mDeck.collection());
 		subMainRight.add(listeDesCartes, BorderLayout.CENTER);
 
-		/////// Ajout des boutons de gestion de deck sous la liste des cartes du deck
-
-		bottomPanel.setLayout(new GridLayout(3, 2));
-
-		nbCarteDansDeck.setText(mDeck.collection().size() + " / 30 cartes");
-		bottomPanel.add(nbCarteDansDeck);
-		bottomPanel.add(supprimerDeck);
-		bottomPanel.add(supprimerCarte);
-		bottomPanel.add(ajoutCarteDeck);
-		bottomPanel.add(manipulationTerminee);
-
-		subMainRight.add(bottomPanel, BorderLayout.SOUTH);
-
-		///////////////////////////////// Ajout des controlleurs
-
-		manipulationTerminee.addActionListener(new ctrlTerminerFenetreDeck(this));
-
-		choixClasse.addActionListener(new ctrlChangeClasseDeck(this));
-
-		nomDeck.addKeyListener(new ctrlTitreDeck(this));
-
-		ajoutCarteDeck.addActionListener(new ctrlAjoutCarteDeck(this));
-
-		supprimerCarte.addActionListener(new ctrlSuppCarteDeck(this));
-
-		supprimerDeck.addActionListener(new ctrlSuppDeck(this));
-
+		
 		/////////////////////////////////
 		// Sélectionne l'item de la combobox correspondant au type du deck
 		{
@@ -197,6 +171,34 @@ public class vueDeck extends vue {
 			isInit = false;
 		}
 		/////////////////////////////////
+		
+		/////// Ajout des boutons de gestion de deck sous la liste des cartes du deck
+		bottomPanel.setLayout(new GridLayout(3, 2));
+
+		nbCarteDansDeck.setText(mDeck.collection().size() + " / 30 cartes");
+		bottomPanel.add(nbCarteDansDeck);
+		bottomPanel.add(supprimerDeck);
+		bottomPanel.add(supprimerCarte);
+		bottomPanel.add(ajoutCarteDeck);
+		bottomPanel.add(manipulationTerminee);
+
+		subMainRight.add(bottomPanel, BorderLayout.SOUTH);
+
+		///////////////////////////////// Ajout des controlleurs
+
+		manipulationTerminee.addActionListener(new ctrlTerminerFenetreDeck(this));
+
+		choixClasse.addActionListener(new ctrlChangeClasseDeck(this));
+
+		nomDeck.addKeyListener(new ctrlTitreDeck(this));
+
+		ajoutCarteDeck.addActionListener(new ctrlAjoutCarteDeck(this));
+
+		supprimerCarte.addActionListener(new ctrlSuppCarteDeck(this));
+
+		supprimerDeck.addActionListener(new ctrlSuppDeck(this));
+
+	
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
@@ -319,6 +321,10 @@ public class vueDeck extends vue {
 	// Permet d'effacer tous les onglets du TabbedPane
 	public void clearTab() {
 		classTab.removeAll();
+	}
+
+	public void modifNbCrateReset() {
+		nbCarteDansDeck.setText(Integer.toString(0) + " / 30 cartes");
 	}
 
 	public void modifNbCarte(boolean decision) {

@@ -50,17 +50,16 @@ public class ImagePanel extends JPanel {
 		File pic = new File("./cachedPics/" + fileName);
 		if (pic.exists() && !pic.isDirectory()) {
 			this.loadPicFile(pic);
-
 		} else {
 			System.out.println("loading image from " + mCarte.urlImage());
-			// System.out.println("Working Directory = " + System.getProperty("user.dir"));
-			// download and cach
+
+			// download and cache
 			BufferedImage image;
 			try {
 				image = ImageIO.read(url);
 				ImageIO.write(image, "png", pic);
 			} catch (IOException e) {
-
+				System.out.println("Error while downloading");
 				e.printStackTrace();
 			}
 			this.loadPicFile(pic);

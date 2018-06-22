@@ -26,7 +26,7 @@ public class ctrlTabbedPaneCollection implements ChangeListener {
 
 		mVue.resetDesciption();
 		try {
-			mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneId());
+			mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneTitle());
 		} catch (ClasseNeutreException | IOException e1) {
 			e1.printStackTrace();
 		}

@@ -45,8 +45,9 @@ public class Sort extends Carte {
             throws ValeurNegativeException, NullPointerException {
         this(nom, mana, desc, rarete, classe, "", "");
     }
-    
+
+    @Override
     public String toString() {
-		return nom;
-	}
+        return nom;
+    }
 }

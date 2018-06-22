@@ -533,7 +533,7 @@ public class vue extends JFrame {
 	Collection<Carte> cartes = collection.collection();
 
 	cartes = applyFilter();
-	cartes = Filtre.cartesParClasse(cartes, getClasseFromTabbedPaneId());
+	cartes = Filtre.cartesParClasse(cartes, getClasseFromTabbedPaneTitle());
 	return cartes;
     }
 
@@ -605,7 +605,7 @@ public class vue extends JFrame {
 
 	//Méthode getClasseFromTabbedPaneId qui permet de récupérer la classe correspondant
 	//à l'onglet choisi
-    public Classe getClasseFromTabbedPaneId() {
+    public Classe getClasseFromTabbedPaneTitle() {
 	try {
 	    switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
 	    case "Guerrier":
