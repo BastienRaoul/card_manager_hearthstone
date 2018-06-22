@@ -25,41 +25,41 @@ public class ctrlCollectionNext implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-	if (position) {
-	    // if left
-	    try {
-		tryleft();
-	    } catch (ClasseNeutreException | IOException e1) {
-		e1.printStackTrace();
-	    }
-	} else {
-	    // if right
-	    try {
-		tryright();
-	    } catch (ClasseNeutreException | IOException e1) {
-		e1.printStackTrace();
-	    }
-	}
+		if (position) {
+			// if left
+			try {
+			tryleft();
+			} catch (ClasseNeutreException | IOException e1) {
+			e1.printStackTrace();
+			}
+		} else {
+			// if right
+			try {
+			tryright();
+			} catch (ClasseNeutreException | IOException e1) {
+			e1.printStackTrace();
+			}
+		}
     }
 
 
 	//Méthode tryLeft permettant d'afficher les 8 cartes à gauche (qui précèdent)
     private void tryleft() throws ClasseNeutreException, IOException {
-	if (mVue.pageNumber > 0) {
-	    --mVue.pageNumber;
-	    mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneTitle());
-	    System.out.println("right page : " + mVue.pageNumber + " " + mVue.applyFilterRace().size());
-	    mVue.resetDesciption();	
-	}
+		if (mVue.pageNumber > 0) {
+			--mVue.pageNumber;
+			mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneTitle());
+			System.out.println("right page : " + mVue.pageNumber + " " + mVue.applyFilterRace().size());
+			mVue.resetDesciption();	
+		}
     }
 
 	//Méthode tryRight permettant d'afficher les 8 cartes à droite (qui suivent)
     private void tryright() throws ClasseNeutreException, IOException {
-	if (((mVue.pageNumber + 1) * 8) < mVue.applyFilterRace().size()) {
-	    ++mVue.pageNumber;
-	    mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneTitle());
-	    System.out.println("right page : " + mVue.pageNumber + " " + mVue.applyFilterRace().size());
-	    mVue.resetDesciption();	
-	}
+		if (((mVue.pageNumber + 1) * 8) < mVue.applyFilterRace().size()) {
+			++mVue.pageNumber;
+			mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneTitle());
+			System.out.println("right page : " + mVue.pageNumber + " " + mVue.applyFilterRace().size());
+			mVue.resetDesciption();	
+		}
     }
 }
