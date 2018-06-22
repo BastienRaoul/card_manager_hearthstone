@@ -1,33 +1,27 @@
 package hearthstone.vue;
 
-import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
-import javax.swing.filechooser.FileNameExtensionFilter;
 
 import hearthstone.carte.Classe;
 import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
-
 import hearthstone.controleur.ctrlAjoutCarte;
-
-import hearthstone.controleur.ctrlTerminerFenetreDeck;
-import hearthstone.controleur.ctrlTerminerFenetreCreation;
 import hearthstone.controleur.ctrlAjoutImageCreation;
+import hearthstone.controleur.ctrlCreerCarteCreation;
+import hearthstone.controleur.ctrlTerminerFenetreCreation;
 
 //Classe vueCreation héritant de vue, affichant l'interface de création de cartes
 public class vueCreation extends vue {
@@ -78,7 +72,7 @@ public class vueCreation extends vue {
 
 	//////
 	private JLabel pousseireEtoile = new JLabel("Poussiere d'étoiles :");
-	public JLabel nbPoussiereEtoile = new JLabel("2000");
+	public JLabel nbPoussiereEtoile = new JLabel();
 
 	////////
 
@@ -230,6 +224,7 @@ public class vueCreation extends vue {
 		subMainRightButton.add(creationBoutton);
 		subMainRightButton.add(destructionCarte);
 		subMainRightButton.add(pousseireEtoile);
+		nbPoussiereEtoile.setText(Integer.toString(collection.getNbPoussiere()));
 		subMainRightButton.add(nbPoussiereEtoile);
 		subMainRight.add(subMainRightButton);
 
@@ -241,12 +236,13 @@ public class vueCreation extends vue {
 
 		/////////////////////////////////
 		terminer.addActionListener(new ctrlTerminerFenetreCreation(this));
+
+		creationBoutton.addActionListener(new ctrlCreerCarteCreation(this));
 		/////////////////////////////////
 
 		this.setPreferredSize(new Dimension(X + 200, Y));
 		setSize(X, Y);
 
-		// TODO
 		try {
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {
