@@ -154,7 +154,6 @@ public class vueCreation extends vue {
 			creationNbMana.addItem(i);
 		}
 		
-<<<<<<< HEAD
 		/**
 		 * 
 		 */
@@ -171,8 +170,6 @@ public class vueCreation extends vue {
 
 		subMainRight.add(labelRace);
 		subMainRight.add(creationRace);
-=======
->>>>>>> 99ce629242c8f7459c12ffeea1d626b803ad62af
 
 		subMainRight.add(labelMana);
 		creationNbMana.setMaximumRowCount(creationNbMana.getModel().getSize());
