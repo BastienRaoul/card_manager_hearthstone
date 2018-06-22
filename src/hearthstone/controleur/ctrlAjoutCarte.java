@@ -8,6 +8,7 @@ import hearthstone.carte.*;
 import hearthstone.vue.*;
 import hearthstone.cartes.*;
 
+//Controlleur permettant de créer une carte selon les volontées de l'utilisateur
 public class ctrlAjoutCarte implements ActionListener {
 
     vueCreation mVue = null;
