@@ -44,6 +44,8 @@ public class vueDeck extends vue {
 
 	/////////////////////////
 
+	public DeckHandler deckList = null;
+	
 	private JComboBox<Classe> choixClasse = new JComboBox<>();
 
 	private JPanel titreDeck = new JPanel();
@@ -64,12 +66,15 @@ public class vueDeck extends vue {
 
 	private JButton manipulationTerminee = new JButton("Terminer");
 
+	
+
 	/////////////////////////
 
-	public vueDeck(Cartes collection, Deck currentDeck) {
+	public vueDeck(Cartes collection, DeckHandler deckhandler, Deck currentDeck) {
 		super(collection);
 		mDeck = currentDeck;
-
+		deckList = deckhandler;
+		
 		if (mDeck == null)
 			try {
 				mDeck = new Deck(collection, Classe.GUERRIER, "NouveauDeck");

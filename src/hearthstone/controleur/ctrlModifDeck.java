@@ -6,11 +6,11 @@ import java.awt.event.ActionListener;
 import hearthstone.vue.vueCollection;
 import hearthstone.vue.vueDeck;
 
-public class ctrlNewCreationDeck implements ActionListener {
+public class ctrlModifDeck implements ActionListener {
 
 	vueCollection mVue = null;
 
-	public ctrlNewCreationDeck(vueCollection vue) {
+	public ctrlModifDeck(vueCollection vue) {
 		mVue = vue;
 	}
 
@@ -20,9 +20,11 @@ public class ctrlNewCreationDeck implements ActionListener {
 			return;
 
 		mVue.isWindowOpen = true;
-		vueDeck main = new vueDeck(mVue.collection, mVue.deckhandler, null);
+
+		vueDeck main = new vueDeck(mVue.collection, mVue.deckhandler, mVue.deckList.getSelectedValue());
 
 		main.pack();
 		main.setVisible(true);
 	}
+
 }
