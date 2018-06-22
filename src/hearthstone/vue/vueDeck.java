@@ -1,16 +1,10 @@
 package hearthstone.vue;
 
-<<<<<<< HEAD
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.Font;
-=======
 import java.awt.*;
 import java.awt.datatransfer.*;
 import java.awt.event.*;
 import java.io.IOException;
 import java.util.Vector;
->>>>>>> f6ac022466bcdb8e5a641320bb9e272658a520c1
 
 import javax.swing.*;
 import javax.swing.UIManager.*;
