@@ -22,98 +22,105 @@ import hearthstone.carte.Carte;
  */
 public class ImagePanel extends JPanel {
 
-    private Image image;
+	private Image image;
 
-    public Carte mCarte = null;
+	public Carte mCarte = null;
 
-    public ImagePanel() {
-	super();
-	image = null;
-    }
+	private boolean isSelected = false;
 
-    public void loadPic(Carte carte) throws MalformedURLException {
-	mCarte = carte;
-
-	URL url = null;
-	try {
-	    url = new URL(mCarte.urlImage());
-	} catch (MalformedURLException e) {
-	    this.setBackground(Color.GRAY);
-	    throw new MalformedURLException(e.getMessage());
+	public ImagePanel() {
+		super();
+		image = null;
 	}
 
-	String fileName = url.getFile().substring(url.getFile().lastIndexOf("/") + 1);
+	public void loadPic(Carte carte) throws MalformedURLException {
+		mCarte = carte;
 
-	// if file is cached
-	File pic = new File("./cachedPics/" + fileName);
-	if (pic.exists() && !pic.isDirectory()) {
-	    this.loadPicFile(pic);
+		URL url = null;
+		try {
+			url = new URL(mCarte.urlImage());
+		} catch (MalformedURLException e) {
+			this.setBackground(Color.GRAY);
+			throw new MalformedURLException(e.getMessage());
+		}
 
-	} else {
-	    System.out.println("loading image from " + mCarte.urlImage());
-	    // System.out.println("Working Directory = " + System.getProperty("user.dir"));
-	    // download and cach
-	    BufferedImage image;
-	    try {
-		image = ImageIO.read(url);
-		ImageIO.write(image, "png", pic);
-	    } catch (IOException e) {
+		String fileName = url.getFile().substring(url.getFile().lastIndexOf("/") + 1);
 
-		e.printStackTrace();
-	    }
-	    this.loadPicFile(pic);
+		// if file is cached
+		File pic = new File("./cachedPics/" + fileName);
+		if (pic.exists() && !pic.isDirectory()) {
+			this.loadPicFile(pic);
+
+		} else {
+			System.out.println("loading image from " + mCarte.urlImage());
+			// System.out.println("Working Directory = " + System.getProperty("user.dir"));
+			// download and cach
+			BufferedImage image;
+			try {
+				image = ImageIO.read(url);
+				ImageIO.write(image, "png", pic);
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+			this.loadPicFile(pic);
+		}
+
+		this.setBackground(Color.getColor("Panel.background"));
+
+		repaint();
 	}
 
-	this.setBackground(Color.getColor("Panel.background"));
-
-	repaint();
-    }
-
-    private void loadPicFile(File file) {
-	//System.out.println("loading image from " + file.toString());
-	try {
-	    image = ImageIO.read(file);
-	} catch (IOException e) {
-	    e.printStackTrace();
-	}
-	repaint();
-    }
-
-    public boolean hasCard() {
-	return mCarte != null;
-    }
-
-    public void setSelected(ImagePanel[] panels) {
-	if (hasCard()) {
-	    for (ImagePanel panel : panels) {
-		if (panel.equals(this) || !panel.hasCard())
-		    continue;
-		panel.setNotSelected();
-	    }
-
-	    this.setBackground(Color.LIGHT_GRAY);
-	    repaint();
+	private void loadPicFile(File file) {
+		// System.out.println("loading image from " + file.toString());
+		try {
+			image = ImageIO.read(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		repaint();
 	}
 
-    }
-
-    public void setNotSelected() {
-	this.setBackground(Color.getColor("Panel.background"));
-	repaint();
-    }
-
-    public void reset() {
-	image = null;
-	mCarte = null;
-	this.setBackground(Color.GRAY);
-	repaint();
-    }
-
-    @Override
-    public void paintComponent(Graphics g) {
-	super.paintComponent(g);
-	if (image != null) {
-	    g.drawImage(image, 0, 0, this.getSize().width, this.getSize().height, this);
+	public boolean hasCard() {
+		return mCarte != null;
 	}
-    }
+
+	public void setSelected(ImagePanel[] panels) {
+		if (hasCard()) {
+			for (ImagePanel panel : panels) {
+				if (panel.equals(this) || !panel.hasCard())
+					continue;
+				panel.setNotSelected();
+			}
+			isSelected = true;
+			this.setBackground(Color.LIGHT_GRAY);
+
+			repaint();
+		}
+	}
+
+	public void setNotSelected() {
+		isSelected = false;
+		this.setBackground(Color.getColor("Panel.background"));
+		repaint();
+	}
+
+	public boolean isSelected() {
+		return isSelected;
+	}
+
+	public void reset() {
+		image = null;
+		mCarte = null;
+		this.setBackground(Color.GRAY);
+		repaint();
+	}
+
+	@Override
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		if (image != null) {
+			g.drawImage(image, 0, 0, this.getSize().width, this.getSize().height, this);
+		}
+	}
 }

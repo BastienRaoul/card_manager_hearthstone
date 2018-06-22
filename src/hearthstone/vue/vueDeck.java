@@ -1,26 +1,41 @@
 package hearthstone.vue;
 
-import java.awt.*;
-import java.awt.datatransfer.*;
-import java.awt.event.*;
-import java.io.IOException;
-import java.util.Vector;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridLayout;
 
-import javax.swing.*;
-import javax.swing.UIManager.*;
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 
-import hearthstone.carte.*;
-import hearthstone.cartes.*;
+import hearthstone.carte.Carte;
+import hearthstone.carte.Classe;
+import hearthstone.cartes.Cartes;
+import hearthstone.cartes.Deck;
+import hearthstone.controleur.ctrlAjoutCarteDeck;
 import hearthstone.controleur.ctrlChangeClasse;
-import hearthstone.controleur.ctrlCreaDeckAccueil;
+import hearthstone.controleur.ctrlTerminerFenetre;
+import hearthstone.controleur.ctrlTitreDeck;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.exception.DeckCreationException;
 import hearthstone.exception.LimiteNombreDeCartesException;
 
 /**
- * Cette vue permet d'afficher les cartes contenus dans un deck, d'ajouter des cartes dans le deck affiché ou encore de supprimer des cartes du deck.
- * Cette vue s'ouvre après avoir cliquer sur le boutons "Nouveau deck" de la vue vueCollection ou 
- * après avoir selectionner un deck déjà créé sur la vue vueCollection.
+ * Cette vue permet d'afficher les cartes contenus dans un deck, d'ajouter des
+ * cartes dans le deck affiché ou encore de supprimer des cartes du deck. Cette
+ * vue s'ouvre après avoir cliquer sur le boutons "Nouveau deck" de la vue
+ * vueCollection ou après avoir selectionner un deck déjà créé sur la vue
+ * vueCollection.
  */
 
 public class vueDeck extends vue {
@@ -28,60 +43,44 @@ public class vueDeck extends vue {
 	public Deck mDeck = null;
 
 	/////////////////////////
-	private JList<Carte> carteList = new JList<>(); //List qui va contenir les cartes du deck affiché dans la vue
 
 	private JComboBox<Classe> choixClasse = new JComboBox<>();  //Choix de la classe pour afficher l'onglet et les cartes correspondantes à la classe
 
-	JPanel bottomPanel = new JPanel();
+	private JPanel titreDeck = new JPanel();
 
-	JLabel nbCarteDansDeck = new JLabel("0");
+	private JTextField nomDeck = new JTextField();
 
-	JLabel labelMaxCarte = new JLabel("/30 cartes");
+	private JList<Carte> carteList = null;
 
-	private JButton creationDeck = new JButton("Terminer");
+	private JPanel bottomPanel = new JPanel();
+
+	public JLabel nbCarteDansDeck = new JLabel("0 / 30 cartes");
+
+	private JButton ajoutCarteDeck = new JButton("Ajouter la carte");
 
 	private JButton supprimerDeck = new JButton("Supprimer Deck");
 
 	private JButton supprimerCarte = new JButton("Supprimer Carte");
 
-	/////////////////////////
+	private JButton manipulationTerminee = new JButton("Terminer");
 
 	public vueDeck(Cartes collection, Deck currentDeck) {
 		super(collection);
+		mDeck = currentDeck;
 
-		if (currentDeck == null)
+		if (mDeck == null)
 			try {
 				mDeck = new Deck(collection, Classe.GUERRIER, "NouveauDeck");
 			} catch (ClasseNeutreException | LimiteNombreDeCartesException | DeckCreationException e1) {
 				e1.printStackTrace();
 			}
-		else
-			mDeck = currentDeck;
-
-		classTab.removeAll();
-		classeGuerrier();
-		classeNeutre();
 
 		/////////////////////////////////
+
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
 		subMainRight.setLayout(new BorderLayout());
 
-		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-		carteList.setLayoutOrientation(JList.HORIZONTAL_WRAP);
-		carteList.setVisibleRowCount(-1);
-
-		// Drag & Drop Image dans List
-		carteList.setDragEnabled(true);
-		carteList.setDropMode(DropMode.INSERT);
-
-		// GhostGlassPane glassPane = new GhostGlassPane();
-
-		JScrollPane listeDesCartes = new JScrollPane(carteList);
-		listeDesCartes.setPreferredSize(new Dimension(250, 80));
-
-		subMainRight.add(listeDesCartes, BorderLayout.CENTER);
-
-		////////////////////////////////
+		titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
 
 		//Choix des classes
 		choixClasse.addItem(Classe.GUERRIER);
@@ -94,43 +93,96 @@ public class vueDeck extends vue {
 		choixClasse.addItem(Classe.DEMONISTE);
 		choixClasse.addItem(Classe.VOLEUR);
 
-		choixClasse.setMaximumRowCount(choixClasse.getModel().getSize());
-
-		/////////////////////////////////
-
-		JPanel titreDeck = new JPanel();
-		titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
-
-		JTextField nomDeck = new JTextField();
-		nomDeck.setText("NouveauDeck");
 		titreDeck.add(choixClasse);
+
+		nomDeck.setText(mDeck.getNom());
 		titreDeck.add(nomDeck);
 
 		subMainRight.add(titreDeck, BorderLayout.NORTH);
 
+		carteList = new JList<>(new CardsHandler(mDeck.collection()));
+		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		carteList.setVisibleRowCount(-1);
+
+		JScrollPane listeDesCartes = new JScrollPane(carteList);
+		listeDesCartes.setPreferredSize(new Dimension(250, 80));
+
+		subMainRight.add(listeDesCartes, BorderLayout.CENTER);
+
 		////////////////////////////////////
 
-		bottomPanel.setLayout(new BoxLayout(bottomPanel, BoxLayout.X_AXIS));
+		bottomPanel.setLayout(new GridLayout(3, 2));
 
+		nbCarteDansDeck.setText(mDeck.collection().size() + " / 30 cartes");
 		bottomPanel.add(nbCarteDansDeck);
-		bottomPanel.add(labelMaxCarte);
 		bottomPanel.add(supprimerDeck);
 		bottomPanel.add(supprimerCarte);
-		bottomPanel.add(creationDeck);
+		bottomPanel.add(ajoutCarteDeck);
+		bottomPanel.add(manipulationTerminee);
 
 		subMainRight.add(bottomPanel, BorderLayout.SOUTH);
 
 		/////////////////////////////////
 
-		//Listener permettant le changement d'onglet lors du changement de classe choisit
+		manipulationTerminee.addActionListener(new ctrlTerminerFenetre(this));
+
 		choixClasse.addActionListener(new ctrlChangeClasse(this));
+
+		nomDeck.addKeyListener(new ctrlTitreDeck(this));
+
+		ajoutCarteDeck.addActionListener(new ctrlAjoutCarteDeck(this));
 
 		/////////////////////////////////
 
+		classTab.removeAll();
+
+		switch (mDeck.classe()) {
+		case GUERRIER:
+			classeGuerrier();
+			choixClasse.setSelectedIndex(0);
+			break;
+		case DRUIDE:
+			classeDruide();
+			choixClasse.setSelectedIndex(1);
+			break;
+		case CHASSEUR:
+			classeChasseur();
+			choixClasse.setSelectedIndex(2);
+			break;
+		case MAGE:
+			classeMage();
+			choixClasse.setSelectedIndex(3);
+			break;
+		case PALADIN:
+			classePaladin();
+			choixClasse.setSelectedIndex(4);
+			break;
+		case PRETRE:
+			classePretre();
+			choixClasse.setSelectedIndex(5);
+			break;
+		case CHAMAN:
+			classeChaman();
+			choixClasse.setSelectedIndex(6);
+			break;
+		case DEMONISTE:
+			classeDemoniste();
+			choixClasse.setSelectedIndex(7);
+			break;
+		case VOLEUR:
+			classeVoleur();
+			choixClasse.setSelectedIndex(8);
+			break;
+		}
+
+		classeNeutre();
+
+		/////////////////////////////////
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
-		this.setPreferredSize(new Dimension(X + 150, Y));
+		this.setPreferredSize(new Dimension(X + 50, Y));
+
 		setSize(X, Y);
 
 		try {

@@ -34,6 +34,7 @@ import hearthstone.controleur.ctrlCollectionNext;
 import hearthstone.controleur.ctrlTabbedPaneCollection;
 import hearthstone.exception.ClasseNeutreException;
 
+//Classe vue abstraite, dont hérite toutes les vues, afin d'avoir le même design
 public class vue extends JFrame {
 
     protected final int YSPACINGCARDS = 10;
@@ -48,15 +49,18 @@ public class vue extends JFrame {
 
     public static boolean isWindowOpen = false;
 
-    ///////////////////
+    /////////////////// On crée les trois panneaux principaux
     private JPanel main = new JPanel();
 
     protected JPanel subMainRight = new JPanel();
     private JPanel subMainCenter = new JPanel();
-
+	///////////////////////:
+	//On ajoute un JTabbedPane pour choisir la classe des cartes
     protected JTabbedPane classTab = new JTabbedPane();
-    //
-    private JPanel cartesLeft = new JPanel(new BorderLayout());
+	
+	//On crée des panneaux représentant les précédentes et prochaines cartes
+	private JPanel cartesLeft = new JPanel(new BorderLayout());
+	//ainsi que des boutons pour aller d'un panel de carte à l'autre
     private JButton cartesButtonNextLeft = new JButton("<");
 
     private JPanel cartesRight = new JPanel(new BorderLayout());
@@ -65,7 +69,8 @@ public class vue extends JFrame {
 
     private ctrlCardClicked ctrlCards = new ctrlCardClicked(this);
 
-    /////
+	///// On crée des tableau d'ImagePanel permettant d'afficher les cartes 
+	//Et ce, pour chaque classe
     protected JPanel mainGUERRIER = null;
     protected JPanel subMainGUERRIERLabel = new JPanel();
     protected JPanel subMainGUERRIERCardsDisplay = new JPanel();
@@ -115,8 +120,11 @@ public class vue extends JFrame {
     protected JPanel subMainNEUTRELabel = new JPanel();
     protected JPanel subMainNEUTRECardsDisplay = new JPanel();
     public ImagePanel[] subMainNEUTRECards = new ImagePanel[8];
-    /////
+	/////
+	
+	///////////////////////
 
+	//On crée le JPanel contenant la description de la carte, son coût, son nombre d'exemplaires..
     private JPanel description = new JPanel();
 
     private JPanel textDescription = new JPanel();
@@ -127,8 +135,10 @@ public class vue extends JFrame {
     public JLabel valeurDesemDescription = new JLabel("Valeur : 0");
     public JLabel nbExemplairesDescription = new JLabel("Exemplaires : 0");
 
+	//On ajoute le panel de filtrage
     private JPanel subMainFilterPanel = new JPanel();
 
+	//Ainsi que les ComboBox et les radiosButton permettant de choisir comment filtrer
     private JCheckBox filtreRaceCheck = new JCheckBox("Filtre par race :");
     private JComboBox<Race> filtreRaceCombo = new JComboBox<>();
 
@@ -141,6 +151,7 @@ public class vue extends JFrame {
     private JRadioButton filtreSort = new JRadioButton("Sorts");
     private JRadioButton filtreNone = new JRadioButton("Tous");
 
+	//Bouton d'application des filtres
     private JButton applyFilter = new JButton("Appliquer");
 
     /////
@@ -160,7 +171,11 @@ public class vue extends JFrame {
 	cartesRight.add(cartesButtonNextRight, BorderLayout.CENTER);
 
 	{
-	    ////// GUERRIER
+		//On crée pour chaque classe un layout permettant d'afficher les cartes
+		//En affichant de base des carrés gris et en ajoutant des mouseListener
+		//Les rendant cliquables
+
+		////// GUERRIER
 	    mainGUERRIER = new JPanel();
 	    mainGUERRIER.setLayout(new BorderLayout());
 	    //
@@ -371,7 +386,7 @@ public class vue extends JFrame {
 	    classTab.add(mainNEUTRE, "Neutre");
 	}
 
-	///////////
+	/////////// Ajout des éléments centraux
 	subMainCenter.setLayout(new BorderLayout());
 	subMainCenter.add(classTab, BorderLayout.CENTER);
 	subMainCenter.add(description, BorderLayout.SOUTH);
@@ -382,7 +397,7 @@ public class vue extends JFrame {
 	/////////////////////////////////
 	subMainRight.setBorder(BorderFactory.createTitledBorder("Mes decks..."));
 
-	////////////////////////////////
+	//////////////////////////////// ajout des éléments de description
 
 	description.setLayout(new BorderLayout());
 
@@ -400,7 +415,7 @@ public class vue extends JFrame {
 
 	description.add(perksDescription, BorderLayout.EAST);
 
-	////////////////////////////////
+	//////////////////////////////// Ajout des éléments du filtre
 
 	subMainFilterPanel.setBorder(BorderFactory.createTitledBorder("Filtres :"));
 	subMainFilterPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -438,20 +453,21 @@ public class vue extends JFrame {
 
 	subMainFilterPanel.add(applyFilter);
 
-	/////////////////////////////////
+	///////////////////////////////// Affichage des cartes de classe Guerrier
 
 	try {
+		//Appel à la fonction drawCards affichant les cartes
 	    drawCards(subMainGUERRIERCards, Classe.GUERRIER);
 	} catch (ClasseNeutreException | IOException e1) {
 	    // TODO Auto-generated catch block
 	    e1.printStackTrace();
 	}
 
-	/////////////////////////////////
+	///////////////////////////////// On ajoute tous les panels au panel principal
 	main.add(subMainCenter, BorderLayout.CENTER);
 	main.add(subMainRight, BorderLayout.EAST);
 	main.add(subMainFilterPanel, BorderLayout.SOUTH);
-	/////////////////////////////////
+	///////////////////////////////// Controleurs
 
 	classTab.addChangeListener(new ctrlTabbedPaneCollection(this));
 
@@ -465,6 +481,7 @@ public class vue extends JFrame {
 	this.getContentPane().add(main);
     }
 
+	//Méthode drawCards permettant d'afficher les cartes en fonction de leur classe
     public void drawCards(ImagePanel[] cardsHolders, Classe classe) throws ClasseNeutreException, IOException {
 	Collection<Carte> cartes = applyFilterRace();
 
@@ -472,6 +489,8 @@ public class vue extends JFrame {
 
 	int counter = 0;
 	int offset = 8 * (pageNumber);
+
+	//Tri des cartes par Race
 
 	if (cartes.size() > offset) {
 	    Collection<Carte> offsetedCollection = new ArrayList<>();
@@ -489,6 +508,8 @@ public class vue extends JFrame {
 	    cartes = offsetedCollection;
 	}
 
+	//Chargement des images des cartes
+
 	for (Carte carte : cartes) {
 	    if (counter == 8)
 		break;
@@ -505,8 +526,9 @@ public class vue extends JFrame {
 	for (int i = counter; i < 8; ++i) {
 	    cardsHolders[i].reset();
 	}
-    }
-
+	}
+	
+	//Méthode de filtre
     public Collection<Carte> applyFilterRace() throws ClasseNeutreException {
 	Collection<Carte> cartes = collection.collection();
 
@@ -518,6 +540,8 @@ public class vue extends JFrame {
     public Collection<Carte> applyFilter() {
 	Collection<Carte> cartes = collection.collection();
 
+	//On vérifie si les filtres sont sélectionnés
+	//Si un filtre est sélectionné, on appelle la méthode de la classe Filtre correspondante
 	if (filtreArme.isSelected()) {
 	    cartes = Filtre.cartesArme(cartes);
 	} else if (filtreServiteur.isSelected()) {
@@ -536,6 +560,8 @@ public class vue extends JFrame {
 	return cartes;
     }
 
+	//Méthode getCurrentImagePanels qui affiche les images correspondantes à l'onglet
+	//de la classe choisie
     public ImagePanel[] getCurrentImagePanels() {
 	try {
 	    switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
@@ -577,6 +603,8 @@ public class vue extends JFrame {
 
     }
 
+	//Méthode getClasseFromTabbedPaneId qui permet de récupérer la classe correspondant
+	//à l'onglet choisi
     public Classe getClasseFromTabbedPaneId() {
 	try {
 	    switch (classTab.getTitleAt((classTab.getSelectedIndex()))) {
@@ -618,6 +646,7 @@ public class vue extends JFrame {
 
     }
 
+	//Méthode resetDescription qui efface le contenu du JTextArea correspondant à la description
     public void resetDesciption() {
 	textAreaDescription.setText("");
 

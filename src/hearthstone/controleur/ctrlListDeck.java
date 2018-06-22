@@ -22,7 +22,9 @@ public class ctrlListDeck implements ListSelectionListener {
 	    return;
 
 	mVue.isWindowOpen = true;
+	mVue.setVisible(false);
 	vueDeck main = new vueDeck(mVue.collection, ((JList<Deck>) e.getSource()).getSelectedValue());
+	main.isWindowOpen = false;
 
 	main.pack();
 	main.setVisible(true);

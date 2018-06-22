@@ -24,7 +24,11 @@ import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
 import hearthstone.controleur.ctrlAjoutImage;
 
+//Classe vueCreation héritant de vue, affichant l'interface de création de cartes
 public class vueCreation extends vue {
+
+	//Ajout des éléments permettant à l'utilisateur d'entrer les 
+	//données voulues pour créer sa carte
 
 	private JLabel labelNomCreation = new JLabel("Nom :");
 	public JTextField textFieldNomCreation = new JTextField("Un nom random...");
@@ -59,7 +63,7 @@ public class vueCreation extends vue {
 
 	private JButton ajoutCarteButton = new JButton("Ajouter la carte.");
 
-	//
+	//création du panel de validation
 	private JPanel subMainRightButton = new JPanel();
 
 	private JButton creationBoutton = new JButton("Créer carte.");
@@ -74,7 +78,8 @@ public class vueCreation extends vue {
 	public vueCreation(Cartes collection) {
 		super(collection);
 
-		////////////////////
+		///Ajout dans le panel principal, remplissage du panel de création
+		// et remplissage des comboBox
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Manipulation de carte..."));
 
 		subMainRight.setLayout(new GridLayout(10, 0));
