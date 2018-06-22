@@ -354,7 +354,7 @@ public class vue extends JFrame {
 	    mainNEUTRE.setLayout(new BorderLayout());
 	    //
 	    subMainNEUTRELabel.setLayout(new FlowLayout(FlowLayout.CENTER));
-	    subMainNEUTRELabel.add(new Label("VOLEUR"));
+	    subMainNEUTRELabel.add(new Label("NEUTRE"));
 
 	    mainNEUTRE.add(subMainNEUTRELabel, BorderLayout.NORTH);
 	    //
