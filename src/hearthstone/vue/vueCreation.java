@@ -1,22 +1,28 @@
 package hearthstone.vue;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 import hearthstone.carte.Classe;
 import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
+import hearthstone.controleur.ctrlAjoutImage;
 
 public class vueCreation extends vue {
 
@@ -47,6 +53,10 @@ public class vueCreation extends vue {
 	public JLabel labelDescription = new JLabel("Description de la carte :");
 	public JTextArea textAreaExplication = new JTextArea("Explication...");
 
+	public JScrollPane scrollArea = new JScrollPane(textAreaExplication);
+	public JPanel panFile = new JPanel(); 
+	public JButton file = new JButton("Ajouter image");	
+
 	private JButton ajoutCarteButton = new JButton("Ajouter la carte.");
 
 	//
@@ -56,8 +66,7 @@ public class vueCreation extends vue {
 	private JButton destructionCarte = new JButton("Détruire carte.");
 
 	//////
-
-	private JLabel pousseireEtoile = new JLabel("Poussiere d'�toiles :");
+	private JLabel pousseireEtoile = new JLabel("Poussiere d'étoiles :");
 	private JLabel nbPoussiereEtoile = new JLabel("2000");
 
 	////////
@@ -69,10 +78,15 @@ public class vueCreation extends vue {
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Manipulation de carte..."));
 
 		subMainRight.setLayout(new GridLayout(10, 0));
+		panFile.setLayout(new GridLayout(1,2));
 
 		subMainRight.add(labelNomCreation);
 		subMainRight.add(textFieldNomCreation);
-
+		
+		/**
+		 * Ajout de toutes les classes à une ComboBox
+		 * qui permet de donner une classe à la carte prochainement créée
+		 */
 		creationClasse.addItem(Classe.NEUTRE);
 		creationClasse.addItem(Classe.PALADIN);
 		creationClasse.addItem(Classe.PRETRE);
@@ -86,6 +100,10 @@ public class vueCreation extends vue {
 		subMainRight.add(labelClasse);
 		subMainRight.add(creationClasse);
 
+		/**
+		 * Ajout de toutes les types de carte à une ComboBox
+		 * qui permet de donner le type de carte que l'on veut créer 
+		 */
 		creationTypeCarte.addItem("Arme");
 		creationTypeCarte.addItem("Sort");
 		creationTypeCarte.addItem("Serviteur");
@@ -93,6 +111,10 @@ public class vueCreation extends vue {
 		subMainRight.add(labelTypeCarte);
 		subMainRight.add(creationTypeCarte);
 
+		/**
+		 * Ajout de toutes les rareté possibles pour une carte dans une ComboBox
+		 * qui permet de choisir la rareté voulu a la carte
+		 */
 		creationRarete.addItem(Rarete.BASIQUE);
 		creationRarete.addItem(Rarete.COMMUNE);
 		creationRarete.addItem(Rarete.RARE);
@@ -101,6 +123,10 @@ public class vueCreation extends vue {
 		subMainRight.add(labelRarete);
 		subMainRight.add(creationRarete);
 
+		/**
+		 * Ajout de toutes les races de carte à une ComboBox
+		 * qui permet de donner le type de carte que l'on veut créer 
+		 */
 		creationRace.addItem(Race.BETE);
 		creationRace.addItem(Race.DEMON);
 		creationRace.addItem(Race.DRAGON);
@@ -121,108 +147,17 @@ public class vueCreation extends vue {
 		subMainRight.add(labelPointDeVie);
 		subMainRight.add(creationPointVie);
 
-		subMainRight.add(labelDescription);
-		subMainRight.add(textAreaExplication);
+		subMainRight.add(labelDescription);	
+		
+		subMainRight.add(panFile);
+		panFile.add(scrollArea);
+		textAreaExplication.setLineWrap(true);		
+		panFile.add(file);
+		file.addActionListener(new ctrlAjoutImage(this));
 
+		// Bouton pour ajouter une image a la carte créée
 		subMainRight.add(ajoutCarteButton);
 
-<<<<<<< HEAD
-    //
-    private JPanel subMainRightButton = new JPanel();
-
-    private JButton creationBoutton = new JButton("Créer carte.");
-    private JButton destructionCarte = new JButton("Détruire carte.");
-
-    //////
-
-    private JLabel pousseireEtoile = new JLabel("Poussiere d'étoiles :");
-    private JLabel nbPoussiereEtoile = new JLabel("2000");
-
-    ////////
-
-    public vueCreation(Cartes collection) {
-	super(collection);
-
-	////////////////////
-	subMainRight.setBorder(BorderFactory.createTitledBorder("Manipulation de carte..."));
-
-	subMainRight.setLayout(new GridLayout(10, 0));
-
-	subMainRight.add(labelNomCreation);
-	subMainRight.add(textFieldNomCreation);
-
-	creationClasse.addItem(Classe.NEUTRE);
-	creationClasse.addItem(Classe.PALADIN);
-	creationClasse.addItem(Classe.PRETRE);
-	creationClasse.addItem(Classe.VOLEUR);
-	creationClasse.addItem(Classe.CHAMAN);
-	creationClasse.addItem(Classe.CHASSEUR);
-	creationClasse.addItem(Classe.DEMONISTE);
-	creationClasse.addItem(Classe.DRUIDE);
-	creationClasse.addItem(Classe.GUERRIER);
-	creationClasse.addItem(Classe.MAGE);
-	subMainRight.add(labelClasse);
-	subMainRight.add(creationClasse);
-
-	creationTypeCarte.addItem("Arme");
-	creationTypeCarte.addItem("Sort");
-	creationTypeCarte.addItem("Serviteur");
-	subMainRight.add(creationTypeCarte);
-	subMainRight.add(labelTypeCarte);
-	subMainRight.add(creationTypeCarte);
-
-	creationRarete.addItem(Rarete.BASIQUE);
-	creationRarete.addItem(Rarete.COMMUNE);
-	creationRarete.addItem(Rarete.RARE);
-	creationRarete.addItem(Rarete.EPIQUE);
-	creationRarete.addItem(Rarete.LEGENDAIRE);
-	subMainRight.add(labelRarete);
-	subMainRight.add(creationRarete);
-
-	creationRace.addItem(Race.BETE);
-	creationRace.addItem(Race.DEMON);
-	creationRace.addItem(Race.DRAGON);
-	creationRace.addItem(Race.ELEMENTAIRE);
-	creationRace.addItem(Race.MECA);
-	creationRace.addItem(Race.MURLOC);
-	creationRace.addItem(Race.PIRATE);
-	creationRace.addItem(Race.TOTEM);
-	subMainRight.add(labelRace);
-	subMainRight.add(creationRace);
-
-	subMainRight.add(labelMana);
-	subMainRight.add(creationNbMana);
-
-	subMainRight.add(labelDegats);
-	subMainRight.add(creationDegats);
-
-	subMainRight.add(labelPointDeVie);
-	subMainRight.add(creationPointVie);
-
-	subMainRight.add(labelDescription);
-	subMainRight.add(textAreaExplication);
-
-	subMainRight.add(ajoutCarteButton);
-
-	subMainRightButton.setLayout(new GridLayout(0, 2));
-	subMainRightButton.add(creationBoutton);
-	subMainRightButton.add(destructionCarte);
-	subMainRight.add(subMainRightButton);
-
-	/////////////////////////////////
-	// TODO control
-	/////////////////////////////////
-
-	this.setPreferredSize(new Dimension(X + 200, Y));
-	setSize(X, Y);
-
-	// TODO
-	try {
-	    for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-		if ("Nimbus".equals(info.getName())) {
-		    UIManager.setLookAndFeel(info.getClassName());
-		    break;
-=======
 		subMainRightButton.setLayout(new GridLayout(0, 2));
 		subMainRightButton.add(creationBoutton);
 		subMainRightButton.add(destructionCarte);
@@ -245,7 +180,6 @@ public class vueCreation extends vue {
 			}
 		} catch (Exception e) {
 			System.out.println("No nimbus");
->>>>>>> a6adc42c5dac2c98e3bf6af2064f7bf6a535ab3b
 		}
 
 		setVisible(true);

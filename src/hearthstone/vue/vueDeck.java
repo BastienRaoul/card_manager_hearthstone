@@ -28,9 +28,9 @@ public class vueDeck extends vue {
 	public Deck mDeck = null;
 
 	/////////////////////////
-	private JList<Carte> carteList = new JList<>();
+	private JList<Carte> carteList = new JList<>(); //List qui va contenir les cartes du deck affiché dans la vue
 
-	private JComboBox<Classe> choixClasse = new JComboBox<>();
+	private JComboBox<Classe> choixClasse = new JComboBox<>();  //Choix de la classe pour afficher l'onglet et les cartes correspondantes à la classe
 
 	JPanel bottomPanel = new JPanel();
 
@@ -42,29 +42,13 @@ public class vueDeck extends vue {
 
 	private JButton supprimerDeck = new JButton("Supprimer Deck");
 
-<<<<<<< HEAD
-	private JButton creationDeck = new JButton("Terminer");
-	
-    /////////////////////////
-=======
 	private JButton supprimerCarte = new JButton("Supprimer Carte");
->>>>>>> a6adc42c5dac2c98e3bf6af2064f7bf6a535ab3b
 
 	/////////////////////////
-
-	/////
 
 	public vueDeck(Cartes collection, Deck currentDeck) {
 		super(collection);
 
-<<<<<<< HEAD
-	classTab.removeAll();
-	classeGuerrier();
-	classeNeutre();
-
-	/////////////////////////////////
-	subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
-=======
 		if (currentDeck == null)
 			try {
 				mDeck = new Deck(collection, Classe.GUERRIER, "NouveauDeck");
@@ -77,7 +61,6 @@ public class vueDeck extends vue {
 		classTab.removeAll();
 		classeGuerrier();
 		classeNeutre();
->>>>>>> a6adc42c5dac2c98e3bf6af2064f7bf6a535ab3b
 
 		/////////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
@@ -100,6 +83,7 @@ public class vueDeck extends vue {
 
 		////////////////////////////////
 
+		//Choix des classes
 		choixClasse.addItem(Classe.GUERRIER);
 		choixClasse.addItem(Classe.DRUIDE);
 		choixClasse.addItem(Classe.CHASSEUR);
@@ -138,6 +122,7 @@ public class vueDeck extends vue {
 
 		/////////////////////////////////
 
+		//Listener permettant le changement d'onglet lors du changement de classe choisit
 		choixClasse.addActionListener(new ctrlChangeClasse(this));
 
 		/////////////////////////////////
@@ -162,17 +147,10 @@ public class vueDeck extends vue {
 		setVisible(true);
 	}
 
-<<<<<<< HEAD
-	creationDeck.addActionListener(new ctrlCreaDeckAccueil(this));
-
-	setVisible(true);
-    }
-=======
 	//////////////////////////////////////////
 	public void classeGuerrier() {
 		classTab.add(mainGUERRIER, "Guerrier");
 	}
->>>>>>> a6adc42c5dac2c98e3bf6af2064f7bf6a535ab3b
 
 	public void classeDruide() {
 		classTab.add(mainDRUIDE, "Druide");
