@@ -22,6 +22,12 @@ public class ctrlAjoutCarteDeck implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		for (ImagePanel panel : mVue.getCurrentImagePanels()) {
 			if (panel.isSelected()) {
+
+				if (mVue.collection.getNbExemplaireFromDenombrement(panel.mCarte) > 0)
+					if (mVue.mDeck.estPresente(panel.mCarte))
+						if (mVue.collection.getNbExemplaireFromDenombrement(panel.mCarte) < 2) {
+							return;
+						}
 				try {
 					mVue.mDeck.ajouter(panel.mCarte);
 					mVue.modifNbCarte(true);

@@ -25,6 +25,7 @@ import hearthstone.cartes.Deck;
 import hearthstone.controleur.ctrlAjoutCarteDeck;
 import hearthstone.controleur.ctrlChangeClasseDeck;
 import hearthstone.controleur.ctrlSuppCarteDeck;
+import hearthstone.controleur.ctrlSuppDeck;
 import hearthstone.controleur.ctrlTerminerFenetreDeck;
 import hearthstone.controleur.ctrlTitreDeck;
 import hearthstone.exception.ClasseNeutreException;
@@ -78,8 +79,6 @@ public class vueDeck extends vue {
 		mDeck = currentDeck;
 		deckList = deckhandler;
 
-		cardshandler = new CardsHandler(mDeck.collection());
-
 		if (mDeck == null)
 			try {
 				mDeck = new Deck(collection, Classe.GUERRIER, "NouveauDeck");
@@ -87,6 +86,7 @@ public class vueDeck extends vue {
 				e1.printStackTrace();
 			}
 
+		cardshandler = new CardsHandler(mDeck.collection());
 		/////////////////////////////////
 
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
@@ -145,6 +145,8 @@ public class vueDeck extends vue {
 		ajoutCarteDeck.addActionListener(new ctrlAjoutCarteDeck(this));
 
 		supprimerCarte.addActionListener(new ctrlSuppCarteDeck(this));
+
+		supprimerDeck.addActionListener(new ctrlSuppDeck(this));
 
 		/////////////////////////////////
 		// Sélectionne l'item de la combobox correspondant au type du deck
