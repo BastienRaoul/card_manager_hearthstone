@@ -153,21 +153,7 @@ public class vueCreation extends vue {
 		for(int i=0; i<11; i++) {
 			creationNbMana.addItem(i);
 		}
-		
-		/**
-		 * 
-		 */
-		for(int i=0; i<13; i++) {
-			creationDegats.addItem(i);
-		}
-
-		/**
-		 * 
-		 */
-		for(int i=0; i<21; i++) {
-			creationPointVie.addItem(i);
-		}
-
+			
 		subMainRight.add(labelRace);
 		subMainRight.add(creationRace);
 
@@ -176,21 +162,13 @@ public class vueCreation extends vue {
 		subMainRight.add(creationNbMana);
 
 
-				/**
+		/**
 		 * Ajout de toutes les valeur de degats possible à une ComboBox qui permet de donner le
 		 * nombre de degats à la carte 
 		 */
-		creationDegats.addItem(0);
-		creationDegats.addItem(1);
-		creationDegats.addItem(2);
-		creationDegats.addItem(3);
-		creationDegats.addItem(4);
-		creationDegats.addItem(5);
-		creationDegats.addItem(6);
-		creationDegats.addItem(7);
-		creationDegats.addItem(8);
-		creationDegats.addItem(9);
-		creationDegats.addItem(10);
+		for(int i=0; i<13; i++) {
+			creationDegats.addItem(i);
+		}
 
 		subMainRight.add(labelDegats);
 		creationDegats.setMaximumRowCount(creationDegats.getModel().getSize());
@@ -200,17 +178,9 @@ public class vueCreation extends vue {
 		 * Ajout de toutes les valeur de Point de Vie Possible à une ComboBox qui permet de donner le
 		 * nombre de Point de Vie pour la carte 
 		 */
-		creationPointVie.addItem(0);
-		creationPointVie.addItem(1);
-		creationPointVie.addItem(2);
-		creationPointVie.addItem(3);
-		creationPointVie.addItem(4);
-		creationPointVie.addItem(5);
-		creationPointVie.addItem(6);
-		creationPointVie.addItem(7);
-		creationPointVie.addItem(8);
-		creationPointVie.addItem(9);
-		creationPointVie.addItem(10);
+		for(int i=0; i<16; i++) {
+			creationPointVie.addItem(i);
+		}
 
 		subMainRight.add(labelPointDeVie);
 		creationPointVie.setMaximumRowCount(creationPointVie.getModel().getSize());
