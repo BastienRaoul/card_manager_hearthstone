@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import hearthstone.vue.vueCollection;
 import hearthstone.vue.vueDeck;
 
+//Controlleur permettant de créer une nouvelle fenêtre de création de deck 
+//Et de l'afficher
 public class ctrlNewCreationDeck implements ActionListener {
 
 	vueCollection mVue = null;
