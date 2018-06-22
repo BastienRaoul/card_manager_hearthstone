@@ -31,7 +31,6 @@ public class ctrlTitreDeck implements KeyListener {
 	@Override
 	public void keyReleased(KeyEvent e) {
 		mVue.mDeck.setNom(((JTextField) e.getSource()).getText());
-		System.out.println("qsdf");
 	}
 
 }

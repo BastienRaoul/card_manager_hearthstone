@@ -17,7 +17,7 @@ public class Hearthstone {
 
 	public static void main(String[] args) throws CarteDejaPresenteException, IOException, ClasseNeutreException,
 			LimiteNombreDeCartesException, DeckCreationException {
-		Cartes collection = new Cartes(FabriqueJson.lireCartesDepuisFichier("./json/cartes11.json"));
+		Cartes collection = new Cartes(FabriqueJson.lireCartesDepuisFichier("./json/collection.json"));
 
 		Deck d1 = new Deck(collection, Classe.CHAMAN, "deck 1");
 		Deck d2 = new Deck(collection, Classe.DEMONISTE, "deck 2");

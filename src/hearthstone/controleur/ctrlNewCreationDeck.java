@@ -18,13 +18,12 @@ public class ctrlNewCreationDeck implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
 		if (mVue.isWindowOpen)
 			return;
 
 		mVue.isWindowOpen = true;
-		vueDeck main = new vueDeck(mVue.collection, null);
-		
+		vueDeck main = new vueDeck(mVue.collection, mVue.deckhandler, null);
+
 		main.pack();
 		main.setVisible(true);
 	}

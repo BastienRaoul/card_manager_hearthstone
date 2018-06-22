@@ -147,7 +147,7 @@ public class Filtre {
     // throw new ClasseNeutreException("You can't choose neutral class.");
 
     for (Carte resultat : desCartes) {
-      if (resultat.classe() == classe || resultat.classe() == Classe.NEUTRE) {
+      if (resultat.classe() == classe) {
         filtreClasse.add(resultat);
       }
     }
