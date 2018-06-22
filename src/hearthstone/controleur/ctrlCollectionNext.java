@@ -7,6 +7,8 @@ import java.io.IOException;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.vue.vue;
 
+//Controlleur permettant d'afficher le lot de 8 cartes de la page suivante
+//Ou précédente selou la valeur du boolean position
 public class ctrlCollectionNext implements ActionListener {
     
     vue mVue = null;
@@ -40,6 +42,8 @@ public class ctrlCollectionNext implements ActionListener {
 	}
     }
 
+
+	//Méthode tryLeft permettant d'afficher les 8 cartes à gauche (qui précèdent)
     private void tryleft() throws ClasseNeutreException, IOException {
 	if (mVue.pageNumber > 0) {
 	    --mVue.pageNumber;
@@ -49,6 +53,7 @@ public class ctrlCollectionNext implements ActionListener {
 	}
     }
 
+	//Méthode tryRight permettant d'afficher les 8 cartes à droite (qui suivent)
     private void tryright() throws ClasseNeutreException, IOException {
 	if (((mVue.pageNumber + 1) * 8) < mVue.applyFilterRace().size()) {
 	    ++mVue.pageNumber;

@@ -147,6 +147,22 @@ public class vueCreation extends vue {
 		creationRace.addItem(Race.MURLOC);
 		creationRace.addItem(Race.PIRATE);
 		creationRace.addItem(Race.TOTEM);
+
+		/**
+		 * 
+		 */
+		creationNbMana.addItem(0);
+		creationNbMana.addItem(1);
+		creationNbMana.addItem(2);
+		creationNbMana.addItem(3);
+		creationNbMana.addItem(4);
+		creationNbMana.addItem(5);
+		creationNbMana.addItem(6);
+		creationNbMana.addItem(7);
+		creationNbMana.addItem(8);
+		creationNbMana.addItem(9);
+		creationNbMana.addItem(10);
+		
 		subMainRight.add(labelRace);
 		subMainRight.add(creationRace);
 

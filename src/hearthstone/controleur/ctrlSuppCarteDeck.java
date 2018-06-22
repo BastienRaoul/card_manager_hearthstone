@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 import hearthstone.exception.CarteAbsenteException;
 import hearthstone.vue.vueDeck;
 
+//Controlleur permettant de supprimer une carte d'un deck en cliquant
+//Sur le bouton "supprimer carte"
 public class ctrlSuppCarteDeck implements ActionListener {
 
 	vueDeck mVue = null;

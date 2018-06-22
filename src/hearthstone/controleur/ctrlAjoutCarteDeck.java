@@ -10,6 +10,8 @@ import hearthstone.exception.LimiteNombreDeCartesException;
 import hearthstone.vue.ImagePanel;
 import hearthstone.vue.vueDeck;
 
+//Controlleur permettant ajouter une carte à un deck en cliquant sur le bouton
+//"ajouter la carte"
 public class ctrlAjoutCarteDeck implements ActionListener {
 
 	vueDeck mVue = null;

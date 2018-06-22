@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import hearthstone.vue.vueCollection;
 import hearthstone.vue.vueDeck;
 
+//Controlleur permettant de lancer la vue de manipulation de deck pour modifier un deck
 public class ctrlModifDeck implements ActionListener {
 
 	vueCollection mVue = null;

@@ -19,29 +19,31 @@ public class ctrlAjoutCarte implements ActionListener {
            
 		try {
 			
-			if(mVue.creationTypeCarte.getSelectedItem().toString().equals("Sort")) {
-				
-				System.out.print("test1");
-
+			if(mVue.creationTypeCarte.getSelectedItem().toString().equals("Sort")) {				
 				
 				//Problème ici
-				String nom = mVue.textFieldNomCreation.getSelectedText();
-				//int mana = mVue.creationNbMana.getSelectedIndex();
-				int mana = 2;
-				String desc = mVue.textAreaExplication.getSelectedText();           
-				Rarete rarete = typeRarete(mVue.creationRarete.getSelectedItem().toString());   
-				Classe classe = typeClasse(mVue.creationClasse.getSelectedItem().toString());				
+
+				String nom = mVue.textFieldNomCreation.getText();
 				
-				Sort sort = new Sort(nom, mana, desc, rarete, classe);				
-				
-				System.out.print("test apres sort");	
+				int mana = mVue.creationNbMana.getSelectedIndex();
+				//Rarete rarete = typeRarete(mVue.creationRarete.getSelectedItem().toString()); 			
+				//Classe classe = typeClasse(mVue.creationClasse.getSelectedItem().toString());				
+								
+				//int mana = 2;
+				String desc = "Je suis une description";    
+				Rarete rarete = Rarete.COMMUNE;
+				Classe classe = Classe.DRUIDE;
+
+				Sort sort = new Sort(nom, mana, desc, rarete, classe);	
+				System.out.print("Sa fonctionne");	
+
 			} else if(mVue.creationTypeCarte.getSelectedItem().toString().equals("Arme")){
 
 			} else if(mVue.creationTypeCarte.getSelectedItem().toString().equals("Serviteur")){
 
 			}
 		} catch (Exception e1) {
-			System.out.print(" Error");
+			System.out.print("Error : catch ");
 		}            
 	}             
 	

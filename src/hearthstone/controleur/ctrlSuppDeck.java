@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import hearthstone.exception.DeckSuppressionException;
 import hearthstone.vue.vueDeck;
 
+//Controlleur permettant d'effacer un deck en cliquant sur le bouton "supprimer deck"
 public class ctrlSuppDeck implements ActionListener {
 
 	vueDeck mVue = null;
