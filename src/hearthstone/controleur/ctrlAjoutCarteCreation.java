@@ -37,16 +37,20 @@ public class ctrlAjoutCarteCreation implements ActionListener {
 			Classe classe = (Classe) mVue.creationClasse.getSelectedItem();// typeClasse(mVue.creationClasse.getSelectedItem().toString());
 
 			Carte newCarte = null;
-			// Image
-			File destination = new File("./cachedPics/");
-			// copier(ctrlAjoutImageCreation.fileImage(), destination);
 
-			// String url = ctrlAjoutImageCreation.fileImage();
-			// String urldoree = ctrlAjoutImageCreation.fileImage().toString();
+			// Image
+			File destination = new File("./cachedPics/deapool.png");
+
+			String url = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/CS2_072.png";
+			String urldoree = "http://media.services.zam.com/v1/media/byName/hs/cards/enus/CS2_072.png";
+
+			//On récupère le type de carte que l'on veut créer puis on fabrique la carte
 
 			if (mVue.creationTypeCarte.getSelectedItem().toString().equals("Sort")) {
-				newCarte = new Sort(nom, mana, desc, rarete, classe);
+				
+				newCarte = new Sort(nom, mana, desc, rarete, classe);				
 				System.out.print("Création carte réussi " + ((Sort) newCarte));
+
 			} else if (mVue.creationTypeCarte.getSelectedItem().toString().equals("Arme")) {
 
 				int degats = mVue.creationDegats.getSelectedIndex();
@@ -54,18 +58,23 @@ public class ctrlAjoutCarteCreation implements ActionListener {
 
 				newCarte = new Arme(nom, mana, desc, rarete, classe, degats, durabilite);
 				System.out.print("Création carte réussi " + ((Arme) newCarte).toString2());
+
 			} else if (mVue.creationTypeCarte.getSelectedItem().toString().equals("Serviteur")) {
 
 				int degats = mVue.creationDegats.getSelectedIndex();
 				int pointsDeVie = mVue.creationPointVie.getSelectedIndex();
-				Race race = typeRace(mVue.creationRace.getSelectedItem().toString());
+				Race race = (Race) mVue.creationRace.getSelectedItem();
 
-				newCarte = new Serviteur(nom, mana, desc, rarete, classe, degats, pointsDeVie, race);
+				newCarte = new Serviteur(nom, mana, desc, rarete, classe, url, urldoree, degats, pointsDeVie, race);
 				System.out.print("Création carte réussi " + ((Serviteur) newCarte).toString2());
 			}
 
+			//On ajoute la carte fabriquée dans la collection
+
 			mVue.collection.ajouter(newCarte);
 			mVue.collection.buildDenombrement();
+
+			//La carte est mise en 1 seul exemplaire
 
 			for (Denombrement denomb : mVue.collection.decombrements()) {
 				if (denomb.carte().equals(newCarte)) {
@@ -84,142 +93,5 @@ public class ctrlAjoutCarteCreation implements ActionListener {
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
-	}
-
-	/**
-	 * @param jsonString
-	 *            la chaine de caractères
-	 * @return la race du serviteur
-	 */
-	public static Race typeRace(String jsonString) {
-
-		try {
-			switch (jsonString) {
-
-			case "BETE":
-				return Race.BETE;
-			case "DEMON":
-				return Race.DEMON;
-			case "DRAGON":
-				return Race.DRAGON;
-			case "ELEMENTAIRE":
-				return Race.ELEMENTAIRE;
-			case "MECA":
-				return Race.MECA;
-			case "MURLOC":
-				return Race.MURLOC;
-			case "PIRATE":
-				return Race.PIRATE;
-			case "TOTEM":
-				return Race.TOTEM;
-			default:
-				System.out.println("");
-			}
-		} catch (Exception e) {
-			System.out.print("");
-		}
-		return null;
-	}
-
-	/**
-	 * @param jsonString
-	 *            la chaine de caractères
-	 * @return la rarete de la carte
-	 */
-	public static Rarete typeRarete(String jsonString) {
-
-		try {
-			switch (jsonString) {
-			case "BASIQUE":
-				return Rarete.BASIQUE;
-			case "COMMUNE":
-				return Rarete.COMMUNE;
-			case "RARE":
-				return Rarete.RARE;
-			case "EPIC":
-				return Rarete.EPIQUE;
-			case "LEGENDAIRE":
-				return Rarete.LEGENDAIRE;
-			default:
-				System.out.println("");
-			}
-		} catch (Exception e) {
-			System.out.print("");
-		}
-		return null;
-	}
-
-	/**
-	 * @param jsonString
-	 *            la chaine de caractères
-	 * @return le classe de la carte
-	 */
-	public static Classe typeClasse(String jsonString) {
-
-		try {
-
-			switch (jsonString) {
-			case "NEUTRE":
-				return Classe.NEUTRE;
-			case "DRUIDE":
-				return Classe.DRUIDE;
-			case "CHASSEUR":
-				return Classe.CHASSEUR;
-			case "MAGE":
-				return Classe.MAGE;
-			case "PALADIN":
-				return Classe.PALADIN;
-			case "PRETRE":
-				return Classe.PRETRE;
-			case "CHAMAN":
-				return Classe.CHAMAN;
-			case "DEMONISTE":
-				return Classe.DEMONISTE;
-			case "VOLEUR":
-				return Classe.VOLEUR;
-			case "GUERRIER":
-				return Classe.GUERRIER;
-			default:
-				System.out.println("");
-			}
-		} catch (Exception e) {
-			System.out.print("");
-		}
-		return null;
-	}
-
-	/**
-	 * Changer dossier image
-	 */
-	public static boolean copier(File source, File dest) {
-		try {
-			// Declaration et ouverture des flux
-			java.io.FileInputStream sourceFile = new java.io.FileInputStream(source);
-
-			try {
-				java.io.FileOutputStream destinationFile = null;
-
-				try {
-					destinationFile = new FileOutputStream(dest);
-
-					// Lecture par segment de 0.5Mo
-					byte buffer[] = new byte[512 * 1024];
-					int nbLecture;
-
-					while ((nbLecture = sourceFile.read(buffer)) != -1) {
-						destinationFile.write(buffer, 0, nbLecture);
-					}
-				} finally {
-					destinationFile.close();
-				}
-			} finally {
-				sourceFile.close();
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-			return false; // Erreur
-		}
-
-		return true; // Résultat OK
 	}
 }

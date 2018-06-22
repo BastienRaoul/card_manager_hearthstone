@@ -36,7 +36,6 @@ public class ctrlAjoutCarteDeck implements ActionListener {
 							e1.printStackTrace();
 						}
 					}
-
 				break;
 			}
 		}

@@ -30,7 +30,5 @@ public class ctrlTabbedPaneCollection implements ChangeListener {
 		} catch (ClasseNeutreException | IOException e1) {
 			e1.printStackTrace();
 		}
-
-
 	}
 }

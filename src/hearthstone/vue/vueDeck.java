@@ -222,8 +222,7 @@ public class vueDeck extends vue {
 		}
 		setVisible(true);
 	}
-
-	//////////////////////////////////////////
+	
 	// Ajoute l'onglet de la classe Guerrier
 	public void classeGuerrier() {
 		classTab.add(mainGUERRIER, "Guerrier");
