@@ -37,6 +37,11 @@ public class ctrlAjoutImageCreation implements ActionListener {
             System.out.println("getSelectedFile() : " + chooser.getSelectedFile());
         } else {
             System.out.println("Pas de fichier séléctioné ");
-        }
+        }       
     }
+    
+    public File fileImage() {
+        File selectedFile = chooser.getSelectedFile();
+        return selectedFile;
+    }    
 }

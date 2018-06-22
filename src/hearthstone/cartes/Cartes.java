@@ -237,8 +237,8 @@ public class Cartes implements ManipulationCartes {
 	 *
 	 * @return la liste des dénombrement des cartes de la collection.
 	 */
-	public List<Deck> decombrements() {
-		return maListeDeDeck;
+	public List<Denombrement> decombrements() {
+		return monDenombrement;
 	}
 
 	/**

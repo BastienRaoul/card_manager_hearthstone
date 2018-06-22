@@ -58,6 +58,13 @@ public class Denombrement {
     public void incremente() {
         nombre++;
     }
+ 
+     /**
+     * met le nombre d'exemplaires à la valeur de nombre
+     */
+    public void setNombre(int nombre){
+      this.nombre = nombre;
+    }
 
     @Override
     public String toString() {
