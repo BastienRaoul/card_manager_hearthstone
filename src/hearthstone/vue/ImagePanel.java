@@ -59,7 +59,7 @@ public class ImagePanel extends JPanel {
 				image = ImageIO.read(url);
 				ImageIO.write(image, "png", pic);
 			} catch (IOException e) {
-				System.out.println("Error while downloading : " + url);
+				System.out.println("Error while downloading : ");
 				e.printStackTrace();
 			}
 			this.loadPicFile(pic);
