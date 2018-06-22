@@ -1,6 +1,7 @@
 package hearthstone.cartes;
 
 import hearthstone.carte.Carte;
+import hearthstone.carte.Rarete;
 import hearthstone.exception.ValeurNegativeException;
 
 /**
@@ -24,13 +25,17 @@ public class Denombrement {
 		this.carte = carte;
 		if (nombre < 0)
 			throw new ValeurNegativeException("The card count can not be negative");
+		if(carte.rarete() == Rarete.BASIQUE)
+			if(nombre<2)
+				nombre +=2;
 		this.nombre = nombre;
 	}
 
 	/**
 	 * creer un "couple" (carte,1)
 	 * 
-	 * @param carte la carte à utiliser
+	 * @param carte
+	 *            la carte à utiliser
 	 */
 	public Denombrement(Carte carte) throws ValeurNegativeException {
 		this(carte, 1);

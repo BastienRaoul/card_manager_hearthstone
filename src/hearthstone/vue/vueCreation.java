@@ -18,7 +18,7 @@ import hearthstone.carte.Classe;
 import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
-import hearthstone.controleur.ctrlAjoutCarte;
+import hearthstone.controleur.ctrlAjoutCarteCreation;
 import hearthstone.controleur.ctrlAjoutImageCreation;
 import hearthstone.controleur.ctrlCreerCarteCreation;
 import hearthstone.controleur.ctrlDetruireCarteCreation;
@@ -143,29 +143,30 @@ public class vueCreation extends vue {
 		creationRace.addItem(Race.PIRATE);
 		creationRace.addItem(Race.TOTEM);
 
-
 		subMainRight.add(labelRace);
 		subMainRight.add(creationRace);
 
 		/**
 		 * Ajout de toutes les valeur de Mana à une ComboBox qui permet de donner le
-		 * nombre de Mana que coute la carte 
+		 * nombre de Mana que coute la carte
 		 */
-		for(int i=0; i<11; i++) {
+		for (int i = 0; i < 11; i++) {
 			creationNbMana.addItem(i);
 		}
-		
+
 		/**
-		 * 
+		 * Ajout de toutes les valeur de degats possible à une ComboBox qui permet de
+		 * donner le nombre de degats à la carte
 		 */
-		for(int i=0; i<13; i++) {
+		for (int i = 0; i < 13; i++) {
 			creationDegats.addItem(i);
 		}
 
 		/**
-		 * 
+		 * Ajout de toutes les valeur de Point de Vie Possible à une ComboBox qui permet
+		 * de donner le nombre de Point de Vie pour la carte
 		 */
-		for(int i=0; i<21; i++) {
+		for (int i = 0; i < 21; i++) {
 			creationPointVie.addItem(i);
 		}
 
@@ -176,42 +177,9 @@ public class vueCreation extends vue {
 		creationNbMana.setMaximumRowCount(creationNbMana.getModel().getSize());
 		subMainRight.add(creationNbMana);
 
-
-				/**
-		 * Ajout de toutes les valeur de degats possible à une ComboBox qui permet de donner le
-		 * nombre de degats à la carte 
-		 */
-		creationDegats.addItem(0);
-		creationDegats.addItem(1);
-		creationDegats.addItem(2);
-		creationDegats.addItem(3);
-		creationDegats.addItem(4);
-		creationDegats.addItem(5);
-		creationDegats.addItem(6);
-		creationDegats.addItem(7);
-		creationDegats.addItem(8);
-		creationDegats.addItem(9);
-		creationDegats.addItem(10);
-
 		subMainRight.add(labelDegats);
 		creationDegats.setMaximumRowCount(creationDegats.getModel().getSize());
 		subMainRight.add(creationDegats);
-
-		/**
-		 * Ajout de toutes les valeur de Point de Vie Possible à une ComboBox qui permet de donner le
-		 * nombre de Point de Vie pour la carte 
-		 */
-		creationPointVie.addItem(0);
-		creationPointVie.addItem(1);
-		creationPointVie.addItem(2);
-		creationPointVie.addItem(3);
-		creationPointVie.addItem(4);
-		creationPointVie.addItem(5);
-		creationPointVie.addItem(6);
-		creationPointVie.addItem(7);
-		creationPointVie.addItem(8);
-		creationPointVie.addItem(9);
-		creationPointVie.addItem(10);
 
 		subMainRight.add(labelPointDeVie);
 		creationPointVie.setMaximumRowCount(creationPointVie.getModel().getSize());
@@ -223,11 +191,12 @@ public class vueCreation extends vue {
 		panFile.add(scrollArea);
 		textAreaExplication.setLineWrap(true);
 		panFile.add(file);
-		file.addActionListener(new ctrlAjoutImageCreation(this)); //Listener : fabrique une carte puis l'ajoute à la collection
+		file.addActionListener(new ctrlAjoutImageCreation(this)); // Listener : fabrique une carte puis l'ajoute à la
+																	// collection
 
 		// Bouton pour ajouter une image a la carte créée
 		subMainRight.add(ajoutCarteButton);
-		ajoutCarteButton.addActionListener(new ctrlAjoutCarte(this));
+		ajoutCarteButton.addActionListener(new ctrlAjoutCarteCreation(this));
 
 		subMainRightButton.setLayout(new GridLayout(0, 2));
 		subMainRightButton.add(creationBoutton);
@@ -247,7 +216,7 @@ public class vueCreation extends vue {
 		terminer.addActionListener(new ctrlTerminerFenetreCreation(this));
 
 		creationBoutton.addActionListener(new ctrlCreerCarteCreation(this));
-		
+
 		destructionCarte.addActionListener(new ctrlDetruireCarteCreation(this));
 		/////////////////////////////////
 
