@@ -4,8 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import hearthstone.carte.Rarete;
+import hearthstone.cartes.Deck;
 import hearthstone.cartes.Denombrement;
-import hearthstone.exception.CoutCreationException;
 import hearthstone.exception.GainDesenchantementException;
 import hearthstone.vue.ImagePanel;
 import hearthstone.vue.vueCreation;
@@ -27,6 +27,10 @@ public class ctrlDetruireCarteCreation implements ActionListener {
 							denomb.setNombre(denomb.nombre() - 1);
 
 							try {
+								for(Deck deck : mVue.collection.collectionDeDeck()) {
+									deck.collection().remove(panel.mCarte);
+								}
+								
 								mVue.collection.setNbPoussiere(
 										mVue.collection.getNbPoussiere() + panel.mCarte.gainDesenchantement());
 								System.out.println(panel.mCarte.gainDesenchantement());
