@@ -24,8 +24,8 @@ public class ctrlAjoutCarteDeck implements ActionListener {
 			if (panel.isSelected()) {
 				try {
 					mVue.mDeck.ajouter(panel.mCarte);
-					mVue.nbCarteDansDeck.setText(
-							Integer.toString(Integer.parseInt(mVue.nbCarteDansDeck.getText().split("/")[0].trim()) + 1) + " / 30 cartes");
+					mVue.modifNbCarte(true);
+					mVue.cardshandler.fire();
 				} catch (DeckPleinException | CarteNonDisponibleException | CarteMauvaiseClasseException
 						| LimiteNombreDeCartesException e1) {
 					e1.printStackTrace();
@@ -33,6 +33,5 @@ public class ctrlAjoutCarteDeck implements ActionListener {
 				break;
 			}
 		}
-
 	}
 }

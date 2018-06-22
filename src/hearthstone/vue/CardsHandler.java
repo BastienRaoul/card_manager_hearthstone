@@ -23,4 +23,15 @@ public class CardsHandler extends AbstractListModel<Carte> {
 	public Carte getElementAt(int index) {
 		return listeCarte.get(index);
 	}
+
+	public void fire() {
+		if (listeCarte.size() != 0) {
+			System.out.println("Fire");
+			fireIntervalAdded(this, 0, listeCarte.size() - 1);
+		} else {
+			System.out.println("No fire");
+			fireIntervalAdded(this, 0, 0);
+		}
+
+	}
 }

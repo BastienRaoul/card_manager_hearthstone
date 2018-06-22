@@ -19,8 +19,12 @@ public class ctrlModifDeck implements ActionListener {
 		if (mVue.isWindowOpen)
 			return;
 
-		mVue.isWindowOpen = true;
+		
 
+		if(mVue.deckList.getSelectedValue() == null)
+			return;
+		
+		mVue.isWindowOpen = true;
 		vueDeck main = new vueDeck(mVue.collection, mVue.deckhandler, mVue.deckList.getSelectedValue());
 
 		main.pack();

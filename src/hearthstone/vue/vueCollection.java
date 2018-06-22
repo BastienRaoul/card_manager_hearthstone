@@ -25,7 +25,7 @@ public class vueCollection extends vue {
 	/////
 	public JList<Deck> deckList = null;
 
-	public DeckHandler deckhandler = new DeckHandler(collection.collectionDeDeck());
+	public DeckHandler deckhandler = null;
 	
 	private JButton creationCarte = new JButton("Creation de carte");
 
@@ -39,6 +39,8 @@ public class vueCollection extends vue {
 	public vueCollection(Cartes collection) {
 		super(collection);
 
+		deckhandler = new DeckHandler(collection.collectionDeDeck());
+		
 		/////////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Mes decks..."));
 

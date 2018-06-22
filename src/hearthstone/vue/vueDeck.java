@@ -24,6 +24,7 @@ import hearthstone.cartes.Cartes;
 import hearthstone.cartes.Deck;
 import hearthstone.controleur.ctrlAjoutCarteDeck;
 import hearthstone.controleur.ctrlChangeClasse;
+import hearthstone.controleur.ctrlSuppCarteDeck;
 import hearthstone.controleur.ctrlTerminerFenetre;
 import hearthstone.controleur.ctrlTitreDeck;
 import hearthstone.exception.ClasseNeutreException;
@@ -45,14 +46,16 @@ public class vueDeck extends vue {
 	/////////////////////////
 
 	public DeckHandler deckList = null;
-	
+
 	private JComboBox<Classe> choixClasse = new JComboBox<>();
+
+	public CardsHandler cardshandler = null;
 
 	private JPanel titreDeck = new JPanel();
 
 	private JTextField nomDeck = new JTextField();
 
-	private JList<Carte> carteList = null;
+	public JList<Carte> carteList = null;
 
 	private JPanel bottomPanel = new JPanel();
 
@@ -66,15 +69,19 @@ public class vueDeck extends vue {
 
 	private JButton manipulationTerminee = new JButton("Terminer");
 
-	
-
 	/////////////////////////
 
 	public vueDeck(Cartes collection, DeckHandler deckhandler, Deck currentDeck) {
 		super(collection);
 		mDeck = currentDeck;
 		deckList = deckhandler;
-		
+
+		cardshandler = new CardsHandler(mDeck.collection());
+
+		cardshandler.fire();
+
+		System.out.println(mDeck.collection());
+
 		if (mDeck == null)
 			try {
 				mDeck = new Deck(collection, Classe.GUERRIER, "NouveauDeck");
@@ -106,7 +113,7 @@ public class vueDeck extends vue {
 
 		subMainRight.add(titreDeck, BorderLayout.NORTH);
 
-		carteList = new JList<>(new CardsHandler(mDeck.collection()));
+		carteList = new JList<>(cardshandler);
 		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		carteList.setVisibleRowCount(-1);
 
@@ -137,6 +144,8 @@ public class vueDeck extends vue {
 		nomDeck.addKeyListener(new ctrlTitreDeck(this));
 
 		ajoutCarteDeck.addActionListener(new ctrlAjoutCarteDeck(this));
+
+		supprimerCarte.addActionListener(new ctrlSuppCarteDeck(this));
 
 		/////////////////////////////////
 
@@ -201,7 +210,6 @@ public class vueDeck extends vue {
 		} catch (Exception e) {
 			System.out.println("No nimbus");
 		}
-
 		setVisible(true);
 	}
 
@@ -294,5 +302,19 @@ public class vueDeck extends vue {
 
 	public void clearTab() {
 		classTab.removeAll();
+	}
+
+	public void modifNbCarte(boolean decision) {
+		if (decision) {
+			nbCarteDansDeck
+					.setText(Integer.toString(Integer.parseInt(nbCarteDansDeck.getText().split("/")[0].trim()) + 1)
+							+ " / 30 cartes");
+		}
+		else {
+			nbCarteDansDeck
+					.setText(Integer.toString(Integer.parseInt(nbCarteDansDeck.getText().split("/")[0].trim()) - 1)
+							+ " / 30 cartes");
+		}
+
 	}
 }

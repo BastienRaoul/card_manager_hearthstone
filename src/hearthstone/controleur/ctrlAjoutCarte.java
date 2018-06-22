@@ -7,14 +7,15 @@ import hearthstone.vue.vueCreation;
 
 public class ctrlAjoutCarte implements ActionListener {
 
-    vueCreation mVue = null;
+	vueCreation mVue = null;
 
-    public ctrlAjoutCarte(vueCreation vue) {
-	mVue = vue;
-    }
+	public ctrlAjoutCarte(vueCreation vue) {
+		mVue = vue;
+	}
 
-    public void actionPerformed(ActionEvent e) {
-	/*
-	 * if (mVue.RightArme.isSelected()) { }
-	 */ }
+	public void actionPerformed(ActionEvent e) {
+		/*
+		 * if (mVue.RightArme.isSelected()) { }
+		 */
+	}
 }

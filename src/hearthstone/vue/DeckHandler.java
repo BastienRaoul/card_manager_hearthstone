@@ -25,6 +25,9 @@ public class DeckHandler extends AbstractListModel<Deck> {
 	}
 
 	public void fire() {
-		fireIntervalAdded(this, 0, listeDeck.size()-1);
+		if (listeDeck.size() != 0)
+			fireIntervalAdded(this, 0, listeDeck.size() - 1);
+		else
+			fireIntervalAdded(this, 0, 0);
 	}
 }
