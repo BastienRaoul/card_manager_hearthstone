@@ -22,7 +22,7 @@ public class ctrlCardClicked implements MouseListener {
 
 	((ImagePanel) e.getSource()).setSelected(mVue.getCurrentImagePanels());
 
-	mVue.textAreaDescription.setText("<html>" + ((ImagePanel) e.getSource()).mCarte.description() + "</html>");
+	mVue.textEditorDescription.setText("<html>" + ((ImagePanel) e.getSource()).mCarte.description() + "</html>");
 
 	try {
 	    mVue.coutDescription

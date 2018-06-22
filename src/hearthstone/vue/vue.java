@@ -15,6 +15,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -128,7 +129,7 @@ public class vue extends JFrame {
     private JPanel description = new JPanel();
 
     private JPanel textDescription = new JPanel();
-    public JTextArea textAreaDescription = new JTextArea("Description...");
+    public JEditorPane textEditorDescription = new JEditorPane("text/html", "Description...");
 
     private JPanel perksDescription = new JPanel();
     public JLabel coutDescription = new JLabel("Cout : 0");
@@ -403,8 +404,8 @@ public class vue extends JFrame {
 
 	textDescription.setLayout(new BorderLayout());
 	textDescription.setBorder(BorderFactory.createTitledBorder("Description :"));
-	textAreaDescription.setEditable(false);
-	textDescription.add(textAreaDescription, BorderLayout.CENTER);
+	textEditorDescription.setEditable(false);
+	textDescription.add(textEditorDescription, BorderLayout.CENTER);
 
 	description.add(textDescription, BorderLayout.CENTER);
 
@@ -646,9 +647,9 @@ public class vue extends JFrame {
 
     }
 
-	//Méthode resetDescription qui efface le contenu du JTextArea correspondant à la description
+	//Méthode resetDescription qui efface le contenu du JEditorPane correspondant à la description
     public void resetDesciption() {
-	textAreaDescription.setText("");
+	textEditorDescription.setText("");
 
 	coutDescription.setText("Cout : 0");
 	valeurDesemDescription.setText("Valeur : 0");
