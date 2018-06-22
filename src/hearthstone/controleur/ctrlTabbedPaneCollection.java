@@ -22,13 +22,15 @@ public class ctrlTabbedPaneCollection implements ChangeListener {
 
 	@Override
 	public void stateChanged(ChangeEvent e) {
+		mVue.pageNumber = 0;
+
+		mVue.resetDesciption();
 		try {
 			mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneId());
 		} catch (ClasseNeutreException | IOException e1) {
 			e1.printStackTrace();
 		}
 
-		mVue.resetDesciption();
-		mVue.pageNumber = 0;
+
 	}
 }
