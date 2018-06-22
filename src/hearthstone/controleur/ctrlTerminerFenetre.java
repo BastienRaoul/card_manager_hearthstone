@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import hearthstone.vue.vueDeck;
 
+//Controlleur permettant de fermer la fenêtre liée
 public class ctrlTerminerFenetre implements ActionListener {
 
 	vueDeck mVue = null;

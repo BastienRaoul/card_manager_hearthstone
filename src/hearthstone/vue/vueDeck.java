@@ -47,7 +47,8 @@ public class vueDeck extends vue {
 	/////////////////////////
 
 	public DeckHandler deckList = null;
-
+	// Choix de la classe pour afficher l'onglet et les cartes correspondantes à la
+	// classe
 	private JComboBox<Classe> choixClasse = new JComboBox<>();
 
 	public CardsHandler cardshandler = null;
@@ -93,6 +94,7 @@ public class vueDeck extends vue {
 
 		titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
 
+		// Choix des classes
 		choixClasse.addItem(Classe.GUERRIER);
 		choixClasse.addItem(Classe.DRUIDE);
 		choixClasse.addItem(Classe.CHASSEUR);
@@ -119,7 +121,7 @@ public class vueDeck extends vue {
 		System.out.println(mDeck.collection());
 		subMainRight.add(listeDesCartes, BorderLayout.CENTER);
 
-		////////////////////////////////////
+		/////// Ajout des boutons de gestion de deck sous la liste des cartes du deck
 
 		bottomPanel.setLayout(new GridLayout(3, 2));
 
@@ -132,7 +134,7 @@ public class vueDeck extends vue {
 
 		subMainRight.add(bottomPanel, BorderLayout.SOUTH);
 
-		/////////////////////////////////
+		///////////////////////////////// Ajout des controlleurs
 
 		manipulationTerminee.addActionListener(new ctrlTerminerFenetre(this));
 
@@ -145,7 +147,7 @@ public class vueDeck extends vue {
 		supprimerCarte.addActionListener(new ctrlSuppCarteDeck(this));
 
 		/////////////////////////////////
-
+		// Sélectionne l'item de la combobox correspondant au type du deck
 		{
 			isInit = true;
 			classTab.removeAll();
@@ -200,6 +202,7 @@ public class vueDeck extends vue {
 
 		setSize(X, Y);
 
+		// Change le look&feel
 		try {
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {
@@ -214,54 +217,65 @@ public class vueDeck extends vue {
 	}
 
 	//////////////////////////////////////////
+	// Ajoute l'onglet de la classe Guerrier
 	public void classeGuerrier() {
 		classTab.add(mainGUERRIER, "Guerrier");
 	}
 
+	// Ajoute l'onglet de la classe Druide
 	public void classeDruide() {
 		classTab.add(mainDRUIDE, "Druide");
 
 	}
 
+	// Ajoute l'onglet de la classe Voleur
 	public void classeVoleur() {
 		classTab.add(mainVOLEUR, "Voleur");
 
 	}
 
+	// Ajoute l'onglet de la classe Chasseur
 	public void classeChasseur() {
 		classTab.add(mainCHASSEUR, "Chasseur");
 
 	}
 
+	// Ajoute l'onglet de la classe Chaman
 	public void classeChaman() {
 		classTab.add(mainCHAMAN, "Chaman");
 	}
 
+	// Ajoute l'onglet de la classe Paladin
 	public void classePaladin() {
 		classTab.add(mainPALADIN, "Paladin");
 	}
 
+	// Ajoute l'onglet de la classe Mage
 	public void classeMage() {
 		classTab.add(mainMAGE, "Mage");
 
 	}
 
+	// Ajoute l'onglet de la classe Pretre
 	public void classePretre() {
 		classTab.add(mainPRETRE, "Pretre");
 
 	}
 
+	// Ajoute l'onglet de la classe Demoniste
 	public void classeDemoniste() {
 		classTab.add(mainDEMONISTE, "Demoniste");
 
 	}
 
+	// Ajoute l'onglet de la classe Neutre
 	public void classeNeutre() {
 		classTab.add(mainNEUTRE, "Neutre");
 	}
 
 	//////////////////////////
 
+	// Récupère la classe choisie dans le comboBox
 	public Classe getClasse() {
 		if (choixClasse.getSelectedItem() != null) {
 			switch (choixClasse.getSelectedItem().toString()) {
@@ -300,6 +314,7 @@ public class vueDeck extends vue {
 		return Classe.NEUTRE;
 	}
 
+	// Permet d'effacer tous les onglets du TabbedPane
 	public void clearTab() {
 		classTab.removeAll();
 	}

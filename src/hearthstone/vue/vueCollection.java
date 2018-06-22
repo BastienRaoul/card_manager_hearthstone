@@ -20,6 +20,8 @@ import hearthstone.controleur.ctrlModifDeck;
 import hearthstone.controleur.ctrlNewCreationCards;
 import hearthstone.controleur.ctrlNewCreationDeck;
 
+//Classe vueCollection, héritant de la classe vue, affichant la collection du joueur
+//Accessoirement, écran d'accueil
 public class vueCollection extends vue {
 
 	/////
@@ -48,9 +50,11 @@ public class vueCollection extends vue {
 		deckList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		// deckList.setVisibleRowCount(-1);
 
+		// Ajout de la liste à un JSrollPane afin de scroll si nécessaire
 		JScrollPane listeDesDeck = new JScrollPane(deckList);
 		listeDesDeck.setPreferredSize(new Dimension(250, 80));
 
+		// Ajout des panels
 		subMainRight.setLayout(new BorderLayout());
 		subMainRight.add(listeDesDeck, BorderLayout.CENTER);
 		subMainRight.add(creationCarte, BorderLayout.NORTH);
@@ -75,6 +79,7 @@ public class vueCollection extends vue {
 		this.setPreferredSize(new Dimension(X, Y));
 		setSize(X, Y);
 
+		// Changement du look&feel
 		try {
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {
