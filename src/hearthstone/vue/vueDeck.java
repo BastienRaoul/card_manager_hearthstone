@@ -79,13 +79,16 @@ public class vueDeck extends vue {
 		mDeck = currentDeck;
 		deckList = deckhandler;
 
+		//Dans le cas ou le deck donné en paramètre est un null
+		//Crée un nouveau deck
 		if (mDeck == null)
 			try {
 				mDeck = new Deck(collection, Classe.GUERRIER, "NouveauDeck");
 			} catch (ClasseNeutreException | LimiteNombreDeCartesException | DeckCreationException e1) {
 				e1.printStackTrace();
 			}
-
+		
+		//crée le cards Handler de ce deck, qui contiendra les cartes du deck
 		cardshandler = new CardsHandler(mDeck.collection());
 	
 		//////////////////////////////
@@ -115,6 +118,7 @@ public class vueDeck extends vue {
 		carteList = new JList<>(cardshandler);
 		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
+		//Affichage de la liste de cartes du deck
 		JScrollPane listeDesCartes = new JScrollPane(carteList);
 		listeDesCartes.setPreferredSize(new Dimension(250, 80));
 		cardshandler.fire();
@@ -170,7 +174,6 @@ public class vueDeck extends vue {
 			classeNeutre();
 			isInit = false;
 		}
-		/////////////////////////////////
 		
 		/////// Ajout des boutons de gestion de deck sous la liste des cartes du deck
 		bottomPanel.setLayout(new GridLayout(3, 2));
@@ -184,7 +187,7 @@ public class vueDeck extends vue {
 
 		subMainRight.add(bottomPanel, BorderLayout.SOUTH);
 
-		///////////////////////////////// Ajout des controlleurs
+		///////// Ajout des controlleurs
 
 		manipulationTerminee.addActionListener(new ctrlTerminerFenetreDeck(this));
 
@@ -323,10 +326,12 @@ public class vueDeck extends vue {
 		classTab.removeAll();
 	}
 
+	//Méthode affichant un nombre de 0 pour le nombre de cartes dans le deck
 	public void modifNbCrateReset() {
 		nbCarteDansDeck.setText(Integer.toString(0) + " / 30 cartes");
 	}
 
+	//Méthode affichant le nombre de cartes courants dans le deck
 	public void modifNbCarte(boolean decision) {
 		if (decision) {
 			nbCarteDansDeck

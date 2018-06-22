@@ -212,14 +212,26 @@ public class vueCreation extends vue {
 
 		subMainRight.add(subMainRightButton2);
 
-		/////////////////////////////////
+		/**
+		 * On ajoute les controleur au bouton associer
+		 */
 		terminer.addActionListener(new ctrlTerminerFenetreCreation(this));
 
 		creationBoutton.addActionListener(new ctrlCreerCarteCreation(this));
 		/////////////////////////////////
 
+
+				/**
+		 * On parametre la taille de la fenetre 
+		 */
+		
 		this.setPreferredSize(new Dimension(X + 200, Y));
 		setSize(X, Y);
+
+
+		/**
+		 * On met le lookandfeel qui s'appelle Nimbus 
+		 */
 
 		try {
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
