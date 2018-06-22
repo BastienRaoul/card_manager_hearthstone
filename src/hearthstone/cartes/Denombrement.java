@@ -17,10 +17,8 @@ public class Denombrement {
 	/**
 	 * creer un "couple" (carte,nombre)
 	 * 
-	 * @param carte
-	 *            la carte à utiliser
-	 * @param nombre
-	 *            le nombre d'exemplaires
+	 * @param carte  la carte à utiliser
+	 * @param nombre le nombre d'exemplaires
 	 */
 	public Denombrement(Carte carte, int nombre) throws ValeurNegativeException {
 		this.carte = carte;
@@ -32,8 +30,7 @@ public class Denombrement {
 	/**
 	 * creer un "couple" (carte,1)
 	 * 
-	 * @param carte
-	 *            la carte à utiliser
+	 * @param carte la carte à utiliser
 	 */
 	public Denombrement(Carte carte) throws ValeurNegativeException {
 		this(carte, 1);
@@ -56,9 +53,9 @@ public class Denombrement {
 	}
 
 	/**
-	*
-	* set la quantitée
-	*/
+	 *
+	 * set la quantitée
+	 */
 	public void setNombre(int i) {
 		nombre = i;
 	}
