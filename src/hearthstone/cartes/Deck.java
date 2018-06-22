@@ -253,4 +253,13 @@ public class Deck implements ManipulationCartes {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setClasse(Classe classe) {
+		collection().clear();
+		this.maClasse = classe;
+	}
 }

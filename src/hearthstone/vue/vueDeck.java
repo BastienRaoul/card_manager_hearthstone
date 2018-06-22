@@ -1,23 +1,30 @@
 package hearthstone.vue;
 
-<<<<<<< HEAD
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.Font;
-=======
-import java.awt.*;
-import java.awt.datatransfer.*;
-import java.awt.event.*;
-import java.io.IOException;
-import java.util.Vector;
->>>>>>> f6ac022466bcdb8e5a641320bb9e272658a520c1
 
-import javax.swing.*;
-import javax.swing.UIManager.*;
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.DropMode;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 
-import hearthstone.carte.*;
-import hearthstone.cartes.*;
+import hearthstone.carte.Carte;
+import hearthstone.carte.Classe;
+import hearthstone.cartes.Cartes;
+import hearthstone.cartes.Deck;
 import hearthstone.controleur.ctrlChangeClasse;
+import hearthstone.controleur.ctrlTerminerFenetre;
+import hearthstone.controleur.ctrlTitreDeck;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.exception.DeckCreationException;
 import hearthstone.exception.LimiteNombreDeCartesException;
@@ -27,9 +34,14 @@ public class vueDeck extends vue {
 	public Deck mDeck = null;
 
 	/////////////////////////
-	private JList<Carte> carteList = new JList<>();
 
 	private JComboBox<Classe> choixClasse = new JComboBox<>();
+
+	JPanel titreDeck = new JPanel();
+
+	JTextField nomDeck = new JTextField();
+
+	private JList<Carte> carteList = new JList<>();
 
 	JPanel bottomPanel = new JPanel();
 
@@ -37,7 +49,7 @@ public class vueDeck extends vue {
 
 	JLabel labelMaxCarte = new JLabel("/30 cartes");
 
-	private JButton creationDeck = new JButton("Terminer");
+	private JButton manipulationTerminee = new JButton("Terminer");
 
 	private JButton supprimerDeck = new JButton("Supprimer Deck");
 
@@ -45,23 +57,16 @@ public class vueDeck extends vue {
 
 	/////////////////////////
 
-	/////
-
 	public vueDeck(Cartes collection, Deck currentDeck) {
 		super(collection);
+		mDeck = currentDeck;
 
-		if (currentDeck == null)
+		if (mDeck == null)
 			try {
 				mDeck = new Deck(collection, Classe.GUERRIER, "NouveauDeck");
 			} catch (ClasseNeutreException | LimiteNombreDeCartesException | DeckCreationException e1) {
 				e1.printStackTrace();
 			}
-		else
-			mDeck = currentDeck;
-
-		classTab.removeAll();
-		classeGuerrier();
-		classeNeutre();
 
 		/////////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
@@ -98,11 +103,9 @@ public class vueDeck extends vue {
 
 		/////////////////////////////////
 
-		JPanel titreDeck = new JPanel();
 		titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
 
-		JTextField nomDeck = new JTextField();
-		nomDeck.setText("NouveauDeck");
+		nomDeck.setText(mDeck.getNom());
 		titreDeck.add(choixClasse);
 		titreDeck.add(nomDeck);
 
@@ -116,20 +119,69 @@ public class vueDeck extends vue {
 		bottomPanel.add(labelMaxCarte);
 		bottomPanel.add(supprimerDeck);
 		bottomPanel.add(supprimerCarte);
-		bottomPanel.add(creationDeck);
+		bottomPanel.add(manipulationTerminee);
 
 		subMainRight.add(bottomPanel, BorderLayout.SOUTH);
 
 		/////////////////////////////////
 
+		manipulationTerminee.addActionListener(new ctrlTerminerFenetre(this));
+		
 		choixClasse.addActionListener(new ctrlChangeClasse(this));
+
+		nomDeck.addKeyListener(new ctrlTitreDeck(this));
 
 		/////////////////////////////////
 
+		classTab.removeAll();
+
+		switch (mDeck.classe()) {
+		case GUERRIER:
+			classeGuerrier();
+			choixClasse.setSelectedIndex(0);
+			break;
+		case DRUIDE:
+			classeDruide();
+			choixClasse.setSelectedIndex(1);
+			break;
+		case CHASSEUR:
+			classeChasseur();
+			choixClasse.setSelectedIndex(2);
+			break;
+		case MAGE:
+			classeMage();
+			choixClasse.setSelectedIndex(3);
+			break;
+		case PALADIN:
+			classePaladin();
+			choixClasse.setSelectedIndex(4);
+			break;
+		case PRETRE:
+			classePretre();
+			choixClasse.setSelectedIndex(5);
+			break;
+		case CHAMAN:
+			classeChaman();
+			choixClasse.setSelectedIndex(6);
+			break;
+		case DEMONISTE:
+			classeDemoniste();
+			choixClasse.setSelectedIndex(7);
+			break;
+		case VOLEUR:
+			classeVoleur();
+			choixClasse.setSelectedIndex(8);
+			break;
+		}
+
+		classeNeutre();
+
+		/////////////////////////////////
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
 		this.setPreferredSize(new Dimension(X + 150, Y));
+
 		setSize(X, Y);
 
 		try {
