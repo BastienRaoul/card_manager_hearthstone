@@ -41,7 +41,7 @@ public class vueCollection extends vue {
 	public vueCollection(Cartes collection) {
 		super(collection);
 
-		//Création de la liste(deckHandler) contenant les decks du joueur
+		// Création de la liste(deckHandler) contenant les decks du joueur
 		deckhandler = new DeckHandler(collection.collectionDeDeck());
 
 		/////////////////////////////////
@@ -66,7 +66,7 @@ public class vueCollection extends vue {
 
 		subMainRight.add(panelBottomBut, BorderLayout.SOUTH);
 
-		/////////////Ajout des controlleurs
+		///////////// Ajout des controlleurs
 		creationDeck.addActionListener(new ctrlNewCreationDeck(this));
 
 		creationCarte.addActionListener(new ctrlNewCreationCards(this));
@@ -89,7 +89,7 @@ public class vueCollection extends vue {
 				}
 			}
 		} catch (Exception e) {
-			System.out.println("No nimbus");
+			// System.out.println("No nimbus");
 		}
 
 		setVisible(true);

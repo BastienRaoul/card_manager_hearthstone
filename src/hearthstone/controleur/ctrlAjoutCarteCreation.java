@@ -49,7 +49,7 @@ public class ctrlAjoutCarteCreation implements ActionListener {
 			if (mVue.creationTypeCarte.getSelectedItem().toString().equals("Sort")) {
 				
 				newCarte = new Sort(nom, mana, desc, rarete, classe);				
-				System.out.print("Création carte réussi " + ((Sort) newCarte));
+				//System.out.print("Création carte réussi " + ((Sort) newCarte));
 
 			} else if (mVue.creationTypeCarte.getSelectedItem().toString().equals("Arme")) {
 
@@ -57,7 +57,7 @@ public class ctrlAjoutCarteCreation implements ActionListener {
 				int durabilite = mVue.creationPointVie.getSelectedIndex();
 
 				newCarte = new Arme(nom, mana, desc, rarete, classe, degats, durabilite);
-				System.out.print("Création carte réussi " + ((Arme) newCarte).toString2());
+				//System.out.print("Création carte réussi " + ((Arme) newCarte).toString2());
 
 			} else if (mVue.creationTypeCarte.getSelectedItem().toString().equals("Serviteur")) {
 
@@ -66,7 +66,7 @@ public class ctrlAjoutCarteCreation implements ActionListener {
 				Race race = (Race) mVue.creationRace.getSelectedItem();
 
 				newCarte = new Serviteur(nom, mana, desc, rarete, classe, url, urldoree, degats, pointsDeVie, race);
-				System.out.print("Création carte réussi " + ((Serviteur) newCarte).toString2());
+				//System.out.print("Création carte réussi " + ((Serviteur) newCarte).toString2());
 			}
 
 			//On ajoute la carte fabriquée dans la collection
@@ -88,7 +88,7 @@ public class ctrlAjoutCarteCreation implements ActionListener {
 				e1.printStackTrace();
 			}
 
-			System.out.print("Création carte réussi " + newCarte);
+			//System.out.print("Création carte réussi " + newCarte);
 
 		} catch (Exception e1) {
 			e1.printStackTrace();

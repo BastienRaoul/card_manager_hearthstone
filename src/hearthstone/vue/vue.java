@@ -488,7 +488,6 @@ public class vue extends JFrame {
 	public void drawCards(ImagePanel[] cardsHolders, Classe classe) throws ClasseNeutreException, IOException {
 		Collection<Carte> cartes = applyFilterRace();
 
-		System.out.println("Drawing for " + classe);
 
 		int counter = 0;
 		int offset = 8 * (pageNumber);
@@ -506,7 +505,6 @@ public class vue extends JFrame {
 				}
 
 				offsetedCollection.add(carte);
-
 			}
 			cartes = offsetedCollection;
 		}
@@ -516,12 +514,14 @@ public class vue extends JFrame {
 		for (Carte carte : cartes) {
 			if (counter == 8)
 				break;
-
+			//System.out.println("Drawing for " + carte);
 			try {
 				cardsHolders[counter].loadPic(carte);
-				System.out.println(carte);
+				//System.out.println(carte);
 			} catch (Exception e) {
-				continue;
+				//System.out.println("Carte sans image");
+				e.printStackTrace();
+				//continue;
 			}
 
 			++counter;

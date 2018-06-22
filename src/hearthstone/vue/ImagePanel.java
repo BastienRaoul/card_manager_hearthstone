@@ -37,11 +37,12 @@ public class ImagePanel extends JPanel {
 		mCarte = carte;
 
 		URL url = null;
-		
+
 		try {
 			url = new URL(mCarte.urlImage());
 		} catch (MalformedURLException e) {
-			this.setBackground(Color.GRAY);
+			this.setBackground(Color.RED);
+			image = null;
 			throw new MalformedURLException(e.getMessage());
 		}
 
@@ -52,7 +53,7 @@ public class ImagePanel extends JPanel {
 		if (pic.exists() && !pic.isDirectory()) {
 			this.loadPicFile(pic);
 		} else {
-			System.out.println("loading image from " + mCarte.urlImage());
+			// System.out.println("loading image from " + mCarte.urlImage());
 
 			// download and cache
 			BufferedImage image;
@@ -60,7 +61,7 @@ public class ImagePanel extends JPanel {
 				image = ImageIO.read(url);
 				ImageIO.write(image, "png", pic);
 			} catch (IOException e) {
-				System.out.println("Error while downloading : ");
+				// System.out.println("Error while downloading : ");
 				e.printStackTrace();
 			}
 			this.loadPicFile(pic);
@@ -93,7 +94,11 @@ public class ImagePanel extends JPanel {
 				panel.setNotSelected();
 			}
 			isSelected = true;
-			this.setBackground(Color.LIGHT_GRAY);
+			if (image == null) {
+				this.setBackground(Color.ORANGE);
+			} else {
+				this.setBackground(Color.LIGHT_GRAY);
+			}
 
 			repaint();
 		}
@@ -101,7 +106,12 @@ public class ImagePanel extends JPanel {
 
 	public void setNotSelected() {
 		isSelected = false;
-		this.setBackground(Color.getColor("Panel.background"));
+		if (image == null) {
+			this.setBackground(Color.RED);
+		} else {
+			this.setBackground(Color.getColor("Panel.background"));
+		}
+
 		repaint();
 	}
 

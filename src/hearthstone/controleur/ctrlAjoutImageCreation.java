@@ -34,14 +34,14 @@ public class ctrlAjoutImageCreation implements ActionListener {
         //
         if (chooser.showOpenDialog(mVue) == JFileChooser.APPROVE_OPTION) {
 
-            System.out.println("getSelectedFile() : " + chooser.getSelectedFile());
+            // System.out.println("getSelectedFile() : " + chooser.getSelectedFile());
         } else {
-            System.out.println("Pas de fichier séléctioné ");
-        }       
+            /// System.out.println("Pas de fichier séléctioné ");
+        }
     }
-    
+
     public File fileImage() {
         File selectedFile = chooser.getSelectedFile();
         return selectedFile;
-    }    
+    }
 }
