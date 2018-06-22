@@ -22,6 +22,7 @@ import hearthstone.carte.Classe;
 import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
+import hearthstone.controleur.ctrlAjoutCarte;
 import hearthstone.controleur.ctrlAjoutImage;
 
 //Classe vueCreation héritant de vue, affichant l'interface de création de cartes
@@ -162,6 +163,7 @@ public class vueCreation extends vue {
 
 		// Bouton pour ajouter une image a la carte créée
 		subMainRight.add(ajoutCarteButton);
+		ajoutCarteButton.addActionListener(new ctrlAjoutCarte(this));
 
 		subMainRightButton.setLayout(new GridLayout(0, 2));
 		subMainRightButton.add(creationBoutton);
