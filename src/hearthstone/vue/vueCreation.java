@@ -43,13 +43,13 @@ public class vueCreation extends vue {
 	public JComboBox<Classe> creationClasse = new JComboBox<>();
 
 	private JLabel labelTypeCarte = new JLabel("Type de carte :");
-	private JComboBox<String> creationTypeCarte = new JComboBox<>();
+	public JComboBox<String> creationTypeCarte = new JComboBox<>();
 
 	private JLabel labelRarete = new JLabel("Rarete :");
-	private JComboBox<Rarete> creationRarete = new JComboBox<>();
+	public JComboBox<Rarete> creationRarete = new JComboBox<>();
 
 	private JLabel labelRace = new JLabel("Race :");
-	private JComboBox<Race> creationRace = new JComboBox<>();
+	public JComboBox<Race> creationRace = new JComboBox<>();
 
 	private JLabel labelMana = new JLabel("Mana :");
 	public JComboBox<Integer> creationNbMana = new JComboBox<>();
@@ -183,7 +183,6 @@ public class vueCreation extends vue {
 		subMainRightButton2.add(terminer);
 	
 		subMainRight.add(subMainRightButton2);
-
 
 
 		/////////////////////////////////
