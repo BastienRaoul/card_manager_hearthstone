@@ -8,17 +8,17 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import hearthstone.vue.vueCreation;
 
-public class ctrlAjoutImageCreation implements ActionListener{
+public class ctrlAjoutImageCreation implements ActionListener {
 
-    FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("png.","png");
+    FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("png.", "png");
 
     JFileChooser chooser;
 
-    vueCreation mVue = null;    
+    vueCreation mVue = null;
 
-	public ctrlAjoutImageCreation(vueCreation vue) {
-		mVue = vue;
-	}  
+    public ctrlAjoutImageCreation(vueCreation vue) {
+        mVue = vue;
+    }
 
     public void actionPerformed(ActionEvent e) {
 
@@ -30,14 +30,12 @@ public class ctrlAjoutImageCreation implements ActionListener{
 
         // Permet d'afficher les fichiers et les répertoires
         chooser.setAcceptAllFileFilterUsed(false);
-        //   
+        //
         if (chooser.showOpenDialog(mVue) == JFileChooser.APPROVE_OPTION) {
-    
-              System.out.println("getSelectedFile() : "
-                 +  chooser.getSelectedFile());               
-              }
-            else {
-              System.out.println("Pas de fichier séléctioné ");
-              }
+
+            System.out.println("getSelectedFile() : " + chooser.getSelectedFile());
+        } else {
+            System.out.println("Pas de fichier séléctioné ");
+        }
     }
 }
