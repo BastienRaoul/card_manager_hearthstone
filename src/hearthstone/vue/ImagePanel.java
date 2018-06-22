@@ -41,7 +41,8 @@ public class ImagePanel extends JPanel {
 		try {
 			url = new URL(mCarte.urlImage());
 		} catch (MalformedURLException e) {
-			this.setBackground(Color.GRAY);
+			this.setBackground(Color.RED); 
+			image = null;
 			throw new MalformedURLException(e.getMessage());
 		}
 
@@ -93,7 +94,11 @@ public class ImagePanel extends JPanel {
 				panel.setNotSelected();
 			}
 			isSelected = true;
-			this.setBackground(Color.LIGHT_GRAY);
+			if(image == null) {
+				this.setBackground(Color.ORANGE);
+			}else {
+				this.setBackground(Color.LIGHT_GRAY);
+			}	
 
 			repaint();
 		}
@@ -101,7 +106,12 @@ public class ImagePanel extends JPanel {
 
 	public void setNotSelected() {
 		isSelected = false;
-		this.setBackground(Color.getColor("Panel.background"));
+		if(image == null) {
+			this.setBackground(Color.RED);
+		}else {
+			this.setBackground(Color.getColor("Panel.background"));
+		}
+	
 		repaint();
 	}
 
