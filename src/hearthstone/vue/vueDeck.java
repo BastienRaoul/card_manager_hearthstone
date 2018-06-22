@@ -1,6 +1,5 @@
 package hearthstone.vue;
 
-<<<<<<< HEAD
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 
@@ -26,29 +25,16 @@ import hearthstone.cartes.Deck;
 import hearthstone.controleur.ctrlChangeClasse;
 import hearthstone.controleur.ctrlTerminerFenetre;
 import hearthstone.controleur.ctrlTitreDeck;
-=======
-import java.awt.*;
-import java.awt.datatransfer.*;
-import java.awt.event.*;
-import java.io.IOException;
-import java.util.Vector;
-
-import javax.swing.*;
-import javax.swing.UIManager.*;
-
-import hearthstone.carte.*;
-import hearthstone.cartes.*;
-import hearthstone.controleur.ctrlChangeClasse;
-import hearthstone.controleur.ctrlCreaDeckAccueil;
->>>>>>> 9315cdc96ac62fe793561665ed26361341bea7d7
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.exception.DeckCreationException;
 import hearthstone.exception.LimiteNombreDeCartesException;
 
 /**
- * Cette vue permet d'afficher les cartes contenus dans un deck, d'ajouter des cartes dans le deck affiché ou encore de supprimer des cartes du deck.
- * Cette vue s'ouvre après avoir cliquer sur le boutons "Nouveau deck" de la vue vueCollection ou 
- * après avoir selectionner un deck déjà créé sur la vue vueCollection.
+ * Cette vue permet d'afficher les cartes contenus dans un deck, d'ajouter des
+ * cartes dans le deck affiché ou encore de supprimer des cartes du deck. Cette
+ * vue s'ouvre après avoir cliquer sur le boutons "Nouveau deck" de la vue
+ * vueCollection ou après avoir selectionner un deck déjà créé sur la vue
+ * vueCollection.
  */
 
 public class vueDeck extends vue {
@@ -95,14 +81,7 @@ public class vueDeck extends vue {
 		subMainRight.setLayout(new BorderLayout());
 
 		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-		carteList.setLayoutOrientation(JList.HORIZONTAL_WRAP);
 		carteList.setVisibleRowCount(-1);
-
-		// Drag & Drop Image dans List
-		carteList.setDragEnabled(true);
-		carteList.setDropMode(DropMode.INSERT);
-
-		// GhostGlassPane glassPane = new GhostGlassPane();
 
 		JScrollPane listeDesCartes = new JScrollPane(carteList);
 		listeDesCartes.setPreferredSize(new Dimension(250, 80));
@@ -148,7 +127,7 @@ public class vueDeck extends vue {
 		/////////////////////////////////
 
 		manipulationTerminee.addActionListener(new ctrlTerminerFenetre(this));
-		
+
 		choixClasse.addActionListener(new ctrlChangeClasse(this));
 
 		nomDeck.addKeyListener(new ctrlTitreDeck(this));
@@ -216,8 +195,6 @@ public class vueDeck extends vue {
 		} catch (Exception e) {
 			System.out.println("No nimbus");
 		}
-
-		creationDeck.addActionListener(new ctrlCreaDeckAccueil(this));
 
 		setVisible(true);
 	}

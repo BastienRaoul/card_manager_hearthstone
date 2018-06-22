@@ -8,24 +8,22 @@ import hearthstone.vue.vueDeck;
 
 public class ctrlNewCreationDeck implements ActionListener {
 
-    vueCollection mVue = null;
+	vueCollection mVue = null;
 
-    public ctrlNewCreationDeck(vueCollection vue) {
-	mVue = vue;
-    }
+	public ctrlNewCreationDeck(vueCollection vue) {
+		mVue = vue;
+	}
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
+	@Override
+	public void actionPerformed(ActionEvent e) {
 
-	if (mVue.isWindowOpen)
-	    return;
+		if (mVue.isWindowOpen)
+			return;
 
-	mVue.isWindowOpen = true;
-	mVue.setVisible(false);
-	vueDeck main = new vueDeck(mVue.collection, null);
-	main.isWindowOpen = false;
-
-	main.pack();
-	main.setVisible(true);
-    }
+		mVue.isWindowOpen = true;
+		vueDeck main = new vueDeck(mVue.collection, null);
+		
+		main.pack();
+		main.setVisible(true);
+	}
 }
