@@ -1,9 +1,9 @@
 package hearthstone.cartes;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 
 import hearthstone.carte.Carte;
 import hearthstone.carte.Classe;
@@ -39,7 +39,7 @@ public class Deck implements ManipulationCartes {
 	private Classe maClasse;
 	private int tailleMax;
 	private String nom;
-	
+
 	/**
 	 * créer un deck On creer une ArrayList de type Carte ce qui nous permet de
 	 * garder les doublons
@@ -68,11 +68,11 @@ public class Deck implements ManipulationCartes {
 		if (maClasse == Classe.NEUTRE) {
 			throw new ClasseNeutreException("un deck ne peut pas être NEUTRE");
 		}
-		if(nom == null)
+		if (nom == null)
 			nom = "";
 		else
 			this.nom = nom;
-		
+
 		this.mesCartes = mesCartes;
 		this.maClasse = maClasse;
 		this.tailleMax = tailleMax;
@@ -107,7 +107,7 @@ public class Deck implements ManipulationCartes {
 	 *         de Cartes
 	 */
 	@Override
-	public Collection<Carte> collection() {
+	public List<Carte> collection() {
 		return this.list;
 	}
 
@@ -248,5 +248,18 @@ public class Deck implements ManipulationCartes {
 	@Override
 	public String toString() {
 		return nom + " : " + maClasse.toString();
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setClasse(Classe classe) {
+		collection().clear();
+		this.maClasse = classe;
 	}
 }

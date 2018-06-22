@@ -181,7 +181,7 @@ public class vue extends JFrame {
 	    //
 	    classTab.add(mainGUERRIER, "Guerrier");
 
-	    ////// DROOD
+	    ////// DRUID
 	    mainDRUIDE = new JPanel();
 	    mainDRUIDE.setLayout(new BorderLayout());
 	    //

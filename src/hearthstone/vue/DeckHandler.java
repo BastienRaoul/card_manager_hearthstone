@@ -6,11 +6,11 @@ import javax.swing.AbstractListModel;
 
 import hearthstone.cartes.Deck;
 
-public class DeckHandeler extends AbstractListModel<Deck> {
+public class DeckHandler extends AbstractListModel<Deck> {
 
 	List<Deck> listeDeck = null;
 
-	public DeckHandeler(List<Deck> decks) {
+	public DeckHandler(List<Deck> decks) {
 		listeDeck = decks;
 	}
 
