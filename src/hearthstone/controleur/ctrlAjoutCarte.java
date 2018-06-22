@@ -14,22 +14,38 @@ public class ctrlAjoutCarte implements ActionListener {
 
     public ctrlAjoutCarte(vueCreation vue) {
 	mVue = vue;
-    }
+	}
+	public void actionPerformed(ActionEvent e) {
+           
+		try {
+			
+			if(mVue.creationTypeCarte.getSelectedItem().toString().equals("Sort")) {
+				
+				System.out.print("test1");
 
-    public void actionPerformed(ActionEvent e) {
-    
-        if(mVue.creationTypeCarte.equals("Sort")) {
-            String nom = mVue.textFieldNomCreation.getSelectedText();
-            int mana = mVue.creationNbMana.getSelectedIndex();
-            String desc =mVue.textAreaExplication.getSelectedText();           
-            Rarete rarete = typeRarete( mVue.creationRarete.getSelectedItem().toString());   
-            //Classe classe = mVue.creationClasse.getSelectedItem();
+				
+				//Problème ici
+				String nom = mVue.textFieldNomCreation.getSelectedText();
+				//int mana = mVue.creationNbMana.getSelectedIndex();
+				int mana = 2;
+				String desc = mVue.textAreaExplication.getSelectedText();           
+				Rarete rarete = typeRarete(mVue.creationRarete.getSelectedItem().toString());   
+				Classe classe = typeClasse(mVue.creationClasse.getSelectedItem().toString());				
+				
+				Sort sort = new Sort(nom, mana, desc, rarete, classe);				
+				
+				System.out.print("test apres sort");	
+			} else if(mVue.creationTypeCarte.getSelectedItem().toString().equals("Arme")){
 
-            //Sort sort = new Sort(nom, mana, desc, rarete, classe);
-        }    
-    }   
-   
-    /** 
+			} else if(mVue.creationTypeCarte.getSelectedItem().toString().equals("Serviteur")){
+
+			}
+		} catch (Exception e1) {
+			System.out.print(" Error");
+		}            
+	}             
+	
+	 /** 
 	 * @param jsonString la chaine de caractères
 	 * @return la rarete de la carte
 	 */
@@ -37,15 +53,15 @@ public class ctrlAjoutCarte implements ActionListener {
 
 		try{		
 			switch(jsonString) {
-				case "Free":
+				case "BASIQUE":
 					return Rarete.BASIQUE;
-				case "Common":
+				case "COMMUNE":
 					return Rarete.COMMUNE;
-				case "Rare":
+				case "RARE":
 					return Rarete.RARE;				
-				case "Epic":
+				case "EPIC":
 					return Rarete.EPIQUE;
-				case "Legendary":
+				case "LEGENDAIRE":
 					return Rarete.LEGENDAIRE;				
 				default:
 					System.out.println("");					
@@ -55,4 +71,44 @@ public class ctrlAjoutCarte implements ActionListener {
 		}
 		return null;
 	}
+
+	/** 
+	 * @param jsonString la chaine de caractères
+	 * @return le classe de la carte
+	 */
+	public static Classe typeClasse(String jsonString) {
+
+		try{		
+		
+			switch(jsonString) {
+				case "NEUTRE":
+					return Classe.NEUTRE;
+				case "DRUIDE":
+					return Classe.DRUIDE;				
+				case "CHASSEUR":
+					return Classe.CHASSEUR;
+				case "MAGE":
+					return Classe.MAGE;
+				case "PALADIN":
+					return Classe.PALADIN;		
+				case "PRETRE":
+					return Classe.PRETRE;
+				case "CHAMAN":
+					return Classe.CHAMAN;
+				case "DEMONISTE":
+					return Classe.DEMONISTE;
+				case "VOLEUR":
+					return Classe.VOLEUR;
+				case "GUERRIER":
+					return Classe.GUERRIER;
+				default:
+					System.out.println("");					
+			}
+		}catch(Exception e) {
+			System.out.print("");
+		}
+		return null;
+	}
+
+    
 }
