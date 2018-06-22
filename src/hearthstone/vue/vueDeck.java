@@ -2,10 +2,10 @@ package hearthstone.vue;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
-import javax.swing.DropMode;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -45,23 +45,23 @@ public class vueDeck extends vue {
 
 	private JComboBox<Classe> choixClasse = new JComboBox<>();
 
-	JPanel titreDeck = new JPanel();
+	private JPanel titreDeck = new JPanel();
 
-	JTextField nomDeck = new JTextField();
+	private JTextField nomDeck = new JTextField();
 
-	private JList<Carte> carteList = new JList<>();
+	private JList<Carte> carteList = null;
 
-	JPanel bottomPanel = new JPanel();
+	private JPanel bottomPanel = new JPanel();
 
-	JLabel nbCarteDansDeck = new JLabel("0");
+	private JLabel nbCarteDansDeck = new JLabel("0 / 30 cartes");
 
-	JLabel labelMaxCarte = new JLabel("/30 cartes");
-
-	private JButton manipulationTerminee = new JButton("Terminer");
+	private JButton ajoutCarteDeck = new JButton("Ajouter la carte");
 
 	private JButton supprimerDeck = new JButton("Supprimer Deck");
 
 	private JButton supprimerCarte = new JButton("Supprimer Carte");
+
+	private JButton manipulationTerminee = new JButton("Terminer");
 
 	/////////////////////////
 
@@ -77,18 +77,11 @@ public class vueDeck extends vue {
 			}
 
 		/////////////////////////////////
+
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
 		subMainRight.setLayout(new BorderLayout());
 
-		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-		carteList.setVisibleRowCount(-1);
-
-		JScrollPane listeDesCartes = new JScrollPane(carteList);
-		listeDesCartes.setPreferredSize(new Dimension(250, 80));
-
-		subMainRight.add(listeDesCartes, BorderLayout.CENTER);
-
-		////////////////////////////////
+		titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
 
 		choixClasse.addItem(Classe.GUERRIER);
 		choixClasse.addItem(Classe.DRUIDE);
@@ -100,26 +93,31 @@ public class vueDeck extends vue {
 		choixClasse.addItem(Classe.DEMONISTE);
 		choixClasse.addItem(Classe.VOLEUR);
 
-		choixClasse.setMaximumRowCount(choixClasse.getModel().getSize());
-
-		/////////////////////////////////
-
-		titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
+		titreDeck.add(choixClasse);
 
 		nomDeck.setText(mDeck.getNom());
-		titreDeck.add(choixClasse);
 		titreDeck.add(nomDeck);
 
 		subMainRight.add(titreDeck, BorderLayout.NORTH);
 
+		carteList = new JList<>(new CardsHandeler(mDeck.collection()));
+		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		carteList.setVisibleRowCount(-1);
+
+		JScrollPane listeDesCartes = new JScrollPane(carteList);
+		listeDesCartes.setPreferredSize(new Dimension(250, 80));
+
+		subMainRight.add(listeDesCartes, BorderLayout.CENTER);
+
 		////////////////////////////////////
 
-		bottomPanel.setLayout(new BoxLayout(bottomPanel, BoxLayout.X_AXIS));
+		bottomPanel.setLayout(new GridLayout(3, 2));
 
 		bottomPanel.add(nbCarteDansDeck);
-		bottomPanel.add(labelMaxCarte);
+		bottomPanel.add(nbCarteDansDeck);
 		bottomPanel.add(supprimerDeck);
 		bottomPanel.add(supprimerCarte);
+		bottomPanel.add(ajoutCarteDeck);
 		bottomPanel.add(manipulationTerminee);
 
 		subMainRight.add(bottomPanel, BorderLayout.SOUTH);
@@ -132,6 +130,8 @@ public class vueDeck extends vue {
 
 		nomDeck.addKeyListener(new ctrlTitreDeck(this));
 
+		ajoutCarteDeck.addActionListener();
+		
 		/////////////////////////////////
 
 		classTab.removeAll();
@@ -181,7 +181,7 @@ public class vueDeck extends vue {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
-		this.setPreferredSize(new Dimension(X + 150, Y));
+		this.setPreferredSize(new Dimension(X + 100, Y));
 
 		setSize(X, Y);
 

@@ -1,9 +1,9 @@
 package hearthstone.cartes;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 
 import hearthstone.carte.Carte;
 import hearthstone.carte.Classe;
@@ -107,7 +107,7 @@ public class Deck implements ManipulationCartes {
 	 *         de Cartes
 	 */
 	@Override
-	public Collection<Carte> collection() {
+	public List<Carte> collection() {
 		return this.list;
 	}
 
