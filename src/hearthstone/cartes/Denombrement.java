@@ -11,77 +11,88 @@ import hearthstone.exception.ValeurNegativeException;
  */
 
 public class Denombrement {
-    private final Carte carte;
-    private int nombre;
+	private final Carte carte;
+	private int nombre;
 
-    /**
-     * creer un "couple" (carte,nombre)
-     * 
-     * @param carte  la carte à utiliser
-     * @param nombre le nombre d'exemplaires
-     */
-    public Denombrement(Carte carte, int nombre) throws ValeurNegativeException {
-        this.carte = carte;
-        if (nombre < 0)
-            throw new ValeurNegativeException("The card count can not be negative");
-        this.nombre = nombre;
-    }
+	/**
+	 * creer un "couple" (carte,nombre)
+	 * 
+	 * @param carte
+	 *            la carte à utiliser
+	 * @param nombre
+	 *            le nombre d'exemplaires
+	 */
+	public Denombrement(Carte carte, int nombre) throws ValeurNegativeException {
+		this.carte = carte;
+		if (nombre < 0)
+			throw new ValeurNegativeException("The card count can not be negative");
+		this.nombre = nombre;
+	}
 
-    /**
-     * creer un "couple" (carte,1)
-     * 
-     * @param carte la carte à utiliser
-     */
-    public Denombrement(Carte carte) throws ValeurNegativeException {
-        this(carte, 1);
-    }
+	/**
+	 * creer un "couple" (carte,1)
+	 * 
+	 * @param carte
+	 *            la carte à utiliser
+	 */
+	public Denombrement(Carte carte) throws ValeurNegativeException {
+		this(carte, 1);
+	}
 
-    /**
-     *
-     * @return la carte
-     */
-    public Carte carte() {
-        return carte;
-    }
+	/**
+	 *
+	 * @return la carte
+	 */
+	public Carte carte() {
+		return carte;
+	}
 
-    /**
-     *
-     * @return le nombre d'exemplaires
-     */
-    public int nombre() {
-        return nombre;
-    }
+	/**
+	 *
+	 * @return le nombre d'exemplaires
+	 */
+	public int nombre() {
+		return nombre;
+	}
 
-    /**
-     * incremente le nombre d'exemplaires
-     */
-    public void incremente() {
-        nombre++;
-    }
+	/**
+	*
+	* set la quantitée
+	*/
+	public void setNombre(int i) {
+		nombre = i;
+	}
 
-    @Override
-    public String toString() {
-        return "(" + "carte=" + carte + ", nombre=" + nombre + ')';
-    }
+	/**
+	 * incremente le nombre d'exemplaires
+	 */
+	public void incremente() {
+		nombre++;
+	}
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
+	@Override
+	public String toString() {
+		return "(" + "carte=" + carte + ", nombre=" + nombre + ')';
+	}
 
-        Denombrement that = (Denombrement) o;
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (o == null || getClass() != o.getClass())
+			return false;
 
-        if (nombre != that.nombre)
-            return false;
-        return carte.equals(that.carte);
-    }
+		Denombrement that = (Denombrement) o;
 
-    @Override
-    public int hashCode() {
-        int result = carte.hashCode();
-        result = 31 * result + nombre;
-        return result;
-    }
+		if (nombre != that.nombre)
+			return false;
+		return carte.equals(that.carte);
+	}
+
+	@Override
+	public int hashCode() {
+		int result = carte.hashCode();
+		result = 31 * result + nombre;
+		return result;
+	}
 }

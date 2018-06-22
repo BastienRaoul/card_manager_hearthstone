@@ -21,6 +21,7 @@ import hearthstone.cartes.Cartes;
 import hearthstone.controleur.ctrlAjoutCarte;
 import hearthstone.controleur.ctrlAjoutImageCreation;
 import hearthstone.controleur.ctrlCreerCarteCreation;
+import hearthstone.controleur.ctrlDetruireCarteCreation;
 import hearthstone.controleur.ctrlTerminerFenetreCreation;
 
 //Classe vueCreation héritant de vue, affichant l'interface de création de cartes
@@ -238,6 +239,8 @@ public class vueCreation extends vue {
 		terminer.addActionListener(new ctrlTerminerFenetreCreation(this));
 
 		creationBoutton.addActionListener(new ctrlCreerCarteCreation(this));
+		
+		destructionCarte.addActionListener(new ctrlDetruireCarteCreation(this));
 		/////////////////////////////////
 
 		this.setPreferredSize(new Dimension(X + 200, Y));
