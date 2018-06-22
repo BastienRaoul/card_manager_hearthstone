@@ -28,6 +28,7 @@ import hearthstone.carte.Classe;
 import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
+import hearthstone.cartes.FabriqueJson;
 import hearthstone.cartes.Filtre;
 import hearthstone.controleur.ctrlApplyFilter;
 import hearthstone.controleur.ctrlCardClicked;
@@ -482,12 +483,26 @@ public class vue extends JFrame {
 
 		/////////////////////////////////
 		this.getContentPane().add(main);
+
+		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		this.addWindowListener(new java.awt.event.WindowAdapter() {
+			@Override
+			public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+
+				try {
+					FabriqueJson.ecrireCartesDansFichier(collection.collection(), "./savedCards.json");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				System.exit(0);
+			}
+		});
 	}
 
 	// Méthode drawCards permettant d'afficher les cartes en fonction de leur classe
 	public void drawCards(ImagePanel[] cardsHolders, Classe classe) throws ClasseNeutreException, IOException {
 		Collection<Carte> cartes = applyFilterRace();
-
 
 		int counter = 0;
 		int offset = 8 * (pageNumber);
@@ -514,14 +529,14 @@ public class vue extends JFrame {
 		for (Carte carte : cartes) {
 			if (counter == 8)
 				break;
-			//System.out.println("Drawing for " + carte);
+			// System.out.println("Drawing for " + carte);
 			try {
 				cardsHolders[counter].loadPic(carte);
-				//System.out.println(carte);
+				// System.out.println(carte);
 			} catch (Exception e) {
-				//System.out.println("Carte sans image");
+				// System.out.println("Carte sans image");
 				e.printStackTrace();
-				//continue;
+				// continue;
 			}
 
 			++counter;

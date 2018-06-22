@@ -74,7 +74,7 @@ public class vueCollection extends vue {
 		manipulationDeck.addActionListener(new ctrlModifDeck(this));
 		/////////////////////////////////
 
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
 		this.setPreferredSize(new Dimension(X, Y));

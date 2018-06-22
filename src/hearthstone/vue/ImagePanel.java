@@ -122,7 +122,7 @@ public class ImagePanel extends JPanel {
 	public void reset() {
 		image = null;
 		mCarte = null;
-		this.setBackground(Color.GRAY);
+		//this.setBackground(Color.GRAY);
 		repaint();
 	}
 
