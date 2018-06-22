@@ -53,18 +53,17 @@ public class Denombrement {
 	}
 
 	/**
-	 *
-	 * set la quantitée
-	 */
-	public void setNombre(int i) {
-		nombre = i;
-	}
-
-	/**
 	 * incremente le nombre d'exemplaires
 	 */
 	public void incremente() {
 		nombre++;
+	}
+
+	/**
+	 * met le nombre d'exemplaires à la valeur de nombre
+	 */
+	public void setNombre(int nombre) {
+		this.nombre = nombre;
 	}
 
 	@Override

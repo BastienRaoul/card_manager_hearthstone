@@ -151,18 +151,26 @@ public class vueCreation extends vue {
 		 * Ajout de toutes les valeur de Mana à une ComboBox qui permet de donner le
 		 * nombre de Mana que coute la carte 
 		 */
-		creationNbMana.addItem(0);
-		creationNbMana.addItem(1);
-		creationNbMana.addItem(2);
-		creationNbMana.addItem(3);
-		creationNbMana.addItem(4);
-		creationNbMana.addItem(5);
-		creationNbMana.addItem(6);
-		creationNbMana.addItem(7);
-		creationNbMana.addItem(8);
-		creationNbMana.addItem(9);
-		creationNbMana.addItem(10);
+		for(int i=0; i<11; i++) {
+			creationNbMana.addItem(i);
+		}
 		
+		/**
+		 * 
+		 */
+		for(int i=0; i<13; i++) {
+			creationDegats.addItem(i);
+		}
+
+		/**
+		 * 
+		 */
+		for(int i=0; i<21; i++) {
+			creationPointVie.addItem(i);
+		}
+
+		subMainRight.add(labelRace);
+		subMainRight.add(creationRace);
 
 		subMainRight.add(labelMana);
 		creationNbMana.setMaximumRowCount(creationNbMana.getModel().getSize());
@@ -215,7 +223,7 @@ public class vueCreation extends vue {
 		panFile.add(scrollArea);
 		textAreaExplication.setLineWrap(true);
 		panFile.add(file);
-		file.addActionListener(new ctrlAjoutImageCreation(this));
+		file.addActionListener(new ctrlAjoutImageCreation(this)); //Listener : fabrique une carte puis l'ajoute à la collection
 
 		// Bouton pour ajouter une image a la carte créée
 		subMainRight.add(ajoutCarteButton);
