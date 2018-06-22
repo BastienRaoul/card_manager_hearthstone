@@ -17,6 +17,7 @@ import hearthstone.carte.Classe;
 import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
+import hearthstone.controleur.ctrlTerminerFenetre;
 
 public class vueCreation extends vue {
 
@@ -48,9 +49,12 @@ public class vueCreation extends vue {
 	public JTextArea textAreaExplication = new JTextArea("Explication...");
 
 	private JButton ajoutCarteButton = new JButton("Ajouter la carte.");
+	private JButton terminer = new JButton("Terminer");
 
 	//
 	private JPanel subMainRightButton = new JPanel();
+	private JPanel subMainRightButton2 = new JPanel();
+
 
 	private JButton creationBoutton = new JButton("Créer carte.");
 	private JButton destructionCarte = new JButton("Détruire carte.");
@@ -124,15 +128,21 @@ public class vueCreation extends vue {
 		subMainRight.add(labelDescription);
 		subMainRight.add(textAreaExplication);
 
-		subMainRight.add(ajoutCarteButton);
-
 		subMainRightButton.setLayout(new GridLayout(0, 2));
 		subMainRightButton.add(creationBoutton);
 		subMainRightButton.add(destructionCarte);
 		subMainRight.add(subMainRightButton);
 
+		subMainRightButton2.setLayout(new GridLayout(0, 2));
+		subMainRightButton2.add(ajoutCarteButton);
+		subMainRightButton2.add(terminer);
+	
+		subMainRight.add(subMainRightButton2);
+
+
+
 		/////////////////////////////////
-		// TODO control
+		terminer.addActionListener(new ctrlTerminerFenetre(this));
 		/////////////////////////////////
 
 		this.setPreferredSize(new Dimension(X + 200, Y));
