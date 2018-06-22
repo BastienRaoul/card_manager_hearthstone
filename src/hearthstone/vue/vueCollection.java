@@ -33,16 +33,11 @@ public class vueCollection extends vue {
 	public vueCollection(Cartes collection) {
 		super(collection);
 
-		//Liste affichant les decks, 
-		//ayant un DeckHandeler contenant ces susdit decks en paramètre
-		deckList = new JList<>(new DeckHandeler(collection.collectionDeDeck()));
-		deckList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-
 		/////////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Mes decks..."));
 
-		//Mode de sélection n'autorisant à ne choisir qu'un deck à la fois
-		deckList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		deckList = new JList<>(new DeckHandler(collection.collectionDeDeck()));
+		deckList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		deckList.setVisibleRowCount(-1);
 
 		//Ajout de la liste à un JSrollPane afin de scroll si nécessaire
