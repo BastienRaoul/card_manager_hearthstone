@@ -39,7 +39,7 @@ public class Deck implements ManipulationCartes {
 	private Classe maClasse;
 	private int tailleMax;
 	private String nom;
-	
+
 	/**
 	 * créer un deck On creer une ArrayList de type Carte ce qui nous permet de
 	 * garder les doublons
@@ -68,11 +68,11 @@ public class Deck implements ManipulationCartes {
 		if (maClasse == Classe.NEUTRE) {
 			throw new ClasseNeutreException("un deck ne peut pas être NEUTRE");
 		}
-		if(nom == null)
+		if (nom == null)
 			nom = "";
 		else
 			this.nom = nom;
-		
+
 		this.mesCartes = mesCartes;
 		this.maClasse = maClasse;
 		this.tailleMax = tailleMax;
@@ -248,5 +248,9 @@ public class Deck implements ManipulationCartes {
 	@Override
 	public String toString() {
 		return nom + " : " + maClasse.toString();
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 }
