@@ -137,9 +137,11 @@ public class Serviteur extends CarteD {
         return result;
     }
 
-    @Override
-    public String toString() {
+    public String toString2() {
         return super.toString() + ", pointsDeVie='" + pointsDeVie + '\'' + ", race='" + race + '\'';
     }
-
+    
+    public String toString() {
+        return nom;
+    }
 }

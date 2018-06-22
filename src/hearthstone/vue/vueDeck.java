@@ -23,8 +23,9 @@ import hearthstone.carte.Classe;
 import hearthstone.cartes.Cartes;
 import hearthstone.cartes.Deck;
 import hearthstone.controleur.ctrlAjoutCarteDeck;
-import hearthstone.controleur.ctrlChangeClasse;
-import hearthstone.controleur.ctrlTerminerFenetre;
+import hearthstone.controleur.ctrlChangeClasseDeck;
+import hearthstone.controleur.ctrlSuppCarteDeck;
+import hearthstone.controleur.ctrlTerminerFenetreDeck;
 import hearthstone.controleur.ctrlTitreDeck;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.exception.DeckCreationException;
@@ -42,15 +43,21 @@ public class vueDeck extends vue {
 
 	public Deck mDeck = null;
 
+	public boolean isInit = false;
 	/////////////////////////
 
-	private JComboBox<Classe> choixClasse = new JComboBox<>();  //Choix de la classe pour afficher l'onglet et les cartes correspondantes à la classe
+	public DeckHandler deckList = null;
+	// Choix de la classe pour afficher l'onglet et les cartes correspondantes à la
+	// classe
+	private JComboBox<Classe> choixClasse = new JComboBox<>();
+
+	public CardsHandler cardshandler = null;
 
 	private JPanel titreDeck = new JPanel();
 
 	private JTextField nomDeck = new JTextField();
 
-	private JList<Carte> carteList = null;
+	public JList<Carte> carteList = null;
 
 	private JPanel bottomPanel = new JPanel();
 
@@ -64,9 +71,14 @@ public class vueDeck extends vue {
 
 	private JButton manipulationTerminee = new JButton("Terminer");
 
-	public vueDeck(Cartes collection, Deck currentDeck) {
+	/////////////////////////
+
+	public vueDeck(Cartes collection, DeckHandler deckhandler, Deck currentDeck) {
 		super(collection);
 		mDeck = currentDeck;
+		deckList = deckhandler;
+
+		cardshandler = new CardsHandler(mDeck.collection());
 
 		if (mDeck == null)
 			try {
@@ -82,7 +94,7 @@ public class vueDeck extends vue {
 
 		titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
 
-		//Choix des classes
+		// Choix des classes
 		choixClasse.addItem(Classe.GUERRIER);
 		choixClasse.addItem(Classe.DRUIDE);
 		choixClasse.addItem(Classe.CHASSEUR);
@@ -100,16 +112,16 @@ public class vueDeck extends vue {
 
 		subMainRight.add(titreDeck, BorderLayout.NORTH);
 
-		carteList = new JList<>(new CardsHandler(mDeck.collection()));
+		carteList = new JList<>(cardshandler);
 		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-		carteList.setVisibleRowCount(-1);
 
 		JScrollPane listeDesCartes = new JScrollPane(carteList);
 		listeDesCartes.setPreferredSize(new Dimension(250, 80));
-
+		cardshandler.fire();
+		System.out.println(mDeck.collection());
 		subMainRight.add(listeDesCartes, BorderLayout.CENTER);
 
-		////////////////////////////////////
+		/////// Ajout des boutons de gestion de deck sous la liste des cartes du deck
 
 		bottomPanel.setLayout(new GridLayout(3, 2));
 
@@ -122,69 +134,75 @@ public class vueDeck extends vue {
 
 		subMainRight.add(bottomPanel, BorderLayout.SOUTH);
 
-		/////////////////////////////////
+		///////////////////////////////// Ajout des controlleurs
 
-		manipulationTerminee.addActionListener(new ctrlTerminerFenetre(this));
+		manipulationTerminee.addActionListener(new ctrlTerminerFenetreDeck(this));
 
-		choixClasse.addActionListener(new ctrlChangeClasse(this));
+		choixClasse.addActionListener(new ctrlChangeClasseDeck(this));
 
 		nomDeck.addKeyListener(new ctrlTitreDeck(this));
 
 		ajoutCarteDeck.addActionListener(new ctrlAjoutCarteDeck(this));
 
+		supprimerCarte.addActionListener(new ctrlSuppCarteDeck(this));
+
 		/////////////////////////////////
+		// Sélectionne l'item de la combobox correspondant au type du deck
+		{
+			isInit = true;
+			classTab.removeAll();
 
-		classTab.removeAll();
+			switch (mDeck.classe()) {
+			case GUERRIER:
+				classeGuerrier();
+				choixClasse.setSelectedIndex(0);
+				break;
+			case DRUIDE:
+				classeDruide();
+				choixClasse.setSelectedIndex(1);
+				break;
+			case CHASSEUR:
+				classeChasseur();
+				choixClasse.setSelectedIndex(2);
+				break;
+			case MAGE:
+				classeMage();
+				choixClasse.setSelectedIndex(3);
+				break;
+			case PALADIN:
+				classePaladin();
+				choixClasse.setSelectedIndex(4);
+				break;
+			case PRETRE:
+				classePretre();
+				choixClasse.setSelectedIndex(5);
+				break;
+			case CHAMAN:
+				classeChaman();
+				choixClasse.setSelectedIndex(6);
+				break;
+			case DEMONISTE:
+				classeDemoniste();
+				choixClasse.setSelectedIndex(7);
+				break;
+			case VOLEUR:
+				classeVoleur();
+				choixClasse.setSelectedIndex(8);
+				break;
+			}
 
-		switch (mDeck.classe()) {
-		case GUERRIER:
-			classeGuerrier();
-			choixClasse.setSelectedIndex(0);
-			break;
-		case DRUIDE:
-			classeDruide();
-			choixClasse.setSelectedIndex(1);
-			break;
-		case CHASSEUR:
-			classeChasseur();
-			choixClasse.setSelectedIndex(2);
-			break;
-		case MAGE:
-			classeMage();
-			choixClasse.setSelectedIndex(3);
-			break;
-		case PALADIN:
-			classePaladin();
-			choixClasse.setSelectedIndex(4);
-			break;
-		case PRETRE:
-			classePretre();
-			choixClasse.setSelectedIndex(5);
-			break;
-		case CHAMAN:
-			classeChaman();
-			choixClasse.setSelectedIndex(6);
-			break;
-		case DEMONISTE:
-			classeDemoniste();
-			choixClasse.setSelectedIndex(7);
-			break;
-		case VOLEUR:
-			classeVoleur();
-			choixClasse.setSelectedIndex(8);
-			break;
+			classeNeutre();
+			isInit = false;
 		}
-
-		classeNeutre();
-
 		/////////////////////////////////
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
-		this.setPreferredSize(new Dimension(X + 50, Y));
+		this.setPreferredSize(new Dimension(X, Y));
 
 		setSize(X, Y);
 
+		// Change le look&feel
 		try {
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {
@@ -195,59 +213,69 @@ public class vueDeck extends vue {
 		} catch (Exception e) {
 			System.out.println("No nimbus");
 		}
-
 		setVisible(true);
 	}
 
 	//////////////////////////////////////////
+	// Ajoute l'onglet de la classe Guerrier
 	public void classeGuerrier() {
 		classTab.add(mainGUERRIER, "Guerrier");
 	}
 
+	// Ajoute l'onglet de la classe Druide
 	public void classeDruide() {
 		classTab.add(mainDRUIDE, "Druide");
 
 	}
 
+	// Ajoute l'onglet de la classe Voleur
 	public void classeVoleur() {
 		classTab.add(mainVOLEUR, "Voleur");
 
 	}
 
+	// Ajoute l'onglet de la classe Chasseur
 	public void classeChasseur() {
 		classTab.add(mainCHASSEUR, "Chasseur");
 
 	}
 
+	// Ajoute l'onglet de la classe Chaman
 	public void classeChaman() {
 		classTab.add(mainCHAMAN, "Chaman");
 	}
 
+	// Ajoute l'onglet de la classe Paladin
 	public void classePaladin() {
 		classTab.add(mainPALADIN, "Paladin");
 	}
 
+	// Ajoute l'onglet de la classe Mage
 	public void classeMage() {
 		classTab.add(mainMAGE, "Mage");
 
 	}
 
+	// Ajoute l'onglet de la classe Pretre
 	public void classePretre() {
 		classTab.add(mainPRETRE, "Pretre");
 
 	}
 
+	// Ajoute l'onglet de la classe Demoniste
 	public void classeDemoniste() {
 		classTab.add(mainDEMONISTE, "Demoniste");
 
 	}
 
+	// Ajoute l'onglet de la classe Neutre
 	public void classeNeutre() {
 		classTab.add(mainNEUTRE, "Neutre");
 	}
 
 	//////////////////////////
 
+	// Récupère la classe choisie dans le comboBox
 	public Classe getClasse() {
 		if (choixClasse.getSelectedItem() != null) {
 			switch (choixClasse.getSelectedItem().toString()) {
@@ -286,7 +314,21 @@ public class vueDeck extends vue {
 		return Classe.NEUTRE;
 	}
 
+	// Permet d'effacer tous les onglets du TabbedPane
 	public void clearTab() {
 		classTab.removeAll();
+	}
+
+	public void modifNbCarte(boolean decision) {
+		if (decision) {
+			nbCarteDansDeck
+					.setText(Integer.toString(Integer.parseInt(nbCarteDansDeck.getText().split("/")[0].trim()) + 1)
+							+ " / 30 cartes");
+		} else {
+			nbCarteDansDeck
+					.setText(Integer.toString(Integer.parseInt(nbCarteDansDeck.getText().split("/")[0].trim()) - 1)
+							+ " / 30 cartes");
+		}
+
 	}
 }

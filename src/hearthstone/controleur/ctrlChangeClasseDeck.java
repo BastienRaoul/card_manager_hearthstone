@@ -8,11 +8,11 @@ import javax.swing.JComboBox;
 import hearthstone.carte.Classe;
 import hearthstone.vue.vueDeck;
 
-public class ctrlChangeClasse implements ActionListener {
+public class ctrlChangeClasseDeck implements ActionListener {
 
 	private vueDeck mVue = null;
 
-	public ctrlChangeClasse(vueDeck vue) {
+	public ctrlChangeClasseDeck(vueDeck vue) {
 		this.mVue = vue;
 	}
 
@@ -63,5 +63,9 @@ public class ctrlChangeClasse implements ActionListener {
 			break;
 		}
 		mVue.classeNeutre();
+		
+		if(!mVue.isInit) {
+			mVue.mDeck.clearCards();
+		}
 	}
 }

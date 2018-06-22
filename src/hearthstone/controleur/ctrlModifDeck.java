@@ -6,13 +6,11 @@ import java.awt.event.ActionListener;
 import hearthstone.vue.vueCollection;
 import hearthstone.vue.vueDeck;
 
-//Controlleur permettant de créer une nouvelle fenêtre de création de deck 
-//Et de l'afficher
-public class ctrlNewCreationDeck implements ActionListener {
+public class ctrlModifDeck implements ActionListener {
 
 	vueCollection mVue = null;
 
-	public ctrlNewCreationDeck(vueCollection vue) {
+	public ctrlModifDeck(vueCollection vue) {
 		mVue = vue;
 	}
 
@@ -21,10 +19,16 @@ public class ctrlNewCreationDeck implements ActionListener {
 		if (mVue.isWindowOpen)
 			return;
 
+		
+
+		if(mVue.deckList.getSelectedValue() == null)
+			return;
+		
 		mVue.isWindowOpen = true;
-		vueDeck main = new vueDeck(mVue.collection, mVue.deckhandler, null);
+		vueDeck main = new vueDeck(mVue.collection, mVue.deckhandler, mVue.deckList.getSelectedValue());
 
 		main.pack();
 		main.setVisible(true);
 	}
+
 }

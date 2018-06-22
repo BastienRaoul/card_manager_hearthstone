@@ -8,6 +8,7 @@ import javax.swing.JTextField;
 
 import hearthstone.vue.vueDeck;
 
+//Controlleur permettant de mettre à jour le nom du deck en le  remplaçant par le nom entré
 public class ctrlTitreDeck implements KeyListener {
 
 	vueDeck mVue = null;
@@ -30,7 +31,6 @@ public class ctrlTitreDeck implements KeyListener {
 	@Override
 	public void keyReleased(KeyEvent e) {
 		mVue.mDeck.setNom(((JTextField) e.getSource()).getText());
-		System.out.println("qsdf");
 	}
 
 }

@@ -23,4 +23,11 @@ public class DeckHandler extends AbstractListModel<Deck> {
 	public Deck getElementAt(int index) {
 		return listeDeck.get(index);
 	}
+
+	public void fire() {
+		if (listeDeck.size() != 0)
+			fireIntervalAdded(this, 0, listeDeck.size() - 1);
+		else
+			fireIntervalAdded(this, 0, 0);
+	}
 }

@@ -19,7 +19,7 @@ import hearthstone.exception.ValeurNegativeException;
 public abstract class Carte {
 
 	@SerializedName("name")
-	private String nom;
+	protected String nom;
 
 	@SerializedName("cost")
 	private final int mana;
@@ -314,7 +314,6 @@ public abstract class Carte {
 		return result;
 	}
 
-	@Override
 	public String toString() {
 		return "mana=" + mana + ", nom='" + nom + '\'' + ", desc='" + desc + '\'' + ", dorée=" + doree + ", rareté="
 				+ rarete + ", classe=" + classe + ", urlImage='" + urlImage + '\'' + ", urlImageDorée='" + urlImageDoree
