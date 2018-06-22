@@ -23,7 +23,8 @@ public class vueDeck extends vue {
 
     private JComboBox<Classe> choixClasse = new JComboBox<>();
 
-    private JButton creationDeck = new JButton("Terminer");
+	private JButton creationDeck = new JButton("Terminer");
+	private JButton addCarte = new JButton("Ajouter");
     /////////////////////////    
 
     public vueDeck(Cartes collection, Deck currentDeck) {
@@ -45,11 +46,6 @@ public class vueDeck extends vue {
 		
 		// GhostGlassPane glassPane = new GhostGlassPane();
 
-
-		
-
-
-
 		JScrollPane listeDesDeck = new JScrollPane(carteList);
 		listeDesDeck.setPreferredSize(new Dimension(250, 80));
 
@@ -57,10 +53,7 @@ public class vueDeck extends vue {
 		carteList.setDragEnabled(true);
 		carteList.setTransferHandler(new ListTransferHandler());
 
-		
-		
-	
-		
+
 
 
 		////////////////////////////////
@@ -99,14 +92,15 @@ public class vueDeck extends vue {
 		JLabel nbCarteDansDeck = new JLabel("15");
 		JLabel sur30 = new JLabel("/30 ");
 		JLabel cartes = new JLabel("cartes");
-		Font font = new Font("Helvetica", Font.BOLD, 18);
+		Font font = new Font("Helvetica", Font.BOLD, 17);
 		nbCarteDansDeck.setFont(font);
 		sur30.setFont(font);
 
 		test.add(nbCarteDansDeck);
 		test.add(sur30);
 		test.add(cartes);
-		test.add(Box.createHorizontalStrut(48));
+		//test.add(Box.createHorizontalStrut(5));
+		test.add(addCarte);
 		test.add(creationDeck);
 
 		subMainRight.add(test, BorderLayout.SOUTH);
