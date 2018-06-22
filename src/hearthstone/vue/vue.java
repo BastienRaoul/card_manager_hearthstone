@@ -514,12 +514,12 @@ public class vue extends JFrame {
 		for (Carte carte : cartes) {
 			if (counter == 8)
 				break;
-			System.out.println("Drawing for " + carte);
+			//System.out.println("Drawing for " + carte);
 			try {
 				cardsHolders[counter].loadPic(carte);
-				System.out.println(carte);
+				//System.out.println(carte);
 			} catch (Exception e) {
-				System.out.println("Carte sans image");
+				//System.out.println("Carte sans image");
 				e.printStackTrace();
 				//continue;
 			}

@@ -79,18 +79,18 @@ public class vueDeck extends vue {
 		mDeck = currentDeck;
 		deckList = deckhandler;
 
-		//Dans le cas ou le deck donné en paramètre est un null
-		//Crée un nouveau deck
+		// Dans le cas ou le deck donné en paramètre est un null
+		// Crée un nouveau deck
 		if (mDeck == null)
 			try {
 				mDeck = new Deck(collection, Classe.GUERRIER, "NouveauDeck");
 			} catch (ClasseNeutreException | LimiteNombreDeCartesException | DeckCreationException e1) {
 				e1.printStackTrace();
 			}
-		
-		//crée le cards Handler de ce deck, qui contiendra les cartes du deck
+
+		// crée le cards Handler de ce deck, qui contiendra les cartes du deck
 		cardshandler = new CardsHandler(mDeck.collection());
-	
+
 		//////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
 		subMainRight.setLayout(new BorderLayout());
@@ -118,14 +118,13 @@ public class vueDeck extends vue {
 		carteList = new JList<>(cardshandler);
 		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
-		//Affichage de la liste de cartes du deck
+		// Affichage de la liste de cartes du deck
 		JScrollPane listeDesCartes = new JScrollPane(carteList);
 		listeDesCartes.setPreferredSize(new Dimension(250, 80));
 		cardshandler.fire();
-		System.out.println(mDeck.collection());
+		// System.out.println(mDeck.collection());
 		subMainRight.add(listeDesCartes, BorderLayout.CENTER);
 
-		
 		/////////////////////////////////
 		// Sélectionne l'item de la combobox correspondant au type du deck
 		{
@@ -174,7 +173,7 @@ public class vueDeck extends vue {
 			classeNeutre();
 			isInit = false;
 		}
-		
+
 		/////// Ajout des boutons de gestion de deck sous la liste des cartes du deck
 		bottomPanel.setLayout(new GridLayout(3, 2));
 
@@ -201,7 +200,6 @@ public class vueDeck extends vue {
 
 		supprimerDeck.addActionListener(new ctrlSuppDeck(this));
 
-	
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
@@ -218,11 +216,11 @@ public class vueDeck extends vue {
 				}
 			}
 		} catch (Exception e) {
-			System.out.println("No nimbus");
+			// System.out.println("No nimbus");
 		}
 		setVisible(true);
 	}
-	
+
 	// Ajoute l'onglet de la classe Guerrier
 	public void classeGuerrier() {
 		classTab.add(mainGUERRIER, "Guerrier");
@@ -325,12 +323,12 @@ public class vueDeck extends vue {
 		classTab.removeAll();
 	}
 
-	//Méthode affichant un nombre de 0 pour le nombre de cartes dans le deck
+	// Méthode affichant un nombre de 0 pour le nombre de cartes dans le deck
 	public void modifNbCrateReset() {
 		nbCarteDansDeck.setText(Integer.toString(0) + " / 30 cartes");
 	}
 
-	//Méthode affichant le nombre de cartes courants dans le deck
+	// Méthode affichant le nombre de cartes courants dans le deck
 	public void modifNbCarte(boolean decision) {
 		if (decision) {
 			nbCarteDansDeck

@@ -27,13 +27,13 @@ public class ctrlDetruireCarteCreation implements ActionListener {
 							denomb.setNombre(denomb.nombre() - 1);
 
 							try {
-								for(Deck deck : mVue.collection.collectionDeDeck()) {
+								for (Deck deck : mVue.collection.collectionDeDeck()) {
 									deck.collection().remove(panel.mCarte);
 								}
-								
+
 								mVue.collection.setNbPoussiere(
 										mVue.collection.getNbPoussiere() + panel.mCarte.gainDesenchantement());
-								System.out.println(panel.mCarte.gainDesenchantement());
+								// System.out.println(panel.mCarte.gainDesenchantement());
 							} catch (GainDesenchantementException e1) {
 								// TODO Auto-generated catch block
 								e1.printStackTrace();

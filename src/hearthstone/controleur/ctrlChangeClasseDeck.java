@@ -21,7 +21,8 @@ public class ctrlChangeClasseDeck implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println(((JComboBox<Classe>) e.getSource()).getSelectedItem().toString());
+		// System.out.println(((JComboBox<Classe>)
+		// e.getSource()).getSelectedItem().toString());
 
 		mVue.clearTab();
 
@@ -66,10 +67,10 @@ public class ctrlChangeClasseDeck implements ActionListener {
 			break;
 		}
 		mVue.classeNeutre();
-		
+
 		mVue.modifNbCrateReset();
-		
-		if(!mVue.isInit) {
+
+		if (!mVue.isInit) {
 			mVue.mDeck.clearCards();
 		}
 	}
