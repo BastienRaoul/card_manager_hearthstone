@@ -6,6 +6,7 @@ import java.awt.event.MouseListener;
 import hearthstone.vue.ImagePanel;
 import hearthstone.vue.vue;
 
+//Controlleur permettant d'afficher la description d'une carte lorsque l'on clique dessus
 public class ctrlCardClicked implements MouseListener {
 
     vue mVue = null;
