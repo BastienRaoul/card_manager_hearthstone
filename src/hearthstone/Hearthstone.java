@@ -19,6 +19,8 @@ public class Hearthstone {
 			LimiteNombreDeCartesException, DeckCreationException {
 		Cartes collection = new Cartes(FabriqueJson.lireCartesDepuisFichier("./json/collection.json"));
 
+		collection.setNbPoussiere(10000);
+		
 		Deck d1 = new Deck(collection, Classe.CHAMAN, "deck 1");
 		Deck d2 = new Deck(collection, Classe.DEMONISTE, "deck 2");
 		Deck d3 = new Deck(collection, Classe.CHASSEUR, "deck 3");

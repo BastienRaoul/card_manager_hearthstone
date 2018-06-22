@@ -43,7 +43,7 @@ public class ctrlCollectionNext implements ActionListener {
     private void tryleft() throws ClasseNeutreException, IOException {
 	if (mVue.pageNumber > 0) {
 	    --mVue.pageNumber;
-	    mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneId());
+	    mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneTitle());
 	    System.out.println("right page : " + mVue.pageNumber + " " + mVue.applyFilterRace().size());
 	    mVue.resetDesciption();	
 	}
@@ -52,7 +52,7 @@ public class ctrlCollectionNext implements ActionListener {
     private void tryright() throws ClasseNeutreException, IOException {
 	if (((mVue.pageNumber + 1) * 8) < mVue.applyFilterRace().size()) {
 	    ++mVue.pageNumber;
-	    mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneId());
+	    mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneTitle());
 	    System.out.println("right page : " + mVue.pageNumber + " " + mVue.applyFilterRace().size());
 	    mVue.resetDesciption();	
 	}
