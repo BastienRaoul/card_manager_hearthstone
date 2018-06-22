@@ -141,16 +141,71 @@ public class vueCreation extends vue {
 		creationRace.addItem(Race.MURLOC);
 		creationRace.addItem(Race.PIRATE);
 		creationRace.addItem(Race.TOTEM);
+
+
 		subMainRight.add(labelRace);
 		subMainRight.add(creationRace);
 
+		/**
+		 * Ajout de toutes les valeur de Mana à une ComboBox qui permet de donner le
+		 * nombre de Mana que coute la carte 
+		 */
+		creationNbMana.addItem(0);
+		creationNbMana.addItem(1);
+		creationNbMana.addItem(2);
+		creationNbMana.addItem(3);
+		creationNbMana.addItem(4);
+		creationNbMana.addItem(5);
+		creationNbMana.addItem(6);
+		creationNbMana.addItem(7);
+		creationNbMana.addItem(8);
+		creationNbMana.addItem(9);
+		creationNbMana.addItem(10);
+		
+
 		subMainRight.add(labelMana);
+		creationNbMana.setMaximumRowCount(creationNbMana.getModel().getSize());
 		subMainRight.add(creationNbMana);
 
+
+				/**
+		 * Ajout de toutes les valeur de degats possible à une ComboBox qui permet de donner le
+		 * nombre de degats à la carte 
+		 */
+		creationDegats.addItem(0);
+		creationDegats.addItem(1);
+		creationDegats.addItem(2);
+		creationDegats.addItem(3);
+		creationDegats.addItem(4);
+		creationDegats.addItem(5);
+		creationDegats.addItem(6);
+		creationDegats.addItem(7);
+		creationDegats.addItem(8);
+		creationDegats.addItem(9);
+		creationDegats.addItem(10);
+
 		subMainRight.add(labelDegats);
+		creationDegats.setMaximumRowCount(creationDegats.getModel().getSize());
 		subMainRight.add(creationDegats);
 
+		/**
+		 * Ajout de toutes les valeur de Point de Vie Possible à une ComboBox qui permet de donner le
+		 * nombre de Point de Vie pour la carte 
+		 */
+		creationPointVie.addItem(0);
+		creationPointVie.addItem(1);
+		creationPointVie.addItem(2);
+		creationPointVie.addItem(3);
+		creationPointVie.addItem(4);
+		creationPointVie.addItem(5);
+		creationPointVie.addItem(6);
+		creationPointVie.addItem(7);
+		creationPointVie.addItem(8);
+		creationPointVie.addItem(9);
+		creationPointVie.addItem(10);
+
 		subMainRight.add(labelPointDeVie);
+		creationPointVie.setMaximumRowCount(creationPointVie.getModel().getSize());
 		subMainRight.add(creationPointVie);
 
 		subMainRight.add(labelDescription);

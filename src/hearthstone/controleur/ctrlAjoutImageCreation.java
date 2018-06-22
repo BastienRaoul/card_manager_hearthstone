@@ -8,6 +8,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import hearthstone.vue.vueCreation;
 
+//Controlleur permettant d'aller chercher une image dans ses documents pour créer une carte
 public class ctrlAjoutImageCreation implements ActionListener {
 
     FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("png.", "png");

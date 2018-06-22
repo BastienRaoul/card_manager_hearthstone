@@ -7,6 +7,7 @@ import java.io.IOException;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.vue.vue;
 
+//Controlleur permettant d'afficher les cartes après avoir lancé les filtres
 public class ctrlApplyFilter implements ActionListener {
     
 	vue mVue = null;

@@ -22,16 +22,16 @@ public class ctrlCreerCarteCreation implements ActionListener {
 				try {
 					if (mVue.collection.getNbPoussiere() >= panel.mCarte.coutCreation()) {
 
-						for(Denombrement denomb : mVue.collection.decombrements()) {
-							if(denomb.carte().equals(panel.mCarte)) {
+						for (Denombrement denomb : mVue.collection.decombrements()) {
+							if (denomb.carte().equals(panel.mCarte)) {
 								denomb.incremente();
 							}
 						}
-						
+
 						mVue.collection.setNbPoussiere(mVue.collection.getNbPoussiere() - panel.mCarte.coutCreation());
 
 						mVue.nbPoussiereEtoile.setText(Integer.toString(mVue.collection.getNbPoussiere()));
-						
+
 						mVue.nbExemplairesDescription.setText(
 								"Exemplaire : " + mVue.collection.getNbExemplaireFromDenombrement((panel.mCarte)));
 

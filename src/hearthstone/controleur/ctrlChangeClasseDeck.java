@@ -8,6 +8,9 @@ import javax.swing.JComboBox;
 import hearthstone.carte.Classe;
 import hearthstone.vue.vueDeck;
 
+//Controlleur permettant d'afficher les cartes dela classe du deck choisi 
+//lors de la manipulation de deck
+
 public class ctrlChangeClasseDeck implements ActionListener {
 
 	private vueDeck mVue = null;
