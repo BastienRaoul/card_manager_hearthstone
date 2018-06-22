@@ -3,23 +3,22 @@ package hearthstone.controleur;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import hearthstone.vue.vueDeck;
+import hearthstone.vue.vueCreation;
 
 //Controlleur permettant de fermer la fenêtre liée
-public class ctrlTerminerFenetreDeck implements ActionListener {
+public class ctrlTerminerFenetreCreation implements ActionListener {
 
-	vueDeck mVue = null;
+	vueCreation mVue = null;
 
-	public ctrlTerminerFenetreDeck(vueDeck vue) {
+	public ctrlTerminerFenetreCreation(vueCreation vue) {
 		mVue = vue;
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		mVue.isWindowOpen = false;
-		mVue.deckList.fire();
 		mVue.dispose();
-		
+
 	}
 
 }

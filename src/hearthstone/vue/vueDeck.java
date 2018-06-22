@@ -23,9 +23,9 @@ import hearthstone.carte.Classe;
 import hearthstone.cartes.Cartes;
 import hearthstone.cartes.Deck;
 import hearthstone.controleur.ctrlAjoutCarteDeck;
-import hearthstone.controleur.ctrlChangeClasse;
+import hearthstone.controleur.ctrlChangeClasseDeck;
 import hearthstone.controleur.ctrlSuppCarteDeck;
-import hearthstone.controleur.ctrlTerminerFenetre;
+import hearthstone.controleur.ctrlTerminerFenetreDeck;
 import hearthstone.controleur.ctrlTitreDeck;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.exception.DeckCreationException;
@@ -136,9 +136,9 @@ public class vueDeck extends vue {
 
 		///////////////////////////////// Ajout des controlleurs
 
-		manipulationTerminee.addActionListener(new ctrlTerminerFenetre(this));
+		manipulationTerminee.addActionListener(new ctrlTerminerFenetreDeck(this));
 
-		choixClasse.addActionListener(new ctrlChangeClasse(this));
+		choixClasse.addActionListener(new ctrlChangeClasseDeck(this));
 
 		nomDeck.addKeyListener(new ctrlTitreDeck(this));
 
@@ -198,7 +198,7 @@ public class vueDeck extends vue {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
-		this.setPreferredSize(new Dimension(X + 50, Y));
+		this.setPreferredSize(new Dimension(X, Y));
 
 		setSize(X, Y);
 

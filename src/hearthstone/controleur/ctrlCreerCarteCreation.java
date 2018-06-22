@@ -5,11 +5,11 @@ import java.awt.event.ActionListener;
 
 import hearthstone.vue.vueCreation;
 
-public class ctrlCreerCarte implements ActionListener {
+public class ctrlCreerCarteCreation implements ActionListener {
 
     vueCreation mVue = null;
 
-    public ctrlCreerCarte(vueCreation vue) {
+    public ctrlCreerCarteCreation(vueCreation vue) {
 	mVue = vue;
     }
 

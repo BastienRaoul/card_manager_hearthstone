@@ -8,7 +8,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import hearthstone.vue.vueCreation;
 
-public class ctrlAjoutImage implements ActionListener{
+public class ctrlAjoutImageCreation implements ActionListener{
 
     FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("png.","png");
 
@@ -16,7 +16,7 @@ public class ctrlAjoutImage implements ActionListener{
 
     vueCreation mVue = null;    
 
-	public ctrlAjoutImage(vueCreation vue) {
+	public ctrlAjoutImageCreation(vueCreation vue) {
 		mVue = vue;
 	}  
 
