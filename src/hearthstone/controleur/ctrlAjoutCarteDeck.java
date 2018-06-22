@@ -26,18 +26,17 @@ public class ctrlAjoutCarteDeck implements ActionListener {
 			if (panel.isSelected()) {
 
 				if (mVue.collection.getNbExemplaireFromDenombrement(panel.mCarte) > 0)
-					if (mVue.mDeck.estPresente(panel.mCarte))
-						if (mVue.collection.getNbExemplaireFromDenombrement(panel.mCarte) < 2) {
-							return;
+					if (mVue.mDeck.estPresente(panel.mCarte)) {
+						try {
+							mVue.mDeck.ajouter(panel.mCarte);
+							mVue.modifNbCarte(true);
+							mVue.cardshandler.fire();
+						} catch (DeckPleinException | CarteNonDisponibleException | CarteMauvaiseClasseException
+								| LimiteNombreDeCartesException e1) {
+							e1.printStackTrace();
 						}
-				try {
-					mVue.mDeck.ajouter(panel.mCarte);
-					mVue.modifNbCarte(true);
-					mVue.cardshandler.fire();
-				} catch (DeckPleinException | CarteNonDisponibleException | CarteMauvaiseClasseException
-						| LimiteNombreDeCartesException e1) {
-					e1.printStackTrace();
-				}
+					}
+
 				break;
 			}
 		}

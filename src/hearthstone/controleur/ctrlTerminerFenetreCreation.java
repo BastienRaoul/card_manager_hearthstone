@@ -18,7 +18,5 @@ public class ctrlTerminerFenetreCreation implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		mVue.isWindowOpen = false;
 		mVue.dispose();
-
 	}
-
 }

@@ -37,6 +37,7 @@ public class ImagePanel extends JPanel {
 		mCarte = carte;
 
 		URL url = null;
+		
 		try {
 			url = new URL(mCarte.urlImage());
 		} catch (MalformedURLException e) {

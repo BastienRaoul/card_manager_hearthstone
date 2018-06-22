@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -222,6 +223,8 @@ public class vueCreation extends vue {
 		destructionCarte.addActionListener(new ctrlDetruireCarteCreation(this));
 		/////////////////////////////////
 
+		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		/**
 		 * On parametre la taille de la fenetre
 		 */
