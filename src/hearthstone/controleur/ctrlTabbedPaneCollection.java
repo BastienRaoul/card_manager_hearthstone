@@ -10,6 +10,8 @@ import hearthstone.carte.Classe;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.vue.vue;
 
+//Controlleur permettant d'afficher les cartes de l'onglet choisi
+//En effaçant les cartes précédents grâce aux méthodes drawCards() et reset()
 public class ctrlTabbedPaneCollection implements ChangeListener {
 
     vue mVue = null;
