@@ -259,7 +259,10 @@ public class Deck implements ManipulationCartes {
 	}
 
 	public void setClasse(Classe classe) {
-		collection().clear();
 		this.maClasse = classe;
+	}
+	
+	public void clearCards() {
+		collection().clear();
 	}
 }

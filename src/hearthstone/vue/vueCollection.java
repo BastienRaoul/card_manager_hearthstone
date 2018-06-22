@@ -26,7 +26,7 @@ public class vueCollection extends vue {
 	public JList<Deck> deckList = null;
 
 	public DeckHandler deckhandler = null;
-	
+
 	private JButton creationCarte = new JButton("Creation de carte");
 
 	private JPanel panelBottomBut = new JPanel();
@@ -40,13 +40,13 @@ public class vueCollection extends vue {
 		super(collection);
 
 		deckhandler = new DeckHandler(collection.collectionDeDeck());
-		
+
 		/////////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Mes decks..."));
 
 		deckList = new JList<>(deckhandler);
 		deckList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		//deckList.setVisibleRowCount(-1);
+		// deckList.setVisibleRowCount(-1);
 
 		JScrollPane listeDesDeck = new JScrollPane(deckList);
 		listeDesDeck.setPreferredSize(new Dimension(250, 80));
@@ -66,7 +66,7 @@ public class vueCollection extends vue {
 
 		creationCarte.addActionListener(new ctrlNewCreationCards(this));
 
-		manipulationDeck.addActionListener(new ctrlModifDeck(this));				
+		manipulationDeck.addActionListener(new ctrlModifDeck(this));
 		/////////////////////////////////
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

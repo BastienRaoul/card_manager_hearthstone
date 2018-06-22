@@ -43,6 +43,7 @@ public class vueDeck extends vue {
 
 	public Deck mDeck = null;
 
+	public boolean isInit = false;
 	/////////////////////////
 
 	public DeckHandler deckList = null;
@@ -78,10 +79,6 @@ public class vueDeck extends vue {
 
 		cardshandler = new CardsHandler(mDeck.collection());
 
-		cardshandler.fire();
-
-		System.out.println(mDeck.collection());
-
 		if (mDeck == null)
 			try {
 				mDeck = new Deck(collection, Classe.GUERRIER, "NouveauDeck");
@@ -115,11 +112,11 @@ public class vueDeck extends vue {
 
 		carteList = new JList<>(cardshandler);
 		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-		carteList.setVisibleRowCount(-1);
 
 		JScrollPane listeDesCartes = new JScrollPane(carteList);
 		listeDesCartes.setPreferredSize(new Dimension(250, 80));
-
+		cardshandler.fire();
+		System.out.println(mDeck.collection());
 		subMainRight.add(listeDesCartes, BorderLayout.CENTER);
 
 		////////////////////////////////////
@@ -149,49 +146,52 @@ public class vueDeck extends vue {
 
 		/////////////////////////////////
 
-		classTab.removeAll();
+		{
+			isInit = true;
+			classTab.removeAll();
 
-		switch (mDeck.classe()) {
-		case GUERRIER:
-			classeGuerrier();
-			choixClasse.setSelectedIndex(0);
-			break;
-		case DRUIDE:
-			classeDruide();
-			choixClasse.setSelectedIndex(1);
-			break;
-		case CHASSEUR:
-			classeChasseur();
-			choixClasse.setSelectedIndex(2);
-			break;
-		case MAGE:
-			classeMage();
-			choixClasse.setSelectedIndex(3);
-			break;
-		case PALADIN:
-			classePaladin();
-			choixClasse.setSelectedIndex(4);
-			break;
-		case PRETRE:
-			classePretre();
-			choixClasse.setSelectedIndex(5);
-			break;
-		case CHAMAN:
-			classeChaman();
-			choixClasse.setSelectedIndex(6);
-			break;
-		case DEMONISTE:
-			classeDemoniste();
-			choixClasse.setSelectedIndex(7);
-			break;
-		case VOLEUR:
-			classeVoleur();
-			choixClasse.setSelectedIndex(8);
-			break;
+			switch (mDeck.classe()) {
+			case GUERRIER:
+				classeGuerrier();
+				choixClasse.setSelectedIndex(0);
+				break;
+			case DRUIDE:
+				classeDruide();
+				choixClasse.setSelectedIndex(1);
+				break;
+			case CHASSEUR:
+				classeChasseur();
+				choixClasse.setSelectedIndex(2);
+				break;
+			case MAGE:
+				classeMage();
+				choixClasse.setSelectedIndex(3);
+				break;
+			case PALADIN:
+				classePaladin();
+				choixClasse.setSelectedIndex(4);
+				break;
+			case PRETRE:
+				classePretre();
+				choixClasse.setSelectedIndex(5);
+				break;
+			case CHAMAN:
+				classeChaman();
+				choixClasse.setSelectedIndex(6);
+				break;
+			case DEMONISTE:
+				classeDemoniste();
+				choixClasse.setSelectedIndex(7);
+				break;
+			case VOLEUR:
+				classeVoleur();
+				choixClasse.setSelectedIndex(8);
+				break;
+			}
+
+			classeNeutre();
+			isInit = false;
 		}
-
-		classeNeutre();
-
 		/////////////////////////////////
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
@@ -309,8 +309,7 @@ public class vueDeck extends vue {
 			nbCarteDansDeck
 					.setText(Integer.toString(Integer.parseInt(nbCarteDansDeck.getText().split("/")[0].trim()) + 1)
 							+ " / 30 cartes");
-		}
-		else {
+		} else {
 			nbCarteDansDeck
 					.setText(Integer.toString(Integer.parseInt(nbCarteDansDeck.getText().split("/")[0].trim()) - 1)
 							+ " / 30 cartes");

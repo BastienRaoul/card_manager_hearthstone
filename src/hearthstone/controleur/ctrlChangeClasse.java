@@ -63,5 +63,9 @@ public class ctrlChangeClasse implements ActionListener {
 			break;
 		}
 		mVue.classeNeutre();
+		
+		if(!mVue.isInit) {
+			mVue.mDeck.clearCards();
+		}
 	}
 }
