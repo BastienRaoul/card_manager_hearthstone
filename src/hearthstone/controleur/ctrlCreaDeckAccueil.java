@@ -20,6 +20,7 @@ public class ctrlCreaDeckAccueil implements ActionListener {
 	    return;
 
 	mVue.isWindowOpen = true;
+	mVue.setVisible(false);
 	vueCollection main = new vueCollection(mVue.collection);
 	main.isWindowOpen = false;
 

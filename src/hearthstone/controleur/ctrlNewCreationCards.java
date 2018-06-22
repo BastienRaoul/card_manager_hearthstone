@@ -20,6 +20,7 @@ public class ctrlNewCreationCards implements ActionListener {
 			return;
 
 		mVue.isWindowOpen = true;
+		mVue.setVisible(false);
 		vueCreation main = new vueCreation(mVue.collection);
 		main.isWindowOpen = false;
 

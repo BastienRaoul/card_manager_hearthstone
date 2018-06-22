@@ -21,6 +21,7 @@ public class ctrlNewCreationDeck implements ActionListener {
 	    return;
 
 	mVue.isWindowOpen = true;
+	mVue.setVisible(false);
 	vueDeck main = new vueDeck(mVue.collection, null);
 	main.isWindowOpen = false;
 
