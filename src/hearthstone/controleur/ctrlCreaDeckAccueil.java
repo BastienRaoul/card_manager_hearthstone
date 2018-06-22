@@ -3,25 +3,24 @@ package hearthstone.controleur;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import hearthstone.vue.vueCollection;
 import hearthstone.vue.vueDeck;
+import hearthstone.vue.vueCollection;
 
-public class ctrlNewCreationDeck implements ActionListener {
+public class ctrlCreaDeckAccueil implements ActionListener {
 
-    vueCollection mVue = null;
+    vueDeck mVue = null;
 
-    public ctrlNewCreationDeck(vueCollection vue) {
+    public ctrlCreaDeckAccueil(vueDeck vue) {
 	mVue = vue;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
 	if (mVue.isWindowOpen)
 	    return;
 
 	mVue.isWindowOpen = true;
-	vueDeck main = new vueDeck(mVue.collection, null);
+	vueCollection main = new vueCollection(mVue.collection);
 	main.isWindowOpen = false;
 
 	main.pack();

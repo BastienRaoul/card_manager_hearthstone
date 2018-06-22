@@ -12,6 +12,7 @@ import javax.swing.UIManager.*;
 import hearthstone.carte.*;
 import hearthstone.cartes.*;
 import hearthstone.controleur.ctrlChangeClasse;
+import hearthstone.controleur.ctrlCreaDeckAccueil;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.exception.DeckCreationException;
 import hearthstone.exception.LimiteNombreDeCartesException;
@@ -41,7 +42,13 @@ public class vueDeck extends vue {
 
 	private JButton supprimerDeck = new JButton("Supprimer Deck");
 
+<<<<<<< HEAD
+	private JButton creationDeck = new JButton("Terminer");
+	
+    /////////////////////////
+=======
 	private JButton supprimerCarte = new JButton("Supprimer Carte");
+>>>>>>> a6adc42c5dac2c98e3bf6af2064f7bf6a535ab3b
 
 	/////////////////////////
 
@@ -50,6 +57,14 @@ public class vueDeck extends vue {
 	public vueDeck(Cartes collection, Deck currentDeck) {
 		super(collection);
 
+<<<<<<< HEAD
+	classTab.removeAll();
+	classeGuerrier();
+	classeNeutre();
+
+	/////////////////////////////////
+	subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
+=======
 		if (currentDeck == null)
 			try {
 				mDeck = new Deck(collection, Classe.GUERRIER, "NouveauDeck");
@@ -62,6 +77,7 @@ public class vueDeck extends vue {
 		classTab.removeAll();
 		classeGuerrier();
 		classeNeutre();
+>>>>>>> a6adc42c5dac2c98e3bf6af2064f7bf6a535ab3b
 
 		/////////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Création de deck..."));
@@ -146,10 +162,17 @@ public class vueDeck extends vue {
 		setVisible(true);
 	}
 
+<<<<<<< HEAD
+	creationDeck.addActionListener(new ctrlCreaDeckAccueil(this));
+
+	setVisible(true);
+    }
+=======
 	//////////////////////////////////////////
 	public void classeGuerrier() {
 		classTab.add(mainGUERRIER, "Guerrier");
 	}
+>>>>>>> a6adc42c5dac2c98e3bf6af2064f7bf6a535ab3b
 
 	public void classeDruide() {
 		classTab.add(mainDRUIDE, "Druide");
