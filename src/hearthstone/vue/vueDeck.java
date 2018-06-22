@@ -44,7 +44,7 @@ public class vueDeck extends vue {
 
 	/////////////////////////
 
-	private JComboBox<Classe> choixClasse = new JComboBox<>();
+	private JComboBox<Classe> choixClasse = new JComboBox<>();  //Choix de la classe pour afficher l'onglet et les cartes correspondantes à la classe
 
 	private JPanel titreDeck = new JPanel();
 
@@ -64,8 +64,6 @@ public class vueDeck extends vue {
 
 	private JButton manipulationTerminee = new JButton("Terminer");
 
-	/////////////////////////
-
 	public vueDeck(Cartes collection, Deck currentDeck) {
 		super(collection);
 		mDeck = currentDeck;
@@ -84,6 +82,7 @@ public class vueDeck extends vue {
 
 		titreDeck.setLayout(new BoxLayout(titreDeck, BoxLayout.Y_AXIS));
 
+		//Choix des classes
 		choixClasse.addItem(Classe.GUERRIER);
 		choixClasse.addItem(Classe.DRUIDE);
 		choixClasse.addItem(Classe.CHASSEUR);
