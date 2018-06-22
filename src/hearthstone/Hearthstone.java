@@ -19,7 +19,8 @@ public class Hearthstone {
 	public static void main(String[] args) throws CarteDejaPresenteException, IOException, ClasseNeutreException,
 			LimiteNombreDeCartesException, DeckCreationException {
 		Cartes collection = null;
-		if (new File("./saveCards.json").exists())
+		
+		if (new File("./savedCards.json").exists())
 			collection = new Cartes(FabriqueJson.lireCartesDepuisFichier("./savedCards.json"));
 		else
 			collection = new Cartes(FabriqueJson.lireCartesDepuisFichier("./json/collection.json"));
