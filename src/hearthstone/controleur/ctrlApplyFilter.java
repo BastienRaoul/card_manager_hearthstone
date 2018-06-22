@@ -21,7 +21,6 @@ public class ctrlApplyFilter implements ActionListener {
 		try {
 			mVue.drawCards(mVue.getCurrentImagePanels(), mVue.getClasseFromTabbedPaneTitle());
 		} catch (ClasseNeutreException | IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 	}

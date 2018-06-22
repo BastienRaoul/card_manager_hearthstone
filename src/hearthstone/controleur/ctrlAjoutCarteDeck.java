@@ -3,6 +3,7 @@ package hearthstone.controleur;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import hearthstone.carte.Carte;
 import hearthstone.exception.CarteMauvaiseClasseException;
 import hearthstone.exception.CarteNonDisponibleException;
 import hearthstone.exception.DeckPleinException;
@@ -25,8 +26,15 @@ public class ctrlAjoutCarteDeck implements ActionListener {
 		for (ImagePanel panel : mVue.getCurrentImagePanels()) {
 			if (panel.isSelected()) {
 
-				if (mVue.collection.getNbExemplaireFromDenombrement(panel.mCarte) > 0)
-					if (mVue.mDeck.estPresente(panel.mCarte)) {
+				if (mVue.collection.getNbExemplaireFromDenombrement(panel.mCarte) > 0) {
+					int nbCarte = 0;
+					for (Carte carte : mVue.mDeck.collection()) {
+						if (carte.equals(panel.mCarte)) {
+							++nbCarte;
+						}
+					}
+
+					if (nbCarte < 2 && nbCarte < mVue.collection.getNbExemplaireFromDenombrement(panel.mCarte)) {
 						try {
 							mVue.mDeck.ajouter(panel.mCarte);
 							mVue.modifNbCarte(true);
@@ -36,7 +44,8 @@ public class ctrlAjoutCarteDeck implements ActionListener {
 							e1.printStackTrace();
 						}
 					}
-				break;
+					break;
+				}
 			}
 		}
 	}
