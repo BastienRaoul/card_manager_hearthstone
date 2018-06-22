@@ -18,6 +18,8 @@ import hearthstone.controleur.ctrlListDeck;
 import hearthstone.controleur.ctrlNewCreationCards;
 import hearthstone.controleur.ctrlNewCreationDeck;
 
+//Classe vueCollection, héritant de la classe vue, affichant la collection du joueur
+//Accessoirement, écran d'accueil
 public class vueCollection extends vue {
 
 	/////
@@ -31,23 +33,29 @@ public class vueCollection extends vue {
 	public vueCollection(Cartes collection) {
 		super(collection);
 
+		//Liste affichant les decks, 
+		//ayant un DeckHandeler contenant ces susdit decks en paramètre
 		deckList = new JList<>(new DeckHandeler(collection.collectionDeDeck()));
 		deckList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 		/////////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Mes decks..."));
 
+		//Mode de sélection n'autorisant à ne choisir qu'un deck à la fois
 		deckList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		deckList.setVisibleRowCount(-1);
 
+		//Ajout de la liste à un JSrollPane afin de scroll si nécessaire
 		JScrollPane listeDesDeck = new JScrollPane(deckList);
 		listeDesDeck.setPreferredSize(new Dimension(250, 80));
 
+		//Ajout des panels
 		subMainRight.setLayout(new BorderLayout());
 		subMainRight.add(listeDesDeck, BorderLayout.CENTER);
 		subMainRight.add(creationCarte, BorderLayout.NORTH);
 		subMainRight.add(creationDeck, BorderLayout.SOUTH);
 
+		///////// Ajout controlleurs 
 		creationDeck.addActionListener(new ctrlNewCreationDeck(this));
 
 		creationCarte.addActionListener(new ctrlNewCreationCards(this));
@@ -62,6 +70,7 @@ public class vueCollection extends vue {
 		this.setPreferredSize(new Dimension(X, Y));
 		setSize(X, Y);
 
+		//Changement du look&feel
 		try {
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {

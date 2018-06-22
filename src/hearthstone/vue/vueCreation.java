@@ -18,7 +18,11 @@ import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
 
+//Classe vueCreation héritant de vue, affichant l'interface de création de cartes
 public class vueCreation extends vue {
+
+	//Ajout des éléments permettant à l'utilisateur d'entrer les 
+	//données voulues pour créer sa carte
 
 	private JLabel labelNomCreation = new JLabel("Nom :");
 	public JTextField textFieldNomCreation = new JTextField("Un nom random...");
@@ -49,13 +53,13 @@ public class vueCreation extends vue {
 
 	private JButton ajoutCarteButton = new JButton("Ajouter la carte.");
 
-	//
+	//création du panel de validation
 	private JPanel subMainRightButton = new JPanel();
 
 	private JButton creationBoutton = new JButton("Créer carte.");
 	private JButton destructionCarte = new JButton("Détruire carte.");
 
-	//////
+	////// création des champs de poussière d'étoile du joueur
 
 	private JLabel pousseireEtoile = new JLabel("Poussiere d'�toiles :");
 	private JLabel nbPoussiereEtoile = new JLabel("2000");
@@ -65,7 +69,8 @@ public class vueCreation extends vue {
 	public vueCreation(Cartes collection) {
 		super(collection);
 
-		////////////////////
+		///Ajout dans le panel principal, remplissage du panel de création
+		// et remplissage des comboBox
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Manipulation de carte..."));
 
 		subMainRight.setLayout(new GridLayout(10, 0));
