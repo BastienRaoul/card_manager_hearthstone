@@ -31,13 +31,11 @@ public class vueCollection extends vue {
 	public vueCollection(Cartes collection) {
 		super(collection);
 
-		deckList = new JList<>(new DeckHandeler(collection.collectionDeDeck()));
-		deckList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-
 		/////////////////////////////////
 		subMainRight.setBorder(BorderFactory.createTitledBorder("Mes decks..."));
 
-		deckList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		deckList = new JList<>(new DeckHandler(collection.collectionDeDeck()));
+		deckList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		deckList.setVisibleRowCount(-1);
 
 		JScrollPane listeDesDeck = new JScrollPane(deckList);

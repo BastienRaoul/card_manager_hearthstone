@@ -22,6 +22,7 @@ import hearthstone.carte.Carte;
 import hearthstone.carte.Classe;
 import hearthstone.cartes.Cartes;
 import hearthstone.cartes.Deck;
+import hearthstone.controleur.ctrlAjoutCarteDeck;
 import hearthstone.controleur.ctrlChangeClasse;
 import hearthstone.controleur.ctrlTerminerFenetre;
 import hearthstone.controleur.ctrlTitreDeck;
@@ -53,7 +54,7 @@ public class vueDeck extends vue {
 
 	private JPanel bottomPanel = new JPanel();
 
-	private JLabel nbCarteDansDeck = new JLabel("0 / 30 cartes");
+	public JLabel nbCarteDansDeck = new JLabel("0 / 30 cartes");
 
 	private JButton ajoutCarteDeck = new JButton("Ajouter la carte");
 
@@ -100,7 +101,7 @@ public class vueDeck extends vue {
 
 		subMainRight.add(titreDeck, BorderLayout.NORTH);
 
-		carteList = new JList<>(new CardsHandeler(mDeck.collection()));
+		carteList = new JList<>(new CardsHandler(mDeck.collection()));
 		carteList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		carteList.setVisibleRowCount(-1);
 
@@ -113,7 +114,7 @@ public class vueDeck extends vue {
 
 		bottomPanel.setLayout(new GridLayout(3, 2));
 
-		bottomPanel.add(nbCarteDansDeck);
+		nbCarteDansDeck.setText(mDeck.collection().size() + " / 30 cartes");
 		bottomPanel.add(nbCarteDansDeck);
 		bottomPanel.add(supprimerDeck);
 		bottomPanel.add(supprimerCarte);
@@ -130,8 +131,8 @@ public class vueDeck extends vue {
 
 		nomDeck.addKeyListener(new ctrlTitreDeck(this));
 
-		ajoutCarteDeck.addActionListener();
-		
+		ajoutCarteDeck.addActionListener(new ctrlAjoutCarteDeck(this));
+
 		/////////////////////////////////
 
 		classTab.removeAll();
@@ -181,7 +182,7 @@ public class vueDeck extends vue {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// this.setLocation(300, 300);
 
-		this.setPreferredSize(new Dimension(X + 100, Y));
+		this.setPreferredSize(new Dimension(X + 50, Y));
 
 		setSize(X, Y);
 
