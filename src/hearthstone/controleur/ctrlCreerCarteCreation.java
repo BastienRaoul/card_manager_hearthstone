@@ -15,11 +15,9 @@ public class ctrlCreerCarteCreation implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         /*
-
-        if( mVue.coutDescription.getText(Integer.toString(mCarte.coutCreation()))<=Integer.toString(mVue.nbPoussiereEtoile.getselectedItem())){
-
+        if(  mVue.coutDescription.getText(Integer.toString(mVue.coutDescription.getText()))<=Integer.toString(mVue.nbPoussiereEtoile.getText())){
+*/
         }
-        */
+
     }
 
-}
