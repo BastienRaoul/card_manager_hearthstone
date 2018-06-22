@@ -22,8 +22,13 @@ import hearthstone.carte.Classe;
 import hearthstone.carte.Race;
 import hearthstone.carte.Rarete;
 import hearthstone.cartes.Cartes;
+
 import hearthstone.controleur.ctrlAjoutCarte;
+
+import hearthstone.controleur.ctrlTerminerFenetre;
+
 import hearthstone.controleur.ctrlAjoutImage;
+
 
 //Classe vueCreation héritant de vue, affichant l'interface de création de cartes
 public class vueCreation extends vue {
@@ -63,9 +68,12 @@ public class vueCreation extends vue {
 	public JButton file = new JButton("Ajouter image");	
 
 	private JButton ajoutCarteButton = new JButton("Ajouter la carte.");
+	private JButton terminer = new JButton("Terminer");
 
 	//création du panel de validation
 	private JPanel subMainRightButton = new JPanel();
+	private JPanel subMainRightButton2 = new JPanel();
+
 
 	private JButton creationBoutton = new JButton("Créer carte.");
 	private JButton destructionCarte = new JButton("Détruire carte.");
@@ -170,8 +178,16 @@ public class vueCreation extends vue {
 		subMainRightButton.add(destructionCarte);
 		subMainRight.add(subMainRightButton);
 
+		subMainRightButton2.setLayout(new GridLayout(0, 2));
+		subMainRightButton2.add(ajoutCarteButton);
+		subMainRightButton2.add(terminer);
+	
+		subMainRight.add(subMainRightButton2);
+
+
+
 		/////////////////////////////////
-		// TODO control
+		terminer.addActionListener(new ctrlTerminerFenetre(this));
 		/////////////////////////////////
 
 		this.setPreferredSize(new Dimension(X + 200, Y));
