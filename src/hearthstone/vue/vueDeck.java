@@ -1,29 +1,22 @@
 package hearthstone.vue;
 
+<<<<<<< HEAD
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
+=======
+import java.awt.*;
+import java.awt.datatransfer.*;
+import java.awt.event.*;
+import java.io.IOException;
+import java.util.Vector;
+>>>>>>> f6ac022466bcdb8e5a641320bb9e272658a520c1
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.DropMode;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
-import javax.swing.ListSelectionModel;
-import javax.swing.UIManager;
-import javax.swing.UIManager.LookAndFeelInfo;
+import javax.swing.*;
+import javax.swing.UIManager.*;
 
-import hearthstone.carte.Carte;
-import hearthstone.carte.Classe;
-import hearthstone.cartes.Cartes;
-import hearthstone.cartes.Deck;
+import hearthstone.carte.*;
+import hearthstone.cartes.*;
 import hearthstone.controleur.ctrlChangeClasse;
 import hearthstone.exception.ClasseNeutreException;
 import hearthstone.exception.DeckCreationException;
