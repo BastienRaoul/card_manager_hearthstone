@@ -9,7 +9,7 @@ Création d'un gestionnaire de carte sur le modèle du jeu Hearthstone.
 
 ## Getting started :
 
-1. java -jar HeathStone.jar.jar
+1. java -jar HeathStone.jar
 
 ## Si problème de proxy :
 
