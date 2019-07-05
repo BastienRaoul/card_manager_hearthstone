@@ -1,7 +1,7 @@
 # Card Manager Hearthstone
 
-Projet IUT Informatique
-Création d'un gestionnaire de carte sur le modèle du jeu Hearthstone. 
+Projet IUT Informatique.  
+Création d'un gestionnaire de carte sur le modèle du jeu Hearthstone.   
 
 ## Installation :
 
